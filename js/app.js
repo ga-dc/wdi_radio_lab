@@ -2,8 +2,8 @@
 
 (function(){
   angular
-  .module("radio",[
-    "ui-router",
+  .module("wdi-radio", [
+    "ui.router",
     "songs"
   ])
   .config([
@@ -14,11 +14,15 @@
     $stateProvider
       .state("radioIndex",{
         url:"/welcome",
-        templateUrl:"js/welcome.html"
+        templateUrl:"js/welcome.html",
+        controller:"SongIndexController",
+        controllerAs:"SongIndexViewModel"
       })
       .state("songIndex",{
         url:"/songs",
-        templateUrl:"songs/index.html"
+        templateUrl:"js/songs/index.html",
+        controller:"SongIndexController",
+        controllerAs:"SongIndexViewModel"
       })
   };
 })()
