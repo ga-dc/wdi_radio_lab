@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="wdiRadio">
 <head>
   <title>Jen's WDI Radio</title>
 
@@ -10,13 +10,17 @@
 
   <!-- Local Script Tags -->
   <script src="js/app.js"></script>
+  <script src="js/songs/songs.js"></script>
+  <script src="js/songs/index.controller.js"></script>
+
 
 </head>
 <body>
-  <header>WDI Radio</header>
+  <header><a data-ui-sref="home">WDI Radio</a></header>
 
   Welcome to the World's Best Song App
 
+  <main data-ui-view></main>
 
 </body>
 </html>
