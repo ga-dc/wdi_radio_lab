@@ -5,14 +5,16 @@
   .module("songs")
   .controller("SongNewController", [
     "SongFactory",
+    "$state",
     ControllerFunction
   ]);
 
-  function ControllerFunction(SongFactory){
+  function ControllerFunction(SongFactory, $state){
     this.song = new SongFactory();
     this.create = function(){
-      this.song.$save();
-      console.log("saved")
+      this.song.$save().then(function(){
+        $state.go("songIndex", {}, {reload: true})
+      })
     }
   }
 })();
