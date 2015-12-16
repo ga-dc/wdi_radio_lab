@@ -12,12 +12,13 @@
 
   function RouterFunction($stateProvider){
     $stateProvider
-      .state("home", {
+      .state("index", {
         url: "/songs",
         templateUrl: "js/songs/index.html",
-        controller: "SongIndexController",
-        controllerAs: "SongIndexViewModel"
+        controller: "IndexController",
+        controllerAs: "IndexViewModel"
       });
+
   }
 // End of function
 })();
