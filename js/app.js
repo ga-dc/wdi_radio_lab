@@ -1,10 +1,11 @@
 "use strict";
 
+
 (function(){
   angular
   .module("radio", [
     "ui.router",
-    "songs"
+    "ngResource"
   ])
   .config([
     "$stateProvider",
@@ -13,14 +14,12 @@
 
   function RouterFunction($stateProvider){
     $stateProvider
-
     .state("songsIndex", {
-      url: "/",
+      url: "/asdf",
       templateUrl: "js/radio/songsIndex.html",
       controller: "SongsIndexController",
       controllerAs: "SongsIndexViewModel"
     })
-
     .state("welcome", {
       url: "/welcome",
       templateUrl: "js/radio/welcome.html",

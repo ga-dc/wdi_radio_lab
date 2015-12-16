@@ -9,7 +9,7 @@
       SongsIndexControllerFunction
     ]);
 
-    function SongsIndexControllerFunction( ){
+    function SongsIndexControllerFunction( SongsFactory ){
       this.songs = SongsFactory.query();
     }
 
