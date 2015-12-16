@@ -3,7 +3,13 @@
 <p><dfn>Created:</dfn> {{SongShowViewModel.song.created_at}}</p>
 <!-- <blockquote>{{SongShowViewModel.song.content}}</blockquote> -->
 
-<!-- <h2>Edit</h2>
-<div data-song-form data-song="SongShowViewModel.song"></div>
-
-<img data-ng-src="{{SongShowViewModel.song.photoUrl}}" src="#" alt="{{SongShowViewModel.song.title}}" /> -->
+<h3>Edit song:</h3>
+<form>
+  <input value="SongsShowViewModel.song.title" data-ng-model="SongsShowViewModel.song.title" />
+  <input value="SongsShowViewModel.song.artist" data-ng-model="SongsShowViewModel.song.artist" />
+  <input value="SongsShowViewModel.song.album_art" data-ng-model="SongsShowViewModel.song.album_art" />
+  <input value="SongsShowViewModel.song.genre" data-ng-model="SongsShowViewModel.song.genre" />
+  <input value="SongsShowViewModel.song.audio_url" data-ng-model="SongsShowViewModel.song.audio_url" />
+  <button data-ng-click="SongShowViewModel.update()">Edit</button>
+  <button data-ng-click="SongShowViewModel.destroy()">Destroy</button>
+</form>
