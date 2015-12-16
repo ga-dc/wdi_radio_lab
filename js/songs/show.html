@@ -1,3 +1,6 @@
 <h2>{{SongShowViewModel.song.title}}</h2>
-<button ng-click="">Edit</button>
-<button ng-click="">Delete</button>
+<button data-ng-click="SongShowViewModel.delete()">Delete</button>
+<button data-ng-click="SongShowViewModel.toggleForm()">Edit</button>
+<form data-ng-show="SongShowViewModel.formVisible">
+  <input type="text" placeholder="kjasdkkajsd">
+</form>
