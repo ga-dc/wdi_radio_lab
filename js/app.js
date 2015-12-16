@@ -1,0 +1,31 @@
+(function (){
+  angular
+  .module("wdi_radio", [
+    "ui.router",
+    "songs"
+  ])
+  .config([
+    "$stateProvider",
+    RouterFunction
+  ]);
+
+  function RouterFunction($stateProvider, $locationProvider){
+    $stateProvider
+    .state("welcome", {
+      url: "/welcome",
+      templateUrl: "js/welcome.html"
+    })
+    .state("songIndex", {
+      url: "/songs",
+      templateUrl: "js/songs/index.html",
+      controller: "SongIndexController",
+      controllerAs: "SongIndexViewModel"
+    })
+    .state("songShow", {
+      url: "/songs/:id",
+      templateUrl: "js/songs/show.html",
+      controller: "SongShowController",
+      controllerAs: "SongShowViewModel"
+    });
+  }
+})();

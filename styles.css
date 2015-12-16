@@ -1,0 +1,19 @@
+img {
+  border: 2px solid grey;
+  display: block;
+  margin: auto;
+}
+.songsDiv {
+  border: 2px solid grey;
+  max-width: 500px;
+  margin: auto;
+}
+
+p {
+  padding: 5px;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+}
