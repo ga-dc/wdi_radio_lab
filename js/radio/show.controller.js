@@ -1,7 +1,5 @@
 "use strict";
 
-console.log("Show Controller");
-
 (function(){
   angular
   .module("radio")

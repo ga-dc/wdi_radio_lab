@@ -3,3 +3,13 @@
 <div data-ng-repeat="song in SongsIndexViewModel.songs | orderBy:'-created_at'">
   <p><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a></p>
 </div>
+
+<h3>Create a new song:</h3>
+<form>
+  <input placeholder="Title" data-ng-model="SongsIndexViewModel.newSong.title" />
+  <input placeholder="Artist" data-ng-model="SongsIndexViewModel.newSong.artist" />
+  <input placeholder="Album Art" data-ng-model="SongsIndexViewModel.newSong.album_art" />
+  <input placeholder="Genre" data-ng-model="SongsIndexViewModel.newSong.genre" />
+  <input placeholder="Audio URL" data-ng-model="SongsIndexViewModel.newSong.audio_url" />
+  <button type="button" data-ng-click="SongsIndexViewModel.create()">Create</button>
+</form>

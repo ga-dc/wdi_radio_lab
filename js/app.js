@@ -20,12 +20,12 @@
       controller: "SongsIndexController",
       controllerAs: "SongsIndexViewModel"
     })
-    // .state("welcome", {
-    //   url: "/welcome",
-    //   templateUrl: "js/radio/welcome.html",
-    //   controller: "WelcomeController",
-    //   controllerAs: "WelcomeViewModel"
-    // })
+    .state("welcome", {
+      url: "/welcome",
+      templateUrl: "js/radio/welcome.html",
+      controller: "WelcomeController",
+      controllerAs: "WelcomeViewModel"
+    })
     .state("songShow", {
       url: "/:id",
       templateUrl: "js/radio/songShow.html",
