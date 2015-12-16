@@ -10,6 +10,5 @@
 
   function SongIndexControllerFunction(SongFactory){
     this.songs = SongFactory.query();
-    console.dir(this.songs);
   }
 })();
