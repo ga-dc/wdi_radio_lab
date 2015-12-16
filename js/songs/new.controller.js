@@ -9,11 +9,11 @@
       SongNewControllerFunction
     ]);
 
-    function SongNewControllerFunction( SongFactory ){
+    function SongNewControllerFunction( SongFactory, $state ){
       this.song = new SongFactory();
       this.create = function(){
         this.song.$save()
-        $state.go("songs", {}, {reload: true})
+        $state.go("songsIndex")
       }
     }
 }());
