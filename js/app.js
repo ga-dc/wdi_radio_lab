@@ -25,7 +25,7 @@
       })
       .state("songShow", {
         url: "/songs/:id",
-        templateUrl: "js/songs/show.html",
+        templateUrl: "js/main/show.html",
         controller: "SongShowController",
         controllerAs: "SongShowViewModel"
       });
