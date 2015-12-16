@@ -1,4 +1,8 @@
+"use strict";
+
 (function(){
   angular
-  .module("songs",[]);
+  .module("songs",[
+    "ngResource"
+  ]);
 })()
