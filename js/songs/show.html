@@ -1,0 +1,6 @@
+<h2>{{SongShowViewModel.song.title}}</h2>
+<p>By: {{SongShowViewModel.song.artist}}</p>
+<img data-ng-src="{{SongShowViewModel.song.album_art}}">
+<p>{{SongShowViewModel.song.genre}}</p>
+<p>Created At: {{SongShowViewModel.song.created_at}}</p>
+<audio controls><source="{{SongShowViewModel.song.audioUrl}}" type="audio/mpeg"/></audio>
