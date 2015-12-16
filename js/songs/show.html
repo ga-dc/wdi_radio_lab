@@ -12,11 +12,11 @@
 <div class="edit">
   <a class="title" href="#" ng-click="formHidden=!formHidden">(Edit Song)</a>
   <form ng-show="formHidden">
-    <input placeholder="Title" data-ng-model="SongShowViewModel.song.title" /><br>
-    <input placeholder="Artist" data-ng-model="SongShowViewModel.song.artist" /><br>
-    <input placeholder="Genre" data-ng-model="SongShowViewModel.song.genre" /><br>
-    <input placeholder="Image URL" data-ng-model="SongShowViewModel.song.album_art" /><br>
-    <input placeholder="Audio URL" data-ng-model="SongShowViewModel.song.audio_url" /><br>
-    <button type="button" data-ng-click="SongShowViewModel.update(); formHidden=!formHidden">Create</button>
+    <input data-ng-model="SongShowViewModel.song.title" /><br>
+    <input data-ng-model="SongShowViewModel.song.artist" /><br>
+    <input data-ng-model="SongShowViewModel.song.genre" /><br>
+    <input data-ng-model="SongShowViewModel.song.album_art" /><br>
+    <input data-ng-model="SongShowViewModel.song.audio_url" /><br>
+    <button type="button" ng-click="SongShowViewModel.edit(); formHidden=!formHidden">(Update)</button>
   </form>
 </div>
