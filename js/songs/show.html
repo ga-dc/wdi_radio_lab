@@ -8,6 +8,15 @@
   </audio> -->
 </div>
 
-<div class="create">
-  <form 
+<a class="title" href="/#/songs" ng-click="SongShowViewModel.delete()">(Delete)</a>
+<div class="edit">
+  <a class="title" href="#" ng-click="formHidden=!formHidden">(Edit Song)</a>
+  <form ng-show="formHidden">
+    <input placeholder="Title" data-ng-model="SongShowViewModel.song.title" /><br>
+    <input placeholder="Artist" data-ng-model="SongShowViewModel.song.artist" /><br>
+    <input placeholder="Genre" data-ng-model="SongShowViewModel.song.genre" /><br>
+    <input placeholder="Image URL" data-ng-model="SongShowViewModel.song.album_art" /><br>
+    <input placeholder="Audio URL" data-ng-model="SongShowViewModel.song.audio_url" /><br>
+    <button type="button" data-ng-click="SongShowViewModel.update(); formHidden=!formHidden">Create</button>
+  </form>
 </div>
