@@ -2,10 +2,11 @@
 <p><dfn>Artist: </dfn>{{SongShowViewModel.song.artist}}</p>
 <p><dfn>Genre: </dfn>{{SongShowViewModel.song.genre}}</p>
 <br>
-<img data-ng-src="{{SongShowViewModel.song.album_art}}" src="#" alt="{{SongShowViewModel.grumble.title}}" />
+<img data-ng-src="{{SongShowViewModel.song.album_art}}" src="#" alt="{{SongShowViewModel.song.title}}" />
 <p><dfn>Added at: </dfn>{{SongShowViewModel.song.created_at | date : "mediumDate"}}</p>
 
 <audio controls>
   <source src="{{SongShowViewModel.song.audio_url}}" type="audio/mpeg">
   Your browser does not support the audio tag.
 </audio>
+<button data-ui-sref="songEdit({id: SongShowViewModel.song.id})">Edit</button>
