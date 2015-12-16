@@ -12,6 +12,7 @@
       this.song = new SongFactory();
       this.create = function(){
         this.song.$save()
+        $state.go("songs", {}, {reload: true})
       }
     }
 }());
