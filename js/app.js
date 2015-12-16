@@ -15,17 +15,24 @@
   function RouterFunction($stateProvider){
     $stateProvider
     .state("songsIndex", {
-      url: "/asdf",
+      url: "/",
       templateUrl: "js/radio/songsIndex.html",
       controller: "SongsIndexController",
       controllerAs: "SongsIndexViewModel"
     })
-    .state("welcome", {
-      url: "/welcome",
-      templateUrl: "js/radio/welcome.html",
-      controller: "WelcomeController",
-      controllerAs: "WelcomeViewModel"
+    // .state("welcome", {
+    //   url: "/welcome",
+    //   templateUrl: "js/radio/welcome.html",
+    //   controller: "WelcomeController",
+    //   controllerAs: "WelcomeViewModel"
+    // })
+    .state("songShow", {
+      url: "/:id",
+      templateUrl: "js/radio/songShow.html",
+      controller: "SongShowController",
+      controllerAs: "SongShowViewModel"
     });
+
   }
 
 }());
