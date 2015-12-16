@@ -1,0 +1,9 @@
+<form>
+  <input placeholder="Title" data-ng-model="SongsEditViewModel.editSong.title">
+  <input placeholder="Audio_url" data-ng-model="SongsEditViewModel.editSong.audio_url">
+  <input placeholder="Album_art" data-ng-model="SongsEditViewModel.editSong.album_art">
+  <input placeholder="Artist" data-ng-model="SongsEditViewModel.editSong.artist">
+  <input placeholder="Genre" data-ng-model="SongsEditViewModel.editSong.genre">
+  <button type="button" data-ng-click="SongsEditViewModel.update()">Update</button>
+  <button type="button" data-ng-click="SongsEditViewModel.destroy()">Delete</button>
+</form>
