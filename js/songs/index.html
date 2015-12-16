@@ -1,5 +1,15 @@
 <h2 class="title">Songs Index</h2>
 
+<a class="title" href="#" ng-click="formHidden=!formHidden">(New Song)</a>
+<form ng-show="formHidden">
+  <input placeholder="Title" data-ng-model="SongIndexViewModel.song.title" /><br>
+  <input placeholder="Artist" data-ng-model="SongIndexViewModel.song.artist" /><br>
+  <input placeholder="Genre" data-ng-model="SongIndexViewModel.song.genre" /><br>
+  <input placeholder="Image URL" data-ng-model="SongIndexViewModel.song.album_art" /><br>
+  <input placeholder="Audio URL" data-ng-model="SongIndexViewModel.song.audio_url" /><br>
+  <button type="button" data-ng-click="SongIndexViewModel.create(); formHidden=!formHidden">Create</button>
+</form>
+
 <div class="songsDiv" data-ng-repeat="song in SongIndexViewModel.songs">
   <p><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a> | Artist: {{song.artist}}</p>
 </div>

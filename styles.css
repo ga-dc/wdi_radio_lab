@@ -16,4 +16,15 @@ p {
 
 .title {
   text-align: center;
+  margin: auto;
+  display: block;
+  padding: 4px;
+}
+
+form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 5px;
 }

@@ -10,5 +10,9 @@
 
   function SongIndexControllerFunction(SongFactory){
     this.songs = SongFactory.query();
+    this.song = new SongFactory();
+    this.create = function(){
+      this.song.$save()
+    }
   }
 })();

@@ -11,5 +11,8 @@
 
   function SongShowControllerFunction(SongFactory, $stateParams){
     this.song = SongFactory.get({id: $stateParams.id})
+    this.delete = function(){
+      // delete goes here
+    }
   }
 })();
