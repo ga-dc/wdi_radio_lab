@@ -5,6 +5,7 @@
     .module( "songs" )
     .controller( "SongNewController", [
       "SongFactory",
+      "$state",
       SongNewControllerFunction
     ]);
 

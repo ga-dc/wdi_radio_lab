@@ -6,6 +6,7 @@
     .controller( "SongEditController", [
       "SongFactory",
       "$stateParams",
+      "$state",
       SongEditControllerFunction
     ]);
 
@@ -13,7 +14,10 @@
     this.song = SongFactory.get({id: $stateParams.id});
     this.update = function(){
       this.song.$update({id: $stateParams.id})
-      // $state.go("songs", {}, {reload: true})
+      $state.go("songs/index.html", {}, {reload: true})
+    }
+    this.destroy = function(){
+      this.song.$delete({id: $stateParams.id});
     }
   }
 }());
