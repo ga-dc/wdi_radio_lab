@@ -1,0 +1,11 @@
+<h2>Create Song</h2>
+
+<form>
+  <p><input placeholder="title" data-ng-model="SongNewViewModel.song.title" /></p>
+  <p><input placeholder="audio_url" data-ng-model="SongNewViewModel.song.audio_url" /></p>
+  <p><input placeholder="album_art" data-ng-model="SongNewViewModel.song.album_art" /></p>
+  <p><input placeholder="artist" data-ng-model="SongNewViewModel.song.artist" /></p>
+  <p><input placeholder="genre" data-ng-model="SongNewViewModel.song.genre" /></p>
+  <button type="button" data-ng-click="SongNewViewModel.create()">Create</button>
+
+</form>
