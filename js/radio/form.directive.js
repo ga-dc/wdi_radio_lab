@@ -26,7 +26,8 @@
           });
         }
         scope.update = function() {
-          SongsFactory.update(scope.song, function(response) {
+          console.log(scope.song)
+          scope.song.$update({id: scope.song.id}, function(response) {
             console.log(response);
       
             // , function(song) {
@@ -34,8 +35,9 @@
           });
         }
         scope.destroy = function() {
-          SongsFactory.destroy(scope.song, function(response) {
+          SongsFactory.remove(scope.song, function(response) {
             console.log(response);
+            // $state.go("songIndex", {});
             // , function() {
             // $state.go('songIndex');
           })
