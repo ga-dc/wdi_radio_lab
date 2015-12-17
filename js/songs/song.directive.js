@@ -7,7 +7,8 @@
       restrict: "A",
       replace: true,
       scope: {
-        song: '='
+        song: '=',
+        type: '@'    
       }
     }
   });
