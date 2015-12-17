@@ -6,8 +6,8 @@
   <p>created at:</p> <input type = "text" name="created_at" data-ng-model="song.created_at"/>
   <p>audio URL source:</p> <input type = "text" name="audio_url" data-ng-model="song.audio_url"/>
     <div ng-show="formType === 'edit'">
-      <button ng-click="update()">Save</button>
       <a data-ui-sref='songShow({id: song.id})'>&larr; Back</a>
+      <button ng-click="update()">Save</button>
       <button ng-click="destroy()">Delete</button>
     </div>
     <div ng-show="formType === 'new'">
