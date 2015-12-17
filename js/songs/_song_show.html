@@ -1,11 +1,14 @@
 <div>
 <a data-ui-sref="songShow({id: song.id})">{{song.title}} [{{song.artist}}]</a>
-<h1>{{song.title}}</h1>
-
-<h2>Artist: {{song.artist}}</h2>
-<h2>Genre: {{song.genre}}</h2>
-<img data-ng-src="{{song.album_art}}">
-
-<p>Added: {{song.created_at | date : "mediumDate"}}</p>
-<audio controls autoplay ng-src="{{song.encodedUrl}}"></audio>
+<button data-ng-click="show = !show">More Info</button>
+  <div data-ng-show="show || displayType == 'show'">
+    <h1>{{song.title}}</h1>
+    <h2>Artist: {{song.artist}}</h2>
+    <h2>Genre: {{song.genre}}</h2>
+    <img data-ng-src="{{song.album_art}}">
+    <p>Added: {{song.created_at | date : "mediumDate"}}</p>
+  </div>
+  <div data-ng-show="displayType == 'show'">
+    <audio controls autoplay data-ng-src="{{song.encodedUrl}}"></audio>
+  </div>
 </div>
