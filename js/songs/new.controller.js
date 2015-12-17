@@ -12,7 +12,6 @@
     this.song = new SongFactory();
     this.create = function(){
       this.song.$save();
-      // tomorrow use $state.go to redirect after form submission
     }
   }
 }());

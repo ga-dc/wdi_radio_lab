@@ -1,14 +1,12 @@
 <div class="song">
   <h2><dfn>Title: </dfn><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a></h2>
-  <p><dfn>Artist: </dfn>{{song.artist}}</p>
-  <p><dfn>Genre: </dfn>{{song.genre}}</p>
-  <br>
-  <img data-ng-src="{{song.album_art}}" src="#" alt="{{song.title}}" />
-  <p><dfn>Added at: </dfn>{{song.created_at | date : "mediumDate"}}</p>
-
-  <audio controls>
-    <source src="{{song.audio_url}}" type="audio/mpeg">
-    Your browser does not support the audio tag.
-  </audio>
   <button data-ui-sref="songEdit({id: song.id})">Edit</button>
+  <button data-ng-click="show = !show">More Info</button>
+    <div ng-show="show || showType == 'show'">
+    <p><dfn>Artist: </dfn>{{song.artist}}</p>
+    <p><dfn>Genre: </dfn>{{song.genre}}</p>
+    <br>
+    <img data-ng-src="{{song.album_art}}" src="#" alt="{{song.title}}" />
+    <p><dfn>Added at: </dfn>{{song.created_at | date : "mediumDate"}}</p>
+    </div>
 </div>
