@@ -11,8 +11,5 @@
 
   function SongEditControllerFunction(SongFactory, $stateParams){
     this.song = SongFactory.get({id: $stateParams.id});
-    this.update = function(){
-      this.song.$update({id: $stateParams.id})
-    }
   }
 }())

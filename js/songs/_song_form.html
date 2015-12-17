@@ -6,7 +6,9 @@
   <input name = 'genre' placeholder="Genre" data-ng-model='song.genre'/>
   <div ng-show="formType == 'edit'">
       <a data-ui-sref='songShow({id: song.id})'>&larr; Back</a>
-      <button ng-click='update()'>Save</button>
+      <button ng-click='update({id: song.id})'>Save</button>
+      <button ng-click = "destroy({id: song.id})">Delete</button>
+
     </div>
     <div ng-show="formType == 'new'">
       <button ng-click='create()'>New Song</button>
