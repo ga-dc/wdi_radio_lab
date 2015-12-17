@@ -8,6 +8,6 @@
     </div>
   </div>
   <div ng-show="showLink">
-  <p><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a> | Artist: {{song.artist}} <img class="smallimg" data-ng-src={{song.album_art}} src="#"/></p>
+  <p><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a> | Artist: {{song.artist}} <img  data-ng-click="selectSong(song)" class="smallimg" data-ng-src={{song.album_art}} src="#"/></p>
   </div>
 </div>

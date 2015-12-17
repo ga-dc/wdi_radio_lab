@@ -4,5 +4,5 @@
 
 
 <div class="songsDiv" data-ng-repeat="song in SongIndexViewModel.songs | orderBy: '-created_at'">
-  <song-show data-song="song" data-show-link="true"></song-show>
+  <song-show data-song="song" data-show-link="true" data-vm="SongIndexViewModel"></song-show>
 </div>

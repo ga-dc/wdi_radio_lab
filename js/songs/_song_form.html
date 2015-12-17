@@ -4,11 +4,11 @@
     <a ng-show="formType=='edit'" class="title" href="#" ng-click="formHidden=!formHidden">(Edit Song)</a>
     <a ng-show="formType== 'new'" class="title" href="#" ng-click="formHidden=!formHidden">(New Song)</a>
     <form ng-show="formHidden">
-      <input data-ng-model="song.title" /><br>
-      <input data-ng-model="song.artist" /><br>
-      <input data-ng-model="song.genre" /><br>
-      <input data-ng-model="song.album_art" /><br>
-      <input data-ng-model="song.audio_url" /><br>
+      <input placeholder="Title" data-ng-model="song.title" /><br>
+      <input placeholder="Artist" data-ng-model="song.artist" /><br>
+      <input placeholder="Genre" data-ng-model="song.genre" /><br>
+      <input placeholder="Album Art" data-ng-model="song.album_art" /><br>
+      <input placeholder="Audio URL" data-ng-model="song.audio_url" /><br>
       <div ng-show="formType == 'edit'">
         <button type="button" ng-click="edit(); formHidden=!formHidden">(Update)</button>
       </div>
