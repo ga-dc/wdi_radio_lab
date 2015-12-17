@@ -1,5 +1,18 @@
 <h2>Songs Index</h2>
 
+<!-- Click to Show form for submit -->
+<button>Create New Song</button>
+<h3>New Song</h3>
+<form>
+  <input placeholder="Title" data-ng-model="NewViewModel.song.title"/>
+  <input placeholder="Artist" data-ng-model="NewViewModel.song.artist"/>
+  <input placeholder="Genre" data-ng-model="NewViewModel.song.genre"/>
+  <input placeholder="Title" data-ng-model="NewViewModel.song.title"/>
+  <input placeholder="Audio URL" data-ng-model="NewViewModel.song.audio_url"/>
+  <input placeholder="Album Art" data-ng-model="NewViewModel.song.album_art"/>
+  <button data-ng-submit="NewViewModel.create()">Create It</button>
+</form>
+
 <div data-ng-repeat="song in IndexViewModel.songs">
   <p>{{song.title}}</p>
 </div>

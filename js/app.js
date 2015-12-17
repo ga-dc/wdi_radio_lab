@@ -23,6 +23,12 @@
         templateUrl: "js/songs/show.html",
         controller: "ShowController",
         controllerAs: "ShowViewModel"
+      })
+      .state("new", {
+        url: "/songs/new",
+        templateUrl: "js/songs/new.html",
+        controller: "NewController",
+        controller: "NewViewModel"
       });
 
   }
