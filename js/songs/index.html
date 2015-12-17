@@ -1,9 +1,8 @@
 <h2>Songs</h2>
 <a ui-sref="songNew">Add Song</a>
-<input ng-model="query" placeholder="Search by artist or song" autofocus>
-<ul>
-  <li ng-repeat="song in SongIndexViewModel.songs | filter:query | orderBy:'-created_at'">
-    <a ui-sref="songShow({id: song.id})">{{song.title}}</a>
-    <a ui-sref="songEdit({id: song.id})">Edit</a>
+<!-- <input ng-model="query" placeholder="Search by artist or song" autofocus> -->
+  <li ng-repeat="song in SongIndexViewModel.songs | orderBy: '-created_at'">
+    <data-song-show data-song="song"></data-show>
+    <!-- <a ui-sref="songShow({id: song.id})">{{song.title}}</a>
+    <a ui-sref="songEdit({id: song.id})">Edit</a> -->
   </li>
-</ul>

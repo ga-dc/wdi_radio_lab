@@ -1,8 +1,3 @@
 <h2>Edit Song</h2>
-<form>
-  <input value="SongEditViewModel.song.title" ng-model="SongEditViewModel.song.title">
-  <input value="SongEditViewModel.song.artist" ng-model="SongEditViewModel.song.artist">
-  <input value="SongEditViewModel.song.albumArt" ng-model="SongEditViewModel.song.albumArt">
-  <button ng-click="SongEditViewModel.update()">Update Song</button>
-  <button ng-click="SongEditViewModel.destroy()">Remove Song</button>
-</form>
+
+<data-song-form data-song="SongEditViewModel.song"></data-song-form>

@@ -1,7 +1,3 @@
 <h2>New Song</h2>
-<form>
-  <input placeholder="Title" ng-model="SongNewViewModel.song.title">
-  <input placeholder="Artist Name" ng-model="SongNewViewModel.song.artist">
-  <input placeholder="Photo URL" ng-model="SongNewViewModel.songs.photoUrl">
-  <button ng-click="SongNewViewModel.create()">Add Song</button>
-</form>
+
+<data-song-form data-song="SongNewViewModel.song"></data-song-form>
