@@ -2,15 +2,28 @@
   padding: 0px;
   margin: 0px;
 }
+
 body {
-  background-color: orange;
   font-family: "Helvetica";
 }
 
 .nav {
   background-color: tomato;
+  padding: 20px;
+  color: white;
 }
 
-.container {
-  padding: 10px;
+.nav a{
+  color:white;
+  text-decoration: none;
 }
+
+.nav a:hover {
+  color: darkorange;
+}
+.container {
+  padding: 20px;
+}
+ input {
+   display: block;
+ }

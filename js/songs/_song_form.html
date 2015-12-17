@@ -5,7 +5,12 @@
   <input type='text' name='album_art' ng-model='song.album_art'>
   <input type='text' name='audio_url' ng-model='song.audio_url'>
   <input type='text' name='genre' ng-model='song.genre'>
-  <a data-ui-sref='songShow({id: song.id})'>&larr; Back</a>
-  <button ng-click='update()'>Save</button>
+  <div ng-show="formType == 'edit'">
+    <a data-ui-sref='songShow({id: song.id})'>&larr; Back</a>
+    <button ng-click='update()'>Save</button>
+  </div>
+  <div ng-show="formType == 'new'">
+    <button ng-click='create()'>New Song</button>
+  </div>
 </form>
 </div>
