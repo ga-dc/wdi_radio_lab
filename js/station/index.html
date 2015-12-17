@@ -1,6 +1,9 @@
-<h1>Songs Index Template</h1>
 
 <div data-ng-repeat="song in SongIndexViewModel.songs">
   <!-- the idshow is define in app.js that links to /songs/:id url to show that specific song-->
   <p><a data-ui-sref="idShow({id: song.id})">{{song.title}}</a></p>
+  <hr>
 </div>
+<!-- <div data-ni-if="songs">
+  <button type="button" data-ng-if="!song.id" data-ng-click="create()">Create</button>
+</div> -->

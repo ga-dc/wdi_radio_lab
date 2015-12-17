@@ -16,6 +16,13 @@ function RouterFunction($stateProvider){
     url: "/",
     templateUrl: "js/station/welcome.html"
   })
+  // .state("songNew", {
+  //   url: "/new",
+  //   templateUrl: "js/station/index.html",
+  //   controller: "SongIndexController",
+  //   controllerAs: "SongIndexViewModel"
+  // })
+
   .state("songShow", {
     url: "/songs",
     templateUrl: "js/station/index.html",
