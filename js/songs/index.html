@@ -1,5 +1,8 @@
-<h2>These are all the available songs</h2>
 
-<div data-ng-repeat='song in SongIndexViewModel.songs'>
-  <p><a data-ui-sref='songsShow({id: song.id})'>{{song.title}}</a></p>
+<div ng-repeat='song in SongIndexViewModel.songs'>
+  <song-directive data-song='song' data-show-link='true'></song-directive>
 </div>
+
+     <!-- class='songs' data-ng-repeat='song in SongIndexViewModel.songs'>
+  <song-directive></song-directive>
+</div> -->
