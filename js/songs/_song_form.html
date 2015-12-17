@@ -1,0 +1,20 @@
+<div>
+  <a ng-show="formType== 'edit'" class="title" href="/#/songs" ng-click="destroy()">(Delete)</a>
+  <div class="edit">
+    <a ng-show="formType=='edit'" class="title" href="#" ng-click="formHidden=!formHidden">(Edit Song)</a>
+    <a ng-show="formType== 'new'" class="title" href="#" ng-click="formHidden=!formHidden">(New Song)</a>
+    <form ng-show="formHidden">
+      <input data-ng-model="song.title" /><br>
+      <input data-ng-model="song.artist" /><br>
+      <input data-ng-model="song.genre" /><br>
+      <input data-ng-model="song.album_art" /><br>
+      <input data-ng-model="song.audio_url" /><br>
+      <div ng-show="formType == 'edit'">
+        <button type="button" ng-click="edit(); formHidden=!formHidden">(Update)</button>
+      </div>
+      <div ng-show="formType == 'new'">
+        <button type="button" data-ng-click="create(); formHidden=!formHidden">Create</button>
+      </div>
+    </form>
+  </div>
+</div>

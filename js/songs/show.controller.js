@@ -6,16 +6,13 @@
   .controller("SongShowController", [
     "SongFactory",
     "$stateParams",
+    "$sce",
     SongShowControllerFunction
   ]);
 
-  function SongShowControllerFunction(SongFactory, $stateParams){
-    this.song = SongFactory.get({id: $stateParams.id})
-    this.edit = function(){
-      this.song.$update({id: $stateParams.id})
-    }
-    this.delete = function(){
-      this.song.$delete({id: $stateParams.id});
-    }
+  function SongShowControllerFunction(SongFactory, $stateParams, $sce){
+    this.song = SongFactory.get({id: $stateParams.id}, function(song){
+      this.song.niceUrl = $sce.trustAsResourceUrl(song.audio_url);
+    }.bind(this))
   }
 })();

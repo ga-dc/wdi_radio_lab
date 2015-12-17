@@ -1,22 +1,5 @@
-<h2 class="title">{{SongShowViewModel.song.title}}</h2>
+<song-show data-song="SongShowViewModel.song" data-show-link="false"></song-show>
 
-<div>
-  <p>Artist - {{SongShowViewModel.song.artist}} | Genre - "{{SongShowViewModel.song.genre}}"</p>
-  <img data-ng-src={{SongShowViewModel.song.album_art}} src="#"/>
-  <!-- <audio controls="controls">
-    <source src={{SongShowViewModel.song.audio_url}} type="audio/wav">
-  </audio> -->
-</div>
+<hr>
 
-<a class="title" href="/#/songs" ng-click="SongShowViewModel.delete()">(Delete)</a>
-<div class="edit">
-  <a class="title" href="#" ng-click="formHidden=!formHidden">(Edit Song)</a>
-  <form ng-show="formHidden">
-    <input data-ng-model="SongShowViewModel.song.title" /><br>
-    <input data-ng-model="SongShowViewModel.song.artist" /><br>
-    <input data-ng-model="SongShowViewModel.song.genre" /><br>
-    <input data-ng-model="SongShowViewModel.song.album_art" /><br>
-    <input data-ng-model="SongShowViewModel.song.audio_url" /><br>
-    <button type="button" ng-click="SongShowViewModel.edit(); formHidden=!formHidden">(Update)</button>
-  </form>
-</div>
+<song-form data-song="SongShowViewModel.song" data-form-type="edit" data-songs="SongShowViewModel.songs"></song-form>

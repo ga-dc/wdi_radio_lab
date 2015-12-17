@@ -12,7 +12,7 @@
   function RouterFunction($stateProvider, $locationProvider){
     $stateProvider
     .state("welcome", {
-      url: "/welcome",
+      url: "/",
       templateUrl: "js/welcome.html"
     })
     .state("songIndex", {
