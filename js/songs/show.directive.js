@@ -5,11 +5,12 @@
   .module("songs")
   .directive("showDirective",[
     "$state",
+    "$stateParams",
     "SongFactory",
     ShowDirectiveFunction
   ])
 
-  function ShowDirectiveFunction($state,SongFactory){
+  function ShowDirectiveFunction($state,$stateParams,SongFactory){
     return {
       templateUrl:"js/songs/_song_show.html",
       replace: true,
@@ -18,7 +19,7 @@
         song: "="
       },
       link: function(scope){
-
+        scope.song = SongFactory.get({id: $stateParams.id});
       }
     }
   }
