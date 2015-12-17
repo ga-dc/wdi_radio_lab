@@ -19,17 +19,17 @@
       link:function(scope){
         scope.create = function(){
           scope.song.$save(scope.song,function(song){
-            $state.go("songShow",song)
+            $state.go("songIndex",{},{reload:true})
           })
         }
         scope.delete = function(){
           scope.song.$delete({id: scope.song.id},function(song){
-            $state.go("songIndex")
+            $state.go("songIndex",{},{reload:true})
           })
         }
         scope.update = function(){
           scope.song.$update({id: scope.song.id},function(song){
-            $state.go("songShow",song)
+            scope.toggleForm();
           })
         }
         scope.toggleForm = function(){

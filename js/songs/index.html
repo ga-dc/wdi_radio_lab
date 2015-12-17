@@ -1,3 +1,4 @@
+<div data-form-directive data-song="SongIndexViewModel.newSong" data-form-type="new"></div>
 <div data-ng-repeat="song in SongIndexViewModel.songs | orderBy:'-created_at'">
-  <p><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a></p>
+  <div data-show-directive data-song="song"></div>
 </div>
