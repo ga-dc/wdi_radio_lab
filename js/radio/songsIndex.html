@@ -1,7 +1,7 @@
 <h2>These are the Songs</h2>
 
 <div data-ng-repeat="song in SongsIndexViewModel.songs | orderBy:'-created_at'">
-  <p><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a></p>
+  <song-show data-song='song'></song-show>
 </div>
 
 <h3>Create a new song:</h3>
