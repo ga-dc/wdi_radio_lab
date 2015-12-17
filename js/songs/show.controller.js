@@ -13,7 +13,6 @@
     this.song = SongFactory.get({id: $stateParams.id});
     this.delete = function(){
       this.song.$remove({id: $stateParams.id})
-      console.log("this is happening")
     }
   }
 }());
