@@ -1,0 +1,12 @@
+<div class="user-nav">
+  <div ng-show="currentUser">
+    Welcome, {{currentUser.email}}
+    <a data-ui-sref="logout">Logout</a>
+  </div>
+
+  <div ng-show="!currentUser">
+    <a data-ui-sref="Welcome">Home</a>
+    <a data-ui-sref="signup">Sign Up</a>
+    <a data-ui-sref="signin">Sign In</a>
+  </div>
+</div>
