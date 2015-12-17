@@ -1,5 +1,7 @@
-<h2><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a> - {{song.artist}}</h2>
-<div ng-show="showType =='show'">
+<!-- <h2><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a> - {{song.artist}}</h2> -->
+<h2><a href ng-click="show=!show">{{song.title}}</a> - {{song.artist}}</h2>
+<div ng-show="show || showType=='show'">
   <img data-ng-src="{{song.album_art}}">
   <a data-ui-sref="songEdit({id:song.id})">Edit Song</a>
+  <audio controls autoplay data-ng-src="{{song.encodedUrl}}"></audio>
 </div>
