@@ -1,5 +1,7 @@
 <h2>{{SongShowViewModel.song.title}}</h2>
-<p><dfn>Artist:</dfn> {{SongShowViewModel.song.artist}}</p>
-<p><dfn>Created:</dfn> {{SongShowViewModel.song.created_at}}</p>
+
+
+  <song-show data-song='SongShowViewModel.song'></song-show>
+
 
 <song-form data-song="SongShowViewModel.song" data-form-type='edit'></song-form>
