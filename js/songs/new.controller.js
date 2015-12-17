@@ -12,6 +12,6 @@
     this.newSong = new SongFactory;
     this.create = function(){
       this.newSong.$save()
-    }
+    };
   }
 })()

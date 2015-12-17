@@ -1,8 +1,3 @@
 <h2>Add a new song</h2>
 
-<form>
-  <label for="title">Title</label><input type="text" name="title" data-ng-model="SongNewViewModel.newSong.title">
-  <label for="artist">Artist</label><input type="text" name="artist" data-ng-model="SongNewViewModel.newSong.artist">
-  <label for="genre">Genre</label><input type="text" name="genre" data-ng-model="SongNewViewModel.newSong.genre">
-  <button ng-click="SongNewViewModel.create()">Create</button>
-</form>
+<div data-form-directive data-song="SongNewViewModel.newSong" data-form-type="new"></div>

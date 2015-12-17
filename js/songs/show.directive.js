@@ -20,12 +20,7 @@
       link: function(scope){
 
       }
-
-
     }
-
-
-
   }
 
 })()

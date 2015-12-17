@@ -1,14 +1,2 @@
 <div data-show-directive data-song="SongShowViewModel.song"></div>
-
-<!-- <h2>{{SongShowViewModel.song.title}}</h2>
-
-<audio autoplay data-ng-src="{{SongShowViewModel.song.audio_url}}" ></audio>
-
-<button data-ng-click="SongShowViewModel.delete()">Delete</button>
-<button data-ng-click="SongShowViewModel.toggleForm()">Edit</button>
-<form data-ng-show="SongShowViewModel.formVisible">
-  <label for="title">Title</label><input type="text" name="title" data-ng-model="SongShowViewModel.song.title">
-  <label for="artist">Artist</label><input type="text" name="artist" data-ng-model="SongShowViewModel.song.artist">
-  <label for="genre">Genre</label><input type="text" name="genre" data-ng-model="SongShowViewModel.song.genre">
-  <button ng-click="SongShowViewModel.update()">Save</button>
-</form> -->
+<div data-form-directive data-song="SongShowViewModel.song" data-form-type="edit"></div>
