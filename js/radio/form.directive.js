@@ -4,17 +4,17 @@
   angular
   .module('radio')
   .directive('songForm', 
-    ['$state',
-    'SongsFactory',
+    ['SongsFactory',
+    '$state',
     songFormFunction]);
 
-    function songFormFunction($state, SongsFactory){
+    function songFormFunction(SongsFactory, $state){
       return {
         templateUrl: 'js/radio/_song_form.html',
         replace: true,
         scope: {
-          song: '=',
-          formType: '@'
+          song: '='
+          // formType: '@'
         },
         link: linkFunction
       }
@@ -26,13 +26,18 @@
           });
         }
         scope.update = function() {
-          SongsFactory.update(scope.song, function(song) {
-            $state.go('songShow', song);
+          SongsFactory.update(scope.song, function(response) {
+            console.log(response);
+      
+            // , function(song) {
+            // $state.go('songShow', song);
           });
         }
         scope.destroy = function() {
-          SongsFactory.destroy(scope.song, function() {
-            $state.go('songIndex');
+          SongsFactory.destroy(scope.song, function(response) {
+            console.log(response);
+            // , function() {
+            // $state.go('songIndex');
           })
         }
       }

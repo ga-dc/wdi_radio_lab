@@ -1,11 +1,11 @@
 <div>
 
 	<form>
-	  <input placeholder="Title" data-ng-model="SongsIndexViewModel.song.title" />
-	  <input placeholder="Artist" data-ng-model="SongsIndexViewModel.song.artist" />
-	  <input placeholder="Album Art" data-ng-model="SongsIndexViewModel.song.album_art" />
-	  <input placeholder="Genre" data-ng-model="SongsIndexViewModel.song.genre" />
-	  <input placeholder="Audio URL" data-ng-model="SongsIndexViewModel.song.audio_url" />
+	  <input type="text" name="title" placeholder="Title" data-ng-model="song.title" />
+	  <input type="text" name="artist" placeholder="Artist" data-ng-model="song.artist" />
+	  <input type="text" name="albumArt" placeholder="Album Art" data-ng-model="song.album_art" />
+	  <input type="text" name="genre" placeholder="Genre" data-ng-model="song.genre" />
+	  <input type="text" name="audioUrl" placeholder="Audio URL" data-ng-model="song.audio_url" />
 
 	  <button type="button" data-ng-click="create()">Create</button>
 
