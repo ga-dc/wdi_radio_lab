@@ -1,0 +1,15 @@
+<button data-ng-click="showNewForm">Add New Song</button>
+<!-- ^ need code to show form -->
+<song-form data-song="IndexViewModel.song" data-form-type="new"></song-form>
+
+
+
+<h2>Songs</h2>
+
+<div data-ng-repeat="song in IndexViewModel.songs | orderBy:'-title'">
+  {{song.title}}
+  <song-show data-song="song"></song-show>
+
+
+
+</div>

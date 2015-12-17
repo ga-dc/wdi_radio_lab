@@ -1,0 +1,14 @@
+<form>
+  <input placeholder="Title" data-ng-model="song.title" />
+  <input placeholder="Arist name" data-ng-model="song.artist" />
+  <input placeholder="Audio URL" data-ng-model="song.audio_url" />
+  <input placeholder="Album Art URL" data-ng-model="song.album_art" />
+  <input placeholder="Genre" data-ng-model="song.genre"></input>
+  <button data-ng-click="hideForm">&larr; Cancel</a>
+  <div data-ng-show="formType == 'edit'">
+    <button data-ng-click='update()'>Save</button>
+  </div>
+  <div data-ng-show="formType == 'new'">
+    <button data-ng-click='create()'>Add Song</button>
+  </div>
+</form>
