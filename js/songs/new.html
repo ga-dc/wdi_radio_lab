@@ -1,9 +1,3 @@
 <h2>New Song</h2>
 
-<form>
-  <input placeholder="Title" data-ng-model="SongNewViewModel.song.title" />
-  <input placeholder="Artist name" data-ng-model="SongNewViewModel.song.artist" />
-  <input placeholder="Album Art" data-ng-model="SongNewViewModel.song.album_art" />
-  <textarea placeholder="Audio URL" data-ng-model="SongNewViewModel.song.audio_url"></textarea>
-  <button type="button" data-ng-click="SongNewViewModel.create()">Save</button>
-</form>
+<div data-song-form data-song="SongNewViewModel.song" data-form-type="new"></div>

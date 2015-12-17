@@ -2,5 +2,5 @@
 <p><a data-ui-sref="songNew">Add a New Song</a><p>
 
 <div data-ng-repeat="song in SongIndexViewModel.songs | orderBy:'-created_at'">
-  <p><a data-ui-sref="songShow({id: song.id})">{{song.title}} by {{song.artist}}</a></p>
+  <div data-song-show data-song="song"></div>
 </div>
