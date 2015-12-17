@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html data-ng-app="webradio">
   <head>
-    <title>WDI Radio</title>
+    <title>Web Radio</title>
     <!-- add bootstrap -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/styles.css">
@@ -10,23 +10,35 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
 
+<!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-sanitize.js"></script> -->
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="js/app.js"></script>
+
+<script src="https://cdn.rawgit.com/Sinetheta/burn/master/jquery.burn.min.js"></script>
+<!-- <script src="js/jquery.burn.js"></script> -->
+
+<script src="js/animation.js"></script>
 <script src="js/songs/songs.js"></script>
+
 
 <script src="js/songs/index.controller.js"></script>
 <script src="js/songs/song.factory.js"></script>
+<script src="player.directive.js"></script>
+<script src="song.directive.js"></script>
 
   </head>
   <body >
+<div class="container">
+    <div><h1 id="logo" class="centerdiv burn">Web Radio</h1>  </div>
 
-    <header>WDI Radio</header>
     <main data-ui-view></main>
 
-    <div data-ng-repeat="song in WebradioIndexViewModel.songs | orderBy:'-title'">
+    <!-- <div data-ng-repeat="song in WebradioIndexViewModel.songs | orderBy:'-title'"> -->
       <!-- <p><a data-ui-sref="songShow({id: grumble.id})">{{song.title}}</a></p> -->
-      <p> songs</p>
-    </div>
+      <!-- <p> songs</p> -->
+    <!-- </div> -->
 
-
+</div>
   </body>
 </html>

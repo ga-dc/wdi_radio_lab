@@ -1,7 +1,33 @@
-<h2>songs page</h2>
 
-<div data-ng-repeat="song in SongIndexViewModel.songs | orderBy:'-authorName'">
-  <!-- <p> songs</p> -->
-  <!-- <p>{{}}</p> -->
-    <p><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a></p>
+
+<div data-song-player data-ng-if="SongsIndexViewModel.playSong" data-song="SongsIndexViewModel.playSong"></div>
+
+<div class="wrapper">
+<div id="movedown" class="row">
+
+<div class = "col-md-4 scene" data-ng-repeat="song in SongIndexViewModel.songs | orderBy:'title'">
+<!-- <div class="songPlayer"><audio-player data-song='encodedUrl'></audio-player> </div> -->
+<div class="songPLyaer">
+  <audio data-ng-src="{{song.encodedUrl}}" audioplayer controls >
+
+  <!-- <source data-ng-src="{{song.encodedUrl}}"> -->
+
+</audio>
+<a ><p>{{song.title}}</p></a>
+</div>
+  <div>
+
+  </div>
+    <div class="movie">
+      <div class="poster">
+          <img class="album-img" data-ng-src="{{song.album_art}}">
+      </div>
+      <div class="info">
+        <p>{{song.title}}</p>
+        <p>{{song.artist}}</p>
+        <p>{{song.genre}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

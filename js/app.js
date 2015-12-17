@@ -5,7 +5,7 @@
   .module("webradio", [
     "ui.router",
     "songs",
-    // "ui.bootstrap"
+    // "ngAudio",
   ])
   .config([
     "$stateProvider",
@@ -26,6 +26,11 @@ function RouterFunction($stateProvider){
   controller:"SongIndexController",
   controllerAs: "SongIndexViewModel"
 })
-
+// .state("audioPlayer", {
+//   url: "/audios",
+//   templateUrl: "/js/songs/audio.html",
+//   controller:"audioPlayerController",
+//   controllerAs: "SongIndexViewModel"
+// })
 }
 })();
