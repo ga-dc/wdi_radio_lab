@@ -29,18 +29,12 @@
           console.log(scope.song)
           scope.song.$update({id: scope.song.id}, function(response) {
             console.log(response);
-      
-            // , function(song) {
-            // $state.go('songShow', song);
           });
         }
         scope.destroy = function() {
-          SongsFactory.remove(scope.song, function(response) {
-            console.log(response);
-            // $state.go("songIndex", {});
-            // , function() {
-            // $state.go('songIndex');
-          })
+          SongsFactory.remove(scope.song, function() {
+            $state.go('songsIndex');
+          });
         }
       }
     }
