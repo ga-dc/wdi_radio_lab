@@ -11,14 +11,19 @@
         song: '=',
         formType: '@'
       },
-      link: linkFunction
+      link: createFunction
     }
 
-    function linkFunction(scope){
+    function createFunction(scope){
       scope.create = function(){
         SongFactory.save(scope.song, function(song){
           $state.go('songsIndex');
-        });
+        })
+      }
+      scope.update = function(){
+        scope.song.$update({id: scope.song.id}, function(song){
+            $state.go('songsIndex');
+        })
       }
     }
   }
