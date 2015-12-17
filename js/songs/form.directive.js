@@ -10,7 +10,8 @@
     return{
       templateUrl: "js/songs/_song_form.html",
       scope: {
-        song: '='
+        song: '=',
+        formType: '@'
       },
       link: function(scope){
         scope.create = function(){

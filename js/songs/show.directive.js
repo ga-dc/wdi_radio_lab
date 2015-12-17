@@ -7,7 +7,8 @@
     return {
       templateUrl: "js/songs/_song_show.html",
       scope: {
-        song: '='
+        song: '=',
+        showType: '@'
       }
     }
   })
