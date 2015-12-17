@@ -1,0 +1,8 @@
+<div class="song">
+  <h2><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a></h2>
+  <p>By: {{song.artist}}</p>
+  <img data-ng-src="{{song.album_art}}">
+  <p>{{song.genre}}</p>
+  <p>Created At: {{song.created_at}}</p>
+  <audio controls><source="{{song.audioUrl}}" type="audio/mpeg"/></audio>
+</div>
