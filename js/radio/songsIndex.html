@@ -1,9 +1,16 @@
 <h2>These are the Songs</h2>
 
 <h3>Create a new song:</h3>
-
 <song-form data-song="SongsIndexViewModel.song" data-form-type='new'></song-form>
 
 <div data-ng-repeat="song in SongsIndexViewModel.songs | orderBy:'-created_at'">
-  <song-show data-song='song'></song-show>
+
+<p ng-hide='songDetails'><a data-ui-sref='songShow({id: song.id})'>{{song.title}}</a>, by {{song.artist}}</p>
+<button ng-click='songDetails = !songDetails' ng-hide='songDetails'>View details</button>
+	<div ng-show='songDetails'>
+  	<song-show data-song='song'></song-show>
+  	<button ng-click='songDetails = !songDetails' ng-hide='!songDetails'>Hide details</button>
+  	<hr>
+  	</div>
+
 </div>
