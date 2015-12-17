@@ -1,7 +1,10 @@
-<h2>These are all the Songs</h2>
+<h2>Songs</h2>
+<label>Search:</label>
+<input ng-model="query" placeholder="Search Artist or Song" autofocus>
+
 <a data-ui-sref="songNew({id: song.id})">New</a>
 
-<div data-ng-repeat="song in SongIndexViewModel.songs">
+<div data-ng-repeat="song in SongIndexViewModel.songs | filter: query">
   <p><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a></p>
   <a data-ui-sref="songEdit({id: song.id})">Edit</a>
 </div>
