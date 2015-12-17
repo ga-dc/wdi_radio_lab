@@ -14,19 +14,22 @@
   <script src="js/songs/index.controller.js"></script>
   <script src="js/songs/show.controller.js"></script>
   <script src="js/songs/songs.factory.js"></script>
+  <script src="js/songs/songs.directive.js"></script>
   <script src="js/songs/edit.controller.js"></script>
-
 
 </head>
 
 <body>
+  <div class="nav">
   <header>WDI Radio</header>
-
-  Welcome to the World's Best Song App
-
-  <h1><a data-ui-sref="songsIndex">Radio Lab</a></h1>
+  <p>Welcome to the World's Best Song App</p>
+</div>
+<div class="container">
+  <h1>
+    <a data-ui-sref="songsIndex">Radio Lab</a>
+  </h1>
   <main data-ui-view></main>
-
+</div>
 </body>
 
 </html>

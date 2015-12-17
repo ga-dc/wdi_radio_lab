@@ -1,0 +1,12 @@
+<div class="song">
+  <a data-ui-sref="songsDirective({id: song.id})">
+    <h2>{{song.title}}</h2>
+  </a>
+
+  Artist: <p>{{song.artist}}</p>
+  <img data-ng-src="{{song.album_art}}"></img>
+  <p>{{song.genre}}</p>
+
+  <a data-ui-sref="songEdit({id: song.id})">Edit</a>
+
+</div>

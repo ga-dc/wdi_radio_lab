@@ -15,10 +15,14 @@
   decending
   <input type="radio" ng-model="direction" name="direction" value="reverse">
 </label> -->
+<!-- <songs-directive data-song="SongIndexViewModel.song"></songs-directive> -->
 
-<a data-ui-sref="songNew({id: song.id})">New</a>
-
+<!-- <a data-ui-sref="songNew({id: song.id})">New</a>
 <div data-ng-repeat="song in SongIndexViewModel.songs | filter: query | orderBy: songOrder">
   <p><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a></p>
   <a data-ui-sref="songEdit({id: song.id})">Edit</a>
+</div> -->
+
+<div data-ng-repeat="song in SongIndexViewModel.songs">
+  <songs-directive data-song="song"></songs-directive>
 </div>

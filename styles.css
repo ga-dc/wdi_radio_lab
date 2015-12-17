@@ -1,3 +1,16 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
 body {
   background-color: orange;
+  font-family: "Helvetica";
+}
+
+.nav {
+  background-color: tomato;
+}
+
+.container {
+  padding: 10px;
 }
