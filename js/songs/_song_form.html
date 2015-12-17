@@ -1,0 +1,16 @@
+<div class="song-form">
+  <form>
+    <label>Title</label>
+    <input type='text' name='title' ng-model='song.title'>
+    <label>Artist</label>
+    <input type='text' name='artist' ng-model='song.artist'>
+    <div ng-show="formType == 'edit'">
+      <a data-ui-sref='songShow({id: song.id})'>&larr; Back</a>
+      <button ng-click='update()'>Save</button>
+      <button ng-click='destroy()'>Delete</button>
+    </div>
+    <div ng-show="formType == 'new'">
+      <button ng-click='create()'>New Song</button>
+    </div>
+  </form>
+</div>
