@@ -1,0 +1,10 @@
+<form>
+  title: <input type = "text" name="title" data-ng-model="song.title" />
+  artist: <input type = "text" name="artist" data-ng-model="song.artist" />
+  album art photo URL: <input type = "text" name="album_art" data-ng-model="song.album_art" />
+  genre: <input type = "text" name="genre" data-ng-model="song.genre"/>
+  created at: <input type = "text" name="created_at" data-ng-model="song.created_at"/>
+  audio URL source: <input type = "text" name="audio_url" data-ng-model="song.audio_url"/>
+  <a data-ui-sref='songShow({id: song.id})'>&larr; Back</a>
+  <button ng-click='update()'>Save</button>
+</form>

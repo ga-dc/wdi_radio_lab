@@ -4,5 +4,6 @@
   <img data-ng-src="{{song.album_art}}">
   <p>{{song.genre}}</p>
   <p>Created At: {{song.created_at}}</p>
-  <audio controls><source="{{song.audioUrl}}" type="audio/mpeg"/></audio>
+  <audio controls><source="{{song.audio_url}}" type="audio/mpeg"/></audio>
+  <p><a data-ui-sref="songEdit({id: song.id})">Edit</a></p>
 </div>
