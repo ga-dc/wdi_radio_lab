@@ -1,0 +1,16 @@
+<div>
+<a data-ui-sref="songShow({id: song.id})">{{song.title}} [{{song.artist}}]</a>
+<h1>{{song.title}}</h1>
+
+<h2>Artist: {{song.artist}}</h2>
+<h2>Genre: {{song.genre}}</h2>
+<img data-ng-src="{{song.album_art}}">
+
+
+<p>Added: {{song.created_at | date : "mediumDate"}}</p>
+
+<audio controls>
+  <source data-ng-src="{{song.audio_url}}" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
+</div>

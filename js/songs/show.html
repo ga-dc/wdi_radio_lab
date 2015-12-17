@@ -1,13 +1,1 @@
-<h1>{{SongShowViewModel.song.title}}</h1>
-
-<h2>Artist: {{SongShowViewModel.song.artist}}</h2>
-<h2>Genre: {{SongShowViewModel.song.genre}}</h2>
-<img data-ng-src="{{SongShowViewModel.song.album_art}}">
-
-
-<p>Added: {{SongShowViewModel.song.created_at | date : "mediumDate"}}</p>
-
-<audio controls>
-  <source data-ng-src="{{SongShowViewModel.song.audio_url}}" type="audio/mpeg">
-  Your browser does not support the audio tag.
-</audio>
+<div data-song-show data-song="SongShowViewModel.song"></div>
