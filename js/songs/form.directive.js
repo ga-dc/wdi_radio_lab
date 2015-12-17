@@ -6,7 +6,8 @@
       templateUrl: 'js/songs/_song_form.html',
       replace: true,
       scope: {
-        song: '='
+        song: '=',
+        formType: '@'
       }
     }
   });
