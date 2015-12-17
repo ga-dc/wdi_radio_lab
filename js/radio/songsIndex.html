@@ -1,15 +1,9 @@
 <h2>These are the Songs</h2>
 
+<h3>Create a new song:</h3>
+
+<song-form data-song="SongsIndexViewModel.song" data-form-type='new'></song-form>
+
 <div data-ng-repeat="song in SongsIndexViewModel.songs | orderBy:'-created_at'">
   <song-show data-song='song'></song-show>
 </div>
-
-<h3>Create a new song:</h3>
-<form>
-  <input placeholder="Title" data-ng-model="SongsIndexViewModel.newSong.title" />
-  <input placeholder="Artist" data-ng-model="SongsIndexViewModel.newSong.artist" />
-  <input placeholder="Album Art" data-ng-model="SongsIndexViewModel.newSong.album_art" />
-  <input placeholder="Genre" data-ng-model="SongsIndexViewModel.newSong.genre" />
-  <input placeholder="Audio URL" data-ng-model="SongsIndexViewModel.newSong.audio_url" />
-  <button type="button" data-ng-click="SongsIndexViewModel.create()">Create</button>
-</form>
