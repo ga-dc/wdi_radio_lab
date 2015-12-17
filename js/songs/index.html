@@ -22,7 +22,7 @@
   <p><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a></p>
   <a data-ui-sref="songEdit({id: song.id})">Edit</a>
 </div> -->
-
+<a data-ui-sref="songNew({id: song.id})">New</a>
 <div data-ng-repeat="song in SongIndexViewModel.songs">
   <songs-directive data-song="song"></songs-directive>
 </div>
