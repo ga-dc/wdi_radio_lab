@@ -5,13 +5,11 @@
     .module("songs")
     .controller("IndexController", [
       "SongFactory",
-      "$stateParams",
       IndexControllerFunction
 
     ]);
 
-    function IndexControllerFunction(SongFactory, $stateParams){
-      this.song = SongFactory.get({id: $stateParams.id});
+    function IndexControllerFunction(SongFactory){
       this.songs = SongFactory.query();
       this.newSong = new SongFactory();
       this.create = function() {
