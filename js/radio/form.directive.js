@@ -14,8 +14,8 @@
         replace: true,
         scope: {
           song: '=',
-          newSong: '='
-          // formType: '@'
+          newSong: '=',
+          formType: '@'
         },
         link: linkFunction
       }
