@@ -1,7 +1,7 @@
 
 
 ### Root Route
-- require dependencies in main `index.html`
+- require dependencies in main `index.html` 
 - define main `app.js`
 - add `ng-app`
 - add a `data-ui-view`

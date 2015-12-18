@@ -1,0 +1,28 @@
+<h2>Songs</h2>
+<label>Search:</label>
+<input ng-model="query" placeholder="Search Artist or Song" autofocus>
+<label>Ascend by:
+  <select ng-model="songOrder">
+    <option value="title">Song</option>
+    <option value="artist">Artist</option>
+  </select>
+</label>
+<!-- <label>
+  <input type="radio" ng-model="direction" name="direction" checked>
+  asending
+</label>
+<label>
+  decending
+  <input type="radio" ng-model="direction" name="direction" value="reverse">
+</label> -->
+<!-- <songs-directive data-song="SongIndexViewModel.song"></songs-directive> -->
+
+<!-- <a data-ui-sref="songNew({id: song.id})">New</a>
+<div data-ng-repeat="song in SongIndexViewModel.songs | filter: query | orderBy: songOrder">
+  <p><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a></p>
+  <a data-ui-sref="songEdit({id: song.id})">Edit</a>
+</div> -->
+<a data-ui-sref="songNew({id: song.id})">New</a>
+<div data-ng-repeat="song in SongIndexViewModel.songs | filter: query | orderBy: songOrder">
+  <songs-directive data-song="song"></songs-directive>
+</div>

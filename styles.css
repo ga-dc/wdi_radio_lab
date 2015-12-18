@@ -1,0 +1,63 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+}
+/*.button {
+  margin: 20px;
+  padding: 5px;
+  background-color: orange;
+  bor
+}*/
+img {
+  height: 100px;
+  padding: 10px
+}
+
+a {
+  color: tomato;
+}
+
+a:hover {
+  color: orange;
+}
+body {
+  font-family: "Helvetica";
+}
+
+.nav {
+  background-color: tomato;
+  padding: 20px;
+  color: white;
+}
+
+.nav a{
+  color:white;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: darkorange;
+}
+.container {
+  padding: 20px;
+}
+ input {
+   display: block;
+ }
+
+ footer {
+   background-color: tomato;
+   color: white;
+   padding: 20px;
+   text-align: right;
+ }
+
+ .dets {
+   position: relative;
+   left: 120px;
+   bottom: 110px;
+ }
+.song {
+  padding: 10px;
+}
