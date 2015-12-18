@@ -16,11 +16,14 @@
     <script src="js/songs/form.directive.js"></script>
     <script src="js/songs/player.directive.js"></script>
     <script src="js/users/sessions.controller.js"></script>
+    <script src="js/users/auth.directive.js"></script>
+
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
       <h1><a data-ui-sref="songIndex">WDI Radio</a></h1>
+      <nav data-auth-nav></nav>
     </header>
     <div class='main' data-ui-view></div>
     <footer>&copy;2015 GA WDI</footer>
