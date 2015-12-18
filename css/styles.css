@@ -13,16 +13,18 @@ background-size:cover;
   position:fixed;
   padding:1em;
   bottom:0;
-  background:#000;
+  /*background:#000;*/
   color:#fff;
   z-index:3;
   /*left:0;*/
+  /*height: 30px;*/
   width:100%;
 }
 .songPlayer h2{
   margin-top:.5em;
   margin-bottom:.5em;
-  font-size: 15px;
+  font-size: 20px;
+    text-shadow: 0 0 2px black;
 }
 
 .centerdiv{
@@ -53,6 +55,10 @@ a{
   color: red;
   font-weight: bold;
   text-shadow: 0 0 2px black;
+}
+
+h3{
+  color: #CED5CE;
 }
 
 label{
