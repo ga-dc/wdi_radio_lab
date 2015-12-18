@@ -7,6 +7,6 @@
     ]);
 
     function FactoryFunction($resource){
-      return $resource("http://localhost:3000/songs");
+      return $resource("http://localhost:3000/songs/:id");
     }
 }());
