@@ -15,6 +15,7 @@
     "$stateProvider",
     RouterFunction
   ]);
+  
   function AuthConfigFunction($authProvider){
     $authProvider.configure({
       apiUrl: "http://localhost:3000"

@@ -28,9 +28,7 @@
           })
         }
         scope.update = function(){
-          scope.song.$update({id: scope.song.id},function(song){
-            scope.toggleForm();
-          })
+          scope.song.$update({id: scope.song.id})
         }
         scope.toggleForm = function(){
           scope.formVisible = (scope.formVisible)?false:true;
