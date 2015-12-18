@@ -27,6 +27,7 @@
         }
         scope.destroy = function(){
           scope.song.$delete({id: scope.song.id}, function(song){
+            scope.songs.splice(scope.songs.indexOf(song), 1);
             $state.go('songIndex', {}, {refresh:true});
           });
         }

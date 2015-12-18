@@ -5,11 +5,14 @@ img {
   max-width: 400px;
 }
 .smallimg {
-  max-height: 50px;
+  max-height: 75px;
+  margin-bottom: 10px;
 }
 .songsDiv {
   border: 2px solid grey;
-  max-width: 500px;
+  border-left: 50px solid black;
+  border-right: 50px solid black;
+  max-width: 300px;
   margin: auto;
 }
 
@@ -31,4 +34,30 @@ form {
   margin-right: auto;
   text-align: center;
   padding: 5px;
+}
+
+span {
+  border: 2px solid black;
+  padding: 3px;
+}
+
+span:hover {
+  background-color: black;
+  color: white;
+}
+
+.fixed {
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:100;
+}
+.spacemaker{
+  height: 50px;
+}
+.playing{
+  color: white;
+  background: black;
+  max-width: 300px;
+  border: 2px solid grey
 }

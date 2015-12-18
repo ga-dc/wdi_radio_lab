@@ -1,8 +1,13 @@
 <h2 class="title">Songs Index</h2>
 
+<div class="fixed">
+  <div class="title playing">Now Playing: {{SongIndexViewModel.currentSong.title}}</div>
+  <audio class="title" controls autoplay ng-src={{SongIndexViewModel.currentSong.niceUrl}}></audio>
+</div>
 <song-form data-song="SongIndexViewModel.song" data-form-type="new" data-songs="SongIndexViewModel.songs"></song-form>
 
 
 <div class="songsDiv" data-ng-repeat="song in SongIndexViewModel.songs | orderBy: '-created_at'">
-  <song-show data-song="song" data-show-link="true" data-vm="SongIndexViewModel"></song-show>
+  <song-show data-song="song" data-vm="SongIndexViewModel"></song-show>
+  <song-form  data-songs="SongIndexViewModel.songs" data-song="song" data-form-type="edit"></song-form>
 </div>

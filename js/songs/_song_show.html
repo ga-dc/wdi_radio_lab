@@ -1,13 +1,3 @@
 <div>
-  <div ng-show="!showLink">
-    <h2 class="title">{{song.title}}</h2>
-    <div>
-      <p>Artist - {{song.artist}} | Genre - "{{song.genre}}"</p>
-      <img data-ng-src={{song.album_art}} src="#"/>
-      <audio class="title" controls ng-src="{{song.niceUrl}}"></audio>
-    </div>
-  </div>
-  <div ng-show="showLink">
-  <p><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a> | Artist: {{song.artist}} <img  data-ng-click="selectSong(song)" class="smallimg" data-ng-src={{song.album_art}} src="#"/></p>
-  </div>
+  <p>{{song.title}} - Artist: {{song.artist}} - Genre: {{song.genre}}<img class="smallimg" data-ng-src={{song.album_art}} src="#"/><span data-ng-click="selectSong(song)"> &#9658;</span></p>
 </div>
