@@ -16,12 +16,13 @@ background-size:cover;
   background:#000;
   color:#fff;
   z-index:3;
-  left:0;
+  /*left:0;*/
   width:100%;
 }
 .songPlayer h2{
   margin-top:.5em;
   margin-bottom:.5em;
+  font-size: 15px;
 }
 
 .centerdiv{
@@ -55,7 +56,7 @@ a{
 }
 
 label{
-  color: white; 
+  color: white;
 }
 
 .wrapper {

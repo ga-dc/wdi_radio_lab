@@ -6,7 +6,6 @@
   .controller("SongIndexController", [
     "SongFactory",
     "$sce",
-    // "$sceDelegateProvider",
     SongIndexControllerFunction
   ]);
 

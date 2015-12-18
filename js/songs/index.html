@@ -1,24 +1,18 @@
 
 
 <!-- <div data-song-player data-ng-if="SongsIndexViewModel.playSong" data-song="SongsIndexViewModel.playSong"></div> -->
-<song-player></song-player>
+<!-- <song-player>SongIndexViewModel.playSong</song-player> -->
 
 <div class="wrapper">
 <div id="movedown" class="row">
 
 <div class = "col-md-4 scene" data-ng-repeat="song in SongIndexViewModel.songs | orderBy:'title'">
-<!-- <div class="songPlayer"><audio-player data-song='encodedUrl'></audio-player> </div> -->
-<div class="songPLyaer">
-  <audio audioplayer controls >
 
-  <!-- <source data-ng-src="{{song.encodedUrl}}"> -->
-
-</audio>
-<a ><p>{{song.title}}</p></a>
+  <div data-song-player  data-song="song" data-ng-click="SongIndexViewModel.play(song)">
 </div>
-  <div>
+<a ><p>{{song.title}}</p></a>
 
-  </div>
+
     <div class="movie">
       <div class="poster">
           <img class="album-img" data-ng-src="{{song.album_art}}">
