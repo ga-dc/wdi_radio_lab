@@ -22,7 +22,7 @@
             })
             .catch(function(err) {
               scope.currentUser = undefined;
-            });
+            })
         }
       };
     });

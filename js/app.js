@@ -60,7 +60,7 @@
         controller: "SessionsController",
         controllerAs: "SessionsViewModel"
       })
-      state("signout", {
+      .state("signout", {
         url: "/signout",
         templateUrl: "js/users/signout.html",
         controller: "SessionsController",
