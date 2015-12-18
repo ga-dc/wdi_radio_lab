@@ -12,10 +12,10 @@
   function SongIndexControllerFunction($sce,SongFactory){
     this.songs = SongFactory.query();
     this.newSong = new SongFactory();
+    this.playSong;
     this.play = function(song){
-      this.playSong = song
-      // workaround for ng-src not allowing expression {{song.audio_url}}
-      this.playSong.encodedUrl = $sce.trustAsResourceUrl(song.audio_url)
+      this.playSong = song;
+      this.playSong.encodedUrl = $sce.trustAsResourceUrl(song.audio_url);
     }
   }
 

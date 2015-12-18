@@ -35,7 +35,7 @@
         scope.toggleForm = function(){
           scope.formVisible = (scope.formVisible)?false:true;
         }
-        scope.formVisible = (scope.formType=='edit')?false:true;
+        scope.formVisible = false;//(scope.formType=='edit')?false:true;
       }
     }
   }

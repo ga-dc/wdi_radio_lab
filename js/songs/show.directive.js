@@ -18,7 +18,7 @@
       scope:{
         song: "="
       },
-      link: function(scope,el){
+      link: function(scope){
         scope.song = SongFactory.get({id: scope.song.id});
         scope.showBody = false;
         scope.arrow = '\u2193';

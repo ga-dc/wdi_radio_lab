@@ -2,6 +2,9 @@
   <div data-ng-show="formType=='edit'">
     <button data-ng-click="toggleForm()">Edit</button>
   </div>
+  <div data-ng-show="formType=='new'">
+    <button data-ng-click="toggleForm()">Create New Song</button>
+  </div>
   <form data-ng-show="formVisible">
     <label for="title">Title</label><input type="text" name="title" data-ng-model="song.title">
     <label for="artist">Artist</label><input type="text" name="artist" data-ng-model="song.artist">
