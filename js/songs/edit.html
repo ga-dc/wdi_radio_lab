@@ -1,0 +1,10 @@
+<h2>Edit Song</h2>
+
+<form>
+  <input value="SongsEditViewModel.song.title" data-ng-model="SongsEditViewModel.song.title" />
+  <input value="SongsEditViewModel.song.artistName" data-ng-model="SongsEditViewModel.song.artistName" />
+  <input value="SongsEditViewModel.song.photoUrl" data-ng-model="SongsEditViewModel.song.photoUrl" />
+  <button data-ng-click="SongsEditViewModel.Update()"
+  >Update</button>
+  <button data-ng-click="SongsEditViewModel.destroy()">Delete</button>
+</form>

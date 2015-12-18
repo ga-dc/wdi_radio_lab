@@ -1,0 +1,13 @@
+<div class="song">
+
+  <a data-ng-show="showLink" data-ui-sref="songShow({id: song.id})">
+    <h2>{{song.title}}</h2>
+  </a>
+
+  Artist: <p>{{song.artist}}</p>
+  <img data-ng-src="{{song.audio_Url}}"></img>
+  <p>{{song.content}}</p>
+
+  <a data-ui-sref="songEdit({id: song.id})">Edit</a>
+
+</div>
