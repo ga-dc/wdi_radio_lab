@@ -1,10 +1,16 @@
 <h2>All Songs</h2>
 
 <!-- User Can Click to Show Create New Form -->
-<button data-song-form data-song="IndexViewModel.newSong">Create New Song</button>
+<div>
+  <button type="button">Create New Song</button>
+</div>
 
-<song-form data-song="IndexViewModel.newSong"></song-form>
+<!-- Clicking on the button shows this form -->
+<div>
+  <song-form data-song="IndexViewModel.newSong"></song-form>
+</div>
 
+<!-- Shows all the songs -->
 <div data-ng-repeat="song in IndexViewModel.songs">
   <h2>{{song.title}}</h2>
   <h3 >{{song.artist}}</h3>
