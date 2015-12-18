@@ -1,3 +1,5 @@
+<div class='song-form' data-form-directive data-song="SongIndexViewModel.newSong" data-form-type="new"></div>
+<div class='song-player' data-player-directive data-ng-show="SongIndexViewModel.playSong" data-song="SongIndexViewModel.playSong"></div>
 <div data-ng-repeat="song in SongIndexViewModel.songs | orderBy:'-created_at'">
-  <p><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a></p>
+  <div class='song-show' data-show-directive data-song="song" data-ng-click="SongIndexViewModel.play(song)"></div>
 </div>
