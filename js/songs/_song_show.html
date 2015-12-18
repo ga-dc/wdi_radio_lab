@@ -4,5 +4,6 @@
   <p>{{song.artist}}</p>
   <img data-ng-src="{{song.album_art}}"></img>
   <p>{{song.genre}}</p>
+  <audio controls autoplay ng-src="{{song.audio_url}}"></audio>
   <a class="button" data-ui-sref="songEdit({id: song.id})">Edit</a>
 </div>

@@ -3,11 +3,12 @@
   margin: 0px;
   text-decoration: none;
 }
-.button {
-  margin-top: 20px;
-  padding: 10px;
+/*.button {
+  margin: 20px;
+  padding: 5px;
   background-color: orange;
-}
+  bor
+}*/
 
 a {
   color: tomato;
@@ -39,4 +40,11 @@ body {
 }
  input {
    display: block;
+ }
+
+ footer {
+   background-color: tomato;
+   color: white;
+   padding: 20px;
+   text-align: right;
  }
