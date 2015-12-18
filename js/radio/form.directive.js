@@ -14,7 +14,6 @@
         replace: true,
         scope: {
           song: '=',
-          newSong: '=',
           formType: '@'
         },
         link: linkFunction
@@ -22,8 +21,8 @@
 
       function linkFunction(scope) {
         scope.create = function(){
-          SongsFactory.save(scope.newSong, function(song) {
-            $state.go('songShow', newSong);
+          SongsFactory.save(scope.song, function(song) {
+            $state.go('songShow', song);
           });
         }
         scope.update = function() {

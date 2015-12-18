@@ -12,7 +12,7 @@
 
     function SongsIndexControllerFunction( SongsFactory, $stateParams ){
       this.songs = SongsFactory.query();
-      this.newSong = new SongsFactory();
+      this.song = new SongsFactory();
 
       // this.create = function(){
       //   this.song.$save();
