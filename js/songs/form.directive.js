@@ -11,6 +11,7 @@
   function FormDirectiveFunction(SongFactory, $state){
     return{
       templateUrl: "js/songs/_form.html",
+      restrict: "E",
       scope: {
         song: "="
       },
