@@ -9,6 +9,10 @@
   background-color: orange;
   bor
 }*/
+img {
+  height: 100px;
+  padding: 10px
+}
 
 a {
   color: tomato;
@@ -48,3 +52,12 @@ body {
    padding: 20px;
    text-align: right;
  }
+
+ .dets {
+   position: relative;
+   left: 120px;
+   bottom: 110px;
+ }
+.song {
+  padding: 10px;
+}
