@@ -2,10 +2,9 @@
   <input placeholder="Title" data-ng-model="song.title"/>
   <input placeholder="Artist" data-ng-model="song.artist"/>
   <input placeholder="Genre" data-ng-model="song.genre"/>
-  <input placeholder="Title" data-ng-model="song.title"/>
   <input placeholder="Audio URL" data-ng-model="song.audio_url"/>
   <input placeholder="Album Art" data-ng-model="song.album_art"/>
 
 <!-- If Create Form -> Create -->
-  <button type="button" data-ng-if="!song.id" data-ng-submit="create()">Create</button>
+  <button type="button" data-ng-if="!song.id" data-ng-click="create()">Create</button>
 </form>

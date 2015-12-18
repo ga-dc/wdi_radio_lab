@@ -15,13 +15,13 @@
       scope: {
         song: "="
       },
-      link: function(scope) {
-        scope.create = function() {
-          console.log("create is called");
-          scope.song.$save(function(response){
-            $state.go("index", {}, {reload: true});
-          });
-        };
+      link: function(scope){
+          scope.create = function(){
+            scope.song.$save(function(response){
+              console.log("create is called?")
+              // $state.go("songs", {}, {reload: true});
+            });
+          };
         // Start new scope here
       }
     };
