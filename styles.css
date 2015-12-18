@@ -1,0 +1,38 @@
+body {
+  background-color: lemonchiffon;
+  margin-bottom: 30px;
+}
+.auth {
+  color: grey;
+  font-size: 20px;
+  margin: auto;
+  margin-top: 50px;
+  text-align: right;
+}
+
+.container {
+  color: black;
+  font-size: 30px;
+  margin: auto;
+  background-color: lemonchiffon;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.maindata {
+  background-color:lemonchiffon;
+  font-size: 20px;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  color: green;
+}
+
+
+.show{
+  color: black;
+}
