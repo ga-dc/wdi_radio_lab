@@ -1,0 +1,69 @@
+img {
+  border: 2px solid grey;
+  display: block;
+  margin: auto;
+  max-width: 400px;
+}
+.smallimg {
+  max-height: 75px;
+  margin-bottom: 10px;
+}
+.songsDiv {
+  border: 2px solid grey;
+  border-left: 50px solid black;
+  border-right: 50px solid black;
+  max-width: 300px;
+  margin: auto;
+}
+
+p {
+  padding: 5px;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  margin: auto;
+  display: block;
+  padding: 4px;
+}
+
+form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 5px;
+}
+
+span {
+  border: 2px solid black;
+  padding: 3px;
+}
+
+span:hover {
+  background-color: black;
+  color: white;
+}
+
+.fixed {
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:100;
+}
+.spacemaker{
+  height: 50px;
+}
+.playing{
+  color: white;
+  background: black;
+  max-width: 300px;
+  border: 2px solid grey
+}
+
+.log {
+  background: grey;
+  border: 1px solid black;
+  width: 300px;
+}
