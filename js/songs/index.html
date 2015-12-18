@@ -1,6 +1,6 @@
 
 
-<div data-song-player data-ng-if="SongsIndexViewModel.playSong" data-song="SongsIndexViewModel.playSong"></div>
+<!-- <div data-song-player data-ng-if="SongsIndexViewModel.playSong" data-song="SongsIndexViewModel.playSong"></div> -->
 
 <div class="wrapper">
 <div id="movedown" class="row">
@@ -8,7 +8,7 @@
 <div class = "col-md-4 scene" data-ng-repeat="song in SongIndexViewModel.songs | orderBy:'title'">
 <!-- <div class="songPlayer"><audio-player data-song='encodedUrl'></audio-player> </div> -->
 <div class="songPLyaer">
-  <audio data-ng-src="{{song.encodedUrl}}" audioplayer controls >
+  <audio audioplayer controls >
 
   <!-- <source data-ng-src="{{song.encodedUrl}}"> -->
 
