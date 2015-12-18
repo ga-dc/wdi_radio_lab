@@ -3,11 +3,12 @@
 (function(){
   angular
   .module('songs')
-  .controller('songsController', [
-    songsControllerFunction
+  .controller('SongsController', [
+    'SongFactory',
+    SongsControllerFunction
   ]);
 
-  songsControllerFunction(){
-    
+  function SongsControllerFunction(SongFactory){
+    this.songs = SongFactory.query();
   }
 })();

@@ -4,7 +4,8 @@
   angular
   .module('radio',[
     'ui.router',
-    'ngResource'
+    'ngResource',
+    'songs'
   ])
   .config([
     '$stateProvider',
@@ -19,7 +20,9 @@
     })
     .state('songsIndex', {
       url:'/songs',
-      templateUrl: 'js/songs/index.html'
+      templateUrl: 'js/songs/index.html',
+      controller: 'SongsController',
+      controllerAs: 'SongsViewModel'
     });
   }
 })();

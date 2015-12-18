@@ -1,12 +1,12 @@
 (function(){
   angular
-    .module( "songs" )
-    .factory( "songFactory", [
+    .module( 'songs')
+    .factory( "SongFactory", [
       "$resource",
       FactoryFunction
     ]);
 
-    function FactoryFunction( $resource ){
-      return $resource( "http://localhost:3000/grumbles/songs" );
+    function FactoryFunction($resource){
+      return $resource("http://localhost:3000/songs");
     }
 }());
