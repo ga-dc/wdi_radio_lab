@@ -4,27 +4,30 @@
   angular
   .module("wdiRadio", [
     "ui.router",
+    "ng-token-auth",
     "songs"
   ])
-
   .config([
     "$stateProvider",
     RouterFunction
-  ])
+  ]).config([
+    "authProvider",
+    AuthConfigFunction
+  ]);
+
+  function AuthConfigFunction($authprovider) {
+    $authprovider.configure({
+      apiUrl: "http://localhost:3000"
+    });
+  }
 
   function RouterFunction($stateProvider){
     $stateProvider
-    .state("songsIndex", {
+    .state("songIndex", {
       url: "/songs",
-      templateUrl: "/js/songs/index.html",
+      templateUrl: "js/songs/index.html",
       controller: "SongsIndexController",
       controllerAs: "SongsIndexViewModel"
-    })
-    .state("songsNew", {
-      url: "/songs/new",
-      templateUrl: "js/songs/new.html",
-      controller: "SongsNewController",
-      controllerAs: "SongsNewViewModel"
     })
     .state("songsShow", {
       url: "/songs/:id",
@@ -32,11 +35,17 @@
       controller: "SongsShowController",
       controllerAs: "SongsShowViewModel"
     })
-    .state("songsEdit", {
-      url: "/songs/:id/edit",
-      templateUrl: "js/songs/edit.html",
-      controller: "SongsEditController",
-      controllerAs: "SongsEditViewModel"
+    .state("signin", {
+      url: "/signin",
+      templateUrl: "js/users/signin.html",
+      controller: "SessionsController",
+      controllerAs: "SessionsViewModel"
+    })
+    .state("signout", {
+      url: "/signout",
+      templateUrl: "js/users/signout.html",
+      controller: "SessionsController",
+      controllerAs: "SessionsViewModel"
     });
   }
 }());
