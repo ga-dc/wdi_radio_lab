@@ -24,6 +24,12 @@
       controller: 'SongsController',
       controllerAs: 'SongsViewModel'
     })
+    .state('songsNew', {
+      url: '/songs/new',
+      templateUrl: 'js/songs/new.html',
+      controller: 'SongsNewController',
+      controllerAs: 'SongsNewViewModel'
+    })
     .state('songsShow', {
       url:'/songs/:id',
       templateUrl: 'js/songs/show.html',
