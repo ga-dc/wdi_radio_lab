@@ -1,22 +1,11 @@
 <h2>this is the show page</h2>
 
 <div ng-show="SongShowViewModel.showSong">
-<p>Title: {{SongShowViewModel.song.title}}</p>
-<p>Artist: {{SongShowViewModel.song.artist}}</p>
-<p>Genre: {{SongShowViewModel.song.genre}}</p>
-<p><img ng-src="{{SongShowViewModel.song.album_art}}" src="#"></img></p>
+  <p><song-show data-song='SongShowViewModel.song'></song-show></p>
 </div>
 
 <div ng-show="!SongShowViewModel.showSong">
-  <p><input data-ng-model="SongShowViewModel.song.title" /></p>
-  <p><input data-ng-model="SongShowViewModel.song.audio_url" /></p>
-  <p><input data-ng-model="SongShowViewModel.song.album_art" /></p>
-  <p><input data-ng-model="SongShowViewModel.song.artist" /></p>
-  <p><input data-ng-model="SongShowViewModel.song.genre" /></p>
-  <button type="button" data-ng-click="SongShowViewModel.update()">Update</button>
-  <button data-ng-click="SongShowViewModel.edit()">Cancel</button>
+  <song-form data-song="SongShowViewModel.song" data-form-type='edit'></song-form>
 </div>
 
-
-<p><button data-ng-click="SongShowViewModel.edit()" ng-show="SongShowViewModel.showSong">Edit</button></p>
-<p><button data-ng-click="SongShowViewModel.destroy()">Delete</button></p>
+<p><button data-ng-click="SongShowViewModel.edit()">{{SongShowViewModel.showSong}}</button></p>
