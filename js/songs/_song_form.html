@@ -1,0 +1,16 @@
+<form>
+  <p>title:</p> <input type = "text" name="title" data-ng-model="song.title" />
+  <p>artist:</p> <input type = "text" name="artist" data-ng-model="song.artist" />
+  <p>album art photo URL:</p> <input type = "text" name="album_art" data-ng-model="song.album_art" />
+  <p>genre:</p> <input type = "text" name="genre" data-ng-model="song.genre"/>
+  <p>created at:</p> <input type = "text" name="created_at" data-ng-model="song.created_at"/>
+  <p>audio URL source:</p> <input type = "text" name="audio_url" data-ng-model="song.audio_url"/>
+    <div ng-show="formType === 'edit'">
+      <a data-ui-sref='songShow({id: song.id})'>&larr; Back</a>
+      <button ng-click="update()">Save</button>
+      <button ng-click="destroy()">Delete</button>
+    </div>
+    <div ng-show="formType === 'new'">
+      <button ng-click="create()">New Song</buton>
+    </div>
+</form>
