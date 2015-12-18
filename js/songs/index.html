@@ -1,0 +1,5 @@
+<h2>Index Songs</h2>
+<div><a data-ui-sref="songsNew">Create New Song</a></div>
+<div data-ng-repeat="song in SongsViewModel.songs">
+  <a data-ui-sref="songsShow({id: song.id})"><song-show data-song='song'></song-show></a>
+</div>
