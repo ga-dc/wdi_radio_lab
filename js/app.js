@@ -4,12 +4,23 @@
   angular
     .module("radioLab", [
       "ui.router",
+      "ng-token-auth",
       "songs"
+    ])
+    .config([
+      "$authProvider",
+      AuthConfigFunction
     ])
     .config([
       "$stateProvider",
       RouterFunction
     ]);
+
+  function AuthConfigFunction($authprovider) {
+    $authprovider.configure({
+      apiUrl: "http://localhost:3000"
+    });
+  }
 
   function RouterFunction($stateProvider) {
     $stateProvider
@@ -36,6 +47,12 @@
         templateUrl: "js/songs/edit.html",
         controller: "SongEditController",
         controllerAs: "SongEditViewModel"
+      })
+      .state("signin", {
+        url: "/signin",
+        templateUrl: "js/users/signin.html",
+        controller: "SessionsController",
+        controllerAs: "SessionsViewModel"
       });
   }
 }());
