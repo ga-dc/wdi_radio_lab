@@ -5,13 +5,11 @@
 
 <div data-ng-repeat="song in SongsIndexViewModel.songs | orderBy:'-created_at'">
 
-	<p ng-hide='songDetails'>{{song.title}}, by {{song.artist}}</p>
-	<button ng-click='songDetails = !songDetails' ng-hide='songDetails'>View details</button>
+	<p>{{song.title}}, by {{song.artist}}</p>
+	<button ng-click='songDetails = !songDetails' ng-hide='songDetails'>View details</button> <button ng-click='songDetails = !songDetails' ng-hide='!songDetails'>Hide details</button>
 	<div ng-show='songDetails'>
 		<song-show data-song='song'></song-show>
-		<a data-ui-sref='songShow({id: song.id})'>Edit</a>
-		<button ng-click='songDetails = !songDetails' ng-hide='!songDetails'>Hide details</button>
-		<hr>
+		<button ng-show="currentUser" data-ui-sref='songShow({id: song.id})'>Edit</button>
 	</div>
-
+<hr>
 </div>

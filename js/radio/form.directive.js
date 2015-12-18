@@ -13,7 +13,8 @@
         templateUrl: 'js/radio/_song_form.html',
         replace: true,
         scope: {
-          song: '='
+          song: '=',
+          newSong: '='
           // formType: '@'
         },
         link: linkFunction
@@ -21,8 +22,8 @@
 
       function linkFunction(scope) {
         scope.create = function(){
-          SongsFactory.save(scope.song, function(song) {
-            $state.go('songShow', song);
+          SongsFactory.save(scope.newSong, function(song) {
+            $state.go('songShow', newSong);
           });
         }
         scope.update = function() {

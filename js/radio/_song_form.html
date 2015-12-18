@@ -6,11 +6,14 @@
 	  <input type="text" name="albumArt" placeholder="Album Art" data-ng-model="song.album_art" />
 	  <input type="text" name="genre" placeholder="Genre" data-ng-model="song.genre" />
 	  <input type="text" name="audioUrl" placeholder="Audio URL" data-ng-model="song.audio_url" />
+	  <!-- <div ng-show="formType == 'new'"> -->
+	  	<button type="button" data-ng-click="create()">Create</button>
+	  <!-- </div> -->
 
-	  <button type="button" data-ng-click="create()">Create</button>
-
-	  <button data-ng-click="update()">Edit</button>
-	  <button data-ng-click="destroy()">Destroy</button>
+	  <!-- <div ng-show="formType == 'edit'"> -->
+		  <button data-ng-click="update()">Edit</button>
+		  <button data-ng-click="destroy()">Destroy</button>
+		 <!-- </div> -->
   </form>
 
 </div>
