@@ -1,17 +1,21 @@
 body {
-  background-color: white;
+  background-color: lemonchiffon;
+  margin-bottom: 30px;
+}
+.auth {
+  color: grey;
+  font-size: 20px;
+  margin: auto;
+  margin-top: 50px;
+  text-align: right;
 }
 
 .container {
-  color: white;
+  color: black;
   font-size: 30px;
   margin: auto;
-  background-color: blue;
+  background-color: lemonchiffon;
   margin-top: 50px;
-  border: 1px solid black;
-  opacity: 0.6;
-  filter: alpha(opacity=60);
-  border-radius: 20px 20px 0px 0px;
   text-align: center;
 }
 
