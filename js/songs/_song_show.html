@@ -1,0 +1,12 @@
+<div class="song">
+  <h2><dfn>Title: </dfn><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a></h2>
+  <a class="small" data-ui-sref="songEdit({id: song.id})">Edit</a>
+  <a class="small" data-ng-click="show = !show">Click for More Info</a>
+    <div ng-show="show || showType == 'show'">
+    <p><dfn>Artist: </dfn>{{song.artist}}</p>
+    <p><dfn>Genre: </dfn>{{song.genre}}</p>
+    <br>
+    <img data-ng-src="{{song.album_art}}" src="#" alt="{{song.title}}" />
+    <p><dfn>Added at: </dfn>{{song.created_at | date : "mediumDate"}}</p>
+    </div>
+</div>

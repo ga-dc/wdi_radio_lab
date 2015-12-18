@@ -1,0 +1,190 @@
+*{
+  box-sizing:border-box;
+}
+
+html{
+  background: url(../img/radio.jpg) no-repeat center center fixed;
+  background-size: cover;
+  font-family:'Helvetica Neue', sans-serif;
+}
+
+body{
+  max-width:50em;
+  margin:auto;
+  text-align: center;
+}
+
+main{
+  background:rgba(100%,100%,100%,.5);
+  padding:2rem;
+}
+
+h1, h2, h3{
+  font-family:'Luckiest Guy', sans-serif;
+}
+
+h1{
+  font-size: 6rem;
+  text-align:center;
+  letter-spacing:.05rem;
+  color:#fff;
+  text-shadow:.05rem .05rem 0 #000;
+  -webkit-text-stroke: 1px #000;
+}
+
+h2, h3 {
+  font-size:3rem;
+  letter-spacing:.05rem;
+}
+
+a{
+  text-align: center;
+}
+
+a.small{
+  font-size: 1rem;
+}
+
+.cf:after{
+  content:'';
+  display:table;
+  clear:both;
+}
+
+.song{
+  position:relative;
+  width:calc(50% - 1rem);
+  float:left;
+  overflow:hidden;
+  margin:.5rem;
+}
+
+.song img{
+  width:100%;
+  display:block;
+}
+
+.song p {
+  position:absolute;
+  font-family:'Helvetica Neue';
+  bottom:0;
+  cursor:pointer;
+  font-size:2rem;
+  color:#fff;
+  margin:0;
+  width:100%;
+  font-weight:100;
+  padding:.5rem .5rem .25rem .5rem;
+  background-image: -webkit-gradient(
+    linear, left top, left bottom, from(rgba(80,80,80,0)),
+    to(rgba(50,50,50,0.8)), color-stop(.5,#333333)
+  );
+}
+
+.song button{
+  position:absolute;
+  top:0;
+  margin:1rem;
+  transform:translateY(-200%);
+  transition:all .2s ease;
+  right:0;
+}
+
+.song:hover button{
+  transform:translateY(0%);
+}
+
+.song form{
+  background: #000;
+  padding:.5rem;
+  padding-top:2.5rem;
+  height:350px;
+}
+
+.song input{
+  width:100%;
+  font:inherit;
+  margin-bottom:.5rem;
+}
+
+.song form button {
+  top:auto;
+  right:auto;
+  margin-left:0;
+  transform: none;
+  position:relative;
+}
+
+.songPlayer{
+  position:fixed;
+  padding:1rem;
+  bottom:0;
+  background:#000;
+  color:#fff;
+  z-index:3;
+  left:0;
+  width:100%;
+}
+.songPlayer h2{
+  margin-top:.5rem;
+  margin-bottom:.5rem;
+}
+
+.user form{
+  background: #000;
+  padding:.5rem;
+  padding-top:2.5rem;
+  height:350px;
+}
+
+.user input{
+  width:100%;
+  font:inherit;
+  margin-bottom:.5rem;
+}
+
+.user form button {
+  top:auto;
+  right:auto;
+  margin-left:0;
+  transform: none;
+  position:relative;
+}
+
+.user label{
+  color: white;
+}
+
+.user-nav a{
+  color: white;
+}
+
+.user-nav {
+  padding:1rem;
+  bottom:0;
+  background:#000;
+  color:#fff;
+  z-index:3;
+  left:0;
+  width:100%;
+}
+
+.logout {
+  padding:1rem;
+  bottom:0;
+  background:#000;
+  color:#fff;
+  z-index:3;
+  left:0;
+  width:100%;
+}
+
+.welcome {
+  padding:1rem;
+  bottom:0;
+  background:#000;
+  color:#fff;
+  z-index:3;
+  left:0;
+  width:100%;
+}

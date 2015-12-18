@@ -1,0 +1,6 @@
+<h1>WDI Radio Songs</h1>
+<p><a data-ui-sref="songNew">Add a New Song</a><p>
+
+<div data-ng-repeat="song in SongIndexViewModel.songs | orderBy:'-created_at'">
+  <div data-song-show data-song="song"></div>
+</div>

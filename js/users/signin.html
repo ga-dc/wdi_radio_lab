@@ -1,0 +1,11 @@
+<form ng-submit="SessionsViewModel.signin()">
+  <div>
+    <label>email</label>
+    <input type="email" name="email" ng-model="SessionsViewModel.signinForm.email" required="required"/>
+  </div>
+  <div>
+    <label>password</label>
+    <input type="password" name="password" ng-model="SessionsViewModel.signinForm.password" required="required"/>
+  </div>
+  <button type="submit">Sign In</button>
+</form>
