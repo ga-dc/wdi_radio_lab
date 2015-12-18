@@ -16,12 +16,19 @@
   <!-- <script src="js/station/welcome.controller.js"></script> -->
   <script src="js/station/station.factory.js"></script>
   <script src="js/station/form.directive.js"></script>
+  <script src="js/users/sessions.controller.js"></script>
+  <script src="js/nav/auth.directive.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-cookie/4.0.9/angular-cookie.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-token-auth/0.0.28/ng-token-auth.min.js"></script>
 
 </head>
 <body>
   <div class="container">
   <header>WDI Radio</header>
   Welcome to the World's Best Song App
+  <auth-nav></auth-nav>
   <div class="maindata">
   <main data-ui-view></main>
   <div>

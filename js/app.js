@@ -4,18 +4,45 @@
   angular.module("station", [
     // injecting dependencies
     "ui.router",
+    "ng-token-auth",
     "songs"
+  ])
+  .config([
+    "$authProvider",
+    AuthConfigFunction
   ])
   .config([ "$stateProvider",
   RouterFunction
 ]);
 
+function AuthConfigFunction($authprovider){
+  $authprovider.configure({
+    apiUrl: "http://localhost:3000"
+  });
+}
+
 function RouterFunction($stateProvider){
   $stateProvider
-  .state("songIndex", {
-    url: "/",
-    templateUrl: "js/station/welcome.html"
+  .state("signin", {
+    url: "/signin",
+    templateUrl: "js/users/signin.html",
+    controller: "SessionsController",
+    controllerAs: "SessionsViewModel"
   })
+  //sigout
+  .state("signout", {
+    url: "/signout",
+    templateUrl: "js/users/signout.html",
+    controller: "SessionsController",
+    controllerAs: "SessionsViewModel"
+  })
+  //signup
+  .state("signup", {
+     url: "/signup",
+     templateUrl: "js/users/signup.html",
+     controller: "SessionsController",
+     controllerAs: "SessionsViewModel"
+   })
   // .state("songNew", {
   //   url: "/new",
   //   templateUrl: "js/station/index.html",
