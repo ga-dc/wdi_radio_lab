@@ -1,0 +1,15 @@
+<div>
+  <!-- <p><a data-ui-sref='songShow({id: song.id})'>{{song.title}}</a>, by {{song.artist}}</p> -->
+  <!-- <p>{{song.title}}, by {{song.artist}}</p> -->
+  <p><img ng-src="{{song.album_art}}"></p>
+<p><dfn>Genre:</dfn> {{song.genre}}</p>
+<p><dfn>Preview URL: </dfn><a href="{{song.audio_url}}" target="_blank"> Listen </a></p>
+
+<!-- <audio control>
+	<source ng-src="{{song.audio_url}}" type="audio/mp4">
+	</audio> -->
+
+<p><dfn>Created:</dfn> {{song.created_at | date: 'MM/dd/yy hh:mm'}}
+<p><dfn>Last updated:</dfn> {{song.updated_at | date: 'MM/dd/yy hh:mm'}}</p>
+
+</div>
