@@ -22,10 +22,6 @@
 
   function RouterFunction($stateProvider, $locationProvider){
     $stateProvider
-    .state("welcome", {
-      url: "/",
-      templateUrl: "js/welcome.html"
-    })
     .state("songIndex", {
       url: "/songs",
       templateUrl: "js/songs/index.html",

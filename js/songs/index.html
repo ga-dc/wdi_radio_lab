@@ -1,6 +1,6 @@
 <h2 class="title">Songs Index</h2>
 
-<div class="fixed">
+<div ng-show="SongIndexViewModel.currentSong"class="fixed">
   <div class="title playing">Now Playing: {{SongIndexViewModel.currentSong.title}}</div>
   <audio class="title" controls autoplay ng-src={{SongIndexViewModel.currentSong.niceUrl}}></audio>
 </div>
