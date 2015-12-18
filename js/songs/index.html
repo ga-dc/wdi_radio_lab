@@ -2,11 +2,11 @@
 
 <!-- User Can Click to Show Create New Form -->
 <div>
-  <button type="button">Create New Song</button>
+  <button type="button" data-ng-click="IndexViewModel.newSong.visible = !IndexViewModel.newSong.visible">Create New Song</button>
 </div>
 
 <!-- Clicking on the button shows this form -->
-<div>
+<div data-ng-show="IndexViewModel.newSong.visible">
   <song-form data-song="IndexViewModel.newSong"></song-form>
 </div>
 
@@ -16,5 +16,4 @@
   <h3 >{{song.artist}}</h3>
   <p>{{song.genre}}</p>
   <img ng-src={{song.album_art}}>
-  <!-- <button data-ui-sref={{song.album_url}} target="blank">Play Track</button> -->
 </div>

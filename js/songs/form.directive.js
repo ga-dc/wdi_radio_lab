@@ -16,6 +16,7 @@
       },
       link: function(scope) {
         scope.create = function() {
+          console.log("create is called");
           scope.song.$save(function(response){
             $state.go("index", {}, {reload: true});
           });
