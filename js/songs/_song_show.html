@@ -1,7 +1,7 @@
 <div>
-  <h2 data-ng-click="toggleShow()">{{song.title}}<span>{{arrow}}</span></h2>
+  <img data-ng-src="{{song.album_art}}" />
+  <h2>{{song.title}} by {{song.artist}}<span data-ng-click="toggleShow()">{{arrow}}</span></h2>
   <div data-ng-show="showBody">
-    <p>{{song.artist}}</p>
     <div data-form-directive data-song="song" data-form-type="edit"></div>
   </div>
 </div>

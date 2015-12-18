@@ -1,14 +1,11 @@
 <div>
-  <div data-ng-show="formType=='edit'">
-    <button data-ng-click="toggleForm()">Edit</button>
-  </div>
   <div data-ng-show="formType=='new'">
     <button data-ng-click="toggleForm()">Create New Song</button>
   </div>
   <form data-ng-show="formVisible">
-    <label for="title">Title</label><input type="text" name="title" data-ng-model="song.title">
-    <label for="artist">Artist</label><input type="text" name="artist" data-ng-model="song.artist">
-    <label for="genre">Genre</label><input type="text" name="genre" data-ng-model="song.genre">
+    <label for="title">Title<input type="text" name="title" data-ng-model="song.title"></label>
+    <label for="artist">Artist<input type="text" name="artist" data-ng-model="song.artist"></label>
+    <label for="genre">Genre<input type="text" name="genre" data-ng-model="song.genre"></label>
 
     <div data-ng-show="formType=='edit'">
       <button data-ng-click="delete()">Delete</button>
