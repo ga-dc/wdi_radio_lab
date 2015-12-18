@@ -27,15 +27,15 @@
       })
       .state("songShow", {
       url: "/songs/:id",
-      templateUrl: "js/songs/show.html",
-      controller: "SongShowController",
-      controllerAs: "SongShowViewModel"
+        templateUrl: "js/songs/show.html",
+        controller: "SongShowController",
+        controllerAs: "SongShowViewModel"
     })
-    .state("songEdit", {
-      url: "/songs/:id/edit",
-      templateUrl: "js/songs/edit.html",
-      controller: "SongEditController",
-      controllerAs: "SongEditViewModel"
+      .state("songEdit", {
+        url: "/songs/:id/edit",
+        templateUrl: "js/songs/edit.html",
+        controller: "SongEditController",
+        controllerAs: "SongEditViewModel"
     });
     }
 })();

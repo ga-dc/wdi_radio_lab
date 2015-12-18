@@ -13,7 +13,6 @@
       },
       link: function(scope){
         scope.create = function(){
-          console.log(scope.song);
           scope.song.$save(scope.song, function(song) {
             $state.go('songShow', song);
           });
