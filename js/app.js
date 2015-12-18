@@ -4,12 +4,25 @@
   angular
   .module("wdiRadio", [
     "ui.router",
+    "ng-token-auth",
     "songs"
   ])
   .config([
     "$stateProvider",
     RouterFunction
   ])
+  .config([
+    "$authProvider",
+    AuthConfigFunction
+  ])
+
+  function AuthConfigFunction($authProvider){
+    $authProvider.configure({
+      apiUrl: "http://localhost:3000"
+    })
+  }
+
+
 
   function RouterFunction($stateProvider){
     $stateProvider
@@ -36,6 +49,12 @@
       templateUrl: "js/songs/show.html",
       controller: "SongShowController",
       controllerAs: "SongShowViewModel"
+    })
+    .state("signIn", {
+      url: "/signin",
+      templateUrl: "js/users/signin.html",
+      controller: "SessionsController",
+      controllerAs: "SessionsViewModel"
     })
 
   }
