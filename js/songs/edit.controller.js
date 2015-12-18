@@ -1,0 +1,15 @@
+"use strict";
+
+(function(){
+  angular
+  .module("songs")
+  .controller("SongEditController",[
+    "SongFactory",
+    "$stateParams",
+    SongEditControllerFunction
+  ]);
+
+  function SongEditControllerFunction(SongFactory, $stateParams){
+    this.song = SongFactory.get({id: $stateParams.id});
+  }
+}())

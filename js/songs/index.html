@@ -1,0 +1,10 @@
+<h2>Create Song</h2>
+
+<div>
+  <song-form data-song='SongIndexViewModel.song' data-form-type='new'></song-form>
+</div>
+
+<div data-ng-repeat="song in SongIndexViewModel.songs | orderBy:'-created_at'">
+  <p><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a>
+  </p>
+</div>
