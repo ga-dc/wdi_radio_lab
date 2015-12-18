@@ -1,8 +1,21 @@
 *{
   padding: 0px;
   margin: 0px;
+  text-decoration: none;
+}
+.button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: orange;
 }
 
+a {
+  color: tomato;
+}
+
+a:hover {
+  color: orange;
+}
 body {
   font-family: "Helvetica";
 }

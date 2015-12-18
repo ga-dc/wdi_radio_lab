@@ -1,13 +1,8 @@
 <div class="song">
-  <a data-ui-sref="songShow({id: song.id})">
-    <h2>{{song.title}}</h2>
-  </a>
-
+  <a data-ui-sref="songShow({id: song.id})"><h2>{{song.title}}</h2></a>
   Artist:
   <p>{{song.artist}}</p>
   <img data-ng-src="{{song.album_art}}"></img>
   <p>{{song.genre}}</p>
-
-  <a data-ui-sref="songEdit({id: song.id})">Edit</a>
-
+  <a class="button" data-ui-sref="songEdit({id: song.id})">Edit</a>
 </div>
