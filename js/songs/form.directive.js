@@ -2,10 +2,10 @@
   angular
     .module('songs')
     .directive('songForm',[
-    '$state',
-    'SongFactory',
-    songForm
-  ]);
+      '$state',
+      'SongFactory',
+      songForm
+    ]);
 
   function songForm($state, SongFactory){
     return {
