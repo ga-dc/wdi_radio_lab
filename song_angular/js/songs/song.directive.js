@@ -1,11 +1,12 @@
 (function(){
   angular
-  .module('songs')
-  .directive('myCustomDirective', function(){
+  .module("songs")
+  .directive("songShow", function(){
     return {
-      template: '<h1>Hi There {{myName}}!</h1>',
-      link: function(scope){
-        scope.myName = 'Slim Shady';
+      templateUrl: 'views/songs/_song_show.html',
+      replace: true,
+      scope: {
+        grumble: '='
       }
     }
   });
