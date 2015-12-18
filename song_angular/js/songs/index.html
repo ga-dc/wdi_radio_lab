@@ -1,0 +1,5 @@
+<h2>These are all the Songs</h2>
+
+<div data-ng-repeat="song in SongIndexViewModel.songs | orderBy:'-genre' ">
+  <p><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a></p>
+</div>
