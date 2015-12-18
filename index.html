@@ -9,6 +9,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-cookie/4.0.9/angular-cookie.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ng-token-auth/0.0.28/ng-token-auth.min.js"></script>
 
 <!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-sanitize.js"></script> -->
 
@@ -26,6 +28,9 @@
 <script src="js/songs/song.factory.js"></script>
 <script src="js/songs/player.directive.js"></script>
 <script src="js/songs/song.directive.js"></script>
+<script src="js/users/sessions.controller.js"></script>
+<script src="js/nav/auth.directive.js"></script>
+
 
 
   </head>
@@ -33,12 +38,9 @@
 <div class="container">
     <div><h1 id="logo" class="centerdiv burn">Web Radio</h1>  </div>
 
+         <auth-nav></auth-nav>
     <main data-ui-view></main>
 
-    <!-- <div data-ng-repeat="song in WebradioIndexViewModel.songs | orderBy:'-title'"> -->
-      <!-- <p><a data-ui-sref="songShow({id: grumble.id})">{{song.title}}</a></p> -->
-      <!-- <p> songs</p> -->
-    <!-- </div> -->
 
 </div>
   </body>

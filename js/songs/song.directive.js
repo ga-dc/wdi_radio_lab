@@ -6,7 +6,7 @@
       templateUrl: 'js/songs/_song_show.html',
       replace: true,
       scope: {
-        grumble: '='
+        song: '='
 
       },
       link: function(scope){
