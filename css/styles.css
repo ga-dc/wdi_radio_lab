@@ -54,6 +54,10 @@ a{
   text-shadow: 0 0 2px black;
 }
 
+label{
+  color: white; 
+}
+
 .wrapper {
 	margin: 0 auto 100px auto;
 	max-width: 960px;

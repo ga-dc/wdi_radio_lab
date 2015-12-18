@@ -1,18 +1,20 @@
-<form ng-submit="SessionsViewModel.signup()">
-  <div>
-    <label>email</label>
-    <input type="email" name="email" ng-model="SessionsViewModel.signupForm.email" required="required"/>
+<div class="centerdiv" id="movedown">
+<form class="form-inline"role="form" ng-submit="SessionsViewModel.signup()">
+  <div class="form-group">
+    <label for="email">email</label>
+    <input type="email" class="form-control" name="email" ng-model="SessionsViewModel.signupForm.email" required="required" id="email"/>
   </div>
 
-  <div>
+  <div class="form-group">
     <label>password</label>
-    <input type="password" name="password" ng-model="SessionsViewModel.signupForm.password" required="required"/>
+    <input type="password" class="form-control" name="password" ng-model="SessionsViewModel.signupForm.password" required="required"/>
   </div>
 
-  <div>
+  <div class="form-group">
     <label>password confirmation</label>
-    <input type="password" name="password_confirmation" ng-model="SessionsViewModel.signupForm.password_confirmation" required="required"/>
+    <input type="password" class="form-control" name="password_confirmation" ng-model="SessionsViewModel.signupForm.password_confirmation" required="required"/>
   </div>
 
-  <button type="submit">Register</button>
+  <button class="btn btn-default" type="submit">Register</button>
 </form>
+</div>

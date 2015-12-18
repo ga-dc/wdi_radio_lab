@@ -1,6 +1,6 @@
 (function(){
   angular
-    .module("songs")
+    .module("webradio")
     .controller("SessionsController", function($auth, $state, $scope){
       this.signinForm = {};
       this.signupForm = {};
@@ -18,7 +18,7 @@
       this.signup = function() {
         $auth.submitRegistration(this.signupForm)
         .then(function(resp) {
-          $state.go('webradioIndex');
+          $state.go('songIndex');
         })
         .catch(function(resp) {
           console.log(resp);
