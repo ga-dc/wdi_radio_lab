@@ -61,3 +61,9 @@ span:hover {
   max-width: 300px;
   border: 2px solid grey
 }
+
+.log {
+  background: grey;
+  border: 1px solid black;
+  width: 300px;
+}
