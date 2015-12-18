@@ -7,7 +7,7 @@
       directiveFunction
     ]);
 
-    directiveFunction = function($state, song){
+    function directiveFunction($state, song){
       return {
         templateUrl: "/js/views/_song_form.html",
         replace: true,
