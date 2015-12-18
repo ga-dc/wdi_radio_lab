@@ -4,7 +4,7 @@
   .directive('songForm', [
     "$state",
     "SongFactory",
-    function($state, Song){
+    function($state){
     return {
       templateUrl: 'js/songs/_song_form.html',
       replace: true,
