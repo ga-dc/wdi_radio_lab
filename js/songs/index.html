@@ -1,0 +1,22 @@
+<h2>All Songs</h2>
+
+<!-- User Can Click to Show Create New Form -->
+<div data-ng-hide="IndexViewModel.newSong.visible">
+  <button type="button" ng-click="IndexViewModel.newSong.visible = !IndexViewModel.newSong.visible">New Song</button>
+</div>
+
+<!-- Clicking on the button shows this form -->
+<div data-ng-show="IndexViewModel.newSong.visible">
+  <div class="song">
+    <song-form data-song="IndexViewModel.newSong"></song-form>
+    <button type="button" data-ng-click="IndexViewModel.newSong.visible = !IndexViewModel.newSong.visible">Cancel</button>
+  </div>
+</div>
+
+<!-- Shows all the songs -->
+<div data-ng-repeat="song in IndexViewModel.songs">
+  <h2>{{song.title}}</h2>
+  <h3 >{{song.artist}}</h3>
+  <p>{{song.genre}}</p>
+  <img ng-src={{song.album_art}}>
+</div>
