@@ -16,10 +16,11 @@
         song: "="
       },
       link: function(scope){
-          scope.create = function(){
+          scope.create = function(scope){
+            console.log("create?");
             scope.song.$save(function(response){
-              console.log("create is called?")
-              // $state.go("songs", {}, {reload: true});
+              console.log("create is called?");
+              $state.go("songs", {}, {reload: true});
             });
           };
         // Start new scope here
