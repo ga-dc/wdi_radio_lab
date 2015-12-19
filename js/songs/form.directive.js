@@ -1,3 +1,5 @@
+"use strict";
+
 (function(){
   angular
     .module('songs')
@@ -9,8 +11,8 @@
 
   function songForm($state, SongFactory){
     return {
-      templateUrl: 'views/songs/_song_form.html',
-      replace: true,
+      templateUrl: 'js/songs/_song_form.html',
+      // replace: true,
       scope: {
         song: '=',
         formType: '@'
@@ -19,18 +21,19 @@
     }
     function linkFunction(scope){
       scope.create = function(){
+        console.log("create function called");
         SongFactory.save(scope.song, function(song) {
-          $state.go('/songs/' + song.id);
+          $state.go('songs', {}, {reload: true});
         });
       }
       scope.update = function(){
         scope.song.$update(scope.song, function(song) {
-          $state.go('songShow', song);
+          $state.go('songs', {}, {reload: true});
         });
       }
       scope.destroy = function(){
         scope.song.$delete(scope.song, function(song) {
-          $state.go('songIndex');
+          $state.go('songIndex', {}, {reload: true});
         });
       }
     }
