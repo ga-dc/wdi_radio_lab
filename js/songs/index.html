@@ -1,0 +1,13 @@
+<div class="newSong">
+  <button data-ng-click="IndexViewModel.toggleForm()">Add New Song</button>
+  <song-form data-ng-show="IndexViewModel.formIsVisible" data-song="IndexViewModel.song" data-form-type="new"></song-form>
+</div>
+
+
+<h2>Songs</h2>
+
+<div class="songs" data-ng-repeat="song in IndexViewModel.songs | orderBy:'-title'">
+  <song-show data-song="song"></song-show>
+  </div>
+
+</div>

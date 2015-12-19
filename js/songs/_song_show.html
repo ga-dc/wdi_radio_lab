@@ -1,0 +1,8 @@
+<div class="song">
+  <h3>"{{song.title}}" ({{song.artist}})</h3>
+  <p>Genre: {{song.genre}}</p>
+  <!-- <img data-ng-src="{{song.album_art}}" alt="">
+  <a ui-sref="{{song.audio_url}}"></a> -->
+  <button data-ng-click="IndexViewModel.toggleForm()">Edit Song</button>
+  <song-form data-ng-show="IndexViewModel.formIsVisible" data-form-type="edit" data-song="song"></song-form>
+</div>
