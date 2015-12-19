@@ -1,0 +1,12 @@
+<form>
+  <input value="song.title" ng-model="song.title">
+  <input value="song.artist" ng-model="song.artist">
+  <input value="song.albumArt" ng-model="song.albumArt">
+  <div ng-show="formType=='new'">
+    <button ng-click="create()">Create Song</button>
+  </div>
+  <div ng-show="formType =='edit'">
+    <button ng-click="update()">Update Song</button>
+    <button ng-click="destroy()">Remove Song</button>
+  </div>
+</form>
