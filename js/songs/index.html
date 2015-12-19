@@ -1,6 +1,8 @@
-<h2>Songs</h2>
-<a ui-sref="songNew">Add Song</a>
-<input ng-model="query" placeholder="Search by song or artist">
-<div ng-repeat="song in SongIndexViewModel.songs | filter:query | orderBy: '-created_at'">
-  <data-song-show data-song="song" data-show-type="index"></data-show>
+<div data-ng-show = "currentUser">
+  <h2>Songs</h2>
+  <a ui-sref="songNew">Add Song</a>
+  <input ng-model="query" placeholder="Search by song or artist">
+  <div ng-repeat="song in SongIndexViewModel.songs | filter:query | orderBy: '-created_at'">
+    <data-song-show data-song="song" data-show-type="index"></data-show>
+  </div>
 </div>

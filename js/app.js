@@ -50,9 +50,21 @@
       controller: "SongShowController",
       controllerAs: "SongShowViewModel"
     })
-    .state("signIn", {
+    .state("signin", {
       url: "/signin",
       templateUrl: "js/users/signin.html",
+      controller: "SessionsController",
+      controllerAs: "SessionsViewModel"
+    })
+    .state("signout", {
+      url: "/signout",
+      templateUrl: "js/users/signout.html",
+      controller: "SessionsController",
+      controllerAs: "SessionsViewModel"
+    })
+    .state("signup",{
+      url: "/signup",
+      templateUrl: "js/users/signup.html",
       controller: "SessionsController",
       controllerAs: "SessionsViewModel"
     })
