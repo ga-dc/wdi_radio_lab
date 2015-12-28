@@ -1,6 +1,5 @@
 "use strict";
 
-// uses module as a getting when passing in no additional dependencies
 (function(){
   angular
   .module("songs")

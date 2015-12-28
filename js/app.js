@@ -11,7 +11,6 @@
     RouterFunction
   ]);
 
-
   function RouterFunction($stateProvider){
     $stateProvider
     .state("songsIndex", {
@@ -27,6 +26,5 @@
       controllerAs: "SongsShowViewModel"
     });
   }
-
 
 }());
