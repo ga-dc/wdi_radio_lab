@@ -1,8 +1,25 @@
-<radio-new-directive></radio-new-directive>
+<h1>WDI RADIO</h1>
+<!-- <div data-song-player data-ng-if="SongsIndexViewModel.playSong" data-song="SongsIndexViewModel.playSong"></div> -->
 
-<h2>Songs</h2>
-<h1>HEY</h1>
-<!-- <button data-ui-sref="songNew()">New Song</button> -->
+<!-- When New Form is visible -->
+<div data-ng-show="SongsIndexViewModel.newSong.visible">
+  <div class="song">
+    <div data-song-form data-song="SongsIndexViewModel.newSong"></div>
+    <button type="button" data-ng-click="SongsIndexViewModel.newSong.visible = !SongsIndexViewModel.newSong.visible">Cancel</button>
+  </div>
+</div>
+
+<!-- When New Form is not Visible  -->
+<div data-ng-hide="SongsIndexViewModel.newSong.visible">
+  <button type="button" ng-click="SongsIndexViewModel.newSong.visible = !SongsIndexViewModel.newSong.visible">New Song</button>
+</div>
+
 <div data-ng-repeat="song in SongsIndexViewModel.songs">
-<radio-new-directive data-song='song'></radio-new-directive>
+  <div class="song">
+    <div ng-show="song.showEdit" data-song-form data-song="song"></div>
+    <p ng-hide="song.showEdit" data-ng-click="SongsIndexViewModel.play(song)">{{song.title}}</p>
+    <img data-ng-src="{{ song.album_art}}" alt="{{song.title}}" />
+    <button type="button" data-ng-if="!song.showEdit" data-ng-click="song.showEdit = !song.showEdit">Edit</button>
+    <button type="button" data-ng-if="song.showEdit" data-ng-click="song.showEdit = !song.showEdit">Cancel Edit</button>
+  </div>
 </div>

@@ -1,8 +1,5 @@
-<radio-new-directive></radio-new-directive>
-
-<h2>Songs</h2>
-<h1>HEY</h1>
-<!-- <button data-ui-sref="songNew()">New Song</button> -->
-<div data-ng-repeat="song in SongsIndexViewModel.songs">
-<radio-new-directive data-song='song'></radio-new-directive>
+<h2>Here Song</h2>
+<div class="songPlayer">
+  <h2>{{ song.title}}</h2>
+  <audio controls autoplay ng-src="{{song.encodedUrl}}"></audio>
 </div>
