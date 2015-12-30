@@ -1,5 +1,5 @@
 <h1>WDI RADIO</h1>
-<!-- <div data-song-player data-ng-if="SongsIndexViewModel.playSong" data-song="SongsIndexViewModel.playSong"></div> -->
+<div data-song-player data-ng-if="SongsIndexViewModel.playSong" data-song="SongsIndexViewModel.playSong"></div>
 
 <!-- When New Form is visible -->
 <div data-ng-show="SongsIndexViewModel.newSong.visible">
@@ -17,7 +17,7 @@
 <div data-ng-repeat="song in SongsIndexViewModel.songs">
   <div class="song">
     <div ng-show="song.showEdit" data-song-form data-song="song"></div>
-    <p ng-hide="song.showEdit" data-ng-click="SongsIndexViewModel.play(song)">{{song.title}}</p>
+    <p ng-hide="song.showEdit">{{song.title}}</p>
     <img data-ng-src="{{ song.album_art}}" alt="{{song.title}}" />
     <button type="button" data-ng-if="!song.showEdit" data-ng-click="song.showEdit = !song.showEdit">Edit</button>
     <button type="button" data-ng-if="song.showEdit" data-ng-click="song.showEdit = !song.showEdit">Cancel Edit</button>
