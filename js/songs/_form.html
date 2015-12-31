@@ -5,7 +5,7 @@
   <input placeholder="Album_art" data-ng-model="song.album_art">
   <input placeholder="Artist" data-ng-model="song.artist">
   <input placeholder="Genre" data-ng-model="song.genre">
-  <button type="button" data-ng-if="!song.id" data-ng-click="create()">Create</button>
+  <button type="button" data-ng-if="!song.id" data-ng-click="create()">Create Song</button>
   <div data-ng-if="song.id">
     <button type="button" data-ng-click="update()">Update</button>
     <button type="button" data-ng-click="delete()">Delete</button>
