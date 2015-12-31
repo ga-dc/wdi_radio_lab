@@ -10,7 +10,7 @@
   ]);
   function SongsFormFunction(SongFactory, $state){
     return {
-      templateUrl: "js/songs/form.html",
+      templateUrl: "js/songs/_form.html",
       scope: {
         song: "="
       },

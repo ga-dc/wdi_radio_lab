@@ -35,6 +35,12 @@
         }
       }
     })
+    .state("songsShow", {
+      url: "/songs/:id",
+      templateUrl: "js/songs/show.html",
+      controller: "SongsShowController",
+      controllerAs: "SongsShowViewModel"
+    })
     .state("signup", {
       url: "/signup",
       templateUrl: "js/users/signup.html",

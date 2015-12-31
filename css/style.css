@@ -15,7 +15,13 @@ main{
   margin: 0 auto;
   position: relative;
 }
-
+.song-show-div{
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  width: 40%;
+  text-align: center;
+  margin: 0 auto;
+}
 .main-songs-page div{
   width: 300px;
   height: 250px;
@@ -94,7 +100,6 @@ form input{
   margin: 0 auto;
   margin-top: 10px;
 }
-
 form button{
   display: inline;
   margin: 5px;
