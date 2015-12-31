@@ -17,7 +17,7 @@
       link: function(scope){
         scope.create = function(){
           scope.song.$save(function(response){
-            $state.go("songs", {}, {reload: true})
+            $state.go("songsIndex", {}, {reload: true});
           })
         };
         scope.update = function(){
@@ -27,7 +27,7 @@
         };
         scope.delete = function(){
           scope.song.$delete({id: scope.song.id}, function(){
-            $state.go("songs", {}, {reload: true});
+            $state.go("songsIndex", {}, {reload: true});
           })
         };
       }
