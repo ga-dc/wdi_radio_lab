@@ -22,7 +22,7 @@
         };
         scope.update = function(){
           scope.song.$update({id: scope.song.id}, function(response){
-            console.log(response);
+            console.log("This is the response!!  " + response);
           })
         };
         scope.delete = function(){
