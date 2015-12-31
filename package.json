@@ -1,0 +1,19 @@
+{
+  "name": "wdi_radio_lab",
+  "version": "1.0.0",
+  "description": "## Setup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pzhang87/wdi_radio_lab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pzhang87/wdi_radio_lab/issues"
+  },
+  "homepage": "https://github.com/pzhang87/wdi_radio_lab#readme"
+}
