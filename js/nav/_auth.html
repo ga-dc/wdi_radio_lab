@@ -1,0 +1,16 @@
+<div class="user-login-nav">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a data-ui-sref="songsIndex">View Songs</a></li>
+
+    <li ng-show="currentUser">
+      <a data-ui-sref="logout">Sign Out</a>
+    </li>
+
+    <li ng-show="!currentUser">
+      <a data-ui-sref="signup">Sign Up</a>
+      <a data-ui-sref="signin">Sign In</a>
+    </li>
+
+  </ul>
+</div>

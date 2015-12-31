@@ -1,0 +1,107 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  background-image: url("natureroad.jpg");
+  background-position: center;
+  background-repeat: repeat;
+}
+main{
+  text-align: center;
+  background-color: rgba(0,0,0,0.2);
+}
+.main-songs-page{
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.song-show-div{
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  width: 40%;
+  text-align: center;
+  margin: 0 auto;
+}
+.main-songs-page div{
+  width: 300px;
+  height: 250px;
+  margin: 20px;
+  display: inline-table;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.song{
+  margin: 0 auto;
+  text-align: center;
+}
+h1{
+  font-size: 45px;
+  font-family: "Pacifico";
+  text-shadow: 1px 1px 1px #000;
+  text-align: center;
+  color: white;
+}
+nav{
+  background-color: rgba(0,0,0,0.8);
+}
+ul{
+  list-style-type: none;
+}
+li{
+  display: inline;
+  padding: 10px;
+}
+li a{
+  font-size: 30px;
+  color: white;
+}
+img{
+  width: 50%;
+  text-align: left;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+img:hover{
+  border: 5px solid #66CDAA;
+}
+button{
+  font-size: 18px;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  display: block;
+  margin: 0 auto;
+}
+button:hover{
+  background-color: rgba(0,0,0,0.9);
+}
+p{
+  font-size: 20px;
+  text-shadow: 1px 1px 2px black, 0 0 25px #66CDAA, 0 0 5px white;
+}
+a{
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  margin-left: 30px;
+}
+a:hover{
+  color: lemonchiffon;
+}
+
+form{
+  color: white;
+  margin-bottom: -250px;
+  background-color: rgba(0,0,0,0.6);
+}
+form input{
+  display: block;
+  font-size: 17px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+form button{
+  display: inline;
+  margin: 5px;
+}

@@ -1,0 +1,25 @@
+<div class="main-songs-page">
+
+  <div data-ng-show="SongsIndexViewModel.newSong.visible">
+    <div class="song">
+      <div data-song-form data-song="SongsIndexViewModel.newSong"></div>
+      <button type="button" data-ng-click="SongsIndexViewModel.newSong.visible = !SongsIndexViewModel.newSong.visible">Cancel</button>
+    </div>
+  </div>
+
+  <div data-ng-hide="SongsIndexViewModel.newSong.visible">
+    <button type="button" ng-click="SongsIndexViewModel.newSong.visible = !SongsIndexViewModel.newSong.visible">New Song</button>
+  </div>
+
+
+  <div data-ng-repeat="song in SongsIndexViewModel.songs">
+    <div class="song">
+      <div ng-show="song.showEdit" data-song-form data-song="song"></div>
+      <p ng-hide="song.showEdit">{{song.title}}</p>
+      <a data-ui-sref="songsShow({id: song.id})"><img data-ng-src="{{song.album_art}}" alt="{{song.title}}" /></a>
+      <button type="button" data-ng-if="!song.showEdit" data-ng-click="song.showEdit = !song.showEdit">Edit</button>
+      <button type="button" data-ng-if="song.showEdit" data-ng-click="song.showEdit = !song.showEdit">Cancel</button>
+    </div>
+  </div>
+
+</div>
