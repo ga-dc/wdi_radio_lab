@@ -44,7 +44,6 @@ ul{
 }
 li{
   display: inline;
-  margin-left: 30px;
   padding: 10px;
 }
 li a{
@@ -57,12 +56,18 @@ img{
   border-radius: 50%;
   border: 5px solid white;
 }
+img:hover{
+  border: 5px solid #66CDAA;
+}
 button{
   font-size: 18px;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.5);
   color: white;
   display: block;
   margin: 0 auto;
+}
+button:hover{
+  background-color: rgba(0,0,0,0.9);
 }
 p{
   font-size: 20px;
@@ -72,9 +77,10 @@ a{
   font-size: 20px;
   text-decoration: none;
   color: black;
+  margin-left: 30px;
 }
 a:hover{
-  color: rgba(55,98,128,1);
+  color: lemonchiffon;
 }
 
 form{

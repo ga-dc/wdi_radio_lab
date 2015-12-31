@@ -1,0 +1,15 @@
+<div class="user">
+  <form ng-submit="SessionsViewModel.signin()" role="form">
+    <div>
+      <label>Email</label>
+      <input type="email" name="email" ng-model="SessionsViewModel.signinForm.email" required="required"/>
+    </div>
+
+    <div>
+      <label>Password</label>
+      <input type="password" name="password" ng-model="SessionsViewModel.signinForm.password" required="required"/>
+    </div>
+
+    <button type="submit">Sign In</button>
+  </form>
+</div>
