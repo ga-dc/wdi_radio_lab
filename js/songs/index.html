@@ -1,0 +1,33 @@
+
+
+<!-- <div data-song-player data-ng-if="SongsIndexViewModel.playSong" data-song="SongsIndexViewModel.playSong"></div> -->
+<!-- <song-player>SongIndexViewModel.playSong</song-player> -->
+
+<div class="wrapper">
+<div id="movedown" class="row">
+
+
+
+<div class = "col-md-4 scene" data-ng-repeat="song in SongIndexViewModel.songs | orderBy:'title'">
+
+<div data-song-player  data-song="song"  data-ng-click="SongIndexViewModel.play(song)" ></div>
+
+
+    <!-- <button data-ng-click="SongIndexViewModel.play(song)">play</button> -->
+    <div class="movie">
+      <div class="poster">
+          <img class="album-img" data-ng-src="{{song.album_art}}" >
+
+      </div>
+      <div class="info">
+        <p>{{song.title}}</p>
+        <p>{{song.artist}}</p>
+        <p>{{song.genre}}</p>
+          <!-- <p>Last Updated: {{song.updated_at}}</p> -->
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
