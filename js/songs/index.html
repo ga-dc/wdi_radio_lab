@@ -4,7 +4,7 @@
 <div data-ng-repeat="song in SongIndexViewModel.songs">
   <div class="album screen songlist">
     <p>
-      <a data-ui-sref="songShow({id: song.id})">{{song.title}}</a>
+      <a data-ui-sref="songShow({id: song.id})">{{song.title}}</a> <a data-ui-sref="songEdit({id: song.id})"> (edit) </a>
     </p>
     <a data-ui-sref="songShow({id: song.id})"><img data-ng-src='{{song.album_art}}' alt="{{song.title}}"/></a>
   </div>

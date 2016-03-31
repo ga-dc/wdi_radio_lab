@@ -30,6 +30,12 @@
       templateUrl: 'js/songs/show.html',
       controller: 'SongShowController',
       controllerAs: 'SongShowViewModel'
-    }); // end of song show state
+    }) // end of song show state
+    .state("songEdit", {
+      url: '/songs/:id/edit',
+      templateUrl: 'js/songs/edit.html',
+      controller: 'SongEditController',
+      controllerAs: 'SongEditViewModel'
+    }); // end of song edit state
   } // end of RouterFunction
 })();
