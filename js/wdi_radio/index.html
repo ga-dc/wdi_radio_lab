@@ -1,4 +1,22 @@
+<div class="songs">
+  <div class = "song" data-ng-repeat="song in SongIndexViewModel.songs" >
+    <p data-ng-hide="song.edit">{{song.title}}, {{song.artist}}</p>
+    <p data-ng-show="song.edit"><input type="string" data-ng-model="song.title" value={{song.title}}/></p>
+    <p data-ng-show="song.edit"><input type="string" data-ng-model="song.artist" value={{song.artist}}/></p>
+    <p data-ng-show="song.edit"><input type="string" data-ng-model="song.genre" value={{song.genre}}/></p>
+    <p data-ng-show="song.edit"><input type="string" data-ng-model="song.audio_url" value={{song.audio_url}}/></p>
+    
+    <img data-ng-hide="song.edit" data-ng-src="{{song.album_art}}"/>
+    <p data-ng-show="song.edit"><input type="string" data-ng-model="song.album_art" value={{song.album_art}}/></p>
+    <p>
+      <span data-ng-click="SongIndexViewModel.destroy(song)">&cross;</span>
+      <span data-ng-hide="song.edit"  data-ng-click="SongIndexViewModel.modify(song)">&#9998; &nbsp;</span>
+      <span data-ng-show="song.edit" data-ng-click="SongIndexViewModel.update(song)">&#10004;  &nbsp;</span>
+    </p>
 
-<div data-ng-repeat="song in SongIndexViewModel.songs">
-  <p>{{song.title}}</p>
+  </div>
 </div>
+
+<h2>New Song</h2>
+
+<div data-song-form data-song="SongIndexViewModel.newSong"></div>
