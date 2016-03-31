@@ -25,6 +25,12 @@
       controller: "SongNewController",
       controllerAs: "SongNewVM"
     })
+    .state("songEdit", {
+      url: "/songs/edit/:id",
+      templateUrl: "js/songs/edit.html",
+      controller: "SongEditController",
+      controllerAs: "SongEditVM"
+    })
     .state("songShow", {
       url: "/songs/:id",
       templateUrl: "js/songs/show.html",
