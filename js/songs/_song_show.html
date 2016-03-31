@@ -1,7 +1,9 @@
 <div class="song">
   <p>Artist: {{song.artist}}</p>
   <p>Song: {{song.title}}</p>
-  <!-- <p><img data-ng-src="{{song.album_art}}"></img></p> -->
   <p>Genre: {{song.genre}}</p>
   <a data-ui-sref="songEdit({id: song.id})">Edit</a>
+  <!-- <audio controls>
+    <source data-ng-src="{{songShowViewModel.song.audio_url}}" type="audio/mpeg">
+  </audio> -->
 </div>

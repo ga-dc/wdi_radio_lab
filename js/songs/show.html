@@ -1,11 +1,5 @@
 <a data-ui-sref="songIndex">Songs</a>
 <div class="song">
   <p><img data-ng-src="{{songShowViewModel.song.album_art}}"></img></p>
-  <p>Artist: {{songShowViewModel.song.artist}}</p>
-  <p>Song: {{songShowViewModel.song.title}}</p>
-  <p>Genre: {{songShowViewModel.song.genre}}</p>
-  <!-- <audio controls>
-    <source data-ng-src="{{songShowViewModel.song.audio_url}}" type="audio/mpeg">
-  </audio> -->
-  <p><a data-ui-sref="songEdit({id: songShowViewModel.song.id})">Edit</a></p>
+  <div song-show data-song='songShowViewModel.song'></div>
 </div>
