@@ -1,0 +1,7 @@
+<h2>All Available Songs <a data-ui-sref="songNew">(Add New Song)</a></h2>
+
+<div data-ng-repeat="song in SongIndexVM.songs">
+  <p>
+    "<a data-ui-sref="songShow({id: song.id})">{{song.title}}</a>" by {{song.artist}} <a data-ui-sref="songEdit({id: song.id})">(Edit)</a>
+  </p>
+</div>
