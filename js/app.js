@@ -12,10 +12,14 @@
 
     function RouterFunction($stateProvider) {
         $stateProvider
-        .state("songIndex", {
-            url: "/songs",
-            templateUrl: "js/songs/index.html"
-        });
+            .state("songIndex", {
+                url: "/songs",
+                templateUrl: "js/songs/index.html"
+            })
+            .state("root", {
+                url: '/',
+                templateUrl: "js/index.html"
+            });
     }
 
 })();
