@@ -1,7 +1,5 @@
 <div data-ng-repeat="song in SongIndexViewModel.songs | orderBy: '-artist'">
   <p>Artist: {{song.artist}}<br />
-    Song: {{song.title}}</p>
-    <audio controls>
-      <source src="{{SongShowViewModel.song.audio_url}}" type="audio/mp3">
-    </audio>
+    Song: <a data-ui-sref="songListen">{{song.title}}</a></p>
+    <div data-radio-form data-radio="SongShowViewModel.song"></div>
 </div>

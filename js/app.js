@@ -33,6 +33,10 @@
       templateUrl: "js/radio/show.html",
       controller: "SongShowController",
       controllerAs: "SongShowViewModel"
+    // })
+    // .state("listen", {
+    //   url: "/listen",
+    //   templateUrl: "js/radio/listen.html",
     });
   }
 }());
