@@ -3,7 +3,7 @@
 (function(){
   angular
   .module("songs")
-  .controller("songIndexController", [
+  .controller("SongIndexController", [
     "SongFactory",
     SongIndexControllerFunction
   ]);
