@@ -16,10 +16,16 @@
     $locationProvider.html5Mode(true);
     $stateProvider
     .state("songIndex", {
-      url: "/"
+      url: "/",
       templateUrl: "js/radio/index.html",
-      controller: "index.controller.js"
-      controllerAs:
+      controller: "SongIndexController",
+      controllerAs: "SongIndexViewModel"
     })
+    .state("songShow", {
+      url: "/:id",
+      templateUrl: "js/radio/show.html",
+      controller: "SongShowController",
+      controllerAs: "SongShowViewModel"
+    });
   }
 }());
