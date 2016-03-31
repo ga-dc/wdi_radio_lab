@@ -1,4 +1,7 @@
 <h1>Songs!</h1>
+
+  <div data-song-form data-song="showVM.song" data-form-method="edit"></div>
+
 <div data-ng-repeat="song in indexVM.songs">
   <h3><a href="#" data-ui-sref="show({id: song.id})">{{song.title}}</a></h3>
     <ul>

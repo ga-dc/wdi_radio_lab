@@ -25,6 +25,10 @@
     "Song",
     "$stateParams",
     showCtrlFunction
+  ])
+  .directive("songForm", [
+    "Song",
+    songFormFunction
   ]);
 
   function RouterFunction($stateProvider){
@@ -36,7 +40,7 @@
       controllerAs: "welcomeVM"
     })
     .state("index", {
-      url: "/songs/index",
+      url: "/songs",
       templateUrl: "songs.index.html",
       controller: "indexCtrl",
       controllerAs: "indexVM"
@@ -64,6 +68,7 @@
   function indexCtrlFunction(Song){
     var indexVM = this;
     indexVM.songs = Song.all;
+    indexVM.newSong = new Song();
   }
 
   function showCtrlFunction(Song, $stateParams){
@@ -77,5 +82,25 @@
     });
   }
 
-
+  function songFormFunction(Song){
+    return{
+      templateUrl: "song.form.html",
+      scope: {
+        destination: "=",
+        formMethod: "@"
+      },
+      link: function(scope){
+        scope.create = function(){
+          Song.save(scope.song, function(response){
+            Song.all.push(response);
+          });
+        }
+        scope.update = function(){
+          Song.update({id: scope.song.id}, scope.song, function(response){
+            console.log("success");
+          });
+        }
+      }
+    }
+  }
 }());
