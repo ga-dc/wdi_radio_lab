@@ -11,7 +11,14 @@
   ]);
 
   function RouterFunction($stateProvider){
-    var vm = this;
-    console.log("ya!");
+    $stateProvider
+    .state("songIndex", {
+      url: "/songs",
+      templateUrl: "js/songs/index.html"
+    })
+    .state("songShow", {
+      url: "/songs/:id",
+      templateUrl: "js/songs/show.html"
+    })
   }
 }());
