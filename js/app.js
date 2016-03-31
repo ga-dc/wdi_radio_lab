@@ -23,7 +23,7 @@
       url: "songs/:id",
       templateUrl: "js/songs/show.html",
       controller: "SongShowController",
-      controllerAs: "SongIndexVM"
+      controllerAs: "SongShowVM"
     })
   }
 })();
