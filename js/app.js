@@ -16,11 +16,25 @@
     .state("songIndex", {
       url: "/songs",
       templateUrl: "js/songs/index.html",
-
       controller: "SongsIndexController",
       controllerAs: "SongsIndexVM" //saves this instance as a variable I can use in the view.
     })
-  }
+
+    .state("songShow", {
+      url: "/songs/:id",
+      templateUrl: "js/songs/show.html",
+      controller: "SongsShowController",
+      controllerAs: "SongsShowVM"
+    })
+
+    .state("songEdit",{
+      url: "/songs/:id/edit",
+      templateUrl: "js/songs/edit.html",
+      controller: "SongsEditController",
+      controllerAs: "SongsEditVM"
+    })
+
+  }// close RouterFunction. all the .states need to be in this function to work
 
 
 })();
