@@ -7,13 +7,16 @@
     "songs"
   ])
   .config([
-  "$stateProvider",
-  "$locationProvider",
-  RouterFunction
+    "$stateProvider",
+    "$locationProvider",
+    RouterFunction
   ])
 
   function RouterFunction($stateProvider, $locationProvider){
-    $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode({
+      enabled: true,
+      requireBase: false
+    });
     $stateProvider
     .state("songIndex", {
       url: "/",

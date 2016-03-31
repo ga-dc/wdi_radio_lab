@@ -1,1 +1,1 @@
-<div data-ng-controller="song_controller as vm"></div>
+<div data-ng-repeat="song in SongIndexViewModel.songs | orderBy: '-artist'"></div>
