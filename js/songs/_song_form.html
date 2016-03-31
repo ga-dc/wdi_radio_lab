@@ -1,0 +1,11 @@
+<a data-ui-sref="songsIndex">Cancel</a>
+<form>
+  <input type="text" placeholder="Title" value="vm.song.title" data-ng-model="vm.song.title" /><br />
+  <input type="text" placeholder="Artist" value="vm.song.artist" data-ng-model="vm.song.artist" /><br />
+  <input type="text" placeholder="Audio Url" value="vm.song.audio_url" data-ng-model="vm.song.audio_url" /><br />
+  <input type="text" placeholder="Album Art" value="vm.song.album_art" data-ng-model="vm.song.album_art" /><br />
+  <input type="text" placeholder="Genre" value="vm.song.genre" data-ng-model="vm.song.genre" /><br />
+  <button type="button" data-ng-click="vm.edit()" data-ng-show="formType == 'edit'">Update</button>
+  <button type="button" data-ng-click="vm.delete()" data-ng-show="formType == 'edit'">Delete Song</button>
+  <button type="button" data-ng-click="vm.create()" data-ng-show="formType == 'new'">Create Song</button>
+</form>

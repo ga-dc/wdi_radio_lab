@@ -23,7 +23,19 @@
         url: "/songs",
         templateUrl: "js/songs/songs.html",
         controller: "SongsIndexController",
-        controllerAs: "SongsIndexControllerViewModel"
+        controllerAs: "SongsIndexViewModel"
+      })
+      .state("songNew", {
+        url: "/songs/new",
+        templateUrl: "js/songs/new.html",
+        controller: "SongsNewController",
+        controllerAs: "SongsNewViewModel"
+      })
+      .state("songEdit", {
+        url: "/songs/:id/edit",
+        templateUrl: "js/songs/edit.html",
+        controller: "SongsEditController",
+        controllerAs: "SongsEditViewModel"
       });
   }
 })();

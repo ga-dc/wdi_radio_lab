@@ -1,4 +1,7 @@
-<div data-ng-repeat="song in SongsIndexControllerViewModel.songs">
+<a data-ui-sref="songNew">New Song</a>
+
+
+<div data-ng-repeat="song in SongsIndexViewModel.songs">
   <div class="song-container">
     <h2>{{song.title}}</h2>
     <p>Artist: {{song.artist}}</p>
@@ -6,7 +9,8 @@
     <p>Album Art: {{song.album_art}}</p>
     <p>Genre: {{song.genre}}</p>
 
-    <p><a href="javascript:void(0)" data-ng-click="">Edit</a></p>
+    <p><a data-ui-sref="songEdit({id: song.id})">Edit</a></p>
+
   </div>
 
 </div>
