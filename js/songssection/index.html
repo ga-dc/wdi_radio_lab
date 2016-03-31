@@ -1,5 +1,5 @@
-<h2>I told you I would show all the songs</h2>
+<h2>All the songs</h2>
 <div data-ng-repeat="asong in SongsIndexViewModel.songs">
-  <p>Title: <a data-ui-sref="songShow({id: $index})">{{asong.title}}</a></p>
+  <p>Title: {{asong.title}}</p>
   <p>Author: {{asong.author}}</p>
 </div>

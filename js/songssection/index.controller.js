@@ -4,12 +4,13 @@
   angular
   .module("songsmodule")
   .controller("SongsIndexCtrl", [
-    '$state',
+    "SongFactory",
     SongsIndexCtrlFunction
   ]);
 
-  function SongsIndexCtrlFunction($state){
+  function SongsIndexCtrlFunction( SongFactory ){
     this.songs = songsdata;
-  
+    SongFactory.helloWorld();
+
   }
 }());
