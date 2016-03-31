@@ -4,7 +4,7 @@
   angular
   .module('songs')
   .controller('SongShowController', [
-    "SongFactory"
+    "SongFactory",
     "$stateParams",
     SongShowControllerFunction
   ]);
