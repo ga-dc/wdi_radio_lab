@@ -4,11 +4,12 @@
   angular
   .module("songs")
   .controller("SongShowController", [
+    "SongFactory",
     "$stateParams",
     SongShowControllerFunction
   ]);
 
-  function SongShowControllerFunction($stateParams){
-    this.song = songs[$stateParams.id];
+  function SongShowControllerFunction(SongFactory, $stateParams){
+     this.song = SongFactory.get({id: $stateParams.id});
   }
 }());
