@@ -1,0 +1,9 @@
+<h1>Just One Song!</h1>
+  <h3>{{showVM.song.title}}</h3>
+    <ul>
+      <li>Artist: {{showVM.song.artist}}</li>
+      <li>Genre: {{showVM.song.genre}}</li>
+      <li><a data-ui-sref="{{showVM.song.audio_url}}">Play Song</a></li>
+    </ul>
+    <img data-ng-src="{{showVM.song.album_art}}" />
+  </div>
