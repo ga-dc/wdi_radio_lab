@@ -6,6 +6,7 @@
   .controller("SongIndexController", [
     "SongFactory",
     "$sce",
+
     SongIndexControllerFunction
   ]);
   function SongIndexControllerFunction(SongFactory, $sce){
