@@ -19,7 +19,7 @@
         song: "="
       },
       link: function(scope,el){
-        scope.song = SongFactory.get({id: scope.song.id});
+        this.song = SongFactory.get({id: scope.song.id});
         scope.showBody = false;
         scope.arrow = '\u2193';
         scope.toggleShow = function(){
