@@ -1,0 +1,11 @@
+<form>
+  <input type="text" name="Title" data-ng-model="song.title">
+  <input type="text" name="URL of audio file" data-ng-model="song.audio_url">
+  <input type="text" name="URL of album art" data-ng-model="song.album_art">
+  <input type="text" name="Artist" data-ng-model="song.artist">
+  <input type="text" name="Genre" data-ng-model="song.genre" />
+  <a data-ui-sref="songShow({id: song.id})">&larr; Back</a>
+  <button type="button" ng-click="create()">Create</button>
+  <button type="button" data-ng-click="update()">Update</button>
+  <button type="button" data-ng-click="destroy()">Delete</button>
+</form>
