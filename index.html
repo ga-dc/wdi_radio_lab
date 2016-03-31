@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="radio">
   <head>
     <title>WDI Radio</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
     <script src="js/app.js"></script>
-
+    <script src="songs/songs.js"></script>
+    <script src="songs/index.controller.js"></script>
+    <script src="songs/song.factory.js"></script>
+    <script src="form.directive.js"></script>
   </head>
   <body>
-    <header>WDI Radio</header>
-
-    Welcome to the World's Best Song App
-
-
+    <a href ="/" h1>WDI Radio</h2></a>
+      <main data-ui-view></main>
+      <a href="http://localhost:8080/#/songs"> Songs </a>
   </body>
 </html>
