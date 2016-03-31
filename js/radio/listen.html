@@ -1,13 +1,28 @@
-<ng-audio audio="$element.appendChild(audio)" id="audio" data-ng-click="pauseOrPlay()" controls="controls">
-  <source data-ng-src="audio.src" type="audio/mpeg">
-</ng-audio>
-<p>controls :</p>
-<button onclick="playAudio();" style="cursor: pointer;">Play</button>
+<div data-song-listen data-song="SongListenDirectiveFunction.$scope.song">
+  <p>{{$scope.song.title}}</p>
+  <p>{{SongShowViewModel.song.title}}</p>
+  <p>{{$scope.song.title}}</p>
+  <p>{{scope.song.title}}</p>
+  <p>{{SongShowViewModel.song.title}}</p>
+  <audio autoplay id="audio" data-ng-src="{{playMusic(scope.song)}}" controls>
+  </audio>
+</div>
 
-<button onclick="pauseAudio();" style="cursor: pointer;">Pause</button>
+  <!--
 
-<button onclick="rewindAudio();" style="cursor: pointer;">
-  Back to beginning</button>
+{{SongShowViewModel.playMusic(SongShowViewModel.song)}} -->
+
+
+
+  <!-- <p>controls :</p>
+  <button onclick="playAudio();" style="cursor: pointer;">Play</button>
+
+  <button onclick="pauseAudio();" style="cursor: pointer;">Pause</button>
+
+  <button onclick="rewindAudio();" style="cursor: pointer;">
+  Back to beginning</button> -->
+
+
   <!-- <script>
     audio = document.querySelector("#audio");
 

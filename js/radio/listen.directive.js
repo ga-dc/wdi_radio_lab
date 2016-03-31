@@ -18,7 +18,17 @@
         // scope.song.pauseOrPlay = function(ele){
           // var audio = angular.element(ele.srcElement);
           // audio[0].pause(); // audio.play()
-          var audio = document.createElement(audio);
+          // var audio = document.createElement(audio);
+          var audio = document.querySelector("#audio");
+        function playAudio() {
+          audio.play();
+        }
+        function pauseAudio() {
+          audio.pause();
+        }
+        function rewindAudio() {
+          audio.currentTime = 0;
+        }
           audio.src = $scope.song.audio_url;
           // audio[0].pause();
           $element.appendChild(audio);

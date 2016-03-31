@@ -1,11 +1,27 @@
-<div data-ng-repeat="song in SongIndexViewModel.songs | orderBy: 'artist'">
-  <p>Artist: {{song.artist}} | Song: <a data-ui-sref="songListen({id: song.id})">{{song.audio_url}}</a></p>
-  <img data-ng-src="{{song.album_art}}" src="#" alt="{{song.title}}" />
-    <p><a data-ui-sref="songShow({id: song.id})">(update)</a></p>
-  <div with-locals ang-include="'listen.html'">
-    </div>
-  <!-- <div data-ui-view="songShow"></div> -->
+<div class="container-fluid">
+  <div class="row">
+    <!-- <div class="col-md-3"> -->
+      <div class="thumbnail" data-ng-repeat="song in SongIndexViewModel.songs | orderBy: 'artist'">
+        <a data-ui-sref="songListen({id: song.id})">
+
+          <img data-ng-src="{{song.album_art}}" src="#" alt="{{song.title}}" />
+          <div class="caption">
+            <h3><strong>{{song.artist}}</strong></h3>
+            <p>{{song.title}}</p>
+            <p><a data-ui-sref="songShow({id: song.id})" class="btn btn-primary" role="button">Edit</a></p>
+            <!-- <div with-locals ang-include="'listen.html'"><p>LISTEN</p>
+          </div>
+          <div with-locals ang-include="'_show.html'">
+          <p>SHOW</p>
+        </div> -->
+        <!-- <div data-ui-view="songShow"></div> -->
+      </div>
+    </a>
+  </div>
+<!-- </div> -->
+</div>
 </div>
 
-  <h3>Add a New Song</h3>
-  <div data-song-form data-song="SongIndexViewModel.newSong"></div>
+
+<h3>Add a New Song</h3>
+<div data-song-form data-song="SongIndexViewModel.newSong"></div>

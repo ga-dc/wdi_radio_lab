@@ -1,12 +1,22 @@
 <form>
-  <input placeholder="Title" data-ng-model="song.title" />
-  <input placeholder="Artist" data-ng-model="song.artist" />
-  <input placeholder="Song URL" data-ng-model="song.audio_url" />
-  <input placeholder="Album Art URL" data-ng-model="song.album_art" />
-  <input placeholder="Genre" data-ng-model="song.genre" />
-  <button type="button" data-ng-if="!song.id" data-ng-click="create()">Create</button>
+  <div class="form-group">
+  <input placeholder="Title" class="form-control"  data-ng-model="song.title" />
+</div>
+<div class="form-group">
+  <input placeholder="Artist" class="form-control"  data-ng-model="song.artist" />
+  </div>
+  <div class="form-group">
+  <input placeholder="Song URL" class="form-control"  data-ng-model="song.audio_url" />
+</div>
+<div class="form-group">
+  <input placeholder="Album Art URL" class="form-control"  data-ng-model="song.album_art" />
+</div>
+<div class="form-group">
+  <input placeholder="Genre" class="form-control"  data-ng-model="song.genre" />
+</div>
+  <button type="submit" class="btn btn-default" type="button" data-ng-if="!song.id" data-ng-click="create()">Create</button>
   <div data-ng-if="song.id">
-    <button type="button" data-ng-click="update()">Update</button>
-    <button type="button" data-ng-click="delete()">Delete</button>
+    <button type="submit" class="btn btn-default" type="button" data-ng-click="update()">Update</button>
+    <button type="submit" class="btn btn-default" type="button" data-ng-click="delete()">Delete</button>
   </div>
 </form>

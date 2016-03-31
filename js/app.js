@@ -29,7 +29,7 @@
       controllerAs: "SongIndexViewModel"
     })
     .state("songShow", {
-      url: "/_:id",
+      url: "/:id",
       templateUrl: "js/radio/_show.html",
       controller: "SongShowController",
       controllerAs: "SongShowViewModel"
@@ -40,3 +40,11 @@
     });
   }
 }());
+
+
+// $routeProvider
+// .when("songListen", {
+//   templateUrl: 'partials/studentListPartial.html',
+//   controller: 'StudentController'});
+// .otherwise({
+//   redirectTo: "/"});
