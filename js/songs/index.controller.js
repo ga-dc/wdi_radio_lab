@@ -9,6 +9,13 @@
 
   function indexControllerFunction(){
     // var vm = this;
-    this.songs = songs;
+    this.songs = [
+      {
+        title: "I am Song One"
+      },
+      {
+        title: "I'm another Song"
+      }
+    ];
   }
 }());
