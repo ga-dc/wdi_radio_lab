@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Dosis', sans-serif
+}
+
+html{
+  background: url("80s-record-player.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+input{
+  display:block;
+  background-color: white;
+  margin: auto;
+}
+
+h1{
+  font-size: 100px;
+  text-align: center;
+  color: white;
+  text-shadow:4px 4px 0 black;
+}
+
+.wdiradio{
+  margin: 20px;
+}
+
+.welcome {
+  border: 2px solid black;
+  width: 500px;
+  height: 200px;
+  margin: auto;
+  text-align: center;
+  background: rgba(0, 0, 0, .5);
+}
+
+.welcometext{
+  font-size:30px;
+  color: white;
+}
+
+.new_song{
+  margin: 20px auto;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  text-shadow:1px 1px 0 black;
+}
+
+.songs {
+  border: 2px solid black;
+  width: 1000px;
+  margin: auto;
+  text-align: center;
+  background: rgba(0, 0, 0, .5);
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.song{
+  width:50%;
+  margin: 20px 0;
+}
+
+
+a:visited {
+    color: white;
+}
+
+img{
+  max-width: 225px;
+  max-height: 225px;
+}
