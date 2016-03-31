@@ -17,5 +17,9 @@
       url: "/songs",
       templateUrl: "js/songs/index.html"
     })
+    .state("show", {
+      url: "/songs",
+      templateUrl: "js/songs/show.html"
+    })
   }
 })();
