@@ -1,2 +1,2 @@
-<h2>Songs</h2>
-<div data-ng-repeat="song in SongIndexVM.songs">{{song.title}}</div>
+<h2>Song List</h2>
+<p data-ng-repeat="song in SongIndexVM.songs"><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a></p>

@@ -19,5 +19,11 @@
       controller: "SongIndexController",
       controllerAs: "SongIndexVM"
     })
+    .state("songShow", {
+      url: "songs/:id",
+      templateUrl: "js/songs/show.html",
+      controller: "SongShowController",
+      controllerAs: "SongIndexVM"
+    })
   }
 })();
