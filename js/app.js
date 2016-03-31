@@ -16,8 +16,8 @@
     .state("songIndex", {
       url: "/songs",
       templateUrl: "js/songs/index.html",
-      controller: "indexController"
-      // controllerAs: "songxxxxxndexVM"
+      controller: "indexController",
+      controllerAs: "songIndexVM"
     })
     .state("songShow", {
       url: "/songs/:id",

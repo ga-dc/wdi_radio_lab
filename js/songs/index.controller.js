@@ -8,6 +8,7 @@
   ]);
 
   function indexControllerFunction(){
-    console.log("things");
+    // var vm = this;
+    this.songs = songs;
   }
 }());
