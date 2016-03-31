@@ -1,4 +1,4 @@
-"user strict";
+"use strict";
 
 (function() {
   angular
@@ -8,10 +8,6 @@
     songFactoryFunction
   ]);
   function songFactoryFunction($resource) {
-    return {
-      helloWorld: function(){
-        console.log("Hello World!");
-      }
-    };
-  }
+    return $resource("http://localhost:3000/songs/:id"); //The return value is in object form (A factory will always return an object named __factory)
+    }
 })();

@@ -1,13 +1,14 @@
-"user strict";
+"use strict";
 
 (function() {
   angular
   .module("songs")
   .controller("songIndexController", [
+    "songFactory",
     songIndexControllerFunction
   ]);
 
-  function songIndexControllerFunction() {
-    this.song = "asdf"
+  function songIndexControllerFunction(songFactory) {
+    this.songs = songFactory.query();
   }
 })();
