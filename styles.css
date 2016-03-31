@@ -1,0 +1,22 @@
+* {
+  background-image: url("80s-record-player.jpg");
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.welcome {
+  border: 2px solid black;
+  position: absolute;
+  width: 500px;
+  height: 200px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -250px;
+  text-align: center;
+  background: rgba(0, 0, 0, .5)
+}
+
+p, a{
+  background: rgba(255,255,255,0)
+}
