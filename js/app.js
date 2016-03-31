@@ -47,8 +47,7 @@
 
   function indexCtrlFunction(Song){
     var indexVM = this;
-    indexVM.hello = "hello world";
-    console.log(Song)
+    indexVM.songs = Song.query()
   }
 
   function showCtrlFunction(){
@@ -57,7 +56,7 @@
   }
 
   function songFactoryFunction($resource){
-    return $resource("/song/:id.json", {},{
+    return $resource("http://localhost:3000/songs/:id", {},{
       update: {method: "PUT"}
     })
   }
