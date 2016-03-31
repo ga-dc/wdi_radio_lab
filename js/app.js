@@ -2,7 +2,7 @@
 
 (function(){
   angular
-  .module("radio", [
+  .module("songs", [
     "ui.router",
     "ngResource"
   ])
