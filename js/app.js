@@ -3,7 +3,8 @@
 
     angular
         .module("radio", [
-            "ui.router"
+            "ui.router",
+            "songs"
         ])
         .config([
             "$stateProvider",

@@ -2,7 +2,7 @@
     "use strict";
     
     angular
-        .module("radio")
+        .module("songs")
         .controller("SongIndexController", [
             SongIndexControllerFunc
         ]);
