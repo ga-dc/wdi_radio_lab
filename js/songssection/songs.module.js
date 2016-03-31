@@ -2,5 +2,7 @@
 
 (function(){
   angular
-  .module("songsmodule", []);
+  .module("songsmodule", [
+    "ngResource"
+  ]);
 }());

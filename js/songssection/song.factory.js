@@ -4,14 +4,11 @@
   angular
   .module("songsmodule")
   .factory("SongFactory", [
+    "$resource",
     SongFactoryFunction
   ]);
 
-  function SongFactoryFunction(){
-    return{
-      helloWorld: function(){
-        console.log("Hello world!");
-      }
-    };
+  function SongFactoryFunction( $resource ){
+    return $resource("http://localhost:3000/songs/:id");
   }
 })();
