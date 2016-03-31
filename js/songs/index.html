@@ -1,7 +1,8 @@
-<h2>This is all the songs</h2>
-
 <div data-ng-repeat="song in SongIndexViewModel.songs">
-  <p>
-    <a data-ui-sref="songShow({id: song.id})">{{song.title}}</a>
-  </p>
+  <div class="album songlist">
+    <p>
+      <a data-ui-sref="songShow({id: song.id})">{{song.title}}</a>
+    </p>
+    <a data-ui-sref="songShow({id: song.id})"><img data-ng-src='{{song.album_art}}' /></a>
+  </div>
 </div>

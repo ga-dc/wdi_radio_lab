@@ -11,12 +11,21 @@
     <script src="js/songs/index.controller.js"></script>
     <script src="js/songs/show.controller.js"></script>
     <script src="js/songs/song.factory.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Freckle+Face' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css" />
 
   </head>
   <body>
     <header>WDI Radio</header>
 
-    Welcome to the World's Best Song App
+    <div class="welcome">
+      <div>
+        Welcome to the World's Best <span class="angular">Angular</span> Song App!
+        <a data-ui-sref="songIndex">(&#9654)</a>
+      </div>
+
+    </div>
 
     <div data-ui-view></div>
 
