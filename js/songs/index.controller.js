@@ -4,19 +4,11 @@
   angular
   .module('songs')
   .controller('SongIndexController', [
-    '$state',
+    'SongFactory',
     SongIndexControllerFunction
   ]);
 
-  function SongIndexControllerFunction($state) {
-    this.songs = [
-      {title: 'this'},
-      {title: 'is'},
-      {title: 'a'},
-      {title: 'song'}
-    ]
-    this.goToIndex = function() {
-      $state.go('songIndex')
-    }
+  function SongIndexControllerFunction(SongFactory) {
+    this.songs = SongFactory.query();
   } // end of songs index controller function
 })();
