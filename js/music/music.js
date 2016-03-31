@@ -5,5 +5,7 @@
 
 (function(){
   angular
-  .module("music", []);
+  .module("music", [
+    "ngResource"
+  ]);
 }());

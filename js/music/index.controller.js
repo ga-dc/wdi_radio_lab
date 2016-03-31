@@ -9,7 +9,6 @@
   ]);
 
   function MusicIndexControllerFunction(musicFactory){
-    this.music = [
-    musicFactory.helloWorld();
+    this.music = musicFactory.query();
   }
 }());

@@ -15,8 +15,8 @@ function RouterFunction ($stateProvider){
   $stateProvider
   .state("musicIndex", {
     url:"/music",
-    templateUrl:"js/music/index.html"
-    controller:"musicIndexController"
+    templateUrl:"js/music/index.html",
+    controller:"musicIndexController",
     controllerAs: "musicIndexViewModel"
 })
 

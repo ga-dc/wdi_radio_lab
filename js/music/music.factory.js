@@ -8,10 +8,6 @@
     ]);
 
   function musicFactoryFunction(){
-    return {
-      helloWorld: function(){
-        console.log( "Hello world!" );
-      }
-    }
+    return $resource("http://localhost:3000/songs")
   }
 }());
