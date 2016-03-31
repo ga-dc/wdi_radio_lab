@@ -5,7 +5,7 @@
   <input type='text' name='albumUrl' ng-model='song.album_art' placeholder="Album Art Url">
   <input type='text' name='songUrl' ng-model='song.audio_url' placeholder="Song Audio MP3 Url">
   <div ng-show="formType == 'edit'">
-    <a data-ui-sref='songShow({id: song.id})'>&larr; Back</a>
+    <!-- <a data-ui-sref='songShow({id: song.id})'>&larr; Back</a> -->
     <button ng-click='update()'>Save</button>
   </div>
   <div ng-show="formType == 'new'">
