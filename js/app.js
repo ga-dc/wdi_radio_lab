@@ -14,15 +14,17 @@
   ])
 
   .controller("indexCtrl", [
-    "Song",
+    "SongFactory",
     indexCtrlFunction
   ])
 
   .controller("showCtrl", [
+    "SongFactory",
+    "$stateParams",
     showCtrlFunction
   ])
 
-  .factory("Song", [
+  .factory("SongFactory", [
     "$resource",
     songFactoryFunction
   ])
@@ -45,14 +47,13 @@
 
   }
 
-  function indexCtrlFunction(Song){
+  function indexCtrlFunction(SongFactory){
     var indexVM = this;
-    indexVM.songs = Song.query()
+    indexVM.songs = SongFactory.query()
   }
 
-  function showCtrlFunction(){
-    var showVM = this;
-    showVM.hello = "this is the show page";
+  function showCtrlFunction(SongFactory, $stateParams){
+    this.song = SongFactory.get({id: $stateParams.id});
   }
 
   function songFactoryFunction($resource){
