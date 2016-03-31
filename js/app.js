@@ -4,7 +4,6 @@
   angular
   .module("wdiRadio", [
     "ui.router",
-    "ngResource",
     "songs"
   ])
   .config([
@@ -14,9 +13,11 @@
 
   function RouterFunction($stateProvider) {
     $stateProvider
-    .state("songindex", {
+    .state("songIndex", {
       url: "/songs",
-      templateURL: "songs/index.html"
+      templateURL: "js/songs/index.html",
+      controller: "songIndexController",
+      controllerAs: "songIndexViewModel"
     });
   }
 })();
