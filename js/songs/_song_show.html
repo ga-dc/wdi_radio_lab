@@ -1,0 +1,7 @@
+<div>
+  <img data-ng-src="{{song.album_art}}" />
+  <h2>{{song.title}} by {{song.artist}}<span data-ng-click="toggleShow()">{{arrow}}</span></h2>
+  <div data-ng-show="showBody">
+    <div data-form-directive data-song="song" data-form-type="edit"></div>
+  </div>
+</div>

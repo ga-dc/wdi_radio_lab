@@ -1,0 +1,41 @@
+*{box-sizing: border-box}
+header{
+  width:900px;
+  text-align: center;
+  margin:3em auto;
+  position:relative;
+}
+.main{
+  width:900px;
+  position:relative;
+  margin: 3em auto;
+  height:auto;
+}
+.song-show{
+  border:1px solid black;
+  height:300px;
+  width:300px;
+  display:inline-block;
+  float:left;
+  position:relative;
+}
+.song-show img{
+  height:100%;
+  width:100%;
+  position:absolute;
+  z-index:-1;
+  opacity:0.5;
+}
+.song-show h2{
+  color:black;
+  font-family:"sans-serif";
+  padding:1em;
+}
+.form-div{
+  display:inline-block;
+  width:200px;
+  margin:0 auto;
+}
+form input{
+  display:block;
+}
