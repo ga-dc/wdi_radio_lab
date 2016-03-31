@@ -1,0 +1,10 @@
+<h2>Create New Song</h2>
+
+<form>
+  <input placeholder="Title" data-ng-model="SongNewVM.song.title" />
+  <input placeholder="URL for MP3" data-ng-model="SongNewVM.song.audio_url" />
+  <input placeholder="URL for Album Art" data-ng-model="SongNewVM.song.album_art" />
+  <input placeholder="Artist Name" data-ng-model="SongNewVM.song.artist" />
+  <input placeholder="Genre" data-ng-model="SongNewVM.song.genre" />
+  <button type="button" data-ng-click="SongNewVM.create()">Create</button>
+</form>
