@@ -6,54 +6,43 @@
   ])
   .config([
     "$stateProvider",
-    routerFunction
+      function($stateProvider) {
+        $stateProvider
+        .state("index", {
+          url: "/",
+          templateUrl: "songs.index.html"
+        })
+        .state("show", {
+          url: "/:id"
+        });
+      }
   ])
   .controller("songsCtrl", [
     "Song",
-    songsCtrlFunction
+    function(Song){
+      var vm = this;
+      vm.songs = Song.all;
+    }
   ])
   .factory("Song", [
     "$resource",
-    songFactoryFunction
- ])
- .directive("songInfo", [
-   "Song",
-   songInfoFunction
- ]);
-
-  function routerFunction($stateProvider) {
-    $stateProvider
-    .state("index", {
-      url: "/",
-      templateUrl: "songs.index.html"
-    })
-    .state("show", {
-      url: "/:id"
-    });
-  }
-
-  function songFactoryFunction($resource){
-    var Song = $resource("http://localhost:3000/songs.json", {}, {
-       update: {method: "PUT"}
-     });
-     Song.all = Song.query();
-
-     return Song;
-   }
-
-   function songsCtrlFunction(Song){
-     var vm = this;
-     vm.songs = Song.all;
-   }
-
-   function songInfoFunction(Song){
-     return{
-       templateUrl: "_song_info.html",
-       scope: {
-         song: '='
-       }
-     };
-   }
-
-
+    function($resource){
+      var Song = $resource("http://localhost:3000/songs.json", {}, {
+         update: {method: "PUT"}
+       });
+       Song.all = Song.query();
+       return Song;
+     }
+  ])
+  .directive("songInfo", [
+    "Song",
+    function(Song){
+      return{
+        templateUrl: "_song_info.html",
+        scope: {
+          song: '='
+        }
+      };
+    }
+  ]);
 })();
