@@ -1,0 +1,4 @@
+<div data-ng-repeat="song in indexVM.songs">
+  <h3><a data-ui-sref="show({id:song.id})">{{song.title}}</a></h3>
+  <img src="{{song.album_art}}">
+</div>
