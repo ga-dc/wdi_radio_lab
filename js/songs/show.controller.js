@@ -14,6 +14,9 @@
      this.song = SongFactory.get({id: $stateParams.id});
      this.delete = function(){
        SongFactory.remove({id: $stateParams.id});
+     };
+     this.update = function(){
+       SongFactory.update({id: $stateParams.id},this.song);
      }
      this.formVisible = false;
      this.toggleForm = function(){
