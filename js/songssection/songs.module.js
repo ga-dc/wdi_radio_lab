@@ -8,6 +8,6 @@
   ])
 
   function SongsIndexCtrlFunction(){
-    console.log("I'm in the controller right now.")
+    this.songs = songsdata;
   }
 }());
