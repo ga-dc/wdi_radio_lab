@@ -1,0 +1,10 @@
+<h2>Add to playlist:</h2>
+
+<form>
+  <input placeholder="Song Title" data-ng-model="SongNewViewModel.song.title" />
+  <input placeholder="Artist" data-ng-model="SongNewViewModel.song.artist" />
+  <input placeholder="Genre" data-ng-model="SongNewViewModel.song.genre" />
+  <input placeholder="Album Art" data-ng-model="SongNewViewModel.song.album_art" />
+  <input placeholder="Audio File (url)" data-ng-model="SongNewViewModel.song.audio_url" />
+  <button type="button" data-ng-click="SongNewViewModel.create()">Add</button>
+</form>

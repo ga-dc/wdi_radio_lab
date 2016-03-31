@@ -36,6 +36,10 @@ header {
   text-decoration: underline;
 }
 
+.newsong {
+  padding: 10px;
+}
+
 .play {
   padding: 5px 15px 5px 15px;
   background-color: gray;

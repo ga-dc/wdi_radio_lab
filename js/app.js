@@ -19,6 +19,12 @@
       controller: 'SongIndexController',
       controllerAs: 'SongIndexViewModel'
     }) // end of song index state
+    .state("songNew", {
+      url: '/songs/new',
+      templateUrl: 'js/songs/new.html',
+      controller: 'SongNewController',
+      controllerAs: 'SongNewViewModel'
+    }) // end of song new state
     .state('songShow', {
       url: '/songs/:id',
       templateUrl: 'js/songs/show.html',
