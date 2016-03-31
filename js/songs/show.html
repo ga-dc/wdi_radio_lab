@@ -1,7 +1,12 @@
 <!-- js/songs/show.html -->
 
-<h2>{{SongShowViewModel.song.title}}</h2>
-<p><dfn>Artist:</dfn> {{SongShowViewModel.song.artist}}</p>
-<p><dfn>Title:</dfn> {{SongShowViewModel.song.title}}</p>
-
-<img data-ng-src="{{SongShowViewModel.song.album_art}}" src="#" alt="{{SongShowViewModel.song.title}}" />
+<p><a data-ui-sref="songIndex">All Songs</a></p>
+<div class="song">
+  <h2>{{SongShowViewModel.song.title}}
+  <a data-ui-sref="songEdit({id: song.id})">Edit</a></h2>
+  <audio controls autoplay ng-src="{{song.audio_url}}">Play</audio>
+  <p><dfn>Artist:</dfn> {{SongShowViewModel.song.artist}}</p>
+  <p><dfn>Title:</dfn> {{SongShowViewModel.song.title}}</p>
+  <p><dfn>Genre:</dfn> {{SongShowViewModel.song.genre}}</p>
+  <img data-ng-src="{{SongShowViewModel.song.album_art}}" src="#" alt="{{SongShowViewModel.song.title}}" />
+</div>
