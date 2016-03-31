@@ -1,6 +1,15 @@
+<div class="player" ng-show="vm.showPlayer">
+  <p>----------------------------</p>
+  <p>{{vm.playerSong.audio_url}}</p>
+  <p>----------------------------</p>
+  <p>{{vm.getPlayerUrl()}}</p>
+  <p>----------------------------</p>
+  <!-- <audio controls>
+    <source ng-src="{{vm.playerUrl}}" type="audio/mpeg">
+  </audio> -->
+</div>
 <div data-ng-repeat="song in vm.songs">
   <div class="songDisp">
-    <p>{{song.id}}</p>
     <p>{{song.title}}</p>
     <p>{{song.audio_url}}</p>
     <p>{{song.album_art}}</p>
@@ -8,5 +17,6 @@
     <p>{{song.genre}}</p>
     <p>{{song.created_at}}</p>
     <p>{{song.updated_at}}</p>
+    <button data-ng-click="vm.togglePlayer(song.id)">Play</button>
   </div>
 </div>
