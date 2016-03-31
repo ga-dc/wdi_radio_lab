@@ -2,7 +2,7 @@
 
 (function(){
   angular
-  .module( "songs", [
+  .module( "radio", [
     "ui.router",
     "ngResource"
   ])
@@ -14,8 +14,12 @@
   function RouterFunction($stateProvider){
     $stateProvider
     .state("index", {
-      url: "/songs",
+      url: "/",
       templateUrl: "js/songs/index.html"
+    })
+    .state("show", {
+      url: "/songs",
+      templateUrl: "js/songs/show.html"
     })
   }
 
