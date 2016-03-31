@@ -1,5 +1,8 @@
+"use strict";
+
 (function(){
   angular
-  .module("songs",[]);
-})()
-View
+  .module("songs",[
+    "ngResource"
+  ]);
+})();
