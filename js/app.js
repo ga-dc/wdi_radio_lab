@@ -14,11 +14,17 @@
   ])
 
   .controller("indexCtrl", [
+    "Song",
     indexCtrlFunction
   ])
 
   .controller("showCtrl", [
     showCtrlFunction
+  ])
+
+  .factory("Song", [
+    "$resource",
+    songFactoryFunction
   ])
 
   function RouterFunction($stateProvider){
@@ -39,14 +45,21 @@
 
   }
 
-  function indexCtrlFunction(){
+  function indexCtrlFunction(Song){
     var indexVM = this;
     indexVM.hello = "hello world";
+    console.log(Song)
   }
 
   function showCtrlFunction(){
     var showVM = this;
     showVM.hello = "this is the show page";
+  }
+
+  function songFactoryFunction($resource){
+    return $resource("/song/:id.json", {},{
+      update: {method: "PUT"}
+    })
   }
 
 
