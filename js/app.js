@@ -3,7 +3,7 @@
 (function(){
   angular
     .module("radio", [
-      "ui-router",
+      "ui.router",
       "songs"
     ])
     .config([
@@ -36,13 +36,13 @@
       templateUrl: "js/songs/edit.html",
       controller: "songEditController",
       controllerAs: "songEditViewModel"
+    })
+    .state("root", {
+      url: "",
+      templateUrl: "js/root/index.html",
+      controller: "rootController",
+      controllerAs: "rootViewModel"
     });
-    // .state("welcome", {
-    //   url: "/", ??
-    //   templateUrl: "index.html", ??
-    //   controller: "welcomeController",
-    //   controllerAs: "welcomeViewModel"
-    // });
   }
 
 }());
