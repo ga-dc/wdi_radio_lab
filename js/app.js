@@ -18,8 +18,12 @@
       requireBase: false
     });
     $stateProvider
-    .state("songIndex", {
+    .state("welcome", {
       url: "/",
+      templateUrl: "js/radio/welcome.html"
+    })
+    .state("songIndex", {
+      url: "/songs",
       templateUrl: "js/radio/index.html",
       controller: "SongIndexController",
       controllerAs: "SongIndexViewModel"
