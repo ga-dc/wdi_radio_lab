@@ -4,18 +4,11 @@
   angular
   .module("songs")
   .controller("indexController", [
+    "songFactory",
     indexControllerFunction
   ]);
 
-  function indexControllerFunction(){
-    // var vm = this;
-    this.songs = [
-      {
-        title: "I am Song One"
-      },
-      {
-        title: "I'm another Song"
-      }
-    ];
+  function indexControllerFunction(songFactory){
+    this.songs = songFactory.query();
   }
 }());
