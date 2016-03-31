@@ -1,1 +1,10 @@
 <h2>All Songs</h2>
+
+<div data-ng-repeat="song in SongIndexViewModel.songs">
+    <div>
+        <img data-ng-src="{{song.album_art}}" alt="album art" />
+        <p>Artist: {{song.artist}}</p>
+        <p>Genre: {{song.genre}}</p>
+        <a data-ui-sref="{{song.audio_url}}">Audio</a>
+    </div>
+</div>
