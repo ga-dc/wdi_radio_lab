@@ -19,6 +19,9 @@
         scope.update = function() {
           scope.song.$update({id: scope.song.id})
         }
+        scope.delete = function() {
+          scope.song.$delete({id: scope.song.id})
+        }
       }
     }
   });
