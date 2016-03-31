@@ -14,6 +14,9 @@
     "$resource",
     songFactoryFunction
   ])
+  .controller("welcomeCtrl", [
+    welcomeCtrlFunction
+  ])
   .controller("indexCtrl", [
     "Song",
     indexCtrlFunction
@@ -26,8 +29,14 @@
 
   function RouterFunction($stateProvider){
     $stateProvider
-    .state("index", {
+    .state("welcome", {
       url: "/",
+      templateUrl: "songs.welcome.html",
+      controller: "welcomeCtrl",
+      controllerAs: "welcomeVM"
+    })
+    .state("index", {
+      url: "/songs/index",
       templateUrl: "songs.index.html",
       controller: "indexCtrl",
       controllerAs: "indexVM"
@@ -46,6 +55,10 @@
     });
     Song.all = Song.query();
     return Song;
+  }
+
+  function welcomeCtrlFunction(){
+    return{};
   }
 
   function indexCtrlFunction(Song){
