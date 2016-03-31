@@ -2,9 +2,8 @@
 
 (function(){
   angular
-  .module("songs",[
-  ])
-  .controller("SongIndexcontroller",[
+  .module("songs")
+  .controller("SongIndexController",[
     SongIndexControllerFunction
   ]);
 

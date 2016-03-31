@@ -3,20 +3,26 @@
 (function(){
   angular
   .module("radio-app",[
-    "ui-router",
+    "ui.router",
     "songs"
   ])
-  .config("$stateprovider",[
+  .config(["$stateProvider",
     RouterFunction
   ]);
 
-function RouterFunction($stateprovider){
-  $stateprovider
-  .state("SongsIndex", {
-    url:         "/songs",
+function RouterFunction($stateProvider){
+  $stateProvider
+  .state("SongIndex", {
+    url: "/songs",
     templateUrl: "js/songs/index.html",
-    controller:  "SongIndexController",
-    controllerAs:"SongIndexViewModel"
+    controller: "SongIndexController",
+    controllerAs: "SongIndexViewModel"
+  })
+  .state("SongView", {
+    url: "/songs/:id",
+    templateUrl: "/js/songs/show.html",
+    controller: "SongShowController",
+    controllerAs: "SongShowViewModel"
   });
 }
 
