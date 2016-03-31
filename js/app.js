@@ -2,14 +2,14 @@
 
 (function (){
   angular
-  .module("songs", [
-    "ui.router"
+  .module("wdi-radio", [
+    "ui.router",
+    "songs"
   ])
   .config([
     "$stateProvider",
       RouterFunction
-  ]
-);
+  ]);
 
 
   function RouterFunction($stateProvider){

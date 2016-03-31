@@ -4,13 +4,14 @@
   angular
   .module("songs")
   .controller("SongIndexController", [
+    "SongFactory",
     SongIndexControllerFunction
   ]);
 
-  function SongIndexControllerFunction(){
-    this.songs = songs;
-  }
+  function SongIndexControllerFunction(SongFactory){
+    this.songs = SongFactory.query();
 
+  }
 
 
 

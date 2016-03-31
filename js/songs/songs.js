@@ -4,7 +4,8 @@
   angular
   .module("songs", [
     "ui.router",
-    "songs"
-  ])
+    "ngResource"
+
+  ]);
 
 }());
