@@ -8,7 +8,6 @@
     "$stateParams",
     WadioShowControllerFunction
   ]);
-
   function WadioShowControllerFunction(WadioFactory, $stateParams){
     this.wadio = WadioFactory.get({:id $stateParams.id});
   }
