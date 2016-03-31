@@ -1,0 +1,11 @@
+<a data-ui-sref="songNew">New Song</a>
+
+<!-- js/songs/index.html -->
+
+<div data-ng-repeat="song in SongIndexViewModel.songs">
+  <div class="song">
+    <h1 data-ui-sref="songShow({id: song.id})">{{song.artist}}</h1>
+    <h2><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a></h2>
+    <p><img data-ng-src="{{song.album_art}}" alt="{{song.title}}" /></p>
+</div>
+</div>

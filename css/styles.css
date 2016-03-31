@@ -1,0 +1,17 @@
+.song {
+  position:relative;
+  width:calc(50% - 1em);
+  float:left;
+  overflow:hidden;
+  margin:.5em;
+}
+
+.song img{
+  width:100%;
+  height: 400px;
+}
+
+body{
+  max-width:50em;
+  margin:auto;
+}
