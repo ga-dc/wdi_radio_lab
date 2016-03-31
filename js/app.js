@@ -15,7 +15,7 @@
     $stateProvider
     .state("songIndex", {
       url: "/songs",
-      template: "I'm the songs index!"
+      templateUrl: "js/songs/index.html"
     });
   }
 
