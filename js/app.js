@@ -29,14 +29,14 @@
       controllerAs: "SongIndexViewModel"
     })
     .state("songShow", {
-      url: "/:id",
-      templateUrl: "js/radio/show.html",
+      url: "/_:id",
+      templateUrl: "js/radio/_show.html",
       controller: "SongShowController",
       controllerAs: "SongShowViewModel"
-    // })
-    // .state("listen", {
-    //   url: "/listen",
-    //   templateUrl: "js/radio/listen.html",
+    })
+    .state("songListen", {
+      url: "/:id/listen",
+      templateUrl: "js/radio/listen.html",
     });
   }
 }());

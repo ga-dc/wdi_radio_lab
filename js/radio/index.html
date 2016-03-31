@@ -1,6 +1,11 @@
-<div data-ng-repeat="song in SongIndexViewModel.songs | orderBy: '-artist'">
-  <p>Artist: {{song.artist}}<br />
-    Song: <a data-ui-sref="SongShowViewModel.song.audio_url">{{song.title}}</a></p>
+<div data-ng-repeat="song in SongIndexViewModel.songs | orderBy: 'artist'">
+  <p>Artist: {{song.artist}} | Song: <a data-ui-sref="songListen({id: song.id})">{{song.audio_url}}</a></p>
+  <img data-ng-src="{{song.album_art}}" src="#" alt="{{song.title}}" />
+    <p><a data-ui-sref="songShow({id: song.id})">(update)</a></p>
+  <div with-locals ang-include="'listen.html'">
+    </div>
+  <!-- <div data-ui-view="songShow"></div> -->
 </div>
 
-<div data-song-form data-song="SongShowViewModel.newSong"></div>
+  <h3>Add a New Song</h3>
+  <div data-song-form data-song="SongIndexViewModel.newSong"></div>
