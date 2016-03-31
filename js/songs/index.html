@@ -1,14 +1,15 @@
-<h2>These are all the songs</h2>
 <a data-ui-sref="songNew">New</a>
-<div data-ng-repeat="song in songIndexViewModel.songs">
-  <!-- <p><a data-ui-sref="songShow({id: song.id})"><img data-ng-src="{{song.album_art}}"></a></p> -->
-  <p><img data-ng-src="{{song.album_art}}"></p>
+<div class="songs">
+  <div data-ng-repeat="song in songIndexViewModel.songs" class="song">
+    <!-- <p><a data-ui-sref="songShow({id: song.id})"><img data-ng-src="{{song.album_art}}"></a></p> -->
+    <p><img data-ng-src="{{song.album_art}}"></p>
 
-  <input type="checkbox" ng-model="checked">
-  <div class="check-element animate-show" ng-show="checked">
-    <audio controls>
-      <source data-ng-src="{{song.audio_url}}" type="audio/mp3">
-      </audio>
-    <div song-show data-song='song'></div>
+    <input type="checkbox" ng-model="checked"> Click Me
+    <div class="check-element animate-show" ng-show="checked">
+      <audio controls>
+        <source data-ng-src="{{song.audio_url}}" type="audio/mp3">
+        </audio>
+      <div song-show data-song='song'></div>
+    </div>
   </div>
 </div>

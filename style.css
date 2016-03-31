@@ -4,10 +4,24 @@
   padding: 10px;
   border: 1px solid black;
   background: white;
+  border-radius: 5px;
+  margin: 10px;
 }
 
 .check-element {
   padding: 10px;
   border: 1px solid black;
   background: white;
+}
+
+.songs {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 0 200px;
+  box-sizing: border-box;
+  padding: 0 10px 10px;
+}
+
+.song {
+
 }
