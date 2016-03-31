@@ -5,6 +5,7 @@
   .module("wdiRadio")
   .controller("wdiRadioIndexController", [
     "wdiRadioFactory",
+    "$sce",
     wdiRadioIndexControllerFunction
   ]);
 
