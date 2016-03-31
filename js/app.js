@@ -5,7 +5,10 @@
   .module("wdiRadio" , [
     "ui.router",
     "songs"
-  ]);
+  ])
+  .config([
+  "$stateProvider"
+]);
 
 
 }());
