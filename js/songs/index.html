@@ -1,3 +1,4 @@
-<div data-ng-repeat="song in SongIndexViewModel.songs">
-  <p>{{song.title}}</p>
+<div data-ng-repeat="song in SongIndexViewModel.songs | orderBy:'-created_at'">
+  <!-- the | implmentation is interesting thanks StackOverflow"-->
+  <p><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a></p>
 </div>
