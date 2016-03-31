@@ -2,7 +2,7 @@
 
 (function() {
   angular
-  .module('songs', [
+  .module('wdiRadio', [
     'ui.router'
   ])
   .config([
@@ -15,6 +15,10 @@
     .state('songIndex', {
       url: '/songs',
       templateUrl: 'js/songs/index.html'
-    }); // end of song index state
+    }) // end of song index state
+    .state('songShow', {
+      url: '/songs/:id',
+      templateUrl: 'js/songs/show.html'
+    }); // end of song show state
   } // end of RouterFunction
 })();
