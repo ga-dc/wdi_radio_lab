@@ -1,7 +1,6 @@
-## Hints
+
 
 ### Root Route
-
 - require dependencies in main `index.html`
 - define main `app.js`
 - add `ng-app`
@@ -31,3 +30,5 @@
   - query for songs in the controller function
   - in `app.js` add controller and controller as
   - add ng-repeat to `js/songs/index.html` to display songs
+
+### Bonus

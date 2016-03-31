@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html data-ng-app="wdiRadio">
-<head>
-  <title>WDI Play Box</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/songs/song.module.js"></script>
-  <script src="js/songs/index.controller.js"></script>
-  <script src="js/songs/show.controller.js"></script>
-  <script src="js/songs/new.controller.js"></script>
-  <script src="js/songs/delete.controller.js"></script>
-</head>
-<body>
-  <h1><a data-ui-sref="radioIndex">WDI Radio</a></h1>
-  <div data-ui-view></div>
-</body>
+  <head>
+    <title>WDI Radio App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-cookie/4.0.9/angular-cookie.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-token-auth/0.0.28/ng-token-auth.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/songs/song.module.js"></script>
+    <script src="js/songs/song.factory.js"></script>
+    <script src="js/songs/index.controller.js"></script>
+    <script src="js/songs/show.directive.js"></script>
+    <script src="js/songs/form.directive.js"></script>
+    <script src="js/songs/player.directive.js"></script>
+    <script src="js/users/sessions.controller.js"></script>
+    <script src="js/users/auth.directive.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <h1><a data-ui-sref="songIndex">WDI Radio</a></h1>
+      <nav data-auth-nav></nav>
+    </header>
+    <div class='main' data-ui-view></div>
+  </body>
 </html>

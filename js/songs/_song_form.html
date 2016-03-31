@@ -1,0 +1,18 @@
+<div>
+  <div data-ng-show="formType=='new'">
+    <button data-ng-click="toggleForm()">Create New Song</button>
+  </div>
+  <form data-ng-show="formVisible">
+    <label for="title">Title<input type="text" name="title" data-ng-model="song.title"></label>
+    <label for="artist">Artist<input type="text" name="artist" data-ng-model="song.artist"></label>
+    <label for="genre">Genre<input type="text" name="genre" data-ng-model="song.genre"></label>
+
+    <div data-ng-show="formType=='edit'">
+      <button data-ng-click="delete()">Delete</button>
+      <button data-ng-click="update()">Save</button>
+    </div>
+    <div data-ng-show="formType=='new'">
+      <button data-ng-click="create()">Create</button>
+    </div>
+  </form>
+</div>

@@ -2,38 +2,54 @@
 
 (function(){
   angular
-  .module("wdiRadio",[
+  .module("wdiRadio", [
     "ui.router",
+    "ng-token-auth",
     "songs"
+  ])
+  .config([
+    "$authProvider",
+    AuthConfigFunction
   ])
   .config([
     "$stateProvider",
     RouterFunction
   ]);
+  
+  function AuthConfigFunction($authProvider){
+    $authProvider.configure({
+      apiUrl: "http://localhost:3000"
+    });
+  }
   function RouterFunction($stateProvider){
     $stateProvider
-    .state("radioIndex",{
-      url:"/welcome",
-      templateUrl:"js/welcome.html"
-    })
-    .state("songIndex",{
-      url:"/songs",
-      templateUrl:"songs/index.html",
-      templateUrl:"js/songs/index.html",
-      controller:"SongIndexController",
-      controllerAs:"SongIndexViewModel"
-      .state("songNew",{
-        url:"/songs/new",
-        templateUrl:"js/songs/new.html",
-        controller:"SongNewController",
-        controllerAs:"SongNewViewModel"
+      .state("radioIndex",{
+        url:"/welcome",
+        templateUrl:"js/welcome.html"
       })
-      .state("songShow",{
-        url:"/songs/:id",
-        templateUrl:"js/songs/show.html",
-        controller:"SongShowController",
-        controllerAs:"SongShowViewModel"
+      .state("signin", {
+        url: "/signin",
+        templateUrl: "js/users/signin.html",
+        controller: "SessionsController",
+        controllerAs: "SessionsViewModel"
       })
-    })
-  }
-})();
+      .state("signout", {
+        url: "/signout",
+        templateUrl: "js/users/signout.html",
+        controller: "SessionsController",
+        controllerAs: "SessionsViewModel"
+      })
+      .state("signup", {
+        url: "/signup",
+        templateUrl: "js/users/signup.html",
+        controller: "SessionsController",
+        controllerAs: "SessionsViewModel"
+      })
+      .state("songIndex",{
+        url:"/songs",
+        templateUrl:"js/songs/index.html",
+        controller:"SongIndexController",
+        controllerAs:"SongIndexViewModel"
+      })
+  };
+})()
