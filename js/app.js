@@ -23,7 +23,14 @@
     .state("songsShow", {
       url: "/songs/:id",
       templateurl: "js/show.html"
-    });
+    })
+
+    .state("home", {
+      url: "/",
+      templateUrl: "js/home.html"
+    })
+
   }
+
 
 })();
