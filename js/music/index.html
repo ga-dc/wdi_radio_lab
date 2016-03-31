@@ -1,0 +1,4 @@
+<div data-ng-repeat="song in musicIndexViewModel.music | orderBy:'-created_at'">
+  <p><a data-ui-sref="musicShow({id: song.id})">{{song.title}}</a></p>
+  <img data-ng-src="{{song.album_art}}"></img>
+</div>

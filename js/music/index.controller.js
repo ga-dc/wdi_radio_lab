@@ -10,5 +10,6 @@
 
   function MusicIndexControllerFunction(musicFactory){
     this.music = musicFactory.query();
+    console.log(this.music)
   }
 }());

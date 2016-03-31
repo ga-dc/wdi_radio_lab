@@ -4,10 +4,11 @@
   angular
     .module( "music" )
     .factory( "musicFactory", [
+      "$resource",
       musicFactoryFunction
     ]);
 
-  function musicFactoryFunction(){
-    return $resource("http://localhost:3000/songs")
+  function musicFactoryFunction($resource){
+    return $resource("http://localhost:3000/songs/");
   }
 }());

@@ -3,9 +3,9 @@
 (function (){
   angular
   .module("myMusic", [
-    "ui.router"
+    "ui.router",
+    "music"
 ])
-
 .config ([
   "$stateProvider",
   RouterFunction
@@ -19,6 +19,12 @@ function RouterFunction ($stateProvider){
     controller:"musicIndexController",
     controllerAs: "musicIndexViewModel"
 })
+.state("musicShow", {
+  url:"/music/:id",
+  templateUrl:"js/music/show.html",
+  controller:"musicShowController",
+  controllerAs: "musicShowViewModel"
+});
 
 }
 })();
