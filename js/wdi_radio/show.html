@@ -1,0 +1,9 @@
+
+  <h3>{{SongsShowViewModel.song.title}}</h3>
+  <h4>{{SongsShowViewModel.song.artist}}</h4>
+  <p><img data-ng-src="{{SongsShowViewModel.song.album_art}}"></p>
+  <p>{{SongsShowViewModel.song.genre}}</p>
+  <audio controls>
+    <source data-ng-src="{{SongsShowViewModel.song.audio_url}}" type="audio/mp3">
+  </audio>
+  <div class="edit-form" data-song="song" data-form-type="edit"></div>

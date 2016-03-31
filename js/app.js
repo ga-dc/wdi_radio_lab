@@ -25,6 +25,12 @@
       controller: "wdiRadioIndexController",
       controllerAs: "wdiRadioIndexViewModel"
     })
+    .state("wdiRadioShow", {
+      url: "/wdi_radio/:id",
+      templateUrl: "js/wdi_radio/show.html",
+      controller: "SongsShowController",
+      controllerAs: "SongsShowViewModel"
+    })
   }
 
 })();
