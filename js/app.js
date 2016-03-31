@@ -15,7 +15,9 @@
     $stateProvider
     .state("songIndex", {
       url: "/songs",
-      templateUrl: "js/songs/index.html"
+      templateUrl: "js/songs/index.html",
+      controller: "SongIndexController",
+      controllerAs: "SongIndexVM"
     })
     .state("songShow", {
       url: "/songs/:id",
