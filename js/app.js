@@ -14,15 +14,15 @@
   function RouterFunction($stateProvider){
     $stateProvider
     .state("index", {
-      url: "/pizza",
+      url: "/",
       controller: "RadioIndexController",
       controllerAs: "RadioViewModel" ,
-      templateUrl: "ng-views/index.html"
+      templateUrl: "js/songs/main_index.html"
     })
 
      .state("show", {
        url: "/:id",
-       templateUrl: "ng-views/show.html"
+       templateUrl: "show.html"
 
      });
   }

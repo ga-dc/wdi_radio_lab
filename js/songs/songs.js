@@ -3,6 +3,7 @@
 (function(){
   angular
   .module("songs",[
+    "ui.router",
     "ngResource"
     ]);
  }());
