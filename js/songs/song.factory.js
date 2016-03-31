@@ -8,7 +8,6 @@
 
   function SongsCooker($resource){
     return("http://localhost:3000/songs/:id");
-
   }
 
 }());

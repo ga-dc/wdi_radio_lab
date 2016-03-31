@@ -23,6 +23,6 @@
       templateUrl: "js/songs/show.html",
       controller: "songsShowController",
       controllerAs: "songsVM"
-    })
+    });
   }
 }());
