@@ -8,7 +8,7 @@
     "$stateParams",
     SongShowControllerFunction
   ]);
-  function SongShowControllerFunction(SongFactory, $stateParams){
-    this.songs = SongFactory.get({id: $stateParams.id});
+  function SongShowControllerFunction(SongFactory){
+    this.songs= SongFactory.query();
   }
-})
+}());
