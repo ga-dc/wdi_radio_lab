@@ -2,12 +2,22 @@
 
 (function(){
   angular
-  .module("songs",[
-    "ui-router"
+  .module("radio-app",[
+    "ui-router",
+    "songs"
   ])
-  .controller("songs-controller",[
-    [SongControllerFunction]
-  ])
-  
+  .config("$stateprovider",[
+    RouterFunction
+  ]);
+
+function RouterFunction($stateprovider){
+  $stateprovider
+  .state("SongsIndex", {
+    url:         "/songs",
+    templateUrl: "js/songs/index.html",
+    controller:  "SongIndexController",
+    controllerAs:"SongIndexViewModel"
+  });
+}
 
 })();
