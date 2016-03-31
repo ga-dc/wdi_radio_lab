@@ -8,7 +8,10 @@
     SongIndexControllerFunction
   ]);
 
-  function SongIndexControllerFunction(SongFactory){
+  function SongIndexControllerFunction(SongFactory, $state){
     this.songs = SongFactory.query();
+    this.goToIndex = function(){
+      $state.go("songIndex");
+    }
   }
 }());
