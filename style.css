@@ -1,0 +1,20 @@
+.songContainer {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.song {
+  padding: 5px;
+}
+
+img {
+  height: 225px;
+  width: 225px;
+}
+
+body {
+  text-align: center;
+}
