@@ -3,11 +3,11 @@
 (function(){
   angular
   .module("songs")
-  .directives("showDirective",[
+  .directive("showDirective",[
     "$state",
     "$stateParams",
     "SongFactory",
-    ShowDirectiveFuntion
+    ShowDirectiveFunction
   ])
 
   function ShowDirectiveFunction($state,$stateParams,SongFactory){
