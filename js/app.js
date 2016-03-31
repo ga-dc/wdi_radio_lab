@@ -4,6 +4,7 @@
   angular
   .module("radioapp", [
     "ui.router",
+    "songsmodule"
   ])
   .config([
     "$stateProvider",
@@ -14,7 +15,11 @@
     $stateProvider
     .state("songIndex", {
       url: "/songs",
-      template: "I'm the Songs index, I will show a list of all the songs!!!"
+      templateUrl: "js/songsection/index.html"
+    })
+    .state("songShow", {
+      url: "/songs/:id",
+      templateUrl: "js/songssection/show.html"
     });
   }
 })();
