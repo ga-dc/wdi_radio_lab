@@ -2,5 +2,20 @@
     "use strict";
 
     angular
-        .module("radio", []);
+        .module("radio", [
+            "ui-router"
+        ])
+        .config([
+            "$stateProvider",
+            RouterFunction
+        ]);
+
+    function RouterFunction($stateProvider) {
+        $stateProvider
+        .state("songIndex", {
+            url: "/songs",
+            templateUrl: "js/songs/index.html"
+        });
+    }
+
 })();
