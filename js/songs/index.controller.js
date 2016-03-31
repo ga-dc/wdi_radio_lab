@@ -10,5 +10,5 @@
 
   function songIndexControllerFunction(songFactory) {
     this.songs = songFactory.query();
-  }
+    }
 })();
