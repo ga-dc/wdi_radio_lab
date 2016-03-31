@@ -6,15 +6,23 @@
   ])
   .config([
     "$stateProvider",
-    RouterFunction
-  ]);
+    routerFunction
+  ])
+  .controller("songsCtrl", [
+    "Song",
+    songsCtrlFunction
+  ])
+  .factory("Song", [
+    "$resource",
+    songFactoryFunction
+ ]);
 
 
-  function RouterFunction($stateProvider) {
+  function routerFunction($stateProvider) {
     $stateProvider
     .state("index", {
       url: "/",
-      template: "/songs.index.html"
+      templateUrl: "songs.index.html"
     })
     .state("show", {
       url: "/:id"
@@ -22,6 +30,21 @@
   }
 
 
+
+  function songFactoryFunction($resource){
+    var Song = $resource("http://localhost:3000/songs.json", {}, {
+       update: {method: "PUT"}
+     });
+     Song.all = Song.query();
+
+
+     return Song;
+   }
+
+   function songsCtrlFunction(Song){
+     var vm = this;
+     vm.songs = Song.all;
+   }
 
 
 })();
