@@ -22,6 +22,8 @@
     .state("songShow", {
       url: "/songs/:id",
       templateUrl: "js/songssection/show.html",
+      controller: "SongsShowCtrl",
+      controllerAs: "SongShowViewModel"
     });
   }
 })();

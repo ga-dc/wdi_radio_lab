@@ -9,8 +9,7 @@
   ]);
 
   function SongsIndexCtrlFunction( SongFactory ){
-    this.songs = songsdata;
-    SongFactory.helloWorld();
+    this.songs = SongFactory.query();
 
   }
 }());
