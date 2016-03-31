@@ -1,3 +1,14 @@
-This is where individual songs will go.
+<div class="screen song">
+  <p>
+    {{SongShowViewModel.song.title}}
+  </p>
+  <p>
+    {{SongShowViewModel.song.artist}}
+  </p>
+  <img data-ng-src='{{SongShowViewModel.song.album_art}}' alt="{{SongShowViewModel.song.title}}"/>
+  <div>
+    <audio data-ng-src="{{SongShowViewModel.playMusic(SongShowViewModel.song)}}" controls>
+    </audio>
+  </div>
 
-{{SongShowViewModel.song.title}}
+</div>

@@ -1,3 +1,12 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+audio {
+  margin: 20px;
+}
+
 body {
   background-image: url('/images/mic-background.jpg');
   background-size: cover;
@@ -14,15 +23,6 @@ header {
 .album {
   float:left;
   text-align: center;
-
-  background-color: rgba(255, 255, 255, 0.5);
-  position: relative;
-  z-index: 100;
-}
-
-.album a {
-  text-decoration: none;
-  color: black;
 }
 
 .album img {
@@ -34,6 +34,26 @@ header {
 .angular {
   font-size: 25px;
   text-decoration: underline;
+}
+
+.play {
+  padding: 5px 15px 5px 15px;
+  background-color: gray;
+  border: 1px solid black;
+  border-radius: 10%
+}
+
+.screen {
+  background-color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  z-index: 100;
+}
+
+.song {
+  font-size: 30px;
+  text-align: center;
+  margin: 0 25% 0 25%;
+  padding: 10px 0 40px 0;
 }
 
 .welcome {
