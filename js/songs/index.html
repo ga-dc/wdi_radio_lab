@@ -1,7 +1,9 @@
 <h2>All Songs</h2>
-<div data-ng-repeat="song in SongIndexViewModel.songs">
-
-  <div>"{{song.title}}"</div>
+<div data-ng-repeat="song in SongIndexViewModel.songs" class="songindex">
+  <div>"<a data-ui-sref="songShow({id: song.id})">{{song.title}}</a>"</div>
   <div>{{song.artist}}</div>
   <img data-ng-src="{{song.album_art}}">
+  <p><audio controls source data-ng-src="{{song.audio_url}}" type="audio/mp3">
+  </audio></p>
+  <p><a data-ui-sref="songEdit({id: song.id})">Edit</a></p>
 </div>
