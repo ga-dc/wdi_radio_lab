@@ -4,9 +4,14 @@
 
 /* Links */
 a,
-a:focus,
-a:hover {
+a:focus {
   color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: turquoise;
+  text-decoration: none;
 }
 
 /* Custom default button */
