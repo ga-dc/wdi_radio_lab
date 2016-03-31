@@ -7,7 +7,7 @@
   .factory('SongsKitchen', ['$resource', SongsCooker]);
 
   function SongsCooker($resource){
-    return("http://localhost:3000/songs/:id");
+    return $resource("http://localhost:3000/songs/:id");
   }
 
 }());
