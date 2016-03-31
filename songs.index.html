@@ -5,15 +5,10 @@
 <div class="" data-ng-controller="songsCtrl as vm" >
 
 
-  <div class="row well" data-ng-repeat="song in vm.songs">
-    <div>
-      <h3><a href="#" data-ui-sref="show({id: song.id})">{{song.title}}</a></h3>
-      <p>{{song.artist}}</p>
-    </div>
-    <div>
-      <img data-ng-src="{{song.album_art}}" />
-    </div>
+  <div data-ng-repeat="song in vm.songs">
+    <song-info data-song='song'></song-info>
   </div>
+
 
 
 </div>
