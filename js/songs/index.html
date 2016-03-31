@@ -1,5 +1,10 @@
 <h2>These are all the songs</h2>
 <a data-ui-sref="songNew">New</a>
 <div data-ng-repeat="song in songIndexViewModel.songs">
-  <p><a data-ui-sref="songShow({id: song.id})"><img data-ng-src="{{song.album_art}}"></a></p>
+  <!-- <p><a data-ui-sref="songShow({id: song.id})"><img data-ng-src="{{song.album_art}}"></a></p> -->
+  <p><img data-ng-src="{{song.album_art}}"></p>
+  <input type="checkbox" ng-model="checked">
+  <div class="check-element animate-show" ng-show="checked">
+    <div song-show data-song='song'></div>
+  </div>
 </div>
