@@ -7,8 +7,16 @@
     "songs"
   ])
   .config([
-  "$stateProvider"
-]);
+    "$stateProvider",
+    RouterFunction
+  ]);
 
+  function RouterFunction($stateProvider){
+    $stateProvider
+    .state("songIndex", {
+      url: "/songs",
+      template: "I'm the songs index!"
+    });
+  }
 
 }());
