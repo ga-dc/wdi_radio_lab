@@ -8,6 +8,6 @@
   ]);
 
   function SongIndexControllerFunction(){
-    this.songs= "These are the songs in this app."
+    this.songs = songs;
   }
 }());
