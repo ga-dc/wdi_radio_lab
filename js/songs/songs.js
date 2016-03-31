@@ -2,7 +2,7 @@
 
 (function(){
   angular
-  .module("songs", [
-    "ngResource"
-  ]);
+    .module( "songs", [
+      "ngResource"
+    ]);
 }());
