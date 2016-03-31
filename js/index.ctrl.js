@@ -8,7 +8,8 @@
     ctrlFunc
   ]);
 
-  function ctrlFunc(RadioFactory){
+  function ctrlFunc(SongFactory){
     this.songs = SongFactory.query();
+    console.log("BONER!!!");
   }
 })();

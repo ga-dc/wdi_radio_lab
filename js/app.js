@@ -15,7 +15,7 @@
       .state("radioIndex", {
         url: "/radio",
         templateUrl: "views/index.html",
-        controlLer: "RadioIndexCtrl",
+        controller: "RadioIndexCtrl",
         controllerAs: "vm"
       });
     }
