@@ -14,7 +14,7 @@
   function RouterFunction($stateProvider){
     $stateProvider
     .state("index", {
-      url: "/songs",
+      url: "/",
       templateUrl: "js/songs/index.html"
     })
     .state("show", {
