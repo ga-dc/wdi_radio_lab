@@ -2,14 +2,23 @@
 
 
 <div data-ng-repeat="song in SongsIndexViewModel.songs">
+
+  <button type="button" data-ng-click="showForm = false" data-ng-show="showForm">Cancel</button>
+  <button type="button" data-ng-click="showForm = true" data-ng-hide="showForm">Edit</button>
+  
+
+  <div song-form data-song="song" data-ng-show="showForm"></div>
+
+
   <div class="song-container">
+
+
     <h2>{{song.title}}</h2>
+    <img data-ng-src="{{song.album_art}}" alt="album art"</img>
     <p>Artist: {{song.artist}}</p>
     <p>Audio Url: {{song.audio_url}}</p>
-    <p>Album Art: {{song.album_art}}</p>
     <p>Genre: {{song.genre}}</p>
 
-    <p><a data-ui-sref="songEdit({id: song.id})">Edit</a></p>
 
   </div>
 
