@@ -1,0 +1,67 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+audio {
+  margin: 20px;
+}
+
+body {
+  background-image: url('/images/mic-background.jpg');
+  background-size: cover;
+  /*Image found: http://cdn.business2community.com/wp-content/uploads/2013/08/Mic-Depositphotos_9468405_s.jpg*/
+  font-family: 'Chelsea Market', cursive;
+}
+
+header {
+  font-size: 80px;
+  font-family: 'Freckle Face', cursive;
+  padding-left: 20px;
+}
+
+.album {
+  float:left;
+  text-align: center;
+}
+
+.album img {
+  width: 200px;
+  height: 200px;
+  padding: 0 20px 20px 20px;
+}
+
+.angular {
+  font-size: 25px;
+  text-decoration: underline;
+}
+
+.newsong {
+  padding: 10px;
+}
+
+.play {
+  padding: 5px 15px 5px 15px;
+  background-color: gray;
+  border: 1px solid black;
+  border-radius: 10%
+}
+
+.screen {
+  background-color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  z-index: 100;
+}
+
+.song {
+  font-size: 30px;
+  text-align: center;
+  margin: 0 25% 0 25%;
+  padding: 10px 0 40px 0;
+}
+
+.welcome {
+  font-size: 20px;
+  padding: 10px;
+  padding-bottom: 20px;
+}
