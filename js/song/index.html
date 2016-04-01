@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div data-ui-sref="songNew"><a href="#">Add Song</a></div>
+    <div data-song-form data-song="SongIndexViewModel.newSong"></div>
+  </div>
+  <h2>Songs Index</h2>
+  <div class="row" data-ng-repeat="song in SongIndexViewModel.songs| orderBy:'-created_at'">
+    <!-- Repeat these info fo all songs -->
+    <p>Title: <a data-ui-sref="songShow({id: song.id})">{{song.title}}</a>
+    </p>
+
+    <img data-ng-src="{{song.album_art}}">
+
+    <p>Artist: <a data-ui-sref="SongShow">{{song.artist}}</a></p>
+    <hr/>
+  </div>
