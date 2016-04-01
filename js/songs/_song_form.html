@@ -1,0 +1,14 @@
+<form>
+  <input type='text' name='title' ng-model='song.title' placeholder="Song Title">
+  <input type='text' name='artistName' ng-model='song.artist' placeholder="Artist">
+  <input type='text' name='genre' ng-model='song.genre' placeholder="Genre">
+  <input type='text' name='albumUrl' ng-model='song.album_art' placeholder="Album Art Url">
+  <input type='text' name='songUrl' ng-model='song.audio_url' placeholder="Song Audio MP3 Url">
+  <div ng-show="formType == 'edit'">
+    <!-- <a data-ui-sref='songShow({id: song.id})'>&larr; Back</a> -->
+    <button ng-click='update()'>Save</button>
+  </div>
+  <div ng-show="formType == 'new'">
+    <button ng-click='create()'>New Song</button>
+  </div>
+</form>

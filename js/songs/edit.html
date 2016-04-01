@@ -1,0 +1,15 @@
+<a data-ui-sref="songIndex">Songs</a>
+<h2>Edit Song</h2>
+<form>
+  <input type='text' name='title' ng-model='songEditViewModel.song.title' placeholder="Song Title">
+  <input type='text' name='artistName' ng-model='songEditViewModel.song.artist' placeholder="Artist">
+  <input type='text' name='genre' ng-model='songEditViewModel.song.genre' placeholder="Genre">
+  <input type='text' name='albumUrl' ng-model='songEditViewModel.song.album_art' placeholder="Album Art Url">
+  <input type='text' name='songUrl' ng-model='songEditViewModel.song.audio_url' placeholder="Song Audio MP3 Url">
+  <button type="button" data-ng-click="songEditViewModel.update()">Edit</button>
+  <button data-ng-click="songEditViewModel.destroy()">Delete</button>
+</form>
+
+<!-- <div>
+  <song-form data-song='songEditViewModel.song' data-form-type='edit'></song-form>
+</div> -->

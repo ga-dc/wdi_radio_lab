@@ -1,0 +1,16 @@
+<h1 class="cover-heading"><a data-ui-sref="root">WDI Radio</a></h1>
+<h2><a data-ui-sref="songNew">New Song</a></h2>
+<div class="songs">
+  <div data-ng-repeat="song in songIndexViewModel.songs" class="song">
+    <!-- <p><a data-ui-sref="songShow({id: song.id})"><img data-ng-src="{{song.album_art}}"></a></p> -->
+    <p><img data-ng-src="{{song.album_art}}"></p>
+
+    <input type="checkbox" ng-model="checked"> Click Me
+    <div class="check-element animate-show" ng-show="checked">
+      <audio controls>
+        <source data-ng-src="{{song.audio_url}}" type="audio/mp3">
+        </audio>
+      <div song-show data-song='song'></div>
+    </div>
+  </div>
+</div>
