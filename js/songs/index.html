@@ -15,7 +15,7 @@
     </h4>
 
 </header>
-<div data-ng-repeat="song in songsIndexVM.songs | filter:search | orderBy: songsIndexVM.sort_on : songsIndexVM.is_descending">
+<div data-ng-repeat="song in songsIndexVM.songs | filter:search | orderBy: songsIndexVM.sort_on : songsIndexVM.is_descending" ng-init="songsIndexVM.sort_by('title')">
   <section>
     <header>
       <h3 class="song-header-line"><a data-ui-sref="songsShow({id: song.id})">{{song.title}}</a></h3>
