@@ -1,0 +1,19 @@
+<div class="container">
+  <button type="button" class="btn btn-default btn-md">
+    <a data-ui-sref="newIndex"><span class="glyphicon glyphicon-plus" ng-click="editable = true"></span>Add New!</a>
+  </button>
+<div  ng-repeat="song in songIndexViewModel.songs | orderBy:'id'" class="jumbotron audio-player center-block col-md-offset-3" style="background-image: {{song.album_art}};">
+<div class="janx">
+  <h3>{{song.artist}}<br><small>{{song.title}}<br></small><span>{{song.genre}}</span></h3>
+  <audio controls>
+    <source type="audio/mp3" ng-src="{{song.audio_url}}">
+  </audio>
+</div>
+    <img ng-src="{{song.album_art}}" alt=""/>
+    <br class="clear" />
+
+<br class="clear" />
+</div>
+
+
+</div>

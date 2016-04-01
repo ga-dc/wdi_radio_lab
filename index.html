@@ -1,15 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="wdiRadio">
   <head>
+    <meta charset="utf-8">
     <title>WDI Radio</title>
-    <script src="js/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="app.css" media="screen" title="no title" charset="utf-8">
+
+    <script src="js/app.js"></script>
+    <script src="js/songs/songs.js"></script>
+    <script src="js/songs/song.factory.js"></script>
+    <script src="js/songs/index.controller.js"></script>
+      <script src="js/songs/new.controller.js"></script>
   </head>
   <body>
-    <header>WDI Radio</header>
+    <div class="container-fluid centered ">
+      <div class="jumbotron centered main2">
+        <h1>WDI Radio<small> The best <br>damn song app in the world...</small></h1>
+      </div>
+  <main data-ui-view>
 
-    Welcome to the World's Best Song App
+  </main>
 
+    </div>
 
   </body>
 </html>
