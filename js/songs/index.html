@@ -1,6 +1,8 @@
 </div>
-<h2> This is my index </h2>
+<h2> All Songs </h2>
+<a data-ui-sref='songNew()'>New Song</a>
 <div class='songs' ng-repeat='song in SongsIndexVM.songs'>
   <p><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a></p>
   <button><a data-ui-sref="songEdit({id: song.id})">Edit</a></button>
+    <button data-ng-click="SongsEditVM.destroy({id: SongsEditVM.song.id})">Delete</button>
 </div>
