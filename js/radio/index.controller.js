@@ -3,9 +3,8 @@
 (function(){
   angular
     .module("songs")
-    .controller("songIndexController", [
-      "ui.router",
-      "ugResources",
+    .controller("SongIndexController", [
+      "SongFactory",
       SongIndexControllerFunction
     ]);
   function SongIndexControllerFunction(){
