@@ -1,0 +1,29 @@
+<div class="index-container">
+<button type="button" data-ng-click="showNewForm = true">New Song</button>
+<button type="button" data-ng-click="showNewForm = false" data-ng-show="showNewForm">Cancel</button>
+<div song-form form-type="new" data-song="SongsIndexViewModel.newSong" data-ng-show="showNewForm"></div>
+
+<div class="all-songs">
+<div data-ng-repeat="song in SongsIndexViewModel.songs" class="song-container">
+
+
+
+  <button type="button" data-ng-click="showForm = false" data-ng-show="showForm">Cancel</button>
+  <button type="button" data-ng-click="showForm = true" data-ng-hide="showForm">Edit</button>
+
+
+  <div song-form form-type="edit" data-song="song" data-ng-show="showForm"></div>
+
+
+
+
+    <h2>{{song.title}}</h2>
+    <img data-ng-src="{{song.album_art}}" alt="album art"</img>
+    <p>Artist: {{song.artist}}</p>
+    <p>Genre: {{song.genre}}</p>
+
+
+
+</div>
+</div>
+</div>
