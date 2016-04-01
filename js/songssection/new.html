@@ -1,0 +1,8 @@
+<h2>Add a New Song</h2>
+
+<form>
+  <input placeholder="Title" data-ng-model="SongNewViewModel.song.title" />
+  <input placeholder="Artist name" data-ng-model="SongNewViewModel.song.artist" />
+  <input placeholder="Photo URL" data-ng-model="SongNewViewModel.song.album_art" />
+  <button type="button" data-ng-click="SongNewViewModel.create()">Create</button>
+</form>
