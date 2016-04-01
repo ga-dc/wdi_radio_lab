@@ -20,5 +20,12 @@
       controller: "SongIndexController",
       controllerAs: "SongIndexViewModel"
     })
+
+    // .state("show", {
+    //   url: "/songs/:id",
+    //   templateUrl: "",
+    //   controller: "",
+    //   controllerAs: ""
+    // })
   }
 })();
