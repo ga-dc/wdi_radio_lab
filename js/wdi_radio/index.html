@@ -1,0 +1,9 @@
+<h2>Select your song</h2>
+
+<div class="edit-form" data-song="wdiRadioIndexViewModel.newSong" data-form-type="new"></div>
+
+<div ng-repeat="song in wdiRadioIndexViewModel.songs">
+  <h3><a data-ui-sref="wdiRadioShow({id: song.id})">{{song.title}}</a></h3>
+  <h4>{{song.artist}}</h4>
+  <img data-ng-src="{{song.album_art}}">
+</div>
