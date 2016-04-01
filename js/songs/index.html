@@ -1,0 +1,7 @@
+<h2>Songs!</h2>
+<div data-ng-repeat="song in SongIndexViewModel.songs">
+  <h3>{{song.title}}</h3>
+  <p>{{song.artist}}</p>
+  <p><audio src={{song.audio_url}}></p>
+  <p><img src={{song.album_art}}></p>
+</div>
