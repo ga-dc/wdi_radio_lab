@@ -2,26 +2,27 @@
 
 (function(){
   angular
-  .module("songs")
-  .directive("songNew", [
-    "SongFactory",
-    "$state",
-    SongFormDirectiveFunction
-  ]);
-
-  function SongFormDirectiveFunction(SongFactory, $state){
-    return{
-      templateUrl: "js/songs/form.html",
+  .module('songs')
+  .directive('songForm', function(){
+    return {
+      templateUrl: 'js/songs/_song_form.html',
+      replace: true,
+      restrict: "C",
       scope: {
-        song: "="
+        song: '=',
+        formType: '@'
       },
       link: function(scope){
         scope.create = function(){
-          scope.song.$save(function(response){
-            $state.go("songIndex", {}, {reload: true});
-          });
-        };
+          scope.song.$save()
+        }
+        scope.update = function(){
+          scope.song.$update({id: scope.song.id})
+        }
+        scope.delete = function(){
+          scope.song.$delete({id: scope.song.id})
+        }
       }
     }
-  }
+  });
 })();
