@@ -12,5 +12,8 @@
 
   function SongsIndexControllerFunction(SongsKitchen){
     this.songs = SongsKitchen.query();
+    this.sort_by = function(criteria){
+      this.sort_on = criteria;
+    }
   }
 }());
