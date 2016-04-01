@@ -4,7 +4,7 @@
   <input type="text" placeholder="Audio Url" value="song.audio_url" data-ng-model="song.audio_url" /><br />
   <input type="text" placeholder="Album Art" value="song.album_art" data-ng-model="song.album_art" /><br />
   <input type="text" placeholder="Genre" value="song.genre" data-ng-model="song.genre" /><br />
-  <button type="button" data-ng-click="edit()">Update</button>
-  <button type="button" data-ng-click="delete()">Delete Song</button>
-  <!-- <button type="button" data-ng-click="vm.create()" data-ng-show="formType == 'new'">Create Song</button> -->
+  <button type="button" data-ng-show="formType == 'edit'" data-ng-click="edit()">Update</button>
+  <button type="button" data-ng-show="formType == 'edit'" data-ng-click="delete()">Delete Song</button>
+  <button type="button" data-ng-show="formType == 'new'" data-ng-click="create()">Create Song</button>
 </form>

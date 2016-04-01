@@ -1,13 +1,17 @@
-<a data-ui-sref="songNew">New Song</a>
 
+<button type="button" data-ng-click="showNewForm = true">New Song</button>
+<button type="button" data-ng-click="showNewForm = false" data-ng-show="showNewForm">Cancel</button>
+<div song-form form-type="new" data-song="SongsIndexViewModel.newSong" data-ng-show="showNewForm"></div>
 
 <div data-ng-repeat="song in SongsIndexViewModel.songs">
 
+
+
   <button type="button" data-ng-click="showForm = false" data-ng-show="showForm">Cancel</button>
   <button type="button" data-ng-click="showForm = true" data-ng-hide="showForm">Edit</button>
-  
 
-  <div song-form data-song="song" data-ng-show="showForm"></div>
+
+  <div song-form form-type="edit" data-song="song" data-ng-show="showForm"></div>
 
 
   <div class="song-container">
