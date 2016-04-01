@@ -1,0 +1,20 @@
+<form>
+  Song Title<input type='text' name='title' ng-model='song.title'>
+  <br>
+  Artist<input type='text' name='artist' ng-model='song.artist'>
+  <br>
+  Genre<input type='text' name='genre' ng-model='song.genre'>
+  <br>
+  Album Art<input type='text' name='album_art' ng-model='song.album_art'>
+  <br>
+  Song URL<input type='text' name='' ng-model='song.audio_url'>
+  <div ng-show="formType == 'edit'">
+  <br>
+    <a data-ui-sref='songShow({id: song.id})'>Back</a>
+    <button ng-click='update()'>Save</button>
+  </div>
+  <div ng-show="formType == 'new'">
+    <button ng-click='create()'> Add New Song </button>
+  </div>
+  <!-- need form.directive.js to make this work! -->
+</form>

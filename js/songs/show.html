@@ -1,0 +1,9 @@
+<h2>{{SongsShowVM.song.title}}</h2>
+<!-- the song here is referring to this.song -->
+<p><dfn>Artist:</dfn> {{SongsShowVM.song.artist}}</p>
+<p><dfn>Created:</dfn> {{SongsShowVM.song.genre}}</p>
+<p><dfn>Created:</dfn> {{SongsShowVM.song.created_at}}</p>
+
+<img data-ng-src="{{SongsShowVM.song.album_art}}" src="#" alt="{{SongsShowVM.song.title}}" />
+<br>
+<audio data-ng-src="{{SongsShowVM.playMusic(SongsShowVM.song)}}" controls></audio>
