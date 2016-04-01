@@ -28,6 +28,11 @@ header a {
   text-decoration: none;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+}
+
 .welcome-container {
   display: flex;
   flex-direction: column;
@@ -47,4 +52,24 @@ header a {
   color: white;
   font-weight: bold;
   margin-bottom: 20px;
+}
+
+.index-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.all-songs {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 300px;
+  max-width: 80%;
+}
+
+.song-container {
+  margin: 20px;
+  background: black;
+  color: white;
+  width: 275px;
 }
