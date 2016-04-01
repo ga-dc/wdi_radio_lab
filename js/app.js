@@ -4,7 +4,8 @@
   angular
   .module("radio", [
     "ui.router",
-    "ngResource"
+    "ngResource",
+    "songs"
   ])
   .config([
     "$stateProvider",
@@ -14,16 +15,22 @@
   function RouterFunction($stateProvider){
     $stateProvider
     .state("index", {
-      url: "/",
+      url: "/songs",
       controller: "RadioIndexController",
-      controllerAs: "RadioViewModel" ,
+      controllerAs: "RadioIndexViewModel" ,
       templateUrl: "js/songs/main_index.html"
     })
 
-     .state("show", {
-       url: "/:id",
-       templateUrl: "show.html"
+ //     .state("show", {
+ //       url: "/:id",
+ //       templateUrl: "show.html"
+ //
+ //   });
+ //    .state("show", {
+ //     url: "/:id",
+ //     templateUrl: "show.html"
+ //
+ // });
 
-     });
   }
 }());

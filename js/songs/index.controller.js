@@ -1,9 +1,11 @@
 (function(){
   angular
   .module("radio")
-  .controller("RadioIndexController", index)
-  function index(){
-    this.pizza = "yum"
-    console.log("Loaded")
+  .controller("RadioIndexController", [
+    "RadioFactory",
+  SongIndexControllerFunction
+])
+  function SongIndexControllerFunction (RadioFactory){
+    this.song= RadioFactory.query();
     }
   }());
