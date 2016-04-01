@@ -1,0 +1,11 @@
+body {
+  background: url("http://radionw.gr/wp-content/themes/meshable2/lib/classes/timthumb.php?src=http://radionw.gr/wp-content/uploads/2012/01/Opera-Background-Speaker-e1349206882268.jpg&h=&w=930&zc=0") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+.songindex {
+  background-color: rgba(255,255,255,0.7);
+  width: 300px;
+  text-align: center;
+  color: black;
+}
