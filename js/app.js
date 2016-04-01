@@ -11,6 +11,12 @@
     RouterFunction
   ]);
 
+// for trying to get the audio to work
+  //   .config(function( $sceProvider){
+  //     $sceProvider.enabled(false);
+  //   }
+  // }
+
   function RouterFunction($stateProvider){
     $stateProvider
     .state("songIndex", {
@@ -21,7 +27,9 @@
     })
     .state("songShow", {
       url: "/songs/:id",
-      templateUrl: "js/songs/show.html"
+      templateUrl: "js/songs/show.html",
+      controller: "showController",
+      controllerAs: "songShowVM"
     });
   }
 }());
