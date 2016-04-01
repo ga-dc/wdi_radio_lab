@@ -1,0 +1,12 @@
+<h2>These Are Songs</h2>
+
+
+
+<div data-ng-repeat="radio in RadioIndexViewModel. | orderBy:'-created_at'">
+    <p>{{radio.title}}</p>
+  </div>
+ <p><dfn>Author:</dfn> RadioShowViewModel.radio.authorName</p>
+ <p><dfn>Created:</dfn> RadioShowViewModel.radio.created_at</p>
+ <blockquote>RadioShowViewModel.radio.content</blockquote>
+
+ <img data-ng-src="{{RadioShowViewModel.radio.photoUrl}}" src="#" alt="{{RadioShowViewModel.radio.title}}" />
