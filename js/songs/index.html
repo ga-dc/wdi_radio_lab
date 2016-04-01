@@ -1,6 +1,16 @@
-
-<div data-ng-repeat="song in songsIndexVM.songs">
-  <p>{{song.title}}</p>
-  <p>{{song.artist}}</p>
-  <p>{{song.genre}}</p>
+<p><a data-ui-sref="welcome">Home</a></p>
+<form>
+  <label="search">
+  <p>Search Songs: <input type="search" label="search" id="search-box" data-ng-model="search"></p>
+</form>
+<div data-ng-repeat="song in songsIndexVM.songs | filter:search">
+  <section>
+    <header>
+      <h3 class="song-header-line"><a data-ui-sref="songsShow({id: song.id})">{{song.title}}</a></h3>
+      <p class="song-header-line"> ({{song.genre}})</p><br>
+      <!-- <audio controls data-ng-src="{{ song.trusted_url) }}" type="audio/mpeg"></audio> -->
+      <a href="{{song.audio_url}}">play</a>
+    </header>
+    <p>by {{song.artist}}</p>
+  </section>
 </div>

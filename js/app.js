@@ -12,6 +12,10 @@
 
   function RouteBuilder($stateProvider){
     $stateProvider
+    .state('welcome', {
+      url: '/welcome',
+      templateUrl: "welcome.html",
+    })
     .state("songsIndex", {
       url: "/songs",
       templateUrl:"js/songs/index.html",

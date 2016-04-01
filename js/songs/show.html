@@ -1,0 +1,7 @@
+<p><a data-ui-sref="songsIndex">Back to songs</a></p>
+{{songsVM.song.title}}
+{{songsVM.song.artist}}
+{{songsVM.song.genre}}
+<img data-ng-src="{{songsVM.song.album_art}}"/>
+
+<audio controls data-ng-src="{{ songsVM.playSong(songsVM.song.trusted_url) }}" type="audio/mpeg"></audio>
