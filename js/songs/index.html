@@ -1,1 +1,10 @@
-<h1> I am an index for SONGS</h1>
+
+<nav><a data-ui-sref="welcome">Home</a></nav>
+
+<div class="display" data-ng-repeat="song in SongIndexViewModel.songs">
+  <h2>{{song.title}}</h2>
+  <p>{{song.artist}}</p>
+  <img data-ng-src="{{ song.album_art}}" alt="{{song.title}}" />
+
+  <a data-ui-sref="show({id: song.id})">Show</a>
+</div>

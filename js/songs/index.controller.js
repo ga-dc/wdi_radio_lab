@@ -1,15 +1,16 @@
 "use strict";
 
 
-(function()){
+(function(){
   angular
     .module("songs")
     .controller("SongIndexController",[
+      "SongFactory",
       SongIndexControllerFunction
     ]);
 
-  function SongIndexController(){
-    console.log("I'm in the controller")
+  function SongIndexControllerFunction(SongFactory){
+    this.songs = SongFactory.query();
   }
 
 
