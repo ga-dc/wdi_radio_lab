@@ -6,7 +6,7 @@
   angular
   .module('radioApp', [
     "ui.router",
-    "songs"
+    "songs",
   ])
   .config(['$stateProvider', RouteBuilder]);
 

@@ -3,16 +3,12 @@
   <form>
     <p>Search Songs: <input type="search" label="search" id="search-box" data-ng-model="search" placeholder="search"></p>
   </form>
-  <form>
-    <p>Add a Song: <input type="text" id="add-song-box" placeholder="add a song"><button>Add</button>
+  <form data-ng-controller="NewSongController as newSongVM">
+    <p>Add a Song: <input type="text" data-ng-model="newSongVM.song.title" id="add-song-box" placeholder="add a song"><button data-ng-click="newSongVM.song.create()">Add</button>
   </form>
-    <h4>Sort By: <button data-ng-click="songsIndexVM.sort_by('title')">Title</button>
-      <button data-ng-click="songsIndexVM.sort_by('artist')">Artist</button>
+    <h4>Sort By: <button data-ng-click="songsIndexVM.sort_by('title'); songsIndexVM.is_descending = false">Title</button>
+      <button data-ng-click="songsIndexVM.sort_by('artist'); songsIndexVM.is_descending = false">Artist</button>
       <button data-ng-click="songsIndexVM.sort_by('created_at')">Date Created </button>
-        Order By:
-      <button data-ng-click="songsIndexVM.is_descending = false">A - Z</button>
-      <button data-ng-click="songsIndexVM.is_descending = true">Z - A</button>
-      <button data-ng-click="songsIndexVM.is_descending = !(songsIndexVM.is_descending)">Date Created</button>
     </h4>
 
 </header>
