@@ -25,6 +25,12 @@
       controller: "SongNewController",
       controllerAs: "SongNewViewModel"
     })
+    .state("songEdit", {
+      url: "/songs/edit/:id",
+      templateUrl: "js/songssection/edit.html",
+      controller: "SongEditController",
+      controllerAs: "SongEditViewModel"
+    })
     .state("songShow", {
       url: "/songs/:id",
       templateUrl: "js/songssection/show.html",
