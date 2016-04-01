@@ -1,1 +1,68 @@
-/*=require bootstrap*/
+body {
+    background-color: black;
+}
+
+#view-wrapper {
+  background-image: url("http://www.zastavki.com/pictures/originals/2013/Music_Professional_microphone_on_a_black_background_049086_.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+
+
+#overlay{
+  background-color: rgba(0,0,0,.5);
+  width: 100%;
+  height: 100%;
+}
+
+/* Index Page CSS */
+.artist {
+  position: absolute;
+  margin-top: 400px;
+  color: tan;
+  margin-left: 25px;
+}
+
+.title a {
+  color: white;
+  text-decoration: none;
+}
+.title {
+  position: absolute;
+  margin-top: 430px;
+  margin-left: 25px;
+}
+.album_cover {
+  border: 2px solid rgba(255, 255, 255, .7);
+  min-width: 500px;
+  min-height: 500px;
+}
+
+/* Show Page CSS */
+
+#artist_disco {
+  max-width: 400px;
+  height: auto;
+  margin-left: 50px;
+  float: left;
+}
+
+.show_album_cover {
+  width: 400px;
+  border: 2px solid rgba(255, 255, 255, .7);
+}
+  .show_artist {
+    color: white;
+    margin: 0 0 15px 0;
+  }
+
+  .show_title {
+    color: tan;
+    margin: 0 0 5px 0;
+  }
+  #artist_disco p {
+    color: white;
+    margin: 0;
+  }
