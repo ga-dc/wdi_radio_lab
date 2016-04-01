@@ -5,10 +5,11 @@
   .module("songs")
   .controller("songIndexController", [
     "songFactory",
+    "$stateParams",
     songIndexControllerFunction
   ]);
 
-  function songIndexControllerFunction(songFactory) {
+  function songIndexControllerFunction(songFactory, $stateParams) {
     this.songs = songFactory.query();
     }
 })();

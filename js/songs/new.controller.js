@@ -4,6 +4,13 @@
   angular
   .module("songs")
   .controller("newSongController", [
-    "songFactory"
+    "songFactory",
+    songNewControllerFunction
   ]);
+  function songNewControllerFunction(songFactory) {
+    this.song = new songFactory();
+    this.create = function() {
+      this.song.$save();
+    };
+  }
 })();
