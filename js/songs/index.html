@@ -1,0 +1,14 @@
+<div>
+  <h2>New Song</h2>
+    <song-form data-song='SongIndexViewModel.newSong'></song-form>
+  <div class="stuff"> </div>
+  <song-player data-ng-show="SongIndexViewModel.current" data-song="SongIndexViewModel.current"></song-player>
+
+  <div class="index">
+    <h2>These are all the Songs</h2>
+    <div data-ng-repeat="song in SongIndexViewModel.songs">
+      <img ng-click="SongIndexViewModel.setCurrent(song)" data-ng-src="{{ song.album_art}}" alt="{{song.title}}" />
+      <button type="button" data-ui-sref="songEdit({id: song.id})">Edit</button>
+    </div>
+  </div>
+</div>
