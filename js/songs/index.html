@@ -12,10 +12,11 @@
         Order By:
       <button data-ng-click="songsIndexVM.is_descending = false">A - Z</button>
       <button data-ng-click="songsIndexVM.is_descending = true">Z - A</button>
+      <button data-ng-click="songsIndexVM.is_descending = !(songsIndexVM.is_descending)">Date Created</button>
     </h4>
 
 </header>
-<div data-ng-repeat="song in songsIndexVM.songs | filter:search | orderBy: songsIndexVM.sort_on : songsIndexVM.is_descending" ng-init="songsIndexVM.sort_by('title')">
+<div data-ng-repeat="song in songsIndexVM.songs | filter:search | orderBy: songsIndexVM.sort_on : songsIndexVM.is_descending" ng-init="songsIndexVM.sort_by('created_at')">
   <section>
     <header>
       <h3 class="song-header-line"><a data-ui-sref="songsShow({id: song.id})">{{song.title}}</a></h3>
