@@ -12,4 +12,4 @@
    function RadioShowControllerFunction(RadioFactory, $stateParams){
      this.song = RadioFactory.get({id: $stateParams.id});
    }
- }());
+ })();
