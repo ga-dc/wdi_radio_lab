@@ -1,0 +1,54 @@
+form input{
+  display: block;
+}
+.jumbotron {
+  background-color: #D7FFF1;
+  padding: 1px 0 1px 0;
+}
+.audio-player {
+  color: #383A3F;
+}
+.center-block {
+  display: block;
+  width: 70%;
+  height: 5%;
+  margin: 5px auto 5px auto;
+  padding: 5px auto 5px auto;
+}
+
+.main2 {
+  background-image: url('http://www.radioretro.ro/images/radio.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  display: block;
+  width: 70%;
+  height: 5%;
+  margin: 5px auto 5px auto;
+}
+audio {
+  float: left;
+  color: #D7FFF1;
+}
+img {
+  display: block;
+  width: 200px;
+  height: 180px;
+  position: relative;
+  float: right;
+  top: 10px;
+}
+
+.clear {
+    clear:both;
+    line-height:0;
+}
+div[class="janx"] *{
+  line-height: 2;
+}
+
+.janx {
+  float: left;
+  position: relative;
+  top: -18px;
+}
