@@ -14,13 +14,13 @@ function RouterFunction($stateProvider){
   $stateProvider
   .state("SongIndex", {
     url: "/songs",
-    templateUrl: "js/songs/index.html",
+    templateUrl: "js/song/index.html",
     controller: "SongIndexController",
     controllerAs: "SongIndexViewModel"
   })
-  .state("SongView", {
-    url: "/songs/:id",
-    templateUrl: "/js/songs/show.html",
+  .state("songShow", {
+    url: "/song/:id",
+    templateUrl: "/js/song/show.html",
     controller: "SongShowController",
     controllerAs: "SongShowViewModel"
   });

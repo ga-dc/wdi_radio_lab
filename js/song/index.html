@@ -2,10 +2,11 @@
   <h2>Songs Index</h2>
   <div class="row" data-ng-repeat="song in SongIndexViewModel.songs| orderBy:'-created_at'">
     <!-- Repeat these info fo all songs -->
-    <p>Title: <a data-ui-sref="SongShow">{{song.title}}</a></p>
-    <a data-ui-sref="SongShow">
-      <img src="{{song.album_art}}">
-    </a>
+    <p>Title: <a data-ui-sref="songShow({id: song.id})">{{song.title}}</a>
+    </p>
+
+      <img data-ng-src="{{song.album_art}}">
+
     <p>Artist: <a data-ui-sref="SongShow">{{song.artist}}</a></p>
     <hr/>
   </div>
