@@ -1,0 +1,7 @@
+<div id="view-wrapper">
+  <div data-ng-repeat="song in musicIndexViewModel.music | orderBy:'-created_at'" style=" width: 500px; height: 500px; display: inline-block; margin: 5%;" >
+    <h1 class="artist">{{song.artist}}</h1>
+    <h2 class="title"><a data-ui-sref="musicShow({id: song.id})">{{song.title}}</a></h2>
+    <img class ="album_cover" data-ng-src="{{song.album_art}}"></img>
+  </div>
+</div>
