@@ -1,0 +1,11 @@
+<form>
+  <input placeholder="Artist" data-ng-model="wadio.title" />
+  <input placeholder="Author name" data-ng-model="wadio.authorName" />
+  <input placeholder="Photo URL" data-ng-model="wadio.photoUrl" />
+  <textarea placeholder="Wadio content" data-ng-model="wadio.content"></textarea>
+  <button type="button" data-ng-if="!wadio.id" data-ng-click="create()">Create</button>
+  <div data-ng-if="wadio.id">
+    <button type="button" data-ng-click="update()">Update</button>
+    <button type="button" data-ng-click="delete()">Delete</button>
+  </div>
+</form>
