@@ -12,7 +12,7 @@
 
 function RouterFunction($stateProvider){
   $stateProvider
-  .state("SongIndex", {
+  .state("songIndex", {
     url: "/songs",
     templateUrl: "js/song/index.html",
     controller: "SongIndexController",
