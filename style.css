@@ -196,3 +196,7 @@ body {
 img {
   border-radius: 10px;
 }
+
+input {
+  color: black;
+}
