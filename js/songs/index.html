@@ -1,0 +1,26 @@
+<p><a data-ui-sref="welcome">Home</a></p>
+<header>
+  <form>
+    <p>Search Songs: <input type="search" label="search" id="search-box" data-ng-model="search" placeholder="search"></p>
+  </form>
+  <form data-ng-controller="NewSongController as newSongVM">
+    <p>Add a Song: <input type="text" data-ng-model="newSongVM.song.title" id="add-song-box" placeholder="add a song"><button data-ng-click="newSongVM.song.create()">Add</button>
+  </form>
+    <h4>Sort By: <button data-ng-click="songsIndexVM.sort_by('title'); songsIndexVM.is_descending = false">Title</button>
+      <button data-ng-click="songsIndexVM.sort_by('artist'); songsIndexVM.is_descending = false">Artist</button>
+      <button data-ng-click="songsIndexVM.sort_by('created_at')">Date Created </button>
+    </h4>
+
+</header>
+<div data-ng-repeat="song in songsIndexVM.songs | filter:search | orderBy: songsIndexVM.sort_on : songsIndexVM.is_descending" ng-init="songsIndexVM.sort_by('created_at')">
+  <section>
+    <header>
+      <h3 class="song-header-line"><a data-ui-sref="songsShow({id: song.id})">{{song.title}}</a></h3>
+      <p class="song-header-line"> ({{song.genre}})</p><br>
+      <!-- <audio controls data-ng-src="{{ song.trusted_url) }}" type="audio/mpeg"></audio> -->
+      <a href="{{song.audio_url}}">play</a>
+    </header>
+    <p>by {{song.artist}}</p>
+    <button data-ng-click="song.destroy($index)">delete song</button>
+  </section>
+</div>
