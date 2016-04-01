@@ -6,7 +6,7 @@
   .module('songs')
   .controller('songsIndexController', [
     "SongsKitchen",
-    "$sce",
+    "$stateParams",
     SongsIndexControllerFunction
   ]);
 
@@ -15,6 +15,12 @@
     this.sort_by = function(criteria){
       this.sort_on = criteria;
       this.is_descending = true;
+    }
+    this.destroy = function(song_index){
+      var s = this.songs[song_index];
+      this.songs.$delete({id: s.id}, function(success){
+        console.log('you did it');
+      })
     }
     console.log(this.songs);
   }

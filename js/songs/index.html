@@ -21,5 +21,6 @@
       <a href="{{song.audio_url}}">play</a>
     </header>
     <p>by {{song.artist}}</p>
+    <button data-ng-click="song.destroy($index)">delete song</button>
   </section>
 </div>
