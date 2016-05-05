@@ -1,0 +1,16 @@
+<h1>{{showVm.song.title}} by {{showVm.song.artist}}</h1>
+
+Appears on:
+<br>
+<img data-ng-src="{{showVm.song.album_art}}" alt="{{showVm.song.title}} by {{showVm.song.artist}}">
+<br>
+<button data-ng-click ="editSongForm = !editSongForm" data-ng-hide = "editSongForm">Edit Song</button>
+<button data-ng-click = "showVm.delete()"> Delete </button>
+<form data-ng-submit = "showVm.update()" data-ng-show = "editSongForm">
+  <input type="text" data-ng-model = "showVm.song.title">
+  <input type="text" data-ng-model = "showVm.song.artist">
+  <input type="text" data-ng-model = "showVm.song.genre">
+  <input type="text" data-ng-model = "showVm.song.audio_url">
+  <input type="text" data-ng-model = "showVm.song.album_art">
+  <button type="submit">Update Song</button>
+</form>
