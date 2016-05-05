@@ -17,6 +17,10 @@
 
     function RouterFunction($stateProvider){
       $stateProvider
+        .state("home", {
+          url: "",
+          template: "Welcome to the Best Song App in the World"
+        })
         .state("songsIndex", {
           url: "/songs",
           templateUrl: "js/index.html",
@@ -24,7 +28,7 @@
           controllerAs: "SongIndexViewModel"
         })
         .state("songShow", {
-          url: "/songs/id",
+          url: "/songs/:id",
           templateUrl: "js/show.html",
           controller: "SongShowController",
           controllerAs: "SongShowViewModel"
@@ -44,7 +48,7 @@
     }
 
     SongShowControllerFunc.$inject = ["SongFactory"]
-    function SongShowControllerFunc (SongFactory) {
-      console.log("this is working!")
+    function SongShowControllerFunc (SongFactory, $stateParams) {
+      this.song = SongFactory.get({id: $stateParams.id});
     }
 }());
