@@ -17,14 +17,14 @@
 <p class = "song">
   <img data-ng-src = "{{song.album_art}}">
   <br>
-  {{song.title}} by {{song.artist}}
+  <a data-ui-sref = "showSongs({id: song.id})">
+    {{song.title}} by {{song.artist}}
+  </a>
   <br>
   <i>
     {{song.genre}}
   </i>
-  <audio controls>
-    <source data-ng-src = "{{ $sce.trustAsResourceUrl(song.audio_url)}}">
-  </audio>
+
 
 </p>
 
