@@ -8,9 +8,7 @@
     var vm = this
     vm.song = new SongFactory();
     vm.create = function(){
-      vm.song.$save().then(function(res){
-        console.log("then called");
-        console.log(res);
+      vm.song.$save().then(function(){
         $state.go("songs")
       })
     }

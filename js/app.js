@@ -35,6 +35,12 @@
       controller: "ShowController",
       controllerAs: "vmShow"
     })
+    .state("editSong",{
+      url:"/songs/:id/edit",
+      templateUrl: "js/templates/_edit.html",
+      controller: "EditController",
+      controllerAs: "vmEdit"
+    })
   }
 
 })();

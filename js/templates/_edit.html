@@ -1,0 +1,12 @@
+<h2>Edit song</h2>
+<div class="form">
+  <form data-ng-submit="vmEdit.update()">
+    <input value="vmShow.song.title" data-ng-model="vmEdit.song.title" />
+    <input value="vmShow.song.artist" data-ng-model="vmEdit.song.artist" />
+    <input value="vmShow.song.genre" data-ng-model="vmEdit.song.genre" />
+    <input value="vmShow.song.album_art" data-ng-model="vmEdit.song.album_art" />
+    <input value="vmShow.song.audio_url" data-ng-model="vmEdit.song.audio_url" />
+    <input type="submit" value="Update Song" />
+  </form>
+  <button data-ng-click="vmEdit.destroy()">Delete</button>
+</div>
