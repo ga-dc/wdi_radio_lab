@@ -1,0 +1,54 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700,100);
+
+body{
+  background-color: #2C3D51;
+  color: #ffffff;
+  font-family: Roboto, sans-serif;
+  padding: 2em;
+}
+
+.header{
+  width:  400px;
+  margin: auto;
+  text-align: center;
+
+}
+.header h1{
+  font-size: 60px;
+}
+.header h3{
+  font-size: 40px;
+}
+
+.songs-container{
+  width: 800px;
+  height: 300px;
+  margin: auto;
+  padding: 10px;
+}
+
+.song-play{
+  margin: 0;
+  padding: 15px;
+  width: 250px;
+  float: left;
+  background-color: #E74C3C;
+  font-family: Verdana, sans-serif;
+}
+
+img {
+  border-style: none;
+
+}
+
+#btn {
+  width: 130px;
+  height: 50px;
+  background-color: #f44336;
+  border: none;
+  color: #ffffff;
+  padding:15px
+  text-align: center;
+  display: inline-block;
+  font-size: 30px;
+}
