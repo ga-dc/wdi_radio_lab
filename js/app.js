@@ -25,6 +25,13 @@
           url: "/",
           templateUrl: "/js/welcome.template.html"
         })
+
+        .state("showSong", {
+          url: "/songs/:id",
+          templateUrl: "js/show.controller.js",
+          controller: "SongsShowController",
+          controllerAs: "showVm"
+        })
     }
 
 
