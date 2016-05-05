@@ -19,7 +19,7 @@
     })
     .state("songs", {
       url: "/songs",
-      templateUrl: "js/templates/songs.template.html"
+      templateUrl: "js/templates/songs.template.html",
       controller: "SongsController",
       controllerAs: "vm"
     })
