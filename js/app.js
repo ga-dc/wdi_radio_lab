@@ -10,8 +10,10 @@
       "$stateProvider",
       RouterFunction
     ])
-    .controller("SongIndexController", SongIndexControllerFunc)
     .factory("SongFactory", SongFactoryFunc)
+    .controller("SongIndexController", SongIndexControllerFunc)
+    .controller("SongShowController", SongShowControllerFunc)
+
 
     function RouterFunction($stateProvider){
       $stateProvider
@@ -20,6 +22,12 @@
           templateUrl: "js/index.html",
           controller: "SongIndexController",
           controllerAs: "SongIndexViewModel"
+        })
+        .state("songShow", {
+          url: "/songs/id",
+          templateUrl: "js/show.html",
+          controller: "SongShowController",
+          controllerAs: "SongShowViewModel"
         })
     }
 
@@ -33,5 +41,10 @@
     SongIndexControllerFunc.$inject = ["SongFactory"]
     function SongIndexControllerFunc (SongFactory){
       this.songs = SongFactory.query();
+    }
+
+    SongShowControllerFunc.$inject = ["SongFactory"]
+    function SongShowControllerFunc (SongFactory) {
+      console.log("this is working!")
     }
 }());
