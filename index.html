@@ -7,16 +7,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-resource.js"></script>
     <script src="js/app.js"></script>
     <script src="js/songs.js"></script>
-    <script src="js/songs.controller.js"></script>
     <script src="js/songs.factory.js"></script>
+    <script src="js/songs.controller.js"></script>
+    <script src="js/show.controller.js"></script>
+    <script src="js/new.controller.js"></script>
+    <link rel="stylesheet" href="style.css">
 
   </head>
   <body data-ng-app="wdiradio">
-    <header><h1><a data-ui-sref="index">WDI Radio</a></h1></header>
 
-    <h3>Welcome to the World's Best Song App</h3>
+    <header>
+      <h1>
+        <a data-ui-sref="index">WDI Radio</a>
+      </h1>
+    </header>
 
-    <button data-ui-sref="songs">Songs</button>
+    <button data-ui-sref="songs">All Songs</button>
+    <button data-ui-sref="newSong">New Song</button>
 
     <main data-ui-view></main>
 

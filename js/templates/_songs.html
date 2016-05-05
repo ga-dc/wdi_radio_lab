@@ -1,0 +1,8 @@
+<h1>Songs</h1>
+<div class="flex container">
+  <div data-ng-repeat="song in vm.songs" class="song_container">
+    <a data-ui-sref="showSong({id:song.id})">
+      <img src="{{song.album_art}}">
+    </a>
+  </div>
+</div>
