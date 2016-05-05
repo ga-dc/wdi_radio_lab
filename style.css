@@ -1,0 +1,30 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+
+a:active {
+  color:yellow;
+}
+
+a:hover {
+  color:yellow;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: gray;
+}
+
+.song {
+  line-height: 2em;
+}
+
+.main-display {
+  margin: auto;
+  width: 65%;
+}

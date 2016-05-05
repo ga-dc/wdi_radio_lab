@@ -1,0 +1,31 @@
+<h1>WDI Radio Songs</h1>
+
+
+<button data-ng-click ="newSongForm = !newSongForm" data-ng-hide = "newSongForm">Add Song</button>
+
+<form data-ng-submit = "indexVm.create()" data-ng-show = "newSongForm">
+  <input type="text" data-ng-model = "indexVm.newSong.title" placeholder="Song">
+  <input type="text" data-ng-model = "indexVm.newSong.artist" placeholder="Artist">
+  <input type="text" data-ng-model = "indexVm.newSong.genre" placeholder="Style/Genre">
+  <input type="text" data-ng-model = "indexVm.newSong.audio_url" placeholder="Audio Preview URL">
+  <input type="text" data-ng-model = "indexVm.newSong.album_art" placeholder="Album Art URL">
+  <button type="submit">Add Song</button>
+</form>
+
+<div data-ng-repeat="song in indexVm.songs">
+
+<p class = "song">
+  <img data-ng-src = "{{song.album_art}}">
+  <br>
+  <a data-ui-sref = "showSongs({id: song.id})">
+    {{song.title}} by {{song.artist}}
+  </a>
+  <br>
+  <i>
+    {{song.genre}}
+  </i>
+
+
+</p>
+
+</div>
