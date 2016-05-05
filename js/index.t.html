@@ -1,5 +1,3 @@
-<h3>Song Index</h3>
-
 <button data-ng-hide="newSong" data-ng-click="newSong=!newSong">Add song</button>
 <form data-ng-show="newSong">
   <input placeholder="Title" data-ng-model="indexVM.newSong.title" />
@@ -11,7 +9,7 @@
 </form>
 
 <div data-ng-repeat="song in indexVM.songs" class="song">
-  <p>{{song.title}} - by {{song.artist}}</p>
+  <p class="song-title">{{song.title}} - by {{song.artist}}</p>
   <button data-ui-sref="songEdit({id: song.id})">Edit/delete {{song.title}}</button>
   <button data-ng-click="indexVM.setSong(song.audio_url); indexVM.play = true">Play {{song.title}}</button>
   <p></p>

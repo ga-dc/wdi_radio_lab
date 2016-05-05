@@ -53,7 +53,6 @@
       }
       indexVM.setSong = function(currentSongUrl){
         indexVM.trustedUrl = $sce.trustAsResourceUrl(currentSongUrl);
-        console.log(indexVM.trustedUrl)
       }
     };
 
