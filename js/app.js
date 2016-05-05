@@ -20,6 +20,11 @@
           controller: "SongsIndexCtrl",
           controllerAs: "indexVm"
         })
+
+        .state("welcome", {
+          url: "/",
+          templateUrl: "/js/welcome.template.html"
+        })
     }
 
 
