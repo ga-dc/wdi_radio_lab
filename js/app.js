@@ -64,10 +64,14 @@
 
   }
 
-  ShowControllerFunc.$inject = ["$state", "$stateParams", "SongFactory"];
-  function ShowControllerFunc($state, $stateParams, SongFactory) {
+  ShowControllerFunc.$inject = ["$state", "$stateParams", "SongFactory", "$sce"];
+  function ShowControllerFunc($state, $stateParams, SongFactory, $sce) {
     var showVm = this;
     showVm.song = SongFactory.get({id: $stateParams.id});
+    showVm.song.$promise.then(function(){
+      showVm.song.mp3_url = $sce.trustAsResourceUrl(showVm.song.audio_url);
+      console.log(showVm.song.mp3_url);
+    })
 
     showVm.update = function() {
       showVm.song.$update({id: $stateParams.id});
