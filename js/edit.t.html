@@ -1,0 +1,14 @@
+<form data-ng-submit="editVM.editSong()">
+  <input data-ng-model="editVM.song.title" />
+  <input data-ng-model="editVM.song.artist" />
+  <input data-ng-model="editVM.song.album_art" />
+  <input data-ng-model="editVM.song.audio_url" />
+  <input data-ng-model="editVM.song.genre" />
+  <button type="submit">Edit</button>
+</form>
+
+<p>
+
+</p>
+
+<button data-ng-click="editVM.deleteSong()">Delete song</button>

@@ -1,0 +1,19 @@
+<button data-ng-hide="newSong" data-ng-click="newSong=!newSong">Add song</button>
+<form data-ng-show="newSong">
+  <input placeholder="Title" data-ng-model="indexVM.newSong.title" />
+  <input placeholder="Artist" data-ng-model="indexVM.newSong.artist" />
+  <input placeholder="Album art url" data-ng-model="indexVM.newSong.album_art" />
+  <input placeholder="Audio url" data-ng-model="indexVM.newSong.audio_url" />
+  <input placeholder="Genre" data-ng-model="indexVM.newSong.genre" />
+  <input type="submit" data-ng-click="indexVM.addSong(); newSong=!newSong"/>
+</form>
+
+<div data-ng-repeat="song in indexVM.songs" class="song">
+  <p class="song-title">{{song.title}} - by {{song.artist}}</p>
+  <button data-ui-sref="songEdit({id: song.id})">Edit/delete {{song.title}}</button>
+  <button data-ng-click="indexVM.setSong(song.audio_url); indexVM.play = true">Play {{song.title}}</button>
+  <p></p>
+  <img data-ng-src="{{song.album_art}}" />
+</div>
+
+<div data-music-player data-ng-if="indexVM.play" data-song="SongsIndexViewModel.playSong"></div>
