@@ -11,6 +11,7 @@
     RouterFunction
   ])
   .controller("SongIndexController", SongIndexControllerFunc)
+  .controller("SongShowController", SongShowControllerFunc)
   .factory("SongFactory", SongFactoryFunc);
 
   function RouterFunction($stateProvider){
@@ -21,14 +22,20 @@
       controller:"SongIndexController",
       controllerAs: "indexVm"
     })
-  }
+    .state ("songShow", {
+      url: "/songs/:id",
+      templateUrl: "js/show.html",
+      controller: "SongShowController",
+      controllerAs: "showVm"
+    })
+}
 
 
   SongFactoryFunc.$inject = ["$resource"];
   function SongFactoryFunc($resource) {
     return $resource("http://localhost:3000/songs/:id", {}, {
       update: {method: "PUT"}
-    })
+    });
   }
 
   SongIndexControllerFunc.$inject = ["SongFactory"];
@@ -36,6 +43,14 @@
      var indexVm = this;
      indexVm.songs = SongFactory.query();
      indexVm.newSong = new SongFactory();
+
+  }
+
+  SongShowControllerFunc.$inject = ["SongFactory", "$stateParams"];
+  function SongShowControllerFunc(SongFactory, $stateParams) {
+     var showVm = this;
+     showVm.song = SongFactory.get({id: $stateParams.id});
+     showVm.newSong = new SongFactory();
 
   }
 

@@ -2,5 +2,5 @@
 <p>Welcome to the dopest app ever</p>
 <div data-ng-repeat="song in indexVm.songs">
   <p>{{song.title}}</p>
-  <p><img data-ng-src="{{song.album_art}}"></p>
+  <p><a data-ui-sref="songShow({id: song.id})"><img data-ng-src="{{song.album_art}}"></a></p>
 </div>
