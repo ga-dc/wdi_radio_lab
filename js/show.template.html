@@ -4,6 +4,10 @@ Appears on:
 <br>
 <img data-ng-src="{{showVm.song.album_art}}" alt="{{showVm.song.title}} by {{showVm.song.artist}}">
 <br>
+<audio controls>
+  <source data-ng-src="{{showVm.song.mp3_url}}">
+</audio>
+<br>
 <button data-ng-click ="editSongForm = !editSongForm" data-ng-hide = "editSongForm">Edit Song</button>
 <button data-ng-click = "showVm.delete()"> Delete </button>
 <form data-ng-submit = "showVm.update()" data-ng-show = "editSongForm">
