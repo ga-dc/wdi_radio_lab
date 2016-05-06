@@ -1,1 +1,11 @@
 <p>{{indexVm.hello}}</p>
+
+<h1>Library</h1>
+
+<div data-ng-repeat="song in indexVm.songs">
+  <div class="song">
+    <p>
+      <a data-ui-sref="showSong({id: song.id})">{{song.title}}</a>
+    </p>
+  </div>
+</div>

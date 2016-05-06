@@ -3,13 +3,16 @@
 (function(){
   angular
     .module("songs")
-    .controller("SongsIndexCtrl",[    // Names this controller as SongsIndexCtrl...
+    .controller("SongsIndexCtrl", [    // Names this controller as SongsIndexCtrl...
       "SongFactory",                // and gets the SongFactory function, and calls...
-      SongsIndexCtrlFunc          // .. this SongsIndexCtrlFunc function.
+      ControllerFunction          // .. this SongsIndexCtrlFunc function.
     ])
-    function SongsIndexCtrlFunc() {
-      var indexVm = this;
-      indexVm.hello = "Hello Dave"
+
+    function ControllerFunction(SongFactory) {
+        this.songs = SongFactory.query();
+
+      // var indexVm = this;             this attempt at 'hello world' didn't work.
+      // indexVm.hello = "Hello Dave"
     }
 
 })();
