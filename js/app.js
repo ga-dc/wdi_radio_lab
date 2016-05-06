@@ -2,8 +2,8 @@
 
 (function(){
   angular
-    .module("wdi_radio", [
-      "ui.router",
+    .module("wdi_radio", [     // Creates the module named wdi_radio and
+      "ui.router",            // gives it the router and songs dependencies.
       "songs"
     ])
     .config([
@@ -21,11 +21,11 @@
           templateUrl: "/js/welcome.template.html"
         })
 
-        .state("allSongs", {
-          url: "/songs",
-          templateUrl: "/js/index.template.html",
-          controller: "SongsIndexCtrl",
-          controllerAs: "indexVm"
+        .state("allSongs", {         // This is the state's name.
+          url: "/songs",              // It makes the URL say this, then...
+          templateUrl: "/js/index.template.html",   // the app gets directed to this file,..
+          controller: "SongsIndexCtrl",     // then uses this controller..
+          controllerAs: "indexVm"           // .. where this abbreviation appears in HTML.
         })
 
         .state("showSong", {

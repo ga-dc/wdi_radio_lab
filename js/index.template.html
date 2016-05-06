@@ -2,10 +2,11 @@
 
 <h1>Library</h1>
 
+            <!-- Using indexVM here directs this <div> to the SongsIndexCtrl controller. -->
 <div data-ng-repeat="song in indexVm.songs">
   <div class="song">
     <p>
       <a data-ui-sref="showSong({id: song.id})">{{song.title}}</a>
-    </p>
+    </p>    <!-- Here, showSong makes this <a link> use the SongsShowController. -->
   </div>
 </div>
