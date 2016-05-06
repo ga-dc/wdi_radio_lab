@@ -1,6 +1,5 @@
 <h1>Dopest Playlist</h1>
 <p>Playlist</P>
-<p><img data-ng-src="{{showVm.album_art}}"></p>
-<p><img data-ng-src="{{song.album_art}}"></p>
+<p><a data-ui-sref="songIndex({id: song.id})"><img data-ng-src="{{song.album_art}}"></a></p>
 <p>{{showVm.song.genre}}</p>
 <p>{{showVm.song.artist}}</p>
