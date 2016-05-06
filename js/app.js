@@ -12,7 +12,7 @@
     ])
     .factory("SongFactory", SongFactoryFunc)
     .controller("SongIndexController", SongIndexControllerFunc)
-    .controller("SongShowController", SongShowControllerFunc)
+    .controller("SongShowController",  SongShowControllerFunc)
 
 
     function RouterFunction($stateProvider){
@@ -47,7 +47,7 @@
       this.songs = SongFactory.query();
     }
 
-    SongShowControllerFunc.$inject = ["SongFactory"]
+    SongShowControllerFunc.$inject = ["SongFactory", "$stateParams"]
     function SongShowControllerFunc (SongFactory, $stateParams) {
       this.song = SongFactory.get({id: $stateParams.id});
     }
