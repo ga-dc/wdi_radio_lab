@@ -2,7 +2,7 @@
   <div class="songs-container">
     <div data-ng-repeat="song in indexVm.songs">
       <div class="song-play">
-        <img data-ng-src="{{ song.album_art}}" alt="{{song.title}}" />
+        <a data-ui-sref='radioShow({id: song.id})'><img data-ng-src="{{ song.album_art}}" alt="{{song.title}}"></a>
 
         <div>
             <div song-show data-song='song'></div>

@@ -6,7 +6,7 @@
   .config(["$stateProvider", RouterFunction])
 
   .controller("RadioIndexController", ["SongFactory", RadioIndexControllerFunc])
-  .controller("RadioShowController", ["SongFactory", RadioShowControllerFunc])
+  .controller("RadioShowController", RadioShowControllerFunc)
   .controller("buttonController")
   .factory("SongFactory", ["$resource", SongFactoryFunc]);
 
@@ -50,9 +50,11 @@
   }
 
   RadioShowControllerFunc.$inject = [ "SongFactory", "$stateParams"];
+
   function RadioShowControllerFunc( SongFactory, $stateParams){
     var showVm = this;
     showVm.song = SongFactory.get({id: $stateParams.id});
+    console.log(showVm.song);
   };
 
 
