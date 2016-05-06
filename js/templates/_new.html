@@ -1,0 +1,11 @@
+<h2>Add new song</h2>
+<div class="form">
+  <form data-ng-submit="vmNew.create()">
+    <input placeholder="Title" data-ng-model="vmNew.song.title" />
+    <input placeholder="Artist" data-ng-model="vmNew.song.artist" />
+    <input placeholder="Genre" data-ng-model="vmNew.song.genre" />
+    <input placeholder="Album Artwork" data-ng-model="vmNew.song.album_art" />
+    <input placeholder="Audio Sample" data-ng-model="vmNew.song.audio_url" />
+    <input type="submit" value="Add Song" />
+  </form>
+</div>
