@@ -40,4 +40,4 @@
       indexVm.hello = "Hello Dave"
     }
 
-})()
+})();
