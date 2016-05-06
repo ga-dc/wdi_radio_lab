@@ -30,7 +30,7 @@
 
         .state("showSong", {
           url: "/songs/:id",
-          templateUrl: "js/show.controller.js",
+          templateUrl: "js/show.html",
           controller: "SongsShowController",
           controllerAs: "showVm"
         })
