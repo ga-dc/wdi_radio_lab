@@ -4,3 +4,16 @@
   <p>By: {{SongShowViewModel.song.artist}}</p>
   <p>Genre: {{SongShowViewModel.song.genre}}</p>
 </div>
+
+<button data-ng-hide="editSong" data-ng-click="editSong = !editSong">Edit Song</button>
+  <form data-ng-show="editSong">
+    <input placeholder="Artist" data-ng-model="SongShowViewModel.song.artist">
+    <input placeholder="Title" data-ng-model="SongShowViewModel.song.title">
+    <input placeholder="Audio URL" data-ng-model="SongShowViewModel.song.audio_url">
+    <input placeholder="Album Art" data-ng-model="SongShowViewModel.song.album_art">
+    <input placeholder="Genre" data-ng-model="SongShowViewModel.song.genre">
+
+    <button class="update" data-ng-click="SongShowViewModel.update(); editSong = !editSong">Save</button>
+    <button class="cancel" data-ng-click="editSong = !editSong">Cancel</button>
+    <button class="delete" data-ui-sref="songIndex" data-ng-click="SongShowViewModel.delete()">Delete</button>
+  </form>

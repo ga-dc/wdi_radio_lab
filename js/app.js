@@ -15,6 +15,7 @@
     .controller("SongShowController",  SongShowControllerFunc)
 
 
+
     function RouterFunction($stateProvider){
       $stateProvider
         .state("home", {
@@ -45,10 +46,25 @@
     SongIndexControllerFunc.$inject = ["SongFactory"]
     function SongIndexControllerFunc (SongFactory){
       this.songs = SongFactory.query();
+      this.newSong = new SongFactory();
+
+      this.create = function($state){
+        this.newSong.$save().then(function(response){
+          this.songs.push(response)
+          this.newSong = new SongFactory();
+        })
+      };
     }
 
     SongShowControllerFunc.$inject = ["SongFactory", "$stateParams"]
     function SongShowControllerFunc (SongFactory, $stateParams) {
       this.song = SongFactory.get({id: $stateParams.id});
-    }
+
+      this.update = function(){
+        this.song.$update({id: $stateParams.id});
+      };
+      this.delete = function(){
+        this.song.$delete({id: $stateParams.id})
+      }
+    };
 }());
