@@ -9,7 +9,7 @@
       "$stateProvider",
       RouterFunc
     ])
-    .controller("SongsIndexCtrl", SongsIndexCtrlFunc)
+
 
     function RouterFunc($stateProvider) {
 
@@ -34,10 +34,5 @@
         })
     }
 
-
-    function SongsIndexCtrlFunc() {
-      var indexVm = this;
-      indexVm.hello = "Hello Dave"
-    }
 
 })();
