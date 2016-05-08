@@ -1,8 +1,19 @@
-<h2>Library</h2>
+
+
+
+<button data-ng-hide="newSong" data-ng-click="newSong = !newSong">Add New Song</button>
+<form data-ng-show="newSong" data-ng-submit="SongNewViewModel.create(); newSong = !newSong">
+  <input placeholder="Artist" data-ng-model="SongNewViewModel.newSong.artist">
+  <input placeholder="Title" data-ng-model="SongNewViewModel.newSong.title">
+  <input placeholder="Audio URL" data-ng-model="SongNewViewModel.newSong.audio_url">
+  <input placeholder="Album Art" data-ng-model="SongNewViewModel.newSong.album_art">
+  <input placeholder="Genre" data-ng-model="SongNewViewModel.song.genre">
+  <button type="submit">Create</button>
+</form>
 
 <div data-ng-repeat="song in SongIndexViewModel.songs">
-<div class="songs">
-<p>{{song.title}}</p>
-<a data-ui-sref="songShow({id: song.id})"><img data-ng-src="{{song.album_art}}"></a>
-</div>
+  <div class="songs">
+    <p>{{song.title}}</p>
+    <a data-ui-sref="songShow({id: song.id})"><img data-ng-src="{{song.album_art}}"></a>
+  </div>
 </div>
