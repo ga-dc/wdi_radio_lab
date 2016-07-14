@@ -1,0 +1,17 @@
+<p>Song: {{SongShowViewModel.song.songTitle}}</p>
+<p>Artist: {{SongShowViewModel.song.artistName}}</p>
+<p>Genre: {{SongShowViewModel.song.genre}}</p>
+
+<button><a ng-click="show = ! show">Edit</a></button>
+  <form data-ng-show="show">
+    <input placeholder="Song Title" data-ng-model="SongShowViewModel.song.songTitle"></input>
+    <input placeholder="Artist" data-ng-model="SongShowViewModel.song.artistName"></input>
+    <input placeholder="Genre" data-ng-model="SongShowViewModel.song.genre"></input>
+    <input placeholder="Album Cover URL" data-ng-model="SongShowViewModel.song.albumUrl"></input>
+    <button type="button" data-ng-click="SongShowViewModel.update()">Update</button>
+</form>
+
+<div class="song">
+  <p>{{SongShowViewModel.song.songTitle}}</p>
+  <img data-ng-src="{{SongShowViewModel.song.albumUrl}}">
+</div>
