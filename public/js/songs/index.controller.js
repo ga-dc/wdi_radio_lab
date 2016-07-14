@@ -5,17 +5,23 @@
   .controller("songsIndexController",[
     "$firebaseArray",
     "$scope",
+    "$state",
     songsIndexControllerFunction
   ])
-  function songsIndexControllerFunction($firebaseArray, $scope){
+  function songsIndexControllerFunction($firebaseArray, $scope, $state){
     var vm = this;
     var ref = firebase.database().ref().child("songs");
     vm.songs = $firebaseArray(ref);
 
-
-    $scope.songForm = false;
-    $scope.showForm = function(){
-      $scope.songForm = true;
+    vm.create = function(){
+      vm.songs.$add(vm.newSong).then(function(){
+        $state.reload();
+      })
+    };
+    vm.update = function(song){
+      vm.songs.$save(song).then(function(){
+        $state.reload();
+      });
     };
   }
 })();
