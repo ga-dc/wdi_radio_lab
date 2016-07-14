@@ -1,0 +1,48 @@
+<h3>Library</h3>
+
+<!-- Song Player  -->
+<div data-song-player data-ng-if="SongsIndexViewModel.playSong" data-song="SongsIndexViewModel.playSong"></div>
+
+<!-- When New Form is visible -->
+<div data-ng-show="SongsIndexViewModel.newSong.visible">
+  <div class="song">
+    <form>
+      <input placeholder="Title" data-ng-model="SongsIndexViewModel.newSong.title">
+      <input placeholder="Audio Url" data-ng-model="SongsIndexViewModel.newSong.audio_url">
+      <input placeholder="Album Art" data-ng-model="SongsIndexViewModel.newSong.album_art">
+      <input placeholder="Artist" data-ng-model="SongsIndexViewModel.newSong.artist">
+      <input placeholder="Genre" data-ng-model="SongsIndexViewModel.newSong.genre">
+      <button type="button" data-ng-click="SongsIndexViewModel.create()">Create</button>
+    </form>
+    <button type="button" data-ng-click="SongsIndexViewModel.toggleNew()">Cancel</button>
+  </div>
+</div>
+
+<!-- When New Form is not Visible  -->
+<div data-ng-hide="SongsIndexViewModel.newSong.visible">
+  <button type="button" data-ng-click="SongsIndexViewModel.toggleNew()">New Song</button>
+</div>
+
+<div class="songs">
+  <div data-ng-repeat="song in SongsIndexViewModel.songs" class="song">
+    <!-- Song Details  -->
+    <div class="song-details" data-ng-hide="song.showEdit">
+      <p data-ng-hide="song.showEdit" data-ng-click="SongsIndexViewModel.play(song)">{{song.title}}</p>
+      <img data-ng-src="{{ song.album_art}}" alt="{{song.title}}" />
+    </div>
+    <button type="button" data-ng-if="!song.showEdit" data-ng-click="SongsIndexViewModel.toggleEdit(song)">Edit</button>
+    <button type="button" data-ng-if="song.showEdit" data-ng-click="SongsIndexViewModel.toggleEdit(song)">Cancel Edit</button>
+    <!-- Edit Form  -->
+    <div class="edit-form" data-ng-show="song.showEdit">
+      <form>
+        <input placeholder="Title" data-ng-model="song.title">
+        <input placeholder="Audio Url" data-ng-model="song.audio_url">
+        <input placeholder="Album Art" data-ng-model="song.album_art">
+        <input placeholder="Artist" data-ng-model="song.artist">
+        <input placeholder="Genre" data-ng-model="song.genre">
+        <button type="button" data-ng-click="SongsIndexViewModel.update(song)">Update</button>
+        <button type="button" data-ng-click="SongsIndexViewModel.destroy(song)">Delete</button>
+      </form>
+    </div>
+  </div>
+</div>
