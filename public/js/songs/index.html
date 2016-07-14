@@ -1,0 +1,14 @@
+<h2>This is the Songs Index</h2>
+<table data-ng-repeat="song in SongIndexVM.songs">
+      <td>Song: {{song.title}}</td>
+
+<tbody>
+  <tr>
+
+    <td>Artist: {{song.artist}}</td>
+    <td>Genre: {{song.genre}}</td>
+
+    <td><img data-ng-src="{{ song.album_art}}" /></td>
+  </tr>
+</tbody>
+</table>
