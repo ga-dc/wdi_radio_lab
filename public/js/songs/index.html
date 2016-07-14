@@ -1,0 +1,36 @@
+<h2> Library</h2>
+
+<p><button ng-click="newForm = ! newForm">Add a new song</button></p>
+<div class="song" data-ng-show="newForm">
+  <form ng-submit = "songsIndexViewModel.create()" >
+    <input data-ng-model = "songsIndexViewModel.newSong.title" placeholder = "Title">
+    <input data-ng-model = "songsIndexViewModel.newSong.artist" placeholder = "Artist">
+    <input data-ng-model = "songsIndexViewModel.newSong.album_art" placeholder = "Album Art">
+    <input data-ng-model = "songsIndexViewModel.newSong.audio_url" placeholder = "Audio">
+    <input data-ng-model = "songsIndexViewModel.newSong.genre" placeholder = "Genre">
+    <button type="submit">submit</button>
+  </form>
+  <button ng-click="newForm=false">cancel</button>
+</div>
+
+
+<div data-ng-show="song" class ="song" data-ng-repeat="song in songsIndexViewModel.songs">
+  <img ng-hide="editForm" data-ng-src="{{song.album_art}}"/>
+  <p>{{song.title}} - {{song.artist}} <br> <a href = "{{song.audio_url}}"> listen</a> </p>
+
+  <button ng-click = "editForm=true">Edit</button>
+
+  <div data-ng-show="editForm">
+    <form data-ng-submit = "songsIndexViewModel.update(song)" >
+      <input  data-ng-model = "song.title"  >
+      <input data-ng-model = "song.artist" >
+      <input data-ng-model = "song.album_art" >
+      <input data-ng-model = "song.audio_url" >
+      <input data-ng-model = "song.genre">
+      <button type="submit">update song</button>
+    </form>
+    <button ng-click="editForm=false" >cancel</button>
+
+  </div>
+
+</div>
