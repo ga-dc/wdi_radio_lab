@@ -142,8 +142,8 @@ body, html, p, a, span {
   transform: translateX(-450%) translateY(-50%);
 }
 
-
-/*@media (min-width: 1024px) {
+/*MOBILE MEDIA
+@media (min-width: 1024px) {
   .anything a:nth-child(odd) {
     background-color: #31465a;
   }
