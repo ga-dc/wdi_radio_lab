@@ -1,0 +1,8 @@
+<div class="songs">
+  <div data-ng-repeat="song in SongIndexViewModel.songs" class="song">
+    <div class="song-details">
+      <p >{{song.title}}</p>
+      <img data-ng-src="{{ song.album_art}}" alt="{{song.title}}" />
+    </div>
+  </div>
+</div>
