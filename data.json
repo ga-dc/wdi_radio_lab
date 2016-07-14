@@ -1,26 +1,30 @@
 [
   {
     "songTitle": "Bulls on Parade",
+    "audio_url": "http://www.wdidc.org/wdi-radio-lab-assets/mp3/The%20Beatles%20-%20Can%27t%20Buy%20Me%20Love.mp3",
     "artistName": "Rage Against the Machine",
-    "albumUrl": "https://en.wikipedia.org/wiki/File:Bullsonparade_domestic.jpg",
+    "albumUrl": "https://upload.wikimedia.org/wikipedia/en/c/c7/Bullsonparade_domestic.jpg",
     "genre": "Metal"
   },
   {
     "songTitle": "Under the Bridge",
+    "audio_url": "http://www.wdidc.org/wdi-radio-lab-assets/mp3/Tycho%20-%20Awake.mp3",
     "artistName": "Red Hot Chili Peppers",
-    "albumUrl": "https://en.wikipedia.org/wiki/File:UndertheBridge.jpg",
+    "albumUrl": "https://upload.wikimedia.org/wikipedia/en/4/41/UndertheBridge.jpg",
     "genre": "Rock"
   },
   {
     "songTitle": "Uprising",
+    "audio_url": "http://www.wdidc.org/wdi-radio-lab-assets/mp3/Tycho%20-%20Awake.mp3",
     "artistName": "Muse",
-    "albumUrl": "https://en.wikipedia.org/wiki/File:MuseUprisingCDsingle.jpg",
+    "albumUrl": "https://upload.wikimedia.org/wikipedia/en/2/26/MuseUprisingCDsingle.jpg",
     "genre": "rock"
   },
   {
     "songTitle": "Two Princes",
+    "audio_url": "http://www.wdidc.org/wdi-radio-lab-assets/mp3/King%20-%20J%20Dilla%20%28Jay%20Stay%20Paid%29.mp3",
     "artistName": "Spin Doctors",
-    "albumUrl": "https://en.wikipedia.org/wiki/File:TwoPrinces.jpg",
+    "albumUrl": "https://upload.wikimedia.org/wikipedia/en/d/dd/TwoPrinces.jpg",
     "genre": "Alt Rock"
   }
 ]

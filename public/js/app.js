@@ -29,6 +29,6 @@
         templateUrl: "/public/js/wdi_radio/show.html",
         controller: "SongShowController",
         controllerAs: "SongShowViewModel"
-      })
+      });
     }
 })();

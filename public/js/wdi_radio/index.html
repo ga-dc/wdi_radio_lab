@@ -1,13 +1,5 @@
 <h2>Songs:</h2>
-
-<div data-ng-repeat="song in SongIndexViewModel.songs">
-  <a data-ui-sref="songShow({id: song.$id})">{{song.songTitle}}</a>
-  <p>{{song.artistName}}</p>
-  <img data-ng-src="{{song.albumUrl}}">
-  <button data-ng-click="SongIndexViewModel.delete(song)">Delete</button>
-</div>
-
-<h4><a ng-click="show = ! show">Click to add a new Song!</a></h4>
+<p><a ng-click="show = ! show">Click to add a new Song!</a></p>
   <form data-ng-show="show">
     <input placeholder="Song Title" data-ng-model="SongIndexViewModel.newSong.songTitle"></input>
     <input placeholder="Artist" data-ng-model="SongIndexViewModel.newSong.artistName"></input>
@@ -15,3 +7,15 @@
     <input placeholder="Album Cover URL" data-ng-model="SongIndexViewModel.newSong.albumUrl"></input>
     <button type="button" data-ng-click="SongIndexViewModel.create()">Create</button>
 </form>
+
+<div data-ng-repeat="song in SongIndexViewModel.songs" class="song">
+  <a data-ui-sref="songShow({id: song.$id})">{{song.artistName}}</a>
+  <p data-ng-click="SongsIndexViewModel.play(song)">{{song.songTitle}}</p>
+  <img data-ng-src="{{song.albumUrl}}">
+  <button data-ng-click="SongIndexViewModel.delete(song)">Delete</button>
+</div>
+
+
+<song-player>
+  <div data-song-player data-ng-if="SongsIndexViewModel.playSong" data-song="SongsIndexViewModel.playSong"></div>
+</song-player>

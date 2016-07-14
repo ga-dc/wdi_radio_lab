@@ -22,5 +22,10 @@
       vm.delete = function(song){
         vm.songs.$remove(song)
       }
+      vm.play = function(song){
+        vm.playSong = song
+        // workaround for ng-src not allowing expression {{song.audio_url}}
+        vm.playSong.encodedUrl = $sce.trustAsResourceUrl(song.audio_url)
+      }
     }
 })();
