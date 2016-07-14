@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html data-ng-app="wdiRadio">
+  <head>
+    <title>WDI Radio</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.0.3/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.0/angularfire.min.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAruPP8LDFTwzLDI5lNQ7qUxHrmtY64WbQ",
+        authDomain: "wdi-radio-c9341.firebaseapp.com",
+        databaseURL: "https://wdi-radio-c9341.firebaseio.com",
+        storageBucket: "wdi-radio-c9341.appspot.com",
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="js/app.js"></script>
+    <script src="js/songs/songs.js"></script>
+    <script src="js/songs/index.controller.js"></script>
+
+
+    <link href='https://fonts.googleapis.com/css?family=Luckiest+Guy' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
+  <body>
+    <header><h1>WDI Radio</h1></header>
+
+      <main data-ui-view></main>
+
+  </body>
+</html>
