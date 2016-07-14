@@ -1,15 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="radio">
   <head>
     <title>WDI Radio</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.0.3/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.0/angularfire.min.js"></script>
+
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyC-Wi_9fNZDnZPMa0wmR_fGfsBVD50SlsI",
+        authDomain: "radio-4ec8d.firebaseapp.com",
+        databaseURL: "https://radio-4ec8d.firebaseio.com",
+        storageBucket: "",
+      };
+      firebase.initializeApp(config);
+    </script>
+
     <script src="js/app.js"></script>
+    <script src="js/songs/songs.js"></script>
+    <script src="js/songs/index.controller.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Luckiest+Guy' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheet/style.css">
 
   </head>
   <body>
-    <header>WDI Radio</header>
+    <header><h1>WDI Radio</h1></header>
+  <main data-ui-view class="cf ng-scope">
 
-    Welcome to the World's Best Song App
-
+  </main>
 
   </body>
 </html>
