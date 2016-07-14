@@ -1,0 +1,9 @@
+<h1> Songs index page </h1>
+
+<div data-ng-repeat="song in SongIndexViewModel.songs">
+  <p>Band Name: The {{song.bandName}}'s </p>
+  <p>Song title: {{song.title}}</p>
+  Album cover:
+  <img data-ng-src="{{SongIndexViewModel.song.photoUrl}}">
+  <br>
+</div>
