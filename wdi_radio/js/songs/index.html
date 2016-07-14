@@ -1,0 +1,17 @@
+<h2>Songs</h2>
+
+<div data-ng-repeat="song in SongIndexViewModel.songs">
+  {{song.title}}
+  <button data-ng-click="GrumbleIndexViewModel.delete(song)">Delete</button>
+</div>
+
+<h2>Add Song</h2>
+
+<form data-ng-submit="SongIndexViewModel.create()">
+  <input data-ng-model="SongIndexViewModel.newSong.title" placeholder="Title">
+  <input data-ng-model="SongIndexViewModel.newSong.audio_url" placeholder="Song URL">
+  <input data-ng-model="SongIndexViewModel.newSong.album_art" placeholder="Album Cover">
+  <input data-ng-model="SongIndexViewModel.newSong.artist" placeholder="Artist">
+  <input data-ng-model="SongIndexViewModel.newSong.genre" placeholder="Genre">
+  <button type="submit">Create</button>
+</form>
