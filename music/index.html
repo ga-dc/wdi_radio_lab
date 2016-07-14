@@ -1,0 +1,33 @@
+<html ng-app="music">
+<head>
+  <title>Radio LABBBBBB</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.1/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.0.3/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/2.0.0/angularfire.min.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA4aYTBIvOpZKTcWl5D5r9Rsor5Mxx7NHk",
+    authDomain: "pandify-c6be6.firebaseapp.com",
+    databaseURL: "https://pandify-c6be6.firebaseio.com",
+    storageBucket: "pandify-c6be6.appspot.com",
+  };
+  firebase.initializeApp(config);
+</script>
+  <script src="app.js"></script>
+  <script src="js/songs/songs.js"></script>
+
+  <script src="js/songs/index.controller.js"></script>
+
+</head>
+
+<body >
+  <h1>WDI RADIO</h1>
+  <a ui-sref="songsIndex">View All Songs</a>
+  <div data-ui-view></div>
+
+
+</body>
+</html>
