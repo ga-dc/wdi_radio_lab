@@ -3,7 +3,7 @@
 }
 
 html{
-  background: url(https://wdi-radio.firebaseapp.com/img/radio.jpg) no-repeat center center fixed;
+  background: url(http://www.tijdvoor80.be/wp/wp-content/uploads/2013/08/boombox-2.jpg) no-repeat center center fixed;
   background-size: cover;
   font-family:'Helvetica Neue', sans-serif;
 }
@@ -14,7 +14,7 @@ body{
 }
 
 main{
-  background:rgba(100%,100%,100%,.5);
+  background:rgba(75%,25%,25%,.7);
   padding:2em;
 }
 
@@ -44,6 +44,7 @@ h4{
 }
 
 a {
+  font-family: 'times new roman', sans-serif;
   color: inherit;
   text-decoration: inherit;
 }
@@ -197,6 +198,9 @@ a {
   display: block;
   margin: auto;
   max-width: 400px;
+  border: 5px solid black;
+  padding: 3px;
+  border-radius: 25px;
 }
 
 .art{
