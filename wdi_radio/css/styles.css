@@ -3,7 +3,7 @@
 }
 
 html{
-  background: url(../img/radio.jpg) no-repeat center center fixed;
+  background: url(https://wdi-radio.firebaseapp.com/img/radio.jpg) no-repeat center center fixed;
   background-size: cover;
   font-family:'Helvetica Neue', sans-serif;
 }
