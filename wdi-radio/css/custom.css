@@ -1,0 +1,22 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+/************** Navbar *****************/
+.navbar{
+  background-color: #000000;
+}
+
+/************** Hero Image *****************/
+
+#hero-image{
+  background-image: url(../images/bkgd-1200x500.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  color:#ffffff;
+}
