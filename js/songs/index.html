@@ -6,8 +6,8 @@
 <div class="songs">
     <div class="song" data-ng-repeat="song in SongIndexViewModel.songs">
         <div class="song-details" data-ng-hide="song.showEdit">
-            <p data-ng-hide="song.showEdit" data-ng-click="SongIndexViewModel.play(song)">{{song.title}}</p>
-            <img data-ng-src="{{song.album_art}}" alt="{{song.title}}" />
+            <p data-ng-hide="song.showEdit" data-ng-click="SongIndexViewModel.play(song)" >{{song.title}}</p>
+            <img data-ng-src="{{song.album_art}}" alt="{{song.title}}" data-ng-click="SongIndexViewModel.play(song)" />
         </div>
         <button type="button" data-ng-if="!song.showEdit" data-ng-click="SongIndexViewModel.toggleEdit(song)">Edit</button>
         <button type="button" data-ng-if="song.showEdit" data-ng-click="SongIndexViewModel.toggleEdit(song)">Cancel Edit</button>
