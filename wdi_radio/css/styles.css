@@ -45,6 +45,7 @@ h4{
 
 a {
   color: inherit;
+  text-decoration: inherit;
 }
 
 .cf:after{
