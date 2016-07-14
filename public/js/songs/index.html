@@ -1,0 +1,24 @@
+<h2> Library</h2>
+
+<div><button id="mybutton" ng-click="showForm()">Add a new song</button></div>
+<div ng-show="songForm" class="ng-cloak">
+
+  <div class=song>
+    <form ng-submit = "vm.create()" >
+      <input data-ng-model = "songsIndexView.song.title" placeholder = "Title">
+      <input data-ng-model = "songsIndexView.song.artist" placeholder = "Artist">
+      <input data-ng-model = "songsIndexView.song.album_art" placeholder = "Album Art">
+      <input data-ng-model = "songsIndexView.song.genre" placeholder = "Genre">
+      <button type="submit">submit</button>
+    </form>
+  </div>
+
+</div>
+
+
+
+
+<div class ="song" data-ng-repeat="song in songsIndexViewModel.songs">
+  <img data-ng-src="{{song.album_art}}"/>
+  <p>{{song.title}} - {{song.artist}} <br> <a href = "{{song.audio_url}}"> listen</a> </p>
+</div>
