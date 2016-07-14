@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>WDI Radio</title>
-    <script src="js/app.js"></script>
+<head>
+  <title>WDI Radio</title>
+  <script src="js/app.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.0.3/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/2.0.0/angularfire.min.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCuxa7fAncS3zHBFbtkkh0gCskDZmraw00",
+    authDomain: "wdi-radio-367dc.firebaseapp.com",
+    databaseURL: "https://wdi-radio-367dc.firebaseio.com",
+    storageBucket: "",
+  };
+  firebase.initializeApp(config);
+  </script>
+</head>
+<body>
+  <header>WDI Radio</header>
 
-  </head>
-  <body>
-    <header>WDI Radio</header>
+  Welcome to the World's Best Song App
+  <main data-ui-view></main>
+  <h1>Songs</h1>
 
-    Welcome to the World's Best Song App
+<div ng-repeat="song in vm.songs">
+  <input type="text" data-ng-model="song.text" data-ng-change="vm.update(todo)">
+  <button data-ng-click+"vm.delete(song)">Delete Song</button>
+</div>
+<br/>
 
+<!-- .addSong() will be triggered whenever a user clicks the submit button or hits enter on the input field. -->
+<form data-ng-submit="vm.addSong()">
+  <input data-ng-model="vm.newSongText">
+  <button type="submit">Add Song</button>
+</form>
 
-  </body>
+</body>
 </html>
