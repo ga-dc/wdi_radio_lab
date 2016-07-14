@@ -190,3 +190,9 @@ a {
   width:100%;
   text-align: center;
 }
+
+.bale{
+  display: block;
+  margin: auto;
+  max-width: 400px;
+}
