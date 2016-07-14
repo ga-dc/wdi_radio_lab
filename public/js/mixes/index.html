@@ -1,1 +1,7 @@
-sup
+<div data-ng-repeat="mix in MixIndexViewModel.mixes">
+  <h2>{{mix.Name}} -  {{mix.date}}</h2>
+  <div id="mixbox">
+    <p>{{mix.desc}}</p>
+    <p>Tracklist: {{mix.tracklist}}</p>
+</div>
+</div>

@@ -2,5 +2,7 @@
 
 (function(){
   angular
-  .module("mixes", []);
+  .module("mixes", [
+    "firebase"
+  ]);
 }());
