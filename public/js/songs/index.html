@@ -1,0 +1,40 @@
+<h2> Library </h2>
+
+<h4><a ng-click="show = !show">Click to add a new Song!</a></h4>
+
+<div class="song" data-ng-show="show">
+  <form class = "ng-pristine ng-valid" data-ng-submit="SongIndexViewModel.create()">
+    <input placeholder="Title" data-ng-model="SongIndexViewModel.newSong.title">
+    <input placeholder="Artist" data-ng-model="SongIndexViewModel.newSong.artist">
+    <input placeholder="Genre" data-ng-model="SongIndexViewModel.newSong.genre">
+    <input placeholder="Album Art" data-ng-model="SongIndexViewModel.newSong.album_art">
+    <input placeholder="Audio Url" data-ng-model="SongIndexViewModel.newSong.audio_url">
+    <button type="button" data-ng-click="SongIndexViewModel.create()">Create</button>
+  </form>
+    <button type="button"
+    data-ng-click="show =!show">Cancel</button>
+  </div>
+<!-- when not visible -->
+
+
+<div data-ng-repeat="song in SongIndexViewModel.songs" class="song ng-scope">
+  <img ng-hide="edit" data-ng-src="{{song.album_art}}">
+  <button type="button" data-ng-click="edit=!edit">Edit</button>
+  <div data-ng-show="edit">
+    <form class = "ng-pristine ng-valid" data-ng-submit="SongIndexViewModel.update(song)">
+      <input placeholder = "Title" data-ng-model="song.title">
+      <input placeholder="Artist" data-ng-model="song.artist">
+      <input placeholder="Genre" data-ng-model="song.genre">
+      <input placeholder="Album Art" data-ng-model="song.album_art">
+      <input placeholder="Audio Url" data-ng-model="song.audio_url">
+      <button type="submit">Update</button>
+    </form>
+    <button type="button" data-ng-click="edit=!edit">Cancel Edit</button>
+    </div>
+  <p>{{song.title}}</p>
+
+
+
+</div>
+
+</div>
