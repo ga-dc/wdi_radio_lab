@@ -1,0 +1,12 @@
+<h2>Here Are Your Songs</h2>
+
+<div class="flexcontainer">
+  <div class="flexleft"></div>
+  <div class="flexcenter">
+    <div class="song" data-ng-repeat="song in SongIndexViewModel.songs">
+      <img data-ng-src="{{song.album_art}}" alt="Description" />
+    </div>
+  </div>
+
+  <div class=flexright></div>
+</div>
