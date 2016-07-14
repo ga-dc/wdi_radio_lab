@@ -1,12 +1,12 @@
 
 <h2>Battle Stations!</h2>
-<!-- <div data-ng-repeat="song in SongIndexViewModel.songs">
-<img data-ui-src="{{song.album_art}}" />
-</div> -->
+
+<div data-song-player data-ng-if="SongIndexViewModel.playSong" data-song="SongIndexViewModel.playSong" ></div>
+
 <div class="songs">
     <div class="song" data-ng-repeat="song in SongIndexViewModel.songs">
         <div class="song-details" data-ng-hide="song.showEdit">
-            <p data-ng-hide="song.showEdit">{{song.title}}</p>
+            <p data-ng-hide="song.showEdit" data-ng-click="SongIndexViewModel.play(song)">{{song.title}}</p>
             <img data-ng-src="{{song.album_art}}" alt="{{song.title}}" />
         </div>
         <button type="button" data-ng-if="!song.showEdit" data-ng-click="SongIndexViewModel.toggleEdit(song)">Edit</button>

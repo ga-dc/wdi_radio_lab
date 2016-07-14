@@ -4,11 +4,12 @@
     angular
         .module("songs")
         .controller("SongIndexController", [
+            "$sce",
             "$firebaseArray",
             SongIndexControllerFunction
         ]);
 
-    function SongIndexControllerFunction($firebaseArray) {
+    function SongIndexControllerFunction($sce, $firebaseArray) {
         var vm = this;
         var ref = firebase.database().ref().child("songs");
         vm.songs = $firebaseArray(ref);
@@ -31,12 +32,14 @@
             vm.toggleEdit(song);
             vm.songs.$remove(song);
         }
-        //     // Play
-        // vm.play = function(song) {
-        //         vm.playSong = song;
-        //         // workaround for ng-src not allowing expression {{song.audio_url}}
-        //         vm.playSong.encodedUrl = $sce.trustAsResourceUrl(song.audio_url);
-        //     }
+            // Play
+        vm.play = function(song) {
+            console.log(song.title);
+            vm.playSong = song;
+            console.log(vm.playSong.title);
+            // workaround for ng-src not allowing expression {{song.audio_url}}
+            vm.playSong.encodedUrl = $sce.trustAsResourceUrl(song.audio_url);
+        }
             // DOM Manipulation Methods
         // vm.toggleNew = function() {
         //     vm.newSong.visible = !vm.newSong.visible;
