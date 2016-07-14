@@ -1,0 +1,26 @@
+[
+  {
+    "songTitle": "Bulls on Parade",
+    "artistName": "Rage Against the Machine",
+    "albumUrl": "https://en.wikipedia.org/wiki/File:Bullsonparade_domestic.jpg",
+    "genre": "Metal"
+  },
+  {
+    "songTitle": "Under the Bridge",
+    "artistName": "Red Hot Chili Peppers",
+    "albumUrl": "https://en.wikipedia.org/wiki/File:UndertheBridge.jpg",
+    "genre": "Rock"
+  },
+  {
+    "songTitle": "Uprising",
+    "artistName": "Muse",
+    "albumUrl": "https://en.wikipedia.org/wiki/File:MuseUprisingCDsingle.jpg",
+    "genre": "rock"
+  },
+  {
+    "songTitle": "Two Princes",
+    "artistName": "Spin Doctors",
+    "albumUrl": "https://en.wikipedia.org/wiki/File:TwoPrinces.jpg",
+    "genre": "Alt Rock"
+  }
+]
