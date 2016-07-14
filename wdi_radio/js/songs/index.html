@@ -1,11 +1,6 @@
 <h2>Songs</h2>
 
-<div data-ng-repeat="song in SongIndexViewModel.songs">
-  {{song.title}}
-  <button data-ng-click="SongIndexViewModel.delete(song)">Delete</button>
-</div>
-
-<h2>Add Song</h2>
+<h4>Add Song</h4>
 
 <form data-ng-submit="SongIndexViewModel.create()">
   <input data-ng-model="SongIndexViewModel.newSong.title" placeholder="Title">
@@ -15,3 +10,11 @@
   <input data-ng-model="SongIndexViewModel.newSong.genre" placeholder="Genre">
   <button type="submit">Create</button>
 </form>
+<hr />
+<div data-ng-repeat="song in SongIndexViewModel.songs">
+  <div class="song">
+  <p>{{song.title}} </p>
+  <img data-ng-src="{{song.album_art}}" />
+  <button data-ng-click="SongIndexViewModel.delete(song)">Delete</button>
+  </div>
+</div>

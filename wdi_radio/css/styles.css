@@ -59,6 +59,7 @@ a {
   float:left;
   overflow:hidden;
   margin:.5em;
+  margin: 20px auto;
 }
 
 .song img{
