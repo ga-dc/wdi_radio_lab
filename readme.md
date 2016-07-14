@@ -1,3 +1,7 @@
+
+#I decided to take advantage of this day project to rebuild my mix site.
+Thank you GA for teaching me this!
+
 # :fire: WDI Radio :fire:
 
 > View deployed solution [here](https://wdi-radio.firebaseapp.com/)
