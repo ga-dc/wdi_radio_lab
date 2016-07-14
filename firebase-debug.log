@@ -1,0 +1,21 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/local/Cellar/node/6.2.0/bin/node /usr/local/bin/firebase serve
+[debug] CLI Version:  3.0.4
+[debug] Platform:     darwin
+[debug] Node Version: v6.2.0
+[debug] Time:         Thu Jul 14 2016 11:55:42 GMT-0400 (EDT)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Starting Firebase development server...
+[info] 
+[info] Project Directory: /Users/michaelholzheimer/wdi/homework/wdi_radio_lab
+[debug] TypeError: Cannot read property 'public' of undefined
+    at Server.<anonymous> (/usr/local/lib/node_modules/firebase-tools/commands/serve.js:24:15)
+    at Server.g (events.js:286:16)
+    at emitNone (events.js:86:13)
+    at Server.emit (events.js:185:7)
+    at emitListeningNT (net.js:1279:10)
+    at _combinedTickCallback (internal/process/next_tick.js:71:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+[error] 
+[error] Error: An unexpected error has occurred.
