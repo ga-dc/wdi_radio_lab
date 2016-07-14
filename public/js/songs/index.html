@@ -1,16 +1,16 @@
 <h2> Library</h2>
 
 <p><button ng-click="newForm = ! newForm">Add a new song</button></p>
- <div class="song" data-ng-show="newForm">
-    <form ng-submit = "songsIndexViewModel.create()" >
-      <input data-ng-model = "songsIndexViewModel.newSong.title" placeholder = "Title">
-      <input data-ng-model = "songsIndexViewModel.newSong.artist" placeholder = "Artist">
-      <input data-ng-model = "songsIndexViewModel.newSong.album_art" placeholder = "Album Art">
-      <input data-ng-model = "songsIndexViewModel.newSong.audio_url" placeholder = "Audio">
-      <input data-ng-model = "songsIndexViewModel.newSong.genre" placeholder = "Genre">
-      <button type="submit">submit</button>
-    </form>
-    <button ng-click="newForm=false">cancel</button>
+<div class="song" data-ng-show="newForm">
+  <form ng-submit = "songsIndexViewModel.create()" >
+    <input data-ng-model = "songsIndexViewModel.newSong.title" placeholder = "Title">
+    <input data-ng-model = "songsIndexViewModel.newSong.artist" placeholder = "Artist">
+    <input data-ng-model = "songsIndexViewModel.newSong.album_art" placeholder = "Album Art">
+    <input data-ng-model = "songsIndexViewModel.newSong.audio_url" placeholder = "Audio">
+    <input data-ng-model = "songsIndexViewModel.newSong.genre" placeholder = "Genre">
+    <button type="submit">submit</button>
+  </form>
+  <button ng-click="newForm=false">cancel</button>
 </div>
 
 
