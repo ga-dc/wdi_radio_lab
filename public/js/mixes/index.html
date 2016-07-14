@@ -1,0 +1,24 @@
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+  <!-- <h2>{{mix.Name}} -  {{mix.date}}</h2>
+  <div class="mixbox">
+    <p>{{MixIndexViewModel.break(mix.desc)}}</p>
+    <p>"Tracklist: {{MixIndexViewModel.break(mix.tracklist)|unsafe}}</p>
+</div> -->
+<h1>Chill mixes</h1>
+<div class="grid">
+<div class="anything" data-ng-repeat="mix in MixIndexViewModel.mixes">
+	<a sref="***SHOW DO LATER***">
+    <img data-ng-src="{{mix.image}}"/>
+      <span><h2>{{mix.date}}<p><p></h2></span>
+      <div class="info">
+        <ul>
+          <li>{{mix.desc}}</li>
+
+        </ul>
+      </div>
+    </a>
+
+
+</div>
+</div>

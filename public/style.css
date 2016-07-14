@@ -1,0 +1,261 @@
+*{
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size:18px;
+  line-height:30px;
+  color:#ffffff;
+  text-shadow: 1px 1px 0px #000000;
+}
+header{
+font-color: black;
+}
+h1{
+font-color: black;
+}
+body, html, p, a, span {
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Lato', serif;
+  font-weight: 300;
+}
+
+.anything {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.anything img{
+  width: 100%;
+  display: block;
+  image-position: 0% 50%;
+}
+.anything a {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  background: black;
+}
+.anything a:-webkit-any-link {
+  text-decoration: none;
+}
+.anything a span {
+  position: absolute;
+  bottom: .6em;
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -moz-transition: all 0.5s ease 0.1s;
+  -o-transition: all 0.5s ease 0.1s;
+  -webkit-transition: all 0.5s ease;
+  -webkit-transition-delay: 0.1s;
+  transition: all 0.5s ease 0.1s;
+  font-size: 1.5em;
+  color: #fff;
+}
+.anything a i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  -moz-transition: all 0.5s ease 0.1s;
+  -o-transition: all 0.5s ease 0.1s;
+  -webkit-transition: all 0.5s ease;
+  -webkit-transition-delay: 0.1s;
+  transition: all 0.5s ease 0.1s;
+  font-size: 6.8em;
+}
+.anything a .info {
+  color: #fff;
+  text-decoration: none;
+  position: absolute;
+  width: 85%;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.anything a .info li {
+  list-style-type: circle;
+  -moz-transform: translateX(150%);
+  -ms-transform: translateX(150%);
+  -webkit-transform: translateX(150%);
+  transform: translateX(150%);
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  padding: .2em 0;
+}
+.anything{
+  position: relative;
+  width: 600px;
+  height: 600px;
+  float:left;
+  overflow: hidden;
+  margin: .5em;
+}
+
+
+.anything a {
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.anything a:hover {
+  z-index: 15;
+
+}
+
+.anything a:hover .info li {
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+
+}
+
+.anything a:hover span {
+  -moz-transform: translateX(-600%);
+  -ms-transform: translateX(-600%);
+  -webkit-transform: translateX(-600%);
+  transform: translateX(-600%);
+}
+
+.anything a:hover i {
+  -moz-transform: translateX(-450%) translateY(-50%);
+  -ms-transform: translateX(-450%) translateY(-50%);
+  -webkit-transform: translateX(-450%) translateY(-50%);
+  transform: translateX(-450%) translateY(-50%);
+}
+
+/*MOBILE MEDIA
+@media (min-width: 1024px) {
+  .anything a:nth-child(odd) {
+    background-color: #31465a;
+  }
+}
+@media (max-width: 1024px) {
+  .anything a {
+    width: 25%;
+  }
+  .anything a i {
+    font-size: 5.8em;
+  }
+  .anything a .css-logo, .anything a .js-logo, .anything a .wordpress-logo {
+    width: 71.42857px;
+    height: 71.42857px;
+  }
+  .anything a .jq-logo {
+    width: 130px;
+    height: 130px;
+  }
+  .anything a .php-logo {
+    width: 100px;
+    height: 100px;
+  }
+  .anything a span {
+    font-size: 1.25em;
+  }
+  .anything a .info li {
+    font-size: 80%;
+  }
+}
+@media (min-width: 751px) and (max-width: 1024px) {
+  .anything a:nth-child(odd) {
+    background-color: #2c3e50;
+  }
+  .anything a:nth-child(1) {
+    background-color: #31465a;
+  }
+  .anything a:nth-child(3) {
+    background-color: #31465a;
+  }
+  .anything a:nth-child(6) {
+    background-color: #31465a;
+  }
+  .anything a:nth-child(8) {
+    background-color: #31465a;
+  }
+  .anything a:nth-child(9) {
+    background-color: #31465a;
+  }
+  .anything a:nth-child(11) {
+    background-color: #31465a;
+  }
+  .anything a:nth-child(14) {
+    background-color: #31465a;
+  }
+}
+@media (min-width: 551px) and (max-width: 750px) {
+  .anything a {
+    width: 33.33333%;
+  }
+  .anything a:nth-child(odd) {
+    background-color: #31465a;
+  }
+}
+@media (max-height: 620px) {
+  .anything a i {
+    font-size: 4em;
+  }
+  .anything a .css-logo, .anything a .js-logo, .anything a .wordpress-logo {
+    width: 58.82353px;
+    height: 58.82353px;
+  }
+  .anything a .php-logo {
+    width: 83.33333px;
+    height: 83.33333px;
+  }
+  .anything a .jq-logo {
+    width: 115px;
+    height: 115px;
+  }
+}
+@media (min-width: 321px) and (max-width: 550px) {
+  .anything a {
+    width: 50%;
+  }
+  .anything a:nth-child(1) {
+    background-color: #31465a;
+  }
+  .anything a:nth-child(4) {
+    background-color: #31465a;
+  }
+  .anything a:nth-child(5) {
+    background-color: #31465a;
+  }
+  .anything a:nth-child(8) {
+    background-color: #31465a;
+  }
+  .anything a:nth-child(9) {
+    background-color: #31465a;
+  }
+  .anything a:nth-child(12) {
+    background-color: #31465a;
+  }
+  .anything a:nth-child(13) {
+    background-color: #31465a;
+  }
+}
+@media (max-width: 320px) {
+  .anything a {
+    width: 100%;
+  }
+  .anything a:nth-child(2n+1) {
+    background-color: #31465a;
+  }
+}*/
