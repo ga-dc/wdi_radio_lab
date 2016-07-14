@@ -1,0 +1,16 @@
+<h2>Artist: {{SongShowViewModel.song.artist}}</h2>
+<p>Song: {{SongShowViewModel.song.title}}</p>
+<!-- <audio controls src="{{SongShowViewModel.song.audio_url}}"></audio> -->
+<p>Genre: {{SongShowViewModel.song.genre}}</p>
+<img data-ng-src="{{SongShowViewModel.song.album_art}}">
+
+<h2>Edit Song</h2>
+
+<form data-ng-submit="SongShowViewModel.update()">
+  <input placeholder="Artist" data-ng-model="SongShowViewModel.song.artist" />
+  <input placeholder="Song Title" data-ng-model="SongShowViewModel.song.title" />
+  <input placeholder="Genre" data-ng-model="SongShowViewModel.song.genre">
+  <input placeholder="Album Art" data-ng-model="SongShowViewModel.song.album_art" />
+  <input placeholder="Audio URL" data-ng-model="SongShowViewModel.song.audio_url" />
+  <button type="submit">Edit</button>
+</form>
