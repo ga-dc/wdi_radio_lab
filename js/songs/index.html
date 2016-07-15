@@ -1,0 +1,28 @@
+
+<h2>Battle Stations!</h2>
+
+<div data-song-player data-ng-if="SongIndexViewModel.playSong" data-song="SongIndexViewModel.playSong" ></div>
+
+<div class="songs">
+    <div class="song" data-ng-repeat="song in SongIndexViewModel.songs">
+        <div class="song-details" data-ng-hide="song.showEdit">
+            <p data-ng-hide="song.showEdit" data-ng-click="SongIndexViewModel.play(song)" >{{song.title}}</p>
+            <img data-ng-src="{{song.album_art}}" alt="{{song.title}}" data-ng-click="SongIndexViewModel.play(song)" />
+        </div>
+        <button type="button" data-ng-if="!song.showEdit" data-ng-click="SongIndexViewModel.toggleEdit(song)">Edit</button>
+        <button type="button" data-ng-if="song.showEdit" data-ng-click="SongIndexViewModel.toggleEdit(song)">Cancel Edit</button>
+        <div class="edit-form ng-hide" data-ng-show="song.showEdit">
+            <form class="ng-pristine ng-valid">
+                <input placeholder="Title" data-ng-model="song.title" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                <input placeholder="Artist" data-ng-model="song.artist" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                <input placeholder="Genre" data-ng-model="song.genre" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                <input placeholder="Audio URL" data-ng-model="song.audio_url" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                <input placeholder="Album Art URL" data-ng-model="song.album_art" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                <button type="button" data-ng-click="SongIndexViewModel.update(song)">Update</button>
+                <button type="button" data-ng-click="SongIndexViewModel.destroy(song)">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- <button data-ng-click="SongIndexViewModel.delete(song)">&cross;</button></p> -->

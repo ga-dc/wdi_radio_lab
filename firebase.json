@@ -1,0 +1,12 @@
+{
+    "public": ".",
+    "ignore": [
+        "firebase.json"
+    ],
+    "database": {
+        "rules": "database.rules.json"
+    },
+    "hosting": {
+        "public": "."
+  }
+}
