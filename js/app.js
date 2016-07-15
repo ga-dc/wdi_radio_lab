@@ -4,7 +4,8 @@
   angular
   .module("song", [
     "ui.router",
-    "songs"
+    "songs",
+    "ngResource"
   ])
   .config(["$stateProvider", RouterFunction]);
 

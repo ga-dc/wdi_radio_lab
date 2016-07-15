@@ -4,22 +4,23 @@
   angular
     .module("songs")
     .controller("SongIndexController", [
-      "$firebaseArray",
+      "SongFactory",
+      "$stateParams",
       SongIndexControllerFunction
     ]);
 
-  function SongIndexControllerFunction($firebaseArray, $stateParams){
+  function SongIndexControllerFunction(SongFactory, $stateParams){
     var vm = this;
-    var ref = firebase.database().ref().child("songs");
-    vm.songs = $firebaseArray(ref);
-    vm.create = function(){
-      vm.songs.$add(vm.newSong).then(function(){
-        vm.newSong = {};
-      });
+    vm.songs = SongFactory.query();
+
+    vm.sort_songs_by = function(name){
+      vm.sort_on = name;
+      vm.is_descending = !(vm.is_descending);
     }
 
-    vm.delete = function(song){
-      vm.songs.$remove(song)
+    vm.create = function(song){
+      vm.song = new SongFactory(song);
+      SongFactory.save(song)
     }
   }
 }());

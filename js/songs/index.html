@@ -1,13 +1,43 @@
+<main data-ng-controller="SongIndexController as vm">
 <h2>I'm the Songs Index!</h2>
-<div data-ng-repeat="song in SongIndexViewModel.songs">
-  <p><a data-ui-sref="songShow({id: song.id})">{{song.artist}}<br/>{{song.title}}</a></p>
-  <button data-ng-click="SongIndexViewModel.delete(song)">Delete Song</button>
-</div>
+<input type="text" class="form-control" placeholder="Filter on..." data-ng-model="vm.filter_on" />
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <td>
+      </td>
+      <th data-ng-click="vm.sort_songs_by('artist')">Artist</th>
+      <th data-ng-click="vm.sort_songs_by('title')">Song Title</th>
+      <th data-ng-click="vm.sort_songs_by('genre')">Genre</th>
+      <th data-ng-click="vm.sort_songs_by('id')">Id</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr data-ng-repeat="song in vm.songs | filter: vm.filter_on | orderBy: vm.sort_on : vm.is_descending">
+        <td></td>
+        <td>
+          <a data-ui-sref="songShow({id: song.id})">{{song.artist}}</a>
+        </td>
+        <td>
+          <a data-ui-sref="songShow({id: song.id})">{{song.title}}</a>
+        </td>
+        <td>
+          <a data-ui-sref="songShow({id: song.id})">{{song.genre}}</a>
+        </td>
+        <td>
+          <a data-ui-sref="songShow({id: song.id})">{{song.id}}</a>
+        </td>
+        <td data-ng-click="SongShowViewModel.destroy(SongShowViewModel.song)">&cross;</td>
+      </tr>
+    </tbody>
+  </table>
+</main>
+
 
 <h2>Create Song</h2>
 
-<form data-ng-submit="SongIndexViewModel.create()">
-  <!-- <input placeholder="Id"  data-ng-model="SongIndexViewModel.newSong.id" /> -->
+<form data-ng-submit="SongIndexViewModel.create(SongIndexViewModel.newSong)">
   <input placeholder="Artist" data-ng-model="SongIndexViewModel.newSong.artist" />
   <input placeholder="Song Title" data-ng-model="SongIndexViewModel.newSong.title" />
   <input placeholder="Genre" data-ng-model="SongIndexViewModel.newSong.genre">

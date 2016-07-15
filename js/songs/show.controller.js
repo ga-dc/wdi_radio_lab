@@ -4,23 +4,21 @@
   angular
     .module("songs")
     .controller("SongShowController", [
+      "SongFactory",
       "$stateParams",
-      "$firebaseObject",  // We are now using $firebaseObject, not $firebaseArray.
       SongShowControllerFunction
     ]);
 
-  function SongShowControllerFunction($stateParams, $firebaseObject){
-    var vm = this;
+  function SongShowControllerFunction(SongFactory, $stateParams){
+    this.song = SongFactory.get({id: $stateParams.id})
 
-    var ref = firebase.database().ref().child("songs/" + $stateParams.id);
-
-    $firebaseObject(ref).$loaded().then(function(song){
-      vm.song = song
-    });
-
-    // This method is triggered when the user clicks "Update Song".
-    vm.update = function(){
-      vm.song.$save();
+    this.update = function(song){
+      song.$update(song);
+    }
+    this.destroy = function(song){
+      console.log(song)
+      SongFactory.remove(song);
+      this.song.splice(song, 1)
     }
   }
 })();
