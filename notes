@@ -1,0 +1,61 @@
+https://songs-8deb7.firebaseapp.com
+
+
+would have been - SongShowController
+(function(){
+  angular
+ .module("songs")
+ .controller("SongShowController", [
+   "$firebaseArray",
+   "$firebaseObject",
+   "$state",
+   SongShowControllerFunction
+ ]);
+
+ function SongShowControllerFunction($firebaseArray,$firbaseObjcet,$state){
+
+  vm.update = function(song){
+    vm.songs.$save(song).then(function() {
+      $state.go("songIndex")
+   })
+}
+}
+
+})();
+
+
+Update.html
+<form>
+  <div class = "newsong">Update Song Information</div>
+  <input value="SongIndexViewModel.song.title" data-ng-model="SongIndexViewModel.song.title">
+  <input value="SongIndexViewModel.song.audio_url" data-ng-model="SongIndexViewModel.song.audio_url">
+  <input value="SongIndexViewModel.song.album_art" data-ng-model="SongIndexViewModel.song.album_art">
+  <input value="SongIndexViewModel.song.artist" data-ng-model="SongIndexViewModel.song.artist">
+  <input value="SongIndexViewModel.song.genre" data-ng-model="SongIndexViewModel.song.genre">
+  <button type="button" data-ng-click="SongIndexViewModel.Update(song)">Update</button>
+</form>
+</div>
+
+
+
+
+
+"use strict";
+
+function() {
+  angular
+  .module("songs")
+  .controller("SongNewController", [
+    "$firebaseArray",
+    "firebaseObject"
+    "SongFactory",
+    SongNewControllerFunction
+  ])
+}
+
+function SongNewControllerFunction($firebaseArray,$firebaseObject){
+  var vm = this;
+  vm.newSong={};
+  vm.songs.$add(vm.newSong)
+  vm.newSong={}
+}
