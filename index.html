@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WDI Radio</title>
+    <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDheLXUQnKCT2c6UViIP9-8qdpLksFukkE",
+        authDomain: "songs-8deb7.firebaseapp.com",
+        databaseURL: "https://songs-8deb7.firebaseio.com",
+        storageBucket: "",
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.0/angularfire.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Luckiest+Guy' rel='stylesheet' type='text/css'>
+
+    <script src="js/app.js"></script>
+    <script src="js/songs/songs.js"></script>
+    <script src="js/songs/index.controller.js"></script>
+    <script src="js/songs/show.controller.js"></script>
+
+  </head>
+  <body data-ng-app="radio">
+    <header>
+      <h1><a data-ui-sref="welcome">WDI Radio</a></h1>
+    </header>
+    <main class = "cf" data-ui-view></main>
+
+
+
+  </body>
+</html>
