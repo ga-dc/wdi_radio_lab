@@ -8,5 +8,9 @@
   },
   "hosting": {
     "public": "."
-  }
+  },
+  "rewrites":  {
+  "source": "/",
+  "destination": "/#/"
+}
 }
