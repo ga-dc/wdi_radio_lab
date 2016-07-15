@@ -11,6 +11,7 @@ function songsIndexControllerFunction($firebaseArray){
   var ref = firebase.database().ref().child("songs");
   console.log("Creating songs array...");
   vm.songs = $firebaseArray(ref);
+  console.log(vm.songs);
 
 }
 

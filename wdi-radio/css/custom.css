@@ -14,9 +14,14 @@ body {
 /************** Hero Image *****************/
 
 #hero-image{
-  background-image: url(../images/bkgd-1200x500.jpg);
+  background-image: url(../images/bkgd-2000x1333.jpg);
   background-repeat: no-repeat;
   background-position: right;
   background-size: cover;
   color:#ffffff;
+  height:360px;
+  margin-bottom: 0px;
 }
+
+/************** Footer *****************/
+footer{background-color: #000000; height:30px; line-height: 30px; padding-left: 40px;}

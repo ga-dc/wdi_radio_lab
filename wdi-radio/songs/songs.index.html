@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="container">
+    <h2>Here is the song list</h2>
+    <p>This is where the songs will go...</p>
+      <ul ng-repeat="song in vm.songs">
+        <li>{{song.title}} | {{song.artist}}</li>
+        <li>{{song.genre}}</li>
+        <li>{{song.audio_url}}</li>
+        <li>{{song.album_art}}</li>
+      </ul>
+  </div>
+</div>
