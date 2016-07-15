@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="radio">
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.0/angularfire.min.js"></script>
+    <title>WDI Radio</title>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBAChAwPoNAmO9LBOA0v6r6vXTe92zwXuc",
+        authDomain: "radio-db5f0.firebaseapp.com",
+        databaseURL: "https://radio-db5f0.firebaseio.com",
+        storageBucket: "",
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <script src="js/app.js"></script>
+    <script src="js/songs/songs.js"></script>
+    <script src="js/songs/index.controller.js"></script>
+
+  </head>
+  <body>
+      <h1 ui-sref="welcome">WDI Jamz</h1>
+
+    <h4>Welcome to the World's Best Song App</h4>
+
+      <main class="cf ng-scope"  ui-view></main>
+  </body>
+</html>
