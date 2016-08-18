@@ -1,0 +1,71 @@
+body {
+  margin: 0 auto;
+  background-image: url("https://wallpaperscraft.com/image/danboard_cardboard_robot_background_pink_70170_2732x2732.jpg");
+  max-width: 70em;
+  height: 100vh;
+  background-size: cover;
+  background-position: left bottom;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  color:rgb(245, 255, 56);
+}
+
+.album_art {
+  margin-right: .25em;
+  color:rgb(245, 255, 56);
+  margin-left: .25em;
+}
+
+.home_link {
+  color:rgb(245, 255, 56);
+  text-decoration: none;
+}
+
+.home_link:hover{
+  color: rgb(56, 245, 255);
+}
+
+.home_h1_title{
+  font-size: 350%;
+  border-bottom: 3px solid rgb(56, 245, 255);
+}
+
+.home_h1_title:hover{
+  border-color:rgb(245, 255, 56);
+}
+
+.title_image:hover {
+  padding: 2px;
+  border: 2px solid rgb(56, 245, 255);
+}
+  
+a, h3 {
+  text-decoration: none;
+  color:rgb(245, 255, 56);
+}
+
+
+.h3_song_title {
+  border: 1px solid black;
+  background: black;
+}
+
+img {
+  border-radius: 4px;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.content_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+

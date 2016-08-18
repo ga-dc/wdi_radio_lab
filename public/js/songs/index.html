@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <h1 class="h1_title">Songs</h1>
+  <div class="content_wrapper">
+    <div data-ng-repeat="song in ICvm.songs">
+      <div class="title_image"><a href="{{song.audio_url}}">
+        <img data-ng-src="{{song.album_art}}" class="album_art">
+        <h3 class="h3_song_title">{{song.title}}</h3>
+        </a></div>
+    </div>
+  </div>
+
