@@ -2,12 +2,15 @@
 
 (function(){
   angular
-  .module("wdiRadio")
-  .controller("RadioIndexController", [
-    GrumbleIndexControllerFunction
+  .module("songIndex")
+  .controller("SongsIndexController", [
+    "$firebaseArray",
+    RadioIndexControllerFunction
   ]);
 
-  function RadioIndexControllerFunction(){
-    this.songs = ;
+  function RadioIndexControllerFunction($firebaseArray){
+    var vm = this;
+    var ref = firebase.database().ref().child("songs");
+    vm.songs = $firebaseArray(ref);
   }
 }());

@@ -2,5 +2,7 @@
 
 (function(){
   angular
-  .module("songs", []);
-}());
+  .module("songIndex", [
+    "firebase"
+  ]);
+})();

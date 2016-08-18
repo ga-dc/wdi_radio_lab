@@ -2,10 +2,20 @@
 <html data-ng-app="wdiRadio">
   <head>
     <title>WDI Radio</title>
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyA5fvNH6VaxfgsvX0VS6VpRLz7GrPv9ouE",
+        authDomain: "wdi-radio-e4dc2.firebaseapp.com",
+        databaseURL: "https://wdi-radio-e4dc2.firebaseio.com",
+        storageBucket: "wdi-radio-e4dc2.appspot.com",
+      };
+      firebase.initializeApp(config);
+    </script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-
-    <script src="js/app.js"></script>
     <script src="js/songs/songs.module.js"></script>
     <script src="js/songs/index.controller.js"></script>
     <script src="js/app.js"></script>

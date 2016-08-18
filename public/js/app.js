@@ -17,7 +17,7 @@
       url: "",
       templateUrl: "js/landing.html"
     })
-    .state("radioSongs", {
+    .state("songIndex", {
       url: "/songs",
       templateUrl: "js/songs/index.html",
       controller: "SongsIndexController",
