@@ -4,6 +4,7 @@
   angular
   .module("wdiRadio", [
     "ui.router",
+    "firebase",
     "songs"
   ])
   .config([
@@ -17,11 +18,11 @@
       url: "",
       templateUrl: "js/landing.html"
     })
-    .state("songIndex", {
+    .state("songs", {
       url: "/songs",
       templateUrl: "js/songs/index.html",
       controller: "SongsIndexController",
       controllerAs: "SongsIndexViewModel"
     });
   }
-}());
+})();

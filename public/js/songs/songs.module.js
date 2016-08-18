@@ -2,7 +2,5 @@
 
 (function(){
   angular
-  .module("songIndex", [
-    "firebase"
-  ]);
+  .module("songs", []);
 })();

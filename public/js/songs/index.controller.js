@@ -2,15 +2,15 @@
 
 (function(){
   angular
-  .module("songIndex")
+  .module("songs")
   .controller("SongsIndexController", [
     "$firebaseArray",
-    RadioIndexControllerFunction
+    SongsIndexControllerFunction
   ]);
 
-  function RadioIndexControllerFunction($firebaseArray){
+  function SongsIndexControllerFunction($firebaseArray){
     var vm = this;
     var ref = firebase.database().ref().child("songs");
     vm.songs = $firebaseArray(ref);
   }
-}());
+})();
