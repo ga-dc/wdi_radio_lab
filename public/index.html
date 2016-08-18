@@ -1,15 +1,28 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>WDI Radio</title>
-    <script src="js/app.js"></script>
-
-  </head>
-  <body>
-    <header>WDI Radio</header>
-
-    Welcome to the World's Best Song App
-
-
-  </body>
+<html data-ng-app="radio">
+<head>
+  <meta charset="UTF-8">
+  <title>WDI RADIO</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.0.3/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/2.0.0/angularfire.min.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC066nJg_tPvRsIz9S51wgngwzp7t2EmbE",
+    authDomain: "sk-radio-98d9d.firebaseapp.com",
+    databaseURL: "https://sk-radio-98d9d.firebaseio.com",
+    storageBucket: "sk-radio-98d9d.appspot.com",
+  };
+  firebase.initializeApp(config);
+</script>
+  <script src="js/app.js"></script>
+  <script src="js/songs/songs.js"></script>
+  <script src="js/songs/index.controller.js"></script>
+</head>
+<body>
+  <h1><a data-ui-sref="home">wdi radio</a></h1>
+<main ui-view></main>
+</body>
 </html>
