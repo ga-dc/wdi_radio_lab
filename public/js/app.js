@@ -3,6 +3,7 @@
 (function(){
   angular
   .module("song", [
+    "ui.router",
     "songs"
   ])
   .config([
@@ -20,7 +21,9 @@
     })
     .state("songShow", {
       url: "/songs/:id",
-      templateUrl: "js/songs/show.html"
+      templateUrl: "js/songs/show.html",
+      controller: "SongShowController",
+      controllerAs: "SongShowViewModel"
     });
   }
 }());

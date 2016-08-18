@@ -1,7 +1,8 @@
 <h2>Songs</h2>
 
 <div data-ng-repeat="song in SongIndexViewModel.songs">
-  <p>{{song.title}}</p>
+  <a data-ui-sref="songShow({id: song.$id})">{{song.title}}</a>
+  <button data-ng-click="SongIndexViewModel.delete(song)">Delete Song</button>
 </div>
 
 <h2>New Song</h2>
