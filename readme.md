@@ -20,7 +20,7 @@ Please fork this repo. By 9:00am Friday, submit your work as a **pull request**.
 - Create an `index.html` in your application's main directory.
 - Make sure to load in any appropriate libraries via CDNs
 - Create a skeleton for your content and include all dependencies.
-- Create the main `app.js` file and create the module for this angular app.
+- Create the main `app.js` file and create the module for this angular app 
 - Create a module that defines songs.
 
 ### Firebase Setup
