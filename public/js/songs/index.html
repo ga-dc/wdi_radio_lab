@@ -2,7 +2,7 @@
 
 <div data-ng-repeat="song in SongIndexViewModel.songs">
   <a data-ui-sref="songShow({id: song.$id})">{{song.title}}</a>
-  <button data-ng-click="SongIndexViewModel.delete(song)">Delete Grumble</button>
+  <button data-ng-click="SongIndexViewModel.delete(song)">Delete Song</button>
 </div>
 
 <h2>Create Song</h2>
