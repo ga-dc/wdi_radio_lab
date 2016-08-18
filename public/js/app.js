@@ -12,7 +12,10 @@
 
     function RouterFunction($stateProvider){
       $stateProvider
-      .state("wdiradioIndex", {
+      .state("welcome", {
+        url: "",
+        templateUrl: "js/welcome.html"
+      }).state("wdiradioIndex", {
         url: "/wdiradio",
         templateUrl: "js/index.html",
         controller: "wdiradioIndexController",

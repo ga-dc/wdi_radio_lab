@@ -16,5 +16,6 @@
     vm.delete = function(song){
       vm.songs.$remove(song)
     }
+
   }
 })()

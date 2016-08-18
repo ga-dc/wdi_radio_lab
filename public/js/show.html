@@ -1,11 +1,8 @@
 <h1> SONG </h1>
 
-<h2> {{wdiradioShowViewModel.song.aritst}}</h2>
-<p> {{wdiradioShowViewModel.song.title}}</p>
-<p> {{wdiradioShowViewModel.song.genre}}</p>
-<a href="{{wdiradioShowViewModel.song.audio_url}}">Song URL</a>
-<img src="{{wdiradioShowViewModel.song.album_art}}">
+<my-custom-directive data-song='wdiradioShowViewModel.song'></my-custom-directive>
 
+<audio controls autoplay ng-src="{{wdiradioShowViewModel.song.audio_url}}"></audio>
 
 <h1> Edit The Song/Artist </h1>
 
