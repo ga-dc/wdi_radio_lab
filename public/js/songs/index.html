@@ -1,0 +1,18 @@
+<!-- <h1>songs</h1>
+<div data-ng-repeat="song in SongIndexViewModel">
+<h2>{{SongIndexViewModel.song.title}}</h2>
+<p><dfn>title:</dfn> {{SongIndexViewModel.song.title}}</p>
+<p><dfn>artist:</dfn> {{SongIndexViewModel.song.artist}}</p>
+
+<img data-ng-src="{{SongIndexViewModel.song.album_art}}" width="200px" src="#" alt="{{SongIndexViewModel.song.artist}}" />
+</div> -->
+
+<h2>songs</h2>
+
+<div data-ng-repeat="song in SongIndexViewModel.songs">
+  <ul>
+  <ul><dfn>song title:</dfn>{{song.title}}</ul>
+  <ul><dfn>artist:</dfn>{{song.artist}}</ul>
+  <img data-ng-src="{{song.album_art}}" width="200px" src="#" alt="{{song.artist}}">
+</ul>
+</div>
