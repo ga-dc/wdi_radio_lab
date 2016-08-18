@@ -11,7 +11,7 @@
     RouterFunction
   ]);
 
-  function RouterFunction($stateProvider){
+  function RouterFunction($stateProvider) {
     $stateProvider
     .state("home", {
       url: "/",

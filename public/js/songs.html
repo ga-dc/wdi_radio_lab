@@ -1,9 +1,51 @@
 <h1>Songs</h1>
+
+<div data-ng-show="songsCtrl.newSong.visible">
+  <div class="form">
+   	<form>
+   		<label>
+		  		<button class="minus" type="button" data-ng-click="songsCtrl.toggleNew()"></button>
+		  		<p>Cancel</p>
+		  	</label>
+   		<label>
+   			<button class="plus" type="button" data-ng-click="songsCtrl.create()"></button>
+   			<p>Submit</p>
+   		</label>
+   		<br>
+		   <input placeholder="Title" data-ng-model="songsCtrl.newSong.title">
+		   <input placeholder="Audio Url" data-ng-model="songsCtrl.newSong.audio_url">
+		   <input placeholder="Album Art" data-ng-model="songsCtrl.newSong.album_art">
+		   <input placeholder="Artist" data-ng-model="songsCtrl.newSong.artist">
+		   <input placeholder="Genre" data-ng-model="songsCtrl.newSong.genre">
+   	</form>
+  	</div>
+</div>
+
+<div data-ng-hide="songsCtrl.newSong.visible">
+	<label>
+		<button class="plus" type="button" data-ng-click="songsCtrl.toggleNew()"></button>
+		<p>Add Song</p>
+	</label>
+</div>
+
 <div class="container">
 	<div ng-repeat="song in songsCtrl.songs">
 		<div class="song">
 			<img ng-src="{{ song.album_art }}" width="100%">
-			<p class="top">{{ song.title }} by {{ song.artist }}</p>
+    		<p class="pad">{{ song.title }} by {{ song.artist }}</p>
+			<span class="pad glyphicon glyphicon-wrench" data-ng-if="!song.showEdit" data-ng-click="songsCtrl.toggleEdit(song)"></span>
+			<span class="pad glyphicon glyphicon-remove" data-ng-if="song.showEdit" data-ng-click="songsCtrl.toggleEdit(song)"></span>
+			<span class="pad glyphicon glyphicon-ok" data-ng-if="song.showEdit" data-ng-click="songsCtrl.update(song)"></span>
+			<span class="pad glyphicon glyphicon-trash" data-ng-if="song.showEdit" data-ng-click="songsCtrl.destroy(song)"></span>
 		</div>
+		<div class="form" data-ng-show="song.showEdit">
+	      <form>
+	      	<input data-ng-model="song.title">
+	      	<input data-ng-model="song.audio_url">
+	      	<input data-ng-model="song.album_art">
+	      	<input data-ng-model="song.artist">
+	      	<input data-ng-model="song.genre">
+	      </form>
+    	</div>
 	</div>
 </div>

@@ -1,23 +1,65 @@
 body {
     font-family: "Lato", sans-serif;
-    color: white;
     background-color: #111;
+}
+
+p, h1, span {
+    color: white;
+}
+
+p {
+    display: inline-block;
+}
+
+span {
+    float: right;
+}
+
+h3 {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
 }
 
 .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+}
+
+.plus {
+    background-color: #4CAF50;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.42;
+    border-radius: 15px;
+}
+
+.minus {
+    background-color: #B22222;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.42;
+    border-radius: 15px;
 }
 
 .song {
     background-color: #262626;
     width: 400px;
-    height: 500px;
     margin: 30px;
 }
 
-.top {
+.pad {
     padding: 20px;
+    margin: 0;
 }
 
 .left {
