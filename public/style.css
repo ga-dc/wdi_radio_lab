@@ -1,21 +1,52 @@
 body {
     font-family: "Lato", sans-serif;
+    color: white;
+    background-color: #111;
 }
 
-.sidenav {
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.song {
+    background-color: #262626;
+    width: 400px;
+    height: 500px;
+    margin: 30px;
+}
+
+.top {
+    padding: 20px;
+}
+
+.left {
     height: 100%;
-    width: 250px;
+    width: 170px;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #262626;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
 }
 
-.sidenav a {
+.right {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #262626;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.left a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
@@ -24,16 +55,17 @@ body {
     transition: 0.3s
 }
 
-.sidenav a:hover, .offcanvas a:focus{
+.left a:hover, .offcanvas a:focus{
     color: #f1f1f1;
 }
 
 #main {
-    margin-left: 250px;
+    background-color: #111;
+    margin-left: 170px;
     padding: 16px;
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .left {padding-top: 15px;}
+  .left a {font-size: 18px;}
 }

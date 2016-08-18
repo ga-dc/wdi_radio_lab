@@ -1,0 +1,9 @@
+<h1>Songs</h1>
+<div class="container">
+	<div ng-repeat="song in songsCtrl.songs">
+		<div class="song">
+			<img ng-src="{{ song.album_art }}" width="100%">
+			<p class="top">{{ song.title }} by {{ song.artist }}</p>
+		</div>
+	</div>
+</div>
