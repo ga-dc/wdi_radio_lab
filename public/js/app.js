@@ -2,9 +2,9 @@
 
 (function(){
   angular
-  .module("wdi_radio", [
+  .module("wdiRadio", [
     "ui.router",
-    "wdiRadio"
+    "songs"
   ])
   .config([
     "$stateProvider",
@@ -13,17 +13,15 @@
 
   function RouterFunction($stateProvider){
     $stateProvider
-    .landing("radioLanding", {
-      url: "/landing",
-      templateUrl: "js/wdiRadio/landing.html",
-      controller: "RadioLandingController",
-      controllerAs: "RadioLandingViewModel"
+    .state("Landing", {
+      url: "",
+      templateUrl: "js/landing.html"
     })
     .state("radioSongs", {
       url: "/songs",
-      templateUrl: "js/wdiRadio/index.html",
-      controller: "RadioIndexController",
-      controllerAs: "RadioIndexViewModel"
+      templateUrl: "js/songs/index.html",
+      controller: "SongsIndexController",
+      controllerAs: "SongsIndexViewModel"
     });
   }
 }());
