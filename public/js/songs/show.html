@@ -1,0 +1,20 @@
+<h2>Have you heard THIS BANGER THO?</h2>
+
+<h3>{{SongShowViewModel.song.title}}</h3>
+<p>Artist: {{SongShowViewModel.song.artist}}</p>
+<p>Genre: {{SongShowViewModel.song.genre}}</p>
+<audio controls autoplay ng-src="{{SongShowViewModel.song.encodedUrl}}"></audio>
+<img data-ng-src="{{SongShowViewModel.song.album_art}}">
+
+<!-- <audio controls autoplay ng-src="{{song.encodedUrl}}"></audio> -->
+
+<h3>Edit</h3>
+<form data-ng-submit="SongShowViewModel.update()">
+  <input value="Title" data-ng-model="SongShowViewModel.song.title">
+  <input value="Artist" data-ng-model="SongShowViewModel.song.artist">
+  <input value="Genre" data-ng-model="SongShowViewModel.song.genre">
+  <input value="Audio" data-ng-model="SongShowViewModel.song.audio_url">
+  <input value="Album Art" data-ng-model="SongShowViewModel.song.album_art">
+  <button type="submit">Update</button>
+</form>
+<button data-ng-click="SongShowViewModel.delete()">Delete</button>
