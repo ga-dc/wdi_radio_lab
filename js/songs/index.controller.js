@@ -14,7 +14,6 @@
 
         var ref = firebase.database().ref().child("songs");
         vm.songs = $firebaseArray(ref);
-
     }
 
 }());
