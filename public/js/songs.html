@@ -31,7 +31,7 @@
 <div class="container">
 	<div ng-repeat="song in songsCtrl.songs">
 		<div class="song">
-			<img ng-src="{{ song.album_art }}" width="100%">
+			<img ng-src="{{ song.album_art }}" width="100%" data-ng-click="go(song)">
     		<p class="pad">{{ song.title }} by {{ song.artist }}</p>
 			<span class="pad glyphicon glyphicon-wrench" data-ng-if="!song.showEdit" data-ng-click="songsCtrl.toggleEdit(song)"></span>
 			<span class="pad glyphicon glyphicon-remove" data-ng-if="song.showEdit" data-ng-click="songsCtrl.toggleEdit(song)"></span>

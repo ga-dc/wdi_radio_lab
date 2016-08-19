@@ -9,6 +9,6 @@
 	]);
 
 	function HomeControllerFunction($firebaseArray) {
-		console.log("Herro from HomeControllerFunction")
+		
 	}
 }());
