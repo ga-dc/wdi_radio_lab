@@ -19,5 +19,9 @@
         vm.newSong = {};
       });
     }
+
+    vm.delete = function(song){
+      vm.songs.$remove(song)
+    }
   }
 }());

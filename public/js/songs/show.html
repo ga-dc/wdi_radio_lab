@@ -1,0 +1,8 @@
+<h2>{{SongShowViewModel.song.title}}</h2>
+
+<p>BY: {{SongShowViewModel.song.artist}}</p>
+<p>{{SongShowViewModel.song.genre}}</p>
+<img data-ng-src="{{SongShowViewModel.song.album_art}}" />
+<audio data-ng-src="{{SongShowViewModel.song.audio_url}}">
+  <a href="" ng-click="{{SongShowViewModel.song.audio_url}}">{{SongShowViewModel.song.title}}</a>
+</audio>
