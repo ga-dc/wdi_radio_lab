@@ -6,3 +6,13 @@
 <audio data-ng-src="{{SongShowViewModel.song.audio_url}}">
   <a href="" ng-click="{{SongShowViewModel.song.audio_url}}">{{SongShowViewModel.song.title}}</a>
 </audio>
+
+<h2>Edit Song</h2>
+
+<form data-ng-submit="SongIndexViewModel.update()">
+  <input placeholder="SongTitle" data-ng-model="SongShowViewModel.song.title" />
+  <input placeholder="Song URL" data-ng-model="SongShowViewModel.song.audio_url" />
+  <input placeholder="Album Art" data-ng-model="SongShowViewModel.song.artist" />
+  <input placeholder="Artist" data-ng-model="SongShowViewModel.song.genre" />
+  <button type="submit">Edit Song</button>
+</form>

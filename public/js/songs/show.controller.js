@@ -16,6 +16,10 @@
       $firebaseObject(ref).$loaded().then(function(song){
         vm.song = song
       });
+
+      vm.update = function(){
+        vm.grumble.$save();
+      }
     }
 
 }());
