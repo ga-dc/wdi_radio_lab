@@ -1,0 +1,15 @@
+<h2>Top Hits Below</h2>
+
+    <div ng-repeat="songs in vm.songs">
+      <p>{{songs.title}}</p>
+      <input type="text" data-ng-model="songs.title">
+    </div>
+
+<h2>Add Song</h2>
+
+<form data-ng-submit="SongIndexViewModel.create()">
+  <input placeholder="SongTitle" data-ng-model="SongIndexViewModel.songs.title" />
+  <input placeholder="Song URL" data-ng-model="SongIndexViewModel.songs.audio_url" />
+  <input placeholder="Album Art" data-ng-model="SongIndexViewModel.songs.artist" />
+  <input placeholder="Artist" data-ng-model="SongIndexViewModel.songs.genre" />
+</form>
