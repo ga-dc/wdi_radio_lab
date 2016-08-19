@@ -1,1 +1,14 @@
-<h1>YES</h1>
+<h1>ALL SONGS</h1>
+
+<div data-ng-repeat="song in SongsIndexViewModel.songs">
+  <h2>
+    {{song.artist}}
+  </h2>
+  <h4>
+    {{song.title}}
+  </h4>
+  <p>
+    {{song.genre}}
+  </p>
+  <img src="{{song.album_art}}" />
+</div>

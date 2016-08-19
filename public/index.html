@@ -6,7 +6,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.0.3/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/angularfire/2.0.0/angularfire.min.js"></script>
-
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyD6rQepEJcnkbjNNP7gBc1lUXxLnH5HlGo",
+        authDomain: "radio-f4078.firebaseapp.com",
+        databaseURL: "https://radio-f4078.firebaseio.com",
+        storageBucket: "",
+      };
+      firebase.initializeApp(config);
+    </script>
     <script src="js/app.js"></script>
     <script src="js/songs/songs.js"></script>
     <script src="js/songs/index.controller.js"></script>
