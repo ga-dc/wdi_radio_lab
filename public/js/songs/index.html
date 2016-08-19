@@ -2,7 +2,7 @@
 
 <div data-ng-repeat="song in SongsIndexViewModel.songs">
   <h2>
-    {{song.artist}}
+    <a data-ui-sref="songsShow({id: $index})">{{song.artist}}</a>
   </h2>
   <h4>
     {{song.title}}
