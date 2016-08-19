@@ -2,8 +2,9 @@
 
 <p>BY: {{SongShowViewModel.song.artist}}</p>
 <p>{{SongShowViewModel.song.content}}</p>
-<img data-ng-src="{{SongShowViewModel.song.photoUrl}}">
-
+<img data-ng-src="{{SongShowViewModel.song.album_art}}" style="max-width: 350px; max-height:450px">
+<audio controls autoplay ng-src="{{SongShowViewModel.song.audio_url}}"></audio>
+<!-- <audio src="{{SongShowViewModel.song.audio_url}}" controls="controls"></audio> -->
 <h2>Edit Song</h2>
 
 <form data-ng-submit="SongShowViewModel.update()">
