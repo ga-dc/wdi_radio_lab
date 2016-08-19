@@ -1,7 +1,8 @@
 <h2>BANGERZ</h2>
 
 <div data-ng-repeat="song in SongIndexViewModel.songs">
-  <a data-ui-sref="songShow({id: song.$id})">{{song.title}}</a>
+  <img class="smallpics" data-ng-src="{{ song.album_art}}"><br>
+  <a data-ui-sref="songShow({id: song.$id})">{{song.title}}</a><br>
   <button data-ng-click="SongIndexViewModel.delete(song)">Delete</button>
 </div>
 
