@@ -13,5 +13,11 @@
     var vm = this;
     var ref = firebase.database().ref().child("songs");
     vm.songs = $firebaseArray(ref);
+
+    vm.create = function(){
+      vm.songs.$add(vm.newSong).then(function(){
+        vm.newSong = {};
+      });
+    }
   }
 }());
