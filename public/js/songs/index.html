@@ -1,9 +1,8 @@
 <h2>Top Hits Below</h2>
 
-    <div ng-repeat="songs in vm.songs">
-      <p>{{songs.title}}</p>
-      <input type="text" data-ng-model="songs.title">
-    </div>
+<div ng-repeat="songs in SongIndexViewModel">
+  <a data-ui-sref="">{{song.title}}</a>
+</div>
 
 <h2>Add Song</h2>
 
