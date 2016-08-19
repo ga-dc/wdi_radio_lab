@@ -7,13 +7,14 @@
             SongIndexControllerFunction
         ]);
 
-    function SongIndexControllerFunction() {
-        // TODO setting vm to this helps avoid some out of scope errors
-        // TODO   how does this actually function?
+    function SongIndexControllerFunction($firebaseArray) {
+        console.log("Song index controller function called");
+
         var vm = this;
 
         var ref = firebase.database().ref().child("songs");
         vm.songs = $firebaseArray(ref);
+        // vm.songs = [{'title': "TEST SONG TITLE"}]
 
     }
 

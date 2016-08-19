@@ -1,5 +1,14 @@
-<h2>Browse the Songs</h2>
+<h2>Browsing Songs</h2>
 
-<div data-ng-repeat="song in SongIndexViewModel.songs">
-  <p>{{song.title}}</p>
-</div>  
+<div class="song-container">
+  <div data-ng-repeat="song in SongIndexViewModel.songs">
+    <a href="">
+      <div class="song">
+        <p>{{song.title}}</p>
+        <p>{{song.artist}}</p>
+        <p>{{song.genre}}</p>
+        <img src="{{song.album_art}}" alt="">
+      </div>
+    </a>
+  </div>
+</div>
