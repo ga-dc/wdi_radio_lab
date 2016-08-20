@@ -1,32 +1,39 @@
 <!DOCTYPE html>
-<html data-ng-app="wdiRadio">
+<html data-ng-app="radio">
 <head>
   <title>WDI Radio</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
-  <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/2.0.0/angularfire.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.0.3/firebase.js"></script>
+
 
   <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
   <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyD1qH6atEfVy26VfeYOIHvH7aTAe3RCKFg",
-      authDomain: "wdiradio-5224d.firebaseapp.com",
-      databaseURL: "https://wdiradio-5224d.firebaseio.com",
-      storageBucket: "",
-    };
-    firebase.initializeApp(config);
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD1qH6atEfVy26VfeYOIHvH7aTAe3RCKFg",
+    authDomain: "wdiradio-5224d.firebaseapp.com",
+    databaseURL: "https://wdiradio-5224d.firebaseio.com",
+    storageBucket: "wdiradio-5224d.appspot.com",
+  };
+  firebase.initializeApp(config);
   </script>
 
+  
   <script src="js/app.js"></script>
-  <script src="js/songs/songs.module.js"></script>
+  <script src="js/songs/songs.js"></script>
   <script src="js/songs/index.controller.js"></script>
+  <script src="js/songs/show.controller.js"></script>
+
 </head>
 <body>
+
+  <h1><a data-ui-sref="songIndex">WDI 11'fm</a></h1>
   <header>WDI Radio</header>
 
   Welcome to the World's Best Song App
 
-
+  <main data-ui-view></main>
 </body>
 </html>

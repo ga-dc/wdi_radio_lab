@@ -2,28 +2,29 @@
 
 (function(){
   angular
-  .module("wdiRadio", [
+  .module("radio", [
     "ui.router",
-    "firebase",
     "songs"
   ])
   .config([
     "$stateProvider",
-    RouterCallBack
+    RouterFunction
   ]);
+function  RouterFunction($stateProvider){
+  $stateProvider
+  .state("songIndex", {
+    url: "/songs",
+    templateUrl: "js/songs/index.html",
+    controller: "SongIndexController",
+    controllerAs: "SongIndexViewModel"
+  })
+  .state("songShow", {
+    url: "/songs/:id",
+    templateUrl: "js/songs/show.html",
+    controller: "SongShowController",
+    controllerAs: "SongShowViewModel"
+  });
+}
 
-  function RouterCallBack($stateProvider){
-    console.log("router is working");
-    $stateProvider
-    .state("welcome", {
-      url:"",
-      templateUrl:"js/welcome.html"
-    })
-    .state("songIndex",{
-      url:"/songIndex",
-      templateUrl:"js/songs/index.html",
-      controller:"SongsIndexController",
-      controllerAs:"SongsIndexViewModel"
-    })
-  }
-})();
+
+}());
