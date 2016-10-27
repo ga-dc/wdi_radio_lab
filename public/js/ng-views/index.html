@@ -1,5 +1,40 @@
+<!-- new song form - activated by button -->
+<button ng-click="addSong = !addSong">Add a Song</button>
 
-<div data-ng-repeat="song in vm.songs">
+<div class="songForm" ng-show="addSong">
+  <h2>Add Song</h2>
+  <form data-ng-submit="vm.add()">
+    <input placeholder="Title" data-ng-model="vm.newSong.title">
+    <input placeholder="Artist" data-ng-model="vm.newSong.artist">
+    <input placeholder="Genre" data-ng-model="vm.newSong.genre">
+    <input placeholder="Audio link" data-ng-model="vm.newSong.audio_url">
+    <input placeholder="Album Cover" data-ng-model="vm.newSong.album_art">
+    <button type="submit" data-ng-click="addSong = false">Add Song to Radio!</button>
+    <button type="button" data-ng-click="addSong = false">Cancel</button>
+  </form>
+</div>
+
+<!-- Song List -->
+<div class="songlist" data-ng-repeat="song in vm.songs">
+
   <img ng-src={{song.album_art}} alt={{song.title}} />
+  <p>{{song.title}}</p>
+
+  <!-- edit/delete song form - activated by button -->
+  <button ng-click="editSong = !editSong">Edit: {{song.title}} - {{song.artist}}</button>
+
+  <div class="songForm" ng-show="editSong">
+    <h2>{{song.title}} - {{song.artist}}</h2>
+    <form>
+      <input data-ng-model="song.title" >
+      <input data-ng-model="song.artist" >
+      <input data-ng-model="song.genre" >
+      <input data-ng-model="song.audio_url" >
+      <input data-ng-model="song.album_art" >
+      <button type="submit" data-ng-click="editSong = false;vm.update(song)">Edit Song!</button>
+      <button type="button" data-ng-click="vm.remove(song)">Delete Song!</button>
+      <button type="button" data-ng-click="editSong = false">Cancel</button>
+    </form>
+  </div>
 
 </div>
