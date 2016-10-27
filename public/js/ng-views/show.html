@@ -1,11 +1,5 @@
 <div class="flex column">
-  <h1>Songs Yo!</h1>
-
-
-  <audio controls><source /></audio>
-
-  <a class="button" ng-click="addForm = true">New Song</a>
-
+  <h1>WDI Radio Jamz!</h1>
   <div class="flex wrap container">
     <div class="card" ng-show="addForm">
       <form>
@@ -20,12 +14,14 @@
     </div>
     <div data-ng-repeat="song in vm.songs" class="flex column card">
       <div class="flex column info">
-        <div class="card-header">
-          <span class="title">{{song.title}}</span>
+        <span class="title">{{song.title}}</span>
+        <span class="artist">{{song.artist}}</span>
+        <div class="card-options">
           <a ng-click="editForm = true"><i class="fa fa-pencil" aria-hidden="true"></i></a>
           <a data-ng-click="vm.delete(song)"><i class="fa fa-trash" aria-hidden="true"></i></a>
         </div>
         <div class="album-cover" style='background-image: url("{{song.album_art}}");'></div>
+        <span class="genre">{{song.genre}}</span>
         <div class="controls">
           <a data-ng-click="vm.play(song)"><i class="fa fa-play fa-2x" aria-hidden="true"></i></a>
         </div>

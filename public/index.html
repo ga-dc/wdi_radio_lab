@@ -27,12 +27,15 @@
 
   <body ng-app="wdiradio" class="flex column">
     <nav>
-      <a data-ui-sref="radioIndex()">Home</a>
+      <a class="button" data-ui-sref="radioIndex()">Home</a>
+      <div class="player">
+      <span id="now-playing"></span>
+      <audio controls>
+        <source />
+      </audio>
+      </div>
+      <a class="button" ng-click="addForm = true">New Song</a>
     </nav>
-    <header>WDI Radio</header>
-
-    Welcome to the World's Best Song App
     <main data-ui-view></main>
-
   </body>
 </html>

@@ -83,13 +83,12 @@
     }
 
     this.play = function(song) {
-        $('audio source').attr("src", song.audio_url)
-        /****************/
-        $('audio')[0].pause();
-        $('audio')[0].load();//suspends and restores all audio element
-
-        //audio[0].play(); changed based on Sprachprofi's comment below
-        $('audio')[0].oncanplaythrough = $('audio')[0].play();
+      $('#now-playing').html(`Now Playing: ${song.title} by ${song.artist}`)
+      console.log(song.title);
+      $('audio source').attr("src", song.audio_url)
+      $('audio')[0].pause();
+      $('audio')[0].load();
+      $('audio')[0].oncanplaythrough = $('audio')[0].play();
     }
 
   }
