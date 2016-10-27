@@ -1,0 +1,12 @@
+*{
+  margin: 0;
+}
+.radioBody{
+  display: flex;
+  align-items: center;
+  width: 600px;
+  height: 100vh;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+}

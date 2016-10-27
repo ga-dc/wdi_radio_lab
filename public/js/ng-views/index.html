@@ -1,5 +1,17 @@
 <h3> Library </h3>
-<div data-ng-repeat="song in vm.songs" ng-src="">
-  {{song.artist}}
-<img ng-src="{{song.album_art}}">
+<div class="radioBody">
+  <div data-ng-repeat="song in vm.songs">
+    {{song.artist}}<br>
+  <img ng-src="{{song.album_art}}">
+  </div>
+</div>
+<div class="newSongDiv">
+<form data-ng-submit="vm.create()">
+    <input placeholder="Album Art" type="text" data-ng-model="vm.newSong.album_art">
+    <input placeholder="Artist" type="text" data-ng-model="vm.newSong.artist">
+    <input placeholder="Audio Link" type="text" data-ng-model="vm.newSong.audio_url">
+    <input placeholder="Genre" type="text" data-ng-model="vm.newSong.genre">
+    <input placeholder="Title" type="text" data-ng-model="vm.newSong.title">
+    <button type="submit">Add Song</button>
+</form>
 </div>
