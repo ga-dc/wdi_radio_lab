@@ -1,0 +1,79 @@
+body {
+  background-image: url(https://static.pexels.com/photos/96857/pexels-photo-96857-large.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  text-align:center;
+  font-family: Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  border: 1px solid white;
+  color: rgb(15,138,122);
+  padding: 10px 30px;
+}
+a:hover {
+  color:white;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  text-align:center;
+  background-color: rgba(30,45,80,.3);
+  padding: 20px 0px;
+  margin:0 auto;
+  font-size: 2em;
+}
+
+h3 {
+  text-align:center;
+  background-color: rgba(15,138,122,.4);
+  padding: 20px 0px;
+  margin:0 auto;
+  font-size: 2em;
+}
+
+
+
+#page-container {
+  width: 65%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+
+#new-song {
+  background-color: rgba(30,45,80,.3);
+  padding: 5px 15px 15px 15px;
+  margin: 0 auto 20px auto;
+}
+
+#songs-container {
+  background-color: rgba(15,138,122,.4);
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+div.songs {
+  height:350px;
+  width:350px;
+  margin:15px;
+  padding: 5px;
+  display:flex;
+  flex-direction: column;
+  justify-content:flex-end;
+}
+
+p {
+  color: white;
+  font-weight:bold;
+  font-size: 2em;
+  position:relative;
+  margin:10px;
+  padding:5px;
+  background-color: rgba(15,138,122,.8);
+}
