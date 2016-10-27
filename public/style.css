@@ -58,15 +58,15 @@ a {
   font-size: 25px;
 }
 
-a:hover {
+a:hover, button:hover {
   color: #000000;
   text-decoration: line-through;
 }
 
 button {
   font-family: 'Rock Salt', cursive;
-  font-size: 18px;
-  padding: .7%;
+  font-size: 15px;
+  padding: 2%;
   margin: 1.5%;
 }
 
