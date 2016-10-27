@@ -35,6 +35,12 @@ function RouterFunction($stateProvider){
         this.radios.$add(this.newRadioText).then( () => this.newRadioText = {} )
         console.log("working")
       }
+      this.update = function (radio) {
+        this.radios.$save(radio)
+      }
+      this.delete = function (radio) {
+        this.radios.$remove(radio)
+      }
     }
 
     function RadioShowControllerFunction($stateParams, $firebaseObject) {

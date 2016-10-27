@@ -3,6 +3,7 @@
 <div data-ng-repeat="radio in vm.radios">{{radio.title}}
   <a data-ui-sref = "radioShow({id: radio.$id})">{{radio.audio_url}}</a>
    <input type="text" data-ng-model="radio.text" data-ng-change="vm.update(radio)">
+   <button data-ng-click="vm.delete(radio)">Delete Song</button>
 </div>
 
 <form data-ng-submit="vm.create()">
