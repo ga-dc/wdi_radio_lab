@@ -1,0 +1,23 @@
+[
+ {
+   "artist": "Joakim Karud",
+   "songUrl": "https://soundcloud.com/joakimkarud/dizzy?in=joakimkarud/sets/dizzy-compilation",
+   "imgUrl": "https://i1.sndcdn.com/artworks-000170784993-tertmy-t500x500.jpg",
+   "track": "dizzy",
+   "album": "dizzy"
+ },
+ {
+   "artist": "dyalla",
+   "songUrl": "https://soundcloud.com/dyallas/70s-theme-song?in=dyallas/sets/beats",
+   "imgUrl": "https://i1.sndcdn.com/artworks-000168605135-8xv0yy-t500x500.jpg",
+   "track": "70's Theme Song",
+   "album": "Beats!"
+ },
+ {
+   "artist": "Ëlē",
+   "songUrl": "https://soundcloud.com/deejayele/05-moving-on-ledouix?in=deejayele/sets/culture-2",
+   "imgUrl": "https://i1.sndcdn.com/artworks-000107055890-mg73i3-t500x500.jpg",
+   "track": "Moving On (Ledouix)",
+   "album": "Culture 001"
+ }
+]
