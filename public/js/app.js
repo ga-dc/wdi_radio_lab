@@ -7,12 +7,14 @@ angular
     "$stateProvider",
     RouterFunction
   ])
-  .controller("radioController", [
+  .controller("radioIndexController", [
     "$firebaseArray",
     radioControllerFunction
   ])
-  .controller("radioIndexController", [
-    radioIndexControllerFunction
+  .controller("radioShowController", [
+    "$stateParams",
+    "$firebaseObject",
+    radioShowControllerFunction
   ])
 
   function RouterFunction($stateProvider) {
@@ -23,17 +25,37 @@ angular
       controller: "radioIndexController",
       controllerAs: "vm"
     })
-    .state("radioSong", {
+    .state("radioShow", {
       url: "songs/:id",
-      templateUrl: "js/ng-views/show.html"
+      templateUrl: "js/ng-views/show.html",
+      controller: "radioShowController",
+      controllerAs: "vm"
     })
   }
 
   function radioControllerFunction($firebaseArray){
     let ref = firebase.database().ref().child("songs");
-    this.songs = $firebaseArray(ref)
+    $firebaseArray(ref).$loaded().then(songs => this.songs = songs)
+
+    this.create = function() {
+      console.log('sup yall');
+      this.songs.$add(this.newSong).then( () => this.newSong = {} )
+    }
+    this.delete = function(song) {
+      this.songs.$remove(song)
+    }
   }
 
-  function radioIndexControllerFunction() {
-    this.songs = []
+  function radioShowControllerFunction($stateParams, $firebaseObject) {
+    let ref = firebase.database().ref().child("songs/" + $stateParams.id)
+    $firebaseObject(ref).$loaded().then(song => this.song = song)
+
+    this.update = function() {
+      this.songs.$save()
+    }
   }
+
+  // $sce for show controller, to get the songs to play
+  // need to define
+  // add a new property to a song called trusted url and make it a trusted url
+  // write trusted url, song.trustedUrl = $sce.trustedResourceUrl(song.audio_url)

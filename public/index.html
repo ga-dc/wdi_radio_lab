@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html data-ng-app="radioApp">
-  <head>
-    <title>WDI Radio</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
-    <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyD5K4VRZSrSlh2yijcfxMGO4xnqNBMdM_4",
-        authDomain: "wdi-radio-bd1cf.firebaseapp.com",
-        databaseURL: "https://wdi-radio-bd1cf.firebaseio.com",
-        storageBucket: "wdi-radio-bd1cf.appspot.com",
-        messagingSenderId: "340676754106"
-      };
-      firebase.initializeApp(config);
-    </script>
+<head>
+  <title>WDI Radio</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD5K4VRZSrSlh2yijcfxMGO4xnqNBMdM_4",
+    authDomain: "wdi-radio-bd1cf.firebaseapp.com",
+    databaseURL: "https://wdi-radio-bd1cf.firebaseio.com",
+    storageBucket: "wdi-radio-bd1cf.appspot.com",
+    messagingSenderId: "340676754106"
+  };
+  firebase.initializeApp(config);
+  </script>
 
-    <script src="js/app.js"></script>
-  </head>
-  <body ng-controller="radioController as vm">
-    <header>WDI Radio... Songs for you and your lover</header>
+  <script src="js/app.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 
-    <h2>Welcome to the World's Best Song App</h2>
-    <a data-ui-sref="radioIndex"></a>
+<body>
+  <header>WDI Radio... Songs for you and your lover</header>
+  <h2>Welcome to the World's Best Song App</h2>
+  <a data-ui-sref="radioIndex"></a>
   <main data-ui-view></main>
-  </body>
+</body>
 </html>
