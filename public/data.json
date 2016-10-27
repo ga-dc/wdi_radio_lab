@@ -1,0 +1,37 @@
+[
+  {
+    "artist": "SBTRKT feat Drake",
+    "songUrl": "https://soundcloud.com/andrea-beat2/ovo-ovo-remix",
+    "imgUrl": "https://i1.sndcdn.com/artworks-000012657054-mg2241-t500x500.jpg" ,
+    "track": "Wildfire (OVO Remix)",
+    "album": "Wildfire"
+  },
+  {
+    "artist": "Snails",
+    "songUrl": "https://soundcloud.com/officialsnails/stomp",
+    "imgUrl": "https://i1.sndcdn.com/artworks-000091310685-a3dcxx-t500x500.jpg",
+    "track": "Stomp",
+    "album": "Stomp EP"
+  },
+  {
+    "artist": "Colin Munroe ft. K Flay (Datsik Remix)",
+    "songUrl": "https://soundcloud.com/datsik/colin-munroe-ft-k-flay-your",
+    "imgUrl": "https://i1.sndcdn.com/artworks-000030285897-gt0w6q-t500x500.jpg",
+    "track": "Your Eyes",
+    "album": "Unsung Hero"
+  },
+  {
+    "artist": "Zeds Dead",
+    "songUrl": "https://soundcloud.com/zedsdead/zeds-dead-demons?in=ryancraley/sets/zeds-dead-songs",
+    "imgUrl": "https://i1.sndcdn.com/avatars-000000711562-05gs87-t500x500.jpg",
+    "track": "Demons",
+    "album": "Hot Sauce EP"
+  },
+  {
+    "artist": "Bassnectar",
+    "songUrl": "https://soundcloud.com/bassnectar/bassnectar-timestretch",
+    "imgUrl":"https://i1.sndcdn.com/artworks-JKoaRLtDANAF-0-t500x500.jpg",
+    "track": "Timestretch",
+    "album": "Timestretch"
+  }
+]
