@@ -1,0 +1,18 @@
+body {
+  background-color: #000;
+
+}
+
+.wrapper {
+  width: 97%;
+  margin: 30px auto 0 auto;
+  background-image: url("https://i.ytimg.com/vi/iQpGq4HguVs/maxresdefault.jpg");
+  background-size: 1300px 800px;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  color: white;
+}
+.create {
+  font-size: 60px;
+  color: green;
+}
