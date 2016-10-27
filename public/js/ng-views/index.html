@@ -1,11 +1,11 @@
-<h2>These are all the Songs</h2>
+<h2>Artists page</h2>
 
 
 <div data-ng-repeat="song in vm.songs">
-  <a data-ui-sref="songShow({id: song.$id})">{{song.title}}</a>
+  <a data-ui-sref="songShow({id: song.$id})">{{song.artist}}</a>
   <button data-ng-click="vm.delete(song)">Delete Song</button>
-
-<h2> Create song</h2>
+</div>
+<h2> Add New Song</h2>
 
 <form data-ng-submit="vm.create()">
     <input placeholder="Artist" data-ng-model="vm.newSong.artist">

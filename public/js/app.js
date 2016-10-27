@@ -4,11 +4,11 @@ angular
     "firebase"
   ])
   .config([
-    "stateProvider",
+    "$stateProvider",
     RouterFunction
   ])
   .controller("RadioIndexController",[
-    "$firebaseArray"
+    "$firebaseArray",
     RadioIndexControllerFunction
   ])
   .controller("RadioShowController", [
@@ -18,9 +18,9 @@ angular
   ])
 
   function RadioShowControllerFunction($stateParams, $firebaseObject){
-      let ref = firebase.database().ref().child("songs/" + $stateParams.id);
+      let ref = firebase.database().ref("songs/" + $stateParams.id);
 
-$firebaseObject(ref).$loaded().then(grumble => this.song = song)
+$firebaseObject(ref).$loaded().then(song => this.song = song)
 }
 
 function RouterFunction($stateProvider){
@@ -40,6 +40,7 @@ function RouterFunction($stateProvider){
 }
 
 function RadioIndexControllerFunction($firebaseArray){
+  console.log("works")
     let ref = firebase.database().ref().child("songs");
     this.songs = $firebaseArray(ref);
 
