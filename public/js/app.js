@@ -15,7 +15,6 @@ angular
     wdiRadioSongsIndexController
   ])
 
-
 function RouterFunction($stateProvider){
   $stateProvider
     .state("wdiRadioIndex", {
@@ -40,4 +39,12 @@ function wdiRadioSongsIndexController($firebaseArray){
   console.log("I'm the SONGS/INDEX!")
   let ref = firebase.database().ref().child("songs");
   this.songs = $firebaseArray(ref);
+
+  this.create = function(){
+    this.songs.$add(this.newSong).then( () => this.newSong = {} )
+  }
+
+  // this.create = function () {
+  //    this.songs.$add(this.newSong).then( () => this.newSong = {} )
+  //  }
 }
