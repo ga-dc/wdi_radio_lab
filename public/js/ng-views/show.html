@@ -1,6 +1,9 @@
 <div class="flex column">
   <h1>Songs Yo!</h1>
 
+
+  <audio controls><source /></audio>
+
   <a class="button" ng-click="addForm = true">New Song</a>
 
   <div class="flex wrap container">
@@ -20,11 +23,11 @@
         <div class="card-header">
           <span class="title">{{song.title}}</span>
           <a ng-click="editForm = true"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-          <button data-ng-click="vm.delete(song)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+          <a data-ng-click="vm.delete(song)"><i class="fa fa-trash" aria-hidden="true"></i></a>
         </div>
         <div class="album-cover" style='background-image: url("{{song.album_art}}");'></div>
         <div class="controls">
-          <i class="fa fa-play fa-2x" aria-hidden="true"></i>
+          <a data-ng-click="vm.play(song)"><i class="fa fa-play fa-2x" aria-hidden="true"></i></a>
         </div>
       </div>
       <form ng-show="editForm">

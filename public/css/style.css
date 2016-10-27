@@ -4,13 +4,16 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+a {
+  cursor: pointer;
+}
+
 .button {
   text-decoration: none;
   margin: 1em;
   border: 1px solid #ddd;
   border-radius: 0.6em;
   padding: 1em;
-  cursor: pointer;
 }
 
 .button:hover {

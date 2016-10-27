@@ -59,26 +59,39 @@
   /*
    * Show Controller Function!
    */
-   function RadioShowControllerFunction($stateParams, $firebaseArray) {
-     // These most firey of base objects
+  function RadioShowControllerFunction($stateParams, $firebaseArray) {
+    // These most firey of base objects
     //  let ref = firebase.database().ref().child(`songs/${$stateParams.id}`)
     //  $firebaseObject(ref).$loaded().then(song => this.song = song)
 
-     // Get that nice firebase reference
-     let ref = firebase.database().ref().child("songs")
-     this.songs = $firebaseArray(ref)
+    // Get that nice firebase reference
+    let ref = firebase.database().ref().child("songs")
+    this.songs = $firebaseArray(ref)
 
-     this.create = function() {
-       this.songs.$add(this.newSong).then( () => this.newSong = {} )
-     }
+    this.create = function() {
+      this.songs.$add(this.newSong).then( () => this.newSong = {} )
+    }
 
-     this.update = function(song) {
-        this.songs.$save(song)
-     }
+    this.update = function(song) {
+      this.songs.$save(song)
+    }
 
-     this.delete = function(song) {
-       this.songs.$remove(song)
-     }
-   }
+    this.delete = function(song) {
+      if (confirm(`Are you sure you want to delete ${song.title}?`)) {
+        this.songs.$remove(song)
+      }
+    }
+
+    this.play = function(song) {
+        $('audio source').attr("src", song.audio_url)
+        /****************/
+        $('audio')[0].pause();
+        $('audio')[0].load();//suspends and restores all audio element
+
+        //audio[0].play(); changed based on Sprachprofi's comment below
+        $('audio')[0].oncanplaythrough = $('audio')[0].play();
+    }
+
+  }
 
 })(); // The end.
