@@ -34,6 +34,7 @@ function SongIndexControllerFunction($firebaseArray, $firebaseObject){
   this.delete = function(song){
     this.songs.$remove(song);
     console.log("delete successful")
+
   }
 
 }
@@ -46,6 +47,7 @@ function NewSongShow(){
   menuShow = true
 }
 }
+
 
 
 
