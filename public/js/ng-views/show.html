@@ -1,0 +1,20 @@
+<h2>Show {{vm.rubinSong.title}} </h2>
+
+<p>ARTIST: {{vm.rubinSong.artist}}</p>
+<p>GENRE: {{vm.rubinSong.genre}}</p>
+<p>ARTIST: {{vm.rubinSong.album_art}}</p>
+<p>ARTIST: {{vm.rubinSong.audio_url}}</p>
+
+<p>{{vm.rubinSong.content}}</p>
+<img data-ng-src="{{vm.rubinSong.photoUrl}}">
+
+<h2>Edit rubinSong</h2>
+
+<form data-ng-submit="vm.update()">
+  <input placeholder="Title" data-ng-model="vm.rubinSong.title">
+  <input placeholder="Photo URL" data-ng-model="vm.rubinSong.artist">
+  <input placeholder="Photo URL" data-ng-model="vm.rubinSong.genre">
+  <input placeholder="Content" data-ng-model="vm.rubinSong.album_art">
+  <input placeholder="Author" data-ng-model="vm.rubinSong.audio_url">
+  <button type="submit">Update rubinSong</button>
+</form>

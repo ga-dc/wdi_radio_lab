@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Harambe",
+    "audio_url": "http://www.wdidc.org/wdi-radio-lab-assets/mp3/Tycho%20-%20Awake.mp3",
+    "album_art": "http://i.imgur.com/0qZGhaD.jpg",
+    "artist": "Tycho Brahe",
+    "genre" : "Electric Triangle"
+  },
+  {
+    "title": "Wavves!!!",
+    "audio_url": "http://www.wdidc.org/wdi-radio-lab-assets/mp3/Wavves%20-%20Green%20Eyes.mp3",
+    "album_art": "http://www.wdidc.org/wdi-radio-lab-assets/img/green_eyes_wavves.jpeg",
+    "artist": "Green Eyes",
+    "genre" : "Electric"
+  },
+  {
+    "title": "Wildfire",
+    "audio_url": "http://www.wdidc.org/wdi-radio-lab-assets/mp3/SBTRKT%20-%20Wildfire.mp3",
+    "album_art": "http://www.wdidc.org/wdi-radio-lab-assets/img/wildfire_sbtrkt.jpeg",
+    "artist": "sbtrkt",
+    "genre" : "Electric"
+  },
+  {
+    "title": "Hang Loose",
+    "audio_url": "http://www.wdidc.org/wdi-radio-lab-assets/mp3/Alabama%20Shakes%20-%20Hang%20Loose.mp3",
+    "album_art": "http://www.wdidc.org/wdi-radio-lab-assets/img/hang_loose_alabama_shakes.jpeg",
+    "artist": "Alabama Shakes",
+    "genre" : "Rock"
+  },
+  {
+    "title": "G-osh",
+    "audio_url": "http://www.wdidc.org/wdi-radio-lab-assets/mp3/Jamie%20xx%20-%20Gosh%20%28Official%20Music%20Video%29.mp3",
+    "album_art": "http://www.wdidc.org/wdi-radio-lab-assets/img/gosh_jamiexx.jpeg",
+    "artist": "Jamie xx",
+    "genre" : "Rock"
+  },
+  {
+    "title": "No! Yup",
+    "audio_url": "http://70mack.co/wp-content/uploads/2014/datas/E-40_Choices_Yup.mp3?_=1",
+    "album_art": "https://i.ytimg.com/vi/-zbw3KzgHBU/maxresdefault.jpg",
+    "artist": "E40",
+    "genre" : "Country"
+  }
+
+
+]
