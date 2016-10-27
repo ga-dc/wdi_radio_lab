@@ -1,0 +1,26 @@
+body {
+  font-family: sans-serif;
+}
+
+.songs {
+  display: flex;
+}
+
+.song {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+}
+
+.song h3 {
+  background-color: rgba(92, 92, 92, 0.40);
+  color: white;
+  padding: 4px;
+  padding-top: 10px;
+  margin-bottom: 0;
+  font-size: 1em;
+}

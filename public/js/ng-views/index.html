@@ -1,0 +1,6 @@
+<h2>Check out these songs!</h2>
+<div class="songs">
+  <div class="song" ng-repeat="song in vm.songs" style="background-image: url('{{song.album_art}}')">
+    <h3>{{song.artist}} - {{song.title}}</h3>
+  </div>
+</div>
