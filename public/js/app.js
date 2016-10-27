@@ -16,6 +16,7 @@ angular
 .controller("wdiRadioShowController", [
     "$stateParams",
     "$firebaseObject",
+    "$sce",
     wdiRadioShowControllerFunction
 ])
 
@@ -47,10 +48,14 @@ function wdiRadioIndexControllerFunction($firebaseArray){
       this.wdiRadio.$remove(wdiRadio)
     }
   }
-  function wdiRadioShowControllerFunction($stateParams, $firebaseObject){
+  function wdiRadioShowControllerFunction($stateParams, $firebaseObject, $sce){
       let ref = firebase.database().ref("/" + $stateParams.id);
       $firebaseObject(ref).$loaded().then(wdiRadio => this.wdiRadio = wdiRadio)
       this.update = function(){
         this.wdiRadio.$save();
+      }
+
+      this.trust = function(someUrl) {
+        return $sce.trustAsResourceUrl( someUrl)
       }
     }
