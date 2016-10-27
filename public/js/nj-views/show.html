@@ -1,11 +1,12 @@
 <h2>This is WDI Radio Station</h2>
 
-<p>{{vm.radio.title}}</p>
-<p>{{vm.radio.artist}}</p>
-<p>{{vm.radio.genre}}</p>
+<p>Song Title: {{vm.radio.title}}</p>
+<p>Artist: {{vm.radio.artist}}</p>
+<p>Genre: {{vm.radio.genre}}</p>
 <img data-ng-src="{{vm.radio.album_art}}"/>
+<button type="button"><a ng-href="{{vm.radio.audio_url}}"></a>Play</button>
+<audio controls autoplay data-ng-src="{{vm.radio.audio_url}}"></audio>
 
-<audio data-ng-src="{{vm.radio.audio_url}}">ddd</audio>
 <hr>
 <hr>
 <hr>
