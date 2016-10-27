@@ -44,7 +44,7 @@ function wdiRadioSongsIndexController($firebaseArray){
     this.songs.$add(this.newSong).then( () => this.newSong = {} )
   }
 
-  // this.create = function () {
-  //    this.songs.$add(this.newSong).then( () => this.newSong = {} )
-  //  }
+  this.delete = function(song){
+    this.songs.$remove(song)
+  }
 }

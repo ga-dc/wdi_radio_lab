@@ -1,8 +1,9 @@
 <h2>Library</h2>
+<div class=panel>
+  <button>New Song</button>
+</div>
 
-<button>New Song</button>
-
-<div>
+<div class="panel">
   <form data-ng-submit="vm.create()">
     <input placeholder="Artist" data-ng-model="vm.newSong.artist">
     <input placeholder="Song Name" data-ng-model="vm.newSong.track">
@@ -14,8 +15,17 @@
 </div>
 
 <div data-ng-repeat="song in vm.songs">
- <img ng-src="{{song.imgUrl}}">
- <a ng-href="{{song.songUrl}}">{{song.track}}</a>
+  <div class="panel">
+    <button type="submit">Edit</button>
+      <div class="song-panel">
+        <img ng-src="{{song.imgUrl}}">
+        <a ng-href="{{song.songUrl}}">{{song.track}}</a>
+        <div class="song-panel-controls">
+          <button type="submit">Update</button>
+          <button data-ng-click="vm.delete(song)">Delete Grumble</button>
+        </div>
+      </div>
+  </div>
 </div>
 
 
