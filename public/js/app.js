@@ -9,6 +9,8 @@ angular
   ])
   .controller("RadioIndexController", [
     "$firebaseArray",
+    "$firebaseObject",
+    "$stateParams",
     RadioIndexControllerFunction
   ])
 
@@ -26,16 +28,24 @@ function RouterFunction($stateProvider){
     })
 }
 
-function RadioIndexControllerFunction($firebaseArray){
+function RadioIndexControllerFunction($firebaseArray, $firebaseObject){
   console.log("whats up");
   let ref = firebase.database().ref().child("songs");
   this.songs = $firebaseArray(ref);
 
   this.create = function(){
     this.songs.$add(this.newSong).then( () => this.newSong = {} )
+  }
 
+  console.log("hello")
   this.delete = function(song){
     this.songs.$remove(song)
   }
-  }
+
+      // Then we retrieve a $firebaseObject based on ref. Once that asynchronous action is done, we save the resulting grumble to `this.grumble`.
+      $firebaseObject(ref).$loaded().then(song => this.song = song)
+      this.update = function(){
+        this.song.$save();
+      }
+
 }
