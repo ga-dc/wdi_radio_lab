@@ -28,7 +28,7 @@ function RouterFunction($stateProvider){
     })
 }
 
-function RadioIndexControllerFunction($firebaseArray, $firebaseObject){
+function RadioIndexControllerFunction($firebaseArray, $firebaseObject, $stateParams){
   console.log("whats up");
   let ref = firebase.database().ref().child("songs");
   this.songs = $firebaseArray(ref);
@@ -37,15 +37,23 @@ function RadioIndexControllerFunction($firebaseArray, $firebaseObject){
     this.songs.$add(this.newSong).then( () => this.newSong = {} )
   }
 
+  let ref2 = firebase.database().ref().child("songs" + $stateParams.id);
+
+      // Then we retrieve a $firebaseObject based on ref. Once that asynchronous action is done, we save the resulting grumble to `this.grumble`.
+  $firebaseObject(ref2).$loaded().then(song => this.song = song)
+
+  this.update = function(){
+    this.song.$save();
+    console.log('update test');
+  }
+
   console.log("hello")
   this.delete = function(song){
     this.songs.$remove(song)
   }
 
       // Then we retrieve a $firebaseObject based on ref. Once that asynchronous action is done, we save the resulting grumble to `this.grumble`.
-      $firebaseObject(ref).$loaded().then(song => this.song = song)
-      this.update = function(){
-        this.song.$save();
-      }
+      // $firebaseObject(ref).$loaded().then(song => this.song = song)
+
 
 }

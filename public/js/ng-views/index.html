@@ -6,7 +6,7 @@
   <p>{{song.artist}}</p>
   <p>{{song.genre}}</p>
   <button ng-click="isvisible=!isvisible">Edit</button>
-  <form data-ng-submit="vm.create()" data-ng-show="isvisible">
+  <form data-ng-submit="vm.update()" data-ng-show="isvisible">
     <input placeholder="Title" data-ng-model="song.title">
     <input placeholder="Audio" data-ng-model="song.audio_url">
     <input placeholder="Album Art" data-ng-model="song.album_art">
