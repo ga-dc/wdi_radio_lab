@@ -1,0 +1,11 @@
+<h2>Edit Song</h2>
+
+<form data-ng-submit="vm.update()">
+  <input placeholder="Title" data-ng-model="vm.song.title">
+  <input placeholder="Artist" data-ng-model="vm.song.artist">
+  <input placeholder="Genre" data-ng-model="vm.song.genre">
+  <input placeholder="Photo" data-ng-model="vm.song.album_art">
+  <input placeholder="Audio url" data-ng-model="vm.song.audio_url">
+
+  <button type="submit">Update Song</button>
+</form>

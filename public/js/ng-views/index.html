@@ -1,5 +1,8 @@
 <h1>All songss</h1>
 
 <div data-ng-repeat="song in vm.songs">
-  <p>{{song.title}}</p>
+  <a data-ui-sref="radioShow({id: song.$id})">{{song.title}}</a>
+  <!-- <a data-ui-sref="radioEdit({id: song.$id})">Edit</a> -->
+<button data-ng-click="vm.delete(song)">Delete Song</button>
+
 </div>

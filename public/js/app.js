@@ -16,18 +16,49 @@ angular
   "$stateParams",
   "$firebaseObject",
   RadioShowControllerFunction
-
 ])
+.controller("RadioNewController", [
+  "$firebaseArray",
+  RadioNewControllerFunction
+])
+// .controller("RadioEditController", [
+//   "$stateParams",
+//   "$firebaseObject",
+//   RadioEditControllerFunction
+// ])
 
 function RadioIndexControllerFunction($firebaseArray){
   let ref =  firebase.database().ref().child("songs");
   this.songs = $firebaseArray(ref);
+}
+
+function RadioNewControllerFunction($firebaseArray){
+  let ref =  firebase.database().ref().child("songs");
+  this.songs = $firebaseArray(ref);
+  this.create = function(){
+    this.songs.$add(this.newSong).then(() => this.newSong = {})
+  }
+
+// function RadioEditControllerFunction($stateParams, $firebaseObject){
+//   let ref = firebase.database().ref().child("songs/" + $stateParams.id);
+//   $firebaseObject(ref).$loaded().then(song => {
+//     song.trustedUrl = $sce.trustAsResourceUrl(song.audio_url)
+//     this.song = song
+//   this.update = function(){
+//     this.song.$save();
+//   }
+// })
+
 }
 function RadioShowControllerFunction($sce, $stateParams, $firebaseObject){
   let ref = firebase.database().ref().child("songs/" + $stateParams.id);
   $firebaseObject(ref).$loaded().then(song => {
     song.trustedUrl = $sce.trustAsResourceUrl(song.audio_url)
     this.song = song
+    this.update = function(){
+      this.song.$save();
+    }
+
   })
 
 }
@@ -40,11 +71,22 @@ function RouterFunction($stateProvider){
     controller: "RadioIndexController",
     controllerAs: "vm"
   })
+  .state("radioNew", {
+    url: "/songs/new",
+    templateUrl: "js/ng-views/new.html",
+    controller: "RadioNewController",
+    controllerAs: "vm"
+  })
   .state("radioShow", {
     url: "/songs/:id",
     templateUrl: "js/ng-views/show.html",
     controller:"RadioShowController",
     controllerAs:"vm"
-
   })
 }
+  // state("radioEdit",{
+  //   url: "/songs/:id/edit",
+  //   templateUrl: "js/ng-views/edit.html",
+  //   controller: "RadioEditController",
+  //   controllerAs: "vm"
+  // })
