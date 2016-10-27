@@ -17,7 +17,8 @@
 <!-- Song List -->
 <div class="songlist" data-ng-repeat="song in vm.songs">
 
-  <img ng-src={{song.album_art}} alt={{song.title}} />
+  <img ng-src={{song.album_art}} ng-click="songPlayer = !songPlayer" alt={{song.title}} />
+  <audio controls ng-show="songPlayer"><source data-ng-src="{{vm.safeUrl(song)}}" type="audio/mpeg"></audio>
   <p>{{song.title}}</p>
 
   <!-- edit/delete song form - activated by button -->

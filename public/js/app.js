@@ -9,27 +9,31 @@ angular
   ])
   .controller("SongIndexCtrl", [
     "$firebaseArray",
-    "$firebaseObject",
+    "$sce",
     "$state",
     songController
   ])
+  .directive("hi", function(){
+  return {
+    template: '<h1>Hi There!</h1>'
+  }})
 
-  function songController($firebaseArray,$firebaseObject,$state){
+  function songController($firebaseArray,$sce,$state){
     let ref = firebase.database().ref().child("songs")
-    // $firebaseObject(ref).$loaded().then(song => this.song = song)
     this.songs = $firebaseArray(ref)
     this.newSong = {}
 
     this.add = function(){
-      // this.addSong = false
       this.songs.$add(this.newSong).then( () => this.newSong = {})
     }
     this.update = function(song){
-      // this.editSong = false
       this.songs.$save(song)
     }
     this.remove = function(song){
       this.songs.$remove(song)
+    }
+    this.safeUrl = function(song){
+      return $sce.trustAsResourceUrl(song.audio_url)
     }
 
   }
