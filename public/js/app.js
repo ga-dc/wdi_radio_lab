@@ -2,7 +2,6 @@ angular
 .module("wdiradio", [
   "ui.router",
   "firebase"
-
 ])
 .config([
   "$stateProvider",
@@ -14,11 +13,11 @@ angular
 ])
 
 function RadioIndexControllerFunction($firebaseArray){
-  let ref =  firebase.database().ref.child("songs");
+  let ref =  firebase.database().ref().child("songs");
   this.songs = $firebaseArray(ref);
-})
+}
 
-function RouterFunction($stateProvider{
+function RouterFunction($stateProvider){
   $stateProvider
   .state("radioIndex",{
     url:"/songs",
@@ -26,4 +25,4 @@ function RouterFunction($stateProvider{
     controller: "RadioIndexController",
     controllerAs: "vm"
   })
-})
+}
