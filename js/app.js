@@ -14,7 +14,6 @@ angular.module("wdiradio", [
 function SongIndexControllerFunction($firebaseArray){
   let ref = firebase.database().ref().child("songs")
   this.songs = $firebaseArray(ref)
-  console.log(this.songs)
 
   this.create = function(){
     this.songs.$add(this.newSong).then(()=>this.newSong)
