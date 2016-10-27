@@ -1,0 +1,41 @@
+<div class="flex column">
+  <h1>Songs Yo!</h1>
+
+  <a class="button" ng-click="addForm = true">New Song</a>
+
+  <div class="flex wrap container">
+    <div class="card" ng-show="addForm">
+      <form>
+        <input placeholder="Title" type="text" data-ng-model="vm.newSong.title" />
+        <input placeholder="Artist" type="text" data-ng-model="vm.newSong.artist" />
+        <input placeholder="Album Art URL" type="text" data-ng-model="vm.newSong.album_art" />
+        <input placeholder="Audio URL" type="text" data-ng-model="vm.newSong.audio_url" />
+        <input placeholder="Genre" type="text" data-ng-model="vm.newSong.genre" />
+        <button type="button" data-ng-click="vm.create(); addForm = false">Submit</button>
+        <button type="button" ng-click="addForm = false">Cancel</button>
+      </form>
+    </div>
+    <div data-ng-repeat="song in vm.songs" class="flex column card">
+      <div class="flex column info">
+        <div class="card-header">
+          <span class="title">{{song.title}}</span>
+          <a ng-click="editForm = true"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+          <button data-ng-click="vm.delete(song)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+        </div>
+        <div class="album-cover" style='background-image: url("{{song.album_art}}");'></div>
+        <div class="controls">
+          <i class="fa fa-play fa-2x" aria-hidden="true"></i>
+        </div>
+      </div>
+      <form ng-show="editForm">
+        <input placeholder="Title" type="text" data-ng-model="song.title" value="song.title" />
+        <input placeholder="Artist" type="text" data-ng-model="song.artist" value="song.artist" />
+        <input placeholder="Album Art URL" type="text" data-ng-model="song.album_art" value="song.album_art" />
+        <input placeholder="Audio URL" type="text" data-ng-model="song.audio_url" value="song.audio_url" />
+        <input placeholder="Genre" type="text" data-ng-model="song.genre" value="song.genre" />
+        <button type="button" data-ng-click="vm.update(song); editForm = false">Update</button>
+        <button type="button" ng-click="editForm = false">Cancel</button>
+      </form>
+    </div>
+  </div>
+</div>
