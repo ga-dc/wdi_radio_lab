@@ -1,0 +1,9 @@
+<h1>This song </h1>
+
+<p>Song Title : {{vm.song.title}}</p>
+<p>Artist : {{vm.song.artist}}</p>
+<p>Genre : {{vm.song.genre}}</p>
+<audio src="{{vm.song.trustedUrl}}" controls autoplay loop>
+  <p>Your browser does not support the <code>audio</code> element.</p>
+</audio>
+<p><img ng-src="{{vm.song.album_art}}"</p>
