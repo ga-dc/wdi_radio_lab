@@ -37,16 +37,6 @@ angular
     function RadioIndexControllerFunction($firebaseArray){
       let ref = firebase.database().ref();
       this.radios = $firebaseArray(ref);
-    }
-
-      function RadioShowControllerFunction($stateParams, $firebaseObject){
-        let ref = firebase.database().ref("/" + $stateParams.id);
-        $firebaseObject(ref).$loaded().then(radio => this.radio = radio)
-      }
-
-      this.update = function(){
-        this.radio.$save();
-      }
 
       this.create = function(){
         this.radios.$add(this.newRadio).then( () => this.newRadio = {})
@@ -55,3 +45,14 @@ angular
       this.delete = function(radio){
         this.radios.$remove(radio)
       }
+    }
+
+      function RadioShowControllerFunction($stateParams, $firebaseObject){
+        let ref = firebase.database().ref("/" + $stateParams.id);
+        $firebaseObject(ref).$loaded().then(radio => this.radio = radio)
+
+
+      this.update = function(){
+        this.radio.$save();
+      }
+  }

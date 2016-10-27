@@ -41,6 +41,9 @@ button {
   border-radius: 5px;
   text-align: center;
 }
+.song {
+  height: 300px;
+}
 img {
   border:10px double brown;
   border-radius: 10px;
