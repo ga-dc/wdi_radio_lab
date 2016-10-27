@@ -30,6 +30,10 @@ angular
 function RadioIndexControllerFunction($firebaseArray){
   let ref =  firebase.database().ref().child("songs");
   this.songs = $firebaseArray(ref);
+  this.delete = function(song){
+    this.songs.$remove(song)
+  }
+
 }
 
 function RadioNewControllerFunction($firebaseArray){
@@ -38,17 +42,6 @@ function RadioNewControllerFunction($firebaseArray){
   this.create = function(){
     this.songs.$add(this.newSong).then(() => this.newSong = {})
   }
-
-// function RadioEditControllerFunction($stateParams, $firebaseObject){
-//   let ref = firebase.database().ref().child("songs/" + $stateParams.id);
-//   $firebaseObject(ref).$loaded().then(song => {
-//     song.trustedUrl = $sce.trustAsResourceUrl(song.audio_url)
-//     this.song = song
-//   this.update = function(){
-//     this.song.$save();
-//   }
-// })
-
 }
 function RadioShowControllerFunction($sce, $stateParams, $firebaseObject){
   let ref = firebase.database().ref().child("songs/" + $stateParams.id);
@@ -63,6 +56,15 @@ function RadioShowControllerFunction($sce, $stateParams, $firebaseObject){
 
 }
 
+// function RadioEditControllerFunction($stateParams, $firebaseObject){
+//   let ref = firebase.database().ref().child("songs/" + $stateParams.id);
+//   $firebaseObject(ref).$loaded().then(song => {
+//     song.trustedUrl = $sce.trustAsResourceUrl(song.audio_url)
+//     this.song = song
+//   this.update = function(){
+//     this.song.$save();
+//   }
+// })
 function RouterFunction($stateProvider){
   $stateProvider
   .state("radioIndex",{
