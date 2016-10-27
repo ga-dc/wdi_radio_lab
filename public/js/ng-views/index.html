@@ -1,5 +1,8 @@
-<h2>Songs</h2>
+<h1>Songs</h1>
 
 <div data-ng-repeat="song in vm.songs">
-  
+  <h2>{{song.title}}</h2>
+  <h3>{{song.artist}}</h3>
+  <img ng-src ="{{song.photoUrl}}"><br>
+  <a ng-href="{{song.link}}">Listen to this song</a>
 </div>

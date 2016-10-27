@@ -1,12 +1,14 @@
 angular
   .module("radio", [
     "ui.router",
+    "firebase"
   ])
   .config([
-    "stateProvider",
+    "$stateProvider",
     RouterFunction
   ])
   .controller("SongIndexController", [
+    "$firebaseArray",
     SongIndexControllerFunction
   ])
 
@@ -23,8 +25,7 @@ angular
       templateUrl: "js/ng-views/show.html"
     })
   }
-
-
-  function SongIndexControllerFunction(){
-
+  function SongIndexControllerFunction($firebaseArray){
+    let ref = firebase.database().ref().child("songs");
+    this.songs = $firebaseArray(ref);
   }
