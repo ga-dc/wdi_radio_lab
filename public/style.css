@@ -1,6 +1,7 @@
 body{
   background-image: url("http://hdwall-papers.com/data/wallpapers/192/WDF_2308289.jpg");
-  background-size: cover;
+  background-size: 100%;
+
   background-color: yellow;
   font-family: 'Lobster', cursive;
 }
@@ -34,7 +35,8 @@ button {
   font-size: 15px;
 }
 .title {
-  margin-top: 25px;
+  margin: 25px;
+
   background-color: orange;
   width: 50%;
   height: 30px;
@@ -43,8 +45,14 @@ button {
 }
 .song {
   height: 300px;
+  margin-bottom: 20px;
+  
 }
+
 img {
+  margin-top: 10px;
+  width: 200px;
+  height: 200px;
   border:10px double brown;
   border-radius: 10px;
 }

@@ -1,8 +1,9 @@
 <h2>Song List</h2>
 
 <div class="song" data-ng-repeat="radio in vm.radios">
-  <div class="title"><a data-ui-sref="radioShow({id: radio.$id})">{{radio.title}}</a></div>
-<img data-ng-src="{{vm.radio.album_art}}"/>
+  <a data-ui-sref="radioShow({id: radio.$id})" class="title">{{radio.title}}</a><br>
+  <img ng-src="{{radio.album_art}}"><br>
+
   <button class="delete" data-ng-click="vm.delete(radio)">Delete</button>
 </div>
 
