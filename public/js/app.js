@@ -44,6 +44,8 @@ function RouterFunction($stateProvider){
     }
 
     function RadioShowControllerFunction($stateParams, $firebaseObject) {
-   let ref = firebase.database().ref().child("songs/" + $stateParams.id)
-   $firebaseObject(ref).$loaded().then(radio => this.radio = radio
-   )}
+   let ref = firebase.database().ref().child("radios/" + $stateParams.id);
+   $firebaseObject(ref).$loaded().then(radio => {
+     this.radio = radio
+     console.log(radio.title)
+   })}
