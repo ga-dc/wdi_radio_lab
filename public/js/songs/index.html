@@ -2,5 +2,10 @@
 
 <div data-ng-repeat="song in vm.songs">
   <p>{{song.title}}</p>
+  <p>{{song.artist}}</p>
+  <p>{{song.genre}}</p>
+  <img data-ng-src="{{song.audio_url}}">
+  <img data-ng-src="{{song.album_art}}">
+
 
 </div>
