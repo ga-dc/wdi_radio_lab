@@ -7,12 +7,12 @@
 
 <h1>Edit this Jam!</h1>
 
-<form data-ng-submit-"vm.update()">
-  <input placeholder="Title" data-ng-model="vm.Song.title" />
-  <input placeholder="Artist" data-ng-model="vm.Song.artist" />
-  <input placeholder="Genre" data-ng-model="vm.Song.genre" />
-  <input placeholder="Album Art Url" data-ng-model="vm.Song.album_art" />
-  <input placeholder="Audio Url" data-ng-model="vm.Song.audio_url" />
+<form data-ng-submit="vm.update()">
+  <input placeholder="Title" data-ng-model="vm.song.title" />
+  <input placeholder="Artist" data-ng-model="vm.song.artist" />
+  <input placeholder="Genre" data-ng-model="vm.song.genre" />
+  <input placeholder="Album Art Url" data-ng-model="vm.song.album_art" />
+  <input placeholder="Audio Url" data-ng-model="vm.song.audio_url" />
   <button type="submit">Update this Jam!</button>
 </form>
 <a href="/#/songs">Back Home</a>

@@ -26,7 +26,7 @@ angular
       controllerAs: "vm"
     })
     .state("radioShow", {
-      url: "songs/:id",
+      url: "/songs/:id",
       templateUrl: "js/ng-views/show.html",
       controller: "radioShowController",
       controllerAs: "vm"
@@ -35,10 +35,10 @@ angular
 
   function radioControllerFunction($firebaseArray){
     let ref = firebase.database().ref().child("songs");
-    $firebaseArray(ref).$loaded().then(songs => this.songs = songs)
+    // $firebaseArray(ref).$loaded().then(songs => this.songs = songs);
+    this.songs = $firebaseArray(ref);
 
     this.create = function() {
-      console.log('sup yall');
       this.songs.$add(this.newSong).then( () => this.newSong = {} )
     }
     this.delete = function(song) {
@@ -51,7 +51,8 @@ angular
     $firebaseObject(ref).$loaded().then(song => this.song = song)
 
     this.update = function() {
-      this.songs.$save()
+      console.log('hey, yall');
+      this.song.$save();
     }
   }
 
