@@ -9,13 +9,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
-
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBmjZ1z4HASUqnyLT3KN4z-YTPeLy1nDes",
+        authDomain: "wdi-radio-33ae7.firebaseapp.com",
+        databaseURL: "https://wdi-radio-33ae7.firebaseio.com",
+        storageBucket: "wdi-radio-33ae7.appspot.com",
+        messagingSenderId: "382995140563"
+      };
+      firebase.initializeApp(config);
+    </script>
     <script src="js/app.js"></script>
-
   </head>
   <body>
     <header>WDI Radio</header>
-    <h1>Welcome to the World's Best Song App</h1>
+    <h1><a data-ui-sref="songIndex">WDI Radio</a></h1>
     <main data-ui-view></main>
 
   </body>
