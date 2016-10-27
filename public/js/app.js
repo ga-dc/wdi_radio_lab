@@ -44,4 +44,7 @@ function showControllerFunction($stateParams, $firebaseObject){
   let ref = firebase.database().ref().child("songs/" + $stateParams.id)
   $firebaseObject(ref).$loaded().then(song => this.song = song)
 
+  this.update = function(){
+    this.song.$save()
+  }
 }
