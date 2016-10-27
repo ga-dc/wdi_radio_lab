@@ -1,4 +1,5 @@
 <h2>Listen to a Song</h2>
 
 <div data-ng-repeat="radio in vm.radios">{{radio.title}}
+  <a data-ui-sref = "radioShow({id: radio.$id})">{{radio.audio_url}}</a>
 </div>
