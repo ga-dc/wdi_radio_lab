@@ -17,7 +17,7 @@ angular
 function RouterFunction( $stateProvider ) {
   $stateProvider
   .state("songIndex", {
-    url: "/",
+    url: "/songs",
     templateUrl: "/js/ng-views/index.html",
     controller: "SongIndexController",
     controllerAs: "vm"
