@@ -8,7 +8,8 @@
 </form>
 <h2>Check out these songs!</h2>
 <div class="songs">
-  <div class="song" ng-repeat="song in vm.songs" style="background-image: url('{{song.album_art}}')">
+  <div class="song" ng-repeat="song in vm.songs" ng-mouseenter="show = true" ng-mouseleave="show = false" style="background-image: url('{{song.album_art}}')">
+    <p class="edit" ng-show="show"><a href="">edit</a></p>
     <h3>{{song.artist}} - {{song.title}}</h3>
   </div>
 </div>

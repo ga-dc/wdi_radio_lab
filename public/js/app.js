@@ -32,4 +32,8 @@ function SongIndexControllerFunction($firebaseArray){
     // this.grumbles.$add(this.newGrumble).then( () => this.newGrumble = {})
     this.songs.$add(this.newSong).then( () => this.newSong = {} )
   }
+  this.showEdit = function(song){
+    // $(song).find('.edit').show();
+    console.log(song);
+  }
 }

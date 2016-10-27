@@ -9,6 +9,7 @@ body {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 .song {
@@ -28,4 +29,16 @@ body {
   padding-top: 10px;
   margin-bottom: 0;
   font-size: 1em;
+}
+
+.edit {
+  margin-bottom: auto;
+  text-align: right;
+}
+
+.edit a {
+  background-color: rgba(92, 92, 92, 0.40);
+  color: white;
+  padding: 4px;
+  text-decoration: none;
 }
