@@ -30,6 +30,8 @@ angular
     this.songs = $firebaseArray(ref);
     this.newSong = {}
     this.create = function(){
-      this.songs.$add(this.newSong).then( () => this.newSong = {} ) 
+      console.log("click")
+      this.songs.$add(this.newSong).then( () => this.newSong = {} )
+      console.log("after")
     }
   }
