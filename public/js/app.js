@@ -5,7 +5,6 @@ angular
   ])
   .config([
     "$stateProvider",
-    "$locationProvider",
     RouterFunction
   ])
   .controller("SongIndexController"[
@@ -14,9 +13,9 @@ angular
   ])
 
 
-function RouterFunction($stateProvider, $locationProvider) {
+function RouterFunction( $stateProvider ) {
   $stateProvider
-    // .state
+
 }
 
 function SongIndexControllerFunction($firebaseArray){
