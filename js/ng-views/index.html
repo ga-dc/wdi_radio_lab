@@ -1,9 +1,44 @@
-<p><a data-ui-sref = "songNew">New Song</a></p>
 
-<p>
+<!-- <a href ="#" ng-click="newForm = !newForm">New</a> -->
+
+<button ng-click="newForm = !newForm"> New!</button>
+
+<p ng-show = "isReplyFormOpen">
+  no
+</p>
+
+<div ng-show = "newForm">
+<form data-ng-submit = "vm.create()">
+
+  <input placeholder="Title" data-ng-model = "vm.newSong.title">
+  <input placeholder="Artist" data-ng-model = "vm.newSong.artist">
+  <input placeholder="album_art" data-ng-model = "vm.newSong.album_art">
+  <input placeholder="audio url" data-ng-model = "vm.newSong.audio_url">
+  <input placeholder="Genre" data-ng-model = "vm.newSong.genre">
+  <button type="submit">New Song</button>
+
+</form>
+</div>
+
+
+<div id = "index">
   <div data-ng-repeat = "song in vm.songs">
+    <button ng-click="editForm = !editForm">Edit</button>
+    <div ng-show = "editForm">
+    <form data-ng-submit ="vm.update()">
+      <input value="title" data-ng-model = "song.title" data-ng-change = "vm.update(song)">
+      <input placeholder="artist" data-ng-model = "song.artist" data-ng-change = "vm.update(song)">
+      <input placeholder="album_art" data-ng-model = "song.album_art" data-ng-change = "vm.update(song)">
+      <input placeholder="audio_url" data-ng-model = "song.audio_url" data-ng-change = "vm.update(song)">
+      <input placeholder="genre" data-ng-model = "song.genre" data-ng-change = "vm.update(song)">
+      <button type="submit">Edit Song</button>
+    </form>
+    </div>
 
-    {{song.title}}
+    <a data-ui-sref = "songShow({id: song.$id})">{{song.title}}</a>
+    {{song.artist}}
+    <img ng-src={{song.album_art}} alt="image"/>
+    {{song.genre}}
 
   </div>
-</p>
+</div>
