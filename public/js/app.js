@@ -39,18 +39,27 @@ angular
     // $scope.showForm = function (){
     //   $scope.formIs
     // }
-    // $scope.create = function(){
-    //   $scope.songs.$add($scope.newSong).then(() => $scope.newSong = {})
-    // }
+    $scope.create = function(){
+      $scope.songs.$add($scope.newSong).then(() => $scope.newSong = {})
+    }
   }
   function radioShowSongControllerFunction($scope, $stateParams, $firebaseObject, $state){
     let ref = firebase.database().ref().child("radio/" + $stateParams.id)
     $firebaseObject(ref).$loaded().then(song => $scope.song = song)
+    .then(function(song){
+      $scope.song = song
+    })
+    console.log("here");
 
     $scope.update = function(){
       $scope.song.$save()
+      $state.go("songs")
     }
-    $state.go("songs")
+    $scope.delete = function(){
+      $scope.song.$remove().then(function () {
+        $state.go("songs")
+      })
+    }
   }
 
   function Router($stateProvider){

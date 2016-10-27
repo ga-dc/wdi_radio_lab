@@ -2,9 +2,9 @@
 
 <h4>{{song.genre}}</h4>
 
-<!-- <audio controls>
-  <source ng-src="{{song.audio_url}}" type="audio/mpeg">
-</audio> -->
+<button data-ng-click="delete()">Delete Song</button>
+
+<div ng-bind-html="trustedHtml"></div>
 
 <form data-ng-submit="update()">
   <input value={{song.artist}} data-ng-model="song.artist">
