@@ -20,8 +20,15 @@
       <div class="song-panel">
         <img ng-src="{{song.imgUrl}}">
         <a ng-href="{{song.songUrl}}">{{song.track}}</a>
-        <div class="song-panel-controls">
+        <div class="panel">
+          <form data-ng-submit="vm.update()">
+            <input placeholder="Artist" data-ng-model="song.artist">
+            <input placeholder="Song Name" data-ng-model="song.track" data-ng-change="vm.update(song)">
+            <input placeholder="Song Link" data-ng-model="song.songUrl">
+            <input placeholder="Album Name" data-ng-model="song.album">
+            <input placeholder="Album Image" data-ng-model="song.imgUrl">
           <button type="submit">Update</button>
+          </form>
           <button data-ng-click="vm.delete(song)">Delete Grumble</button>
         </div>
       </div>

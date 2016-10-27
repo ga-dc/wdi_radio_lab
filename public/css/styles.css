@@ -3,6 +3,10 @@ body {
   font-size: 21px;
 }
 
+header {
+  width: 90%;
+}
+
 a {
   display: block;
 }
@@ -25,4 +29,11 @@ img {
 
 .song-panel {
   border: 3px solid lightblue;
+  padding: 30px;
+}
+
+.test {
+  background-color: red;
+  font-size: 10px;
+  padding: 9px;
 }

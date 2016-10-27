@@ -12,6 +12,7 @@ angular
   ])
   .controller("wdiRadioSongsIndexController", [
     "$firebaseArray",
+    "$firebaseObject",
     wdiRadioSongsIndexController
   ])
 
@@ -35,7 +36,7 @@ function wdiRadioIndexController(){
   console.log("Hey Mike! I'm the INDEX/WELCOME!")
 }
 
-function wdiRadioSongsIndexController($firebaseArray){
+function wdiRadioSongsIndexController($firebaseArray, $firebaseObject){
   console.log("I'm the SONGS/INDEX!")
   let ref = firebase.database().ref().child("songs");
   this.songs = $firebaseArray(ref);
@@ -46,5 +47,12 @@ function wdiRadioSongsIndexController($firebaseArray){
 
   this.delete = function(song){
     this.songs.$remove(song)
+  }
+
+  $firebaseObject(ref).$loaded().then(song => this.song = song)
+  
+  this.update = function(song){
+    this.songs.$save(song);
+    console.log("Look!")
   }
 }
