@@ -51,7 +51,6 @@ angular
     $firebaseObject(ref).$loaded().then(song => this.song = song)
 
     this.update = function() {
-      console.log('hey, yall');
       this.song.$save();
     }
   }

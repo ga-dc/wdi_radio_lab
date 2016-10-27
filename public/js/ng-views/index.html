@@ -1,5 +1,4 @@
-
-<h1 class="middle">Welcome to the song list, baby.</h1>
+<h1 class="top">🎧 Welcome to the song list, baby. 🎵 </h1>
 <div data-ng-repeat="song in vm.songs">
   <div class="songs">
     <h2><a data-ui-sref="radioShow({id: song.$id})">Title: {{song.title}}</a></h2>
@@ -11,7 +10,7 @@
   </div>
 </div>
 
-<div class="top">
+<div class="middle">
   <h1>Add your own groovy tunes</h1>
   <form data-ng-submit="vm.create()">
     <input placeholder="Title" data-ng-model="vm.newSong.title" />
@@ -19,6 +18,7 @@
     <input placeholder="Genre" data-ng-model="vm.newSong.genre" />
     <input placeholder="Album Art Url" data-ng-model="vm.newSong.album_art" />
     <input placeholder="Audio Url" data-ng-model="vm.newSong.audio_url" />
+    <br />
     <button type="submit">Add Your Tune</button>
   </form>
 </div>

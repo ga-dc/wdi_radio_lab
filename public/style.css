@@ -1,3 +1,52 @@
+header {
+  text-align: left;
+  font-size: 22px;
+}
+
+body {
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  background-color: #3A4241;
+  color: white;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .songs {
-  border: #776C8A solid 2px;
+  margin: 2% 25% 2% 25%;
+  border: #776C8A dotted 2px;
+  border-radius: 16px;
+  padding: 1%;
+}
+
+a {
+  color: #F2EAEA;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+a:hover {
+  color: #000000;
+  text-decoration: line-through;
+}
+
+button {
+  font-family: 'Indie Flower', cursive;
+  font-size: 18px;
+  padding: .7%;
+  margin: 1.5%;
+}
+
+input {
+  font-family: 'Indie Flower', cursive;
+  font-size: 20px;
+  width: 50%;
+}
+
+input[type=text]:focus {
+    background-color: lightblue;
 }
