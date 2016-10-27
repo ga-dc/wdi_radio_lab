@@ -1,0 +1,8 @@
+<h2>All Songs!</h2>
+
+<!-- <p><a ng-click="showForm()"  href="#">Add Song</a></p> -->
+
+
+<div data-ng-repeat="song in songs">
+  <p><a ui-sref="showSong({id: song.$id})">{{song.title}}</a></p>
+</div>

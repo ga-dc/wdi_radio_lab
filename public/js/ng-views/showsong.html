@@ -1,0 +1,14 @@
+<h2>{{song.artist}}: {{song.title}}</h2>
+
+<h4>{{song.genre}}</h4>
+
+<!-- <audio controls>
+  <source ng-src="{{song.audio_url}}" type="audio/mpeg">
+</audio> -->
+
+<form data-ng-submit="update()">
+  <input value={{song.artist}} data-ng-model="song.artist">
+  <input value={{song.title}} data-ng-model="song.title">
+  <input value={{song.genre}} data-ng-model="song.genre">
+  <button type="submit">Update Artist</button>
+</form>
