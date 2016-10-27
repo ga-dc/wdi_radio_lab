@@ -1,0 +1,17 @@
+<h2>These are all the Songs</h2>
+
+<div data-ng-repeat="wdiRadio in vm.wdiRadio">
+  <a data-ui-sref="wdiRadioShow({id: wdiRadio.$id})">{{wdiRadio.track}}</a>
+  <button data-ng-click="vm.delete(wdiRadio)">Delete Song</button>
+</div>
+
+<h2>Create Song</h2>
+
+<form data-ng-submit="vm.create()">
+  <input placeholder="Track" data-ng-model="vm.newwdiRadio.track">
+  <input placeholder="Artist" data-ng-model="vm.newwdiRadio.artist">
+  <input placeholder="Album" data-ng-model="vm.newwdiRadio.album">
+  <input placeholder="Album Image" data-ng-model="vm.newwdiRadio.imgUrl">
+  <input placeholder="Song Url" data-ng-model="vm.newwdiRadio.songUrl">
+  <button type="submit">Create Song</button>
+</form>

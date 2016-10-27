@@ -1,0 +1,18 @@
+<h2>This is a Song</h2>
+
+<p>{{vm.wdiRadio.track}}</p>
+<p>{{vm.wdiRadio.artist}}</p>
+<p>{{vm.wdiRadio.album}}</p>
+<p>{{vm.wdiRadio.songUrl}}
+<img data-ng-src="{{vm.wdiRadio.imgUrl}}">
+
+<h2>Edit Song</h2>
+
+<form data-ng-submit="vm.update()">
+  <input placeholder="Track" data-ng-model="vm.wdiRadio.track">
+  <input placeholder="Artist" data-ng-model=" vm.wdiRadio.artist">
+  <input placeholder="Album" data-ng-model="vm.wdiRadio.album">
+  <input placeholder="Album Image" data-ng-model="vm.wdiRadio.imgUrl">
+  <input placeholder="Song Url" data-ng-model="vm.wdiRadio.songUrl"
+  <button type="submit">Update Song</button>
+</form>
