@@ -18,7 +18,7 @@ function RouterFunction( $stateProvider ) {
   $stateProvider
   .state("songIndex", {
     url: "/songs",
-    templateUrl: "/js/ng-views/index.html",
+    templateUrl: "js/ng-views/index.html",
     controller: "SongIndexController",
     controllerAs: "vm"
   })
@@ -28,4 +28,8 @@ function RouterFunction( $stateProvider ) {
 function SongIndexControllerFunction($firebaseArray){
   let ref = firebase.database().ref().child("songs")
   this.songs = $firebaseArray(ref)
+  this.create = function(){
+    // this.grumbles.$add(this.newGrumble).then( () => this.newGrumble = {})
+    this.songs.$add(this.newSong).then( () => this.newSong = {} )
+  }
 }

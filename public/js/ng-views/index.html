@@ -1,3 +1,11 @@
+<form id="add-song" data-ng-submit="vm.create()">
+  <input type="text" placeholder="Title" data-ng-model="vm.newSong.title" />
+  <input type="text" placeholder="Artist" data-ng-model="vm.newSong.artist" />
+  <input type="text" placeholder="Art" data-ng-model="vm.newSong.album_art" />
+  <input type="text" placeholder="Song Url" data-ng-model="vm.newSong.audio_url" />
+  <br>
+  <button type="submit">Create</button>
+</form>
 <h2>Check out these songs!</h2>
 <div class="songs">
   <div class="song" ng-repeat="song in vm.songs" style="background-image: url('{{song.album_art}}')">
