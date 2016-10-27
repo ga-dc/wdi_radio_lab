@@ -6,3 +6,13 @@
   <img ng-src ="{{song.photoUrl}}"><br>
   <a ng-href="{{song.link}}">Listen to this song</a>
 </div>
+
+<h2>Add a Song</h2>
+
+<form data-ng-submit="vm.create()">
+  <input placeholder="Title" data-ng-model="vm.newGrumble.title">
+  <input placeholder="Artist" data-ng-model="vm.newGrumble.artist">
+  <input placeholder="Photo" data-ng-model="vm.newGrumble.photo">
+  <input placeholder="Song Link" data-ng-model="vm.newGrumble.songLink">
+  <button type="submit">Add Song</button>
+</form>

@@ -28,4 +28,8 @@ angular
   function SongIndexControllerFunction($firebaseArray){
     let ref = firebase.database().ref().child("songs");
     this.songs = $firebaseArray(ref);
+    this.newSong = {}
+    this.create = function(){
+      this.songs.$add(this.newSong).then( () => this.newSong = {} ) 
+    }
   }
