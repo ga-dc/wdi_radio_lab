@@ -1,6 +1,4 @@
-"use strict"
-(function() {
-  angular
+angular
   .module("wdiRadio", [
     "ui.router",
     "firebase",
@@ -9,6 +7,10 @@
   .config([
     "$stateProvider",
     RouterFunction
+  ])
+  .controller("WelcomeController", [
+    "$state",
+    WelcomeControllerFunction
   ])
   .controller("SongIndexController", [
     "$firebaseArray",
@@ -22,9 +24,9 @@
 
   function RouterFunction($stateProvider) {
     $stateProvider
-    .state("Welcome", {
+    .state("welcome", {
       url: "/",
-      templateUrl: "js/welcome.html"
+      templateUrl: "js/songs/welcome.html"
     })
     .state("songIndex", {
       url: "/songs",
@@ -40,14 +42,26 @@
     });
   }
 
+  function WelcomeControllerFunction() {
+
+  }
+
   function SongIndexControllerFunction($firebaseArray) {
-    let ref = firebase.database().ref().child("songs");
+    let ref = firebase.database().ref().child("wdiRadio");
     this.songs = $firebaseArray(ref);
+
+  }
+  function SongShowControllerFunction($stateParams, $firebaseObject){
+    let ref = firebase.database().ref().child("wdiRadio/" + $stateParams.id);
+    $firebaseObject(ref).$loaded().then(song => this.song = song)
   }
 
-  function SongShowControllerFunction($stateParams, $firebaseObject) {
-    let ref = firebase.database().ref().child("songs/" + $stateParams.id);
+  // #create
+  this.create = function(){
+    this.songs.$add(this.newSong).then( () => this.newSong = {} )
+    console.log("clicked")
   }
-
-
-}());
+  // #destroy
+  this.delete = function(song){
+    this.songs.$remove(song)
+  }
