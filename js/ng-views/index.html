@@ -22,23 +22,40 @@
 
 
 <div id = "index">
-  <div data-ng-repeat = "song in vm.songs">
+  <div id = "subIndex" data-ng-repeat = "song in vm.songs">
+
+    {{song.title}}--
+    {{song.artist}}
+    <img ng-src={{song.album_art}} alt="image"/>
+    {{song.genre}}
+
+
     <button ng-click="editForm = !editForm">Edit</button>
     <div ng-show = "editForm">
     <form data-ng-submit ="vm.update()">
+      <label>title</label>
       <input value="title" data-ng-model = "song.title" data-ng-change = "vm.update(song)">
+      <label>artist</label>
       <input placeholder="artist" data-ng-model = "song.artist" data-ng-change = "vm.update(song)">
+      <label>album art</label>
       <input placeholder="album_art" data-ng-model = "song.album_art" data-ng-change = "vm.update(song)">
+      <label>audio url</label>
       <input placeholder="audio_url" data-ng-model = "song.audio_url" data-ng-change = "vm.update(song)">
+      <label>genre</label>
       <input placeholder="genre" data-ng-model = "song.genre" data-ng-change = "vm.update(song)">
+      <button data-ng-click="vm.delete(song)">Delete Song</button>
       <button type="submit">Edit Song</button>
     </form>
     </div>
 
-    <a data-ui-sref = "songShow({id: song.$id})">{{song.title}}</a>
-    {{song.artist}}
-    <img ng-src={{song.album_art}} alt="image"/>
-    {{song.genre}}
+  <audio controls data-ng-src="{{song.audio_url}}" ></audio>
+
+  </audio>
+
+
+      </audio>
+
+    </audio>
 
   </div>
 </div>

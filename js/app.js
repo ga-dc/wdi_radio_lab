@@ -28,8 +28,12 @@ function SongIndexControllerFunction($firebaseArray, $firebaseObject){
   }
 
   this.update = function(song){
-    console.log("update!")
     this.songs.$save(song)
+  }
+
+  this.delete = function(song){
+    this.songs.$remove(song);
+    console.log("delete successful")
   }
 
 }
@@ -42,6 +46,7 @@ function NewSongShow(){
   menuShow = true
 }
 }
+
 
 
   function Router($stateProvider){
@@ -58,10 +63,4 @@ function NewSongShow(){
       controller: "SongIndexController",
       controllerAs: "vm"
     })
-    // .state("songShow", {
-    //   url: "/songs/:id",
-    //   templateUrl: "js/ng-views/show.html",
-    //   controller: "SongShowController",
-    //   ControllerAs: "vm"
-    // })
   }
