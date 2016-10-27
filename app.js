@@ -1,4 +1,14 @@
 angular
   .module("wdiRadio", [
-    "ui.router"
+    "ui.router",
+    "firebase"
   ])
+  .config([
+    "$stateProvider",
+    RouterFunction
+  ])
+
+  function RouterFunction($stateProvider) {
+    $stateProvider
+      .state()
+  }
