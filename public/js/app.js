@@ -30,6 +30,11 @@ function RouterFunction($stateProvider){
     function RadioControllerFuntion($firebaseArray){
       let ref = firebase.database().ref().child("radios");
       this.radios = $firebaseArray(ref);
+      this.newRadioText = {}
+      this.create = function() {
+        this.radios.$add(this.newRadioText).then( () => this.newRadioText = {} )
+        console.log("working")
+      }
     }
 
     function RadioShowControllerFunction($stateParams, $firebaseObject) {

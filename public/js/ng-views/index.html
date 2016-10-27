@@ -2,4 +2,14 @@
 
 <div data-ng-repeat="radio in vm.radios">{{radio.title}}
   <a data-ui-sref = "radioShow({id: radio.$id})">{{radio.audio_url}}</a>
+   <input type="text" data-ng-model="radio.text" data-ng-change="vm.update(radio)">
 </div>
+
+<form data-ng-submit="vm.create()">
+  <input placeholder="Title" data-ng-model="vm.newRadioText.title">
+  <input placeholder="Audio_Url" data-ng-model="vm.newRadioText.authorUrl">
+  <input placeholder="Album Art" data-ng-model="vm.newRadioText.albumArt">
+  <input placeholder="Artist" data-ng-model="vm.newRadioText.artist">
+  <input placeholder="Genre" data-ng-model="vm.newRadioText.genre">
+  <button type="submit">Create a Song</button>
+</form>
