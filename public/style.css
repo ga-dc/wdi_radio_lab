@@ -1,12 +1,25 @@
 *{
   margin: 0;
+  font-family: 'Architects Daughter', cursive;
+
+}
+nav, h3{
+  background-color: #CD5EFF;
+}
+.indexPage{
+  background-color: #0059BB;
+  display: flex;
+  justify-content: center;
 }
 .radioBody{
   display: flex;
   align-items: center;
-  width: 600px;
-  height: 100vh;
+  width: 800px;
   flex-direction: column;
   flex-wrap: wrap;
-
+  border: 1px solid red;
+}
+.album_art{
+  height: 200px;
+  width: 200px;
 }
