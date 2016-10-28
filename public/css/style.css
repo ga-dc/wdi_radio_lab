@@ -17,8 +17,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  width: 250px;
-  height: 250px;
+  width: 350px;
+  height: 350px;
   margin: 10px;
 }
 
@@ -31,12 +31,12 @@ body {
   font-size: 1em;
 }
 
-.edit {
+.song-menu {
   margin-bottom: auto;
   text-align: right;
 }
 
-.edit a {
+.song-menu a {
   background-color: rgba(92, 92, 92, 0.40);
   color: white;
   padding: 4px;

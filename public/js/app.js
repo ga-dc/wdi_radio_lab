@@ -28,12 +28,22 @@ function RouterFunction( $stateProvider ) {
 function SongIndexControllerFunction($firebaseArray){
   let ref = firebase.database().ref().child("songs")
   this.songs = $firebaseArray(ref)
+  this.editing = false;
   this.create = function(){
     // this.grumbles.$add(this.newGrumble).then( () => this.newGrumble = {})
     this.songs.$add(this.newSong).then( () => this.newSong = {} )
   }
-  this.showEdit = function(song){
-    // $(song).find('.edit').show();
-    console.log(song);
+  this.edit = function(song){
+    this.editing = true;
+    this.toUpdate = song;
   }
+  this.update = function(){
+    console.log("updating");
+    this.songs.$save(this.toUpdate)
+    this.editing = false;
+  }
+  this.delete = function(song){
+    this.songs.$remove(song)
+  }
+
 }
