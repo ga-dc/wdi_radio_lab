@@ -1,0 +1,8 @@
+<h2>Songs</h2>
+
+<div ng-repeat="song in vm.songs">
+  <h3>Song: {{ song.title}}</h3>
+  <h3>Artist: {{song.artist}}</h3>
+  <h3>Genre: {{song.genre}}</h3>
+  <img src="{{ song.album_art}}" />
+</div>
