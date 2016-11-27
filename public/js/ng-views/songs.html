@@ -5,4 +5,5 @@
   <h3>Artist: {{song.artist}}</h3>
   <h3>Genre: {{song.genre}}</h3>
   <img src="{{ song.album_art}}" />
+  <audio controls><source src="{{song.audio_url}}" type="audio/mpeg"></audio>
 </div>
