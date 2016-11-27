@@ -36,7 +36,7 @@ function SongControllerFunction($firebaseArray) {
     this.songs.$remove(song)
   }
 
-  this.update = function(song){
+  this.edit = function(song){
     this.songs.$save(song)
   }
 }

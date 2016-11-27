@@ -24,13 +24,12 @@
 
   <div ng-show="editSong">
     <br>
-    <form data-ng-submit="vm.update(song)">
-      <input placeholder="Title" data-ng-model="vm.newSong.title">
-      <input placeholder="Artist" data-ng-model="vm.newSong.artist">
-      <input placeholder="Genre" data-ng-model="vm.newSong.genre">
-      <input placeholder="Album Art" data-ng-model="vm.newSong.album_art">
-      <input placeholder="Audio" data-ng-model="vm.newSong.audio_url">
-      <button type="submit">Edit Song</button>
+    <form data-ng-submit="vm.edit(song)">
+      <input placeholder="Title" data-ng-model="song.title">
+      <input placeholder="Artist" data-ng-model="song.artist">
+      <input placeholder="Genre" data-ng-model="song.genre">
+      <input placeholder="Album Art" data-ng-model="song.album_art">
+      <input placeholder="Audio" data-ng-model="song.audio_url">
     </form>
   </div>
 
