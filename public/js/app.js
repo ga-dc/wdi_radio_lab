@@ -27,4 +27,16 @@ function RouterFunction($stateProvider){
 function SongControllerFunction($firebaseArray) {
   let ref = firebase.database().ref().child("songs")
   this.songs = $firebaseArray(ref)
+
+  this.add = function(){
+    this.songs.$add(this.newSong).then( () => this.newSong = {})
+  }
+
+  this.delete = function(song){
+    this.songs.$remove(song)
+  }
+
+  this.update = function(song){
+    this.songs.$save(song)
+  }
 }
