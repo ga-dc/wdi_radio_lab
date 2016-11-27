@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WDI Radio</title>
+    <title>ROB Radio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+
+    <script>
+      // Initialize Firebase
+      var config = {
+      apiKey: "AIzaSyA4RKvTO6beJUxL8btmjSCRisHXD7ODLZk",
+      authDomain: "rob-radio.firebaseapp.com",
+      databaseURL: "https://rob-radio.firebaseio.com",
+      storageBucket: "rob-radio.appspot.com",
+      messagingSenderId: "737527721203"
+      };
+      firebase.initializeApp(config);
+    </script>
     <script src="js/app.js"></script>
 
   </head>
-  <body>
+  <body ng-app="wdiRadio">
     <header>WDI Radio</header>
-
-    Welcome to the World's Best Song App
-
-
+      Welcome to the World's Best Song App
+      <div ui-view></div>
   </body>
 </html>
