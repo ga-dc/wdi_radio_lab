@@ -1,29 +1,28 @@
-angular
-  .module("radio", [
-    "ui.router",
-    "firebase"
-  ])
-  .config([
-    "$stateProvider",
-    RouterFunction
-  ])
-  .controller("RadioIndexController", [
-    "$firebaseArray",
-    RadioIndexControllerFunction
-  ])
+"use strict";
 
-  function RouterFunction($stateProvider){
-        $stateProvider
-        .state("radioIndex", {
-          url: "/songs",
-          templateUrl: "js/ng-views/index.html",
-          controller: "RadioIndexController",
-          controllerAs: "vm"
+(function(){
+  angular
+    .module("wdiRadio", [
+      "ui.router",
+      "firebase",
+      "songs"
+    ])
+    .config([
+      "$stateProvider",
+      RouterFunction
+    ])
+
+    function RouterFunction($stateProvider){
+      $stateProvider
+        .state("Welcome", {
+          url: "",
+          templateUrl: "js/welcome.html"
         })
-      }
-
-      function RadioIndexControllerFunction($firebaseArray){
-         let ref = firebase.database().ref().child("songs");
-         this.songs = $firebaseArray(ref);
-       }
-}
+        .state("songs", {
+          url: "/songs",
+          templateUrl: "js/songs/index.html",
+          controller: "SongsIndexController",
+          controllerAs: "SongsIndexViewModel"
+        })
+    }
+}());
