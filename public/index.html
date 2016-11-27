@@ -1,15 +1,32 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html data-ng-app="radio">
+
+<head>
     <title>WDI Radio</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBoii7kK6LTaGnlauSr_WYhNoklibF6ryc",
+            authDomain: "radio-fd757.firebaseapp.com",
+            databaseURL: "https://radio-fd757.firebaseio.com",
+            storageBucket: "radio-fd757.appspot.com",
+            messagingSenderId: "341053066335"
+        };
+        firebase.initializeApp(config);
+    </script>
+
     <script src="js/app.js"></script>
+</head>
 
-  </head>
-  <body>
-    <header>WDI Radio</header>
+<body>
+    <h1>WDI Radio</h1> Welcome to the World's Best Song App
+    <main data-ui-view></main>
 
-    Welcome to the World's Best Song App
+</body>
 
-
-  </body>
 </html>
