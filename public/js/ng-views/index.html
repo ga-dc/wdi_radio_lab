@@ -1,0 +1,33 @@
+<h2>All Songs:</h2>
+<div data-ng-repeat="song in vm.songs">
+  <p>{{song.title}}</p>
+  <p><img data-ng-src="{{song.album_art}}"></p>
+  <p>{{song.artist}}</p>
+  <p>{{song.audio_url}}</p>
+  <p>{{song.genre}}</p>
+</div>
+
+<hr></hr>
+
+<h2>Add a song:</h2>
+<form>
+  <input placeholder="Title" data-ng-model="vm.newSong.title">
+  <input placeholder="Album Art" data-ng-model="vm.newSong.album_art">
+  <input placeholder="Artist" data-ng-model="vm.newSong.artist">
+  <input placeholder="Song URL" data-ng-model="vm.newSong.audio_url">
+  <input placeholder="Genre" data-ng-model="vm.newSong.genre">
+  <button type="button" data-ng-click="vm.create()">Add Song</button>
+</form>
+
+<hr></hr>
+
+<h2>Edit a song:</h2>
+<form data-ng-submit="vm.create()">
+  <input placeholder="Title" data-ng-model="vm.newSong.title">
+  <input placeholder="Album Art" data-ng-model="vm.newSong.album_art">
+  <input placeholder="Artist" data-ng-model="vm.newSong.artist">
+  <input placeholder="Song URL" data-ng-model="vm.newSong.audio_url">
+  <input placeholder="Genre" data-ng-model="vm.newSong.genre">
+  <button type="button" data-ng-click="vm.update(song)">Update</button>
+  <button type="button" data-ng-click="vm.destroy(song)">Delete</button>
+</form>
