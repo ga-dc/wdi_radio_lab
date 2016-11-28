@@ -1,0 +1,22 @@
+<h3>Library</h3>
+<div data-ng-show="vm.newSong.visible">
+  <div class="song">
+    <form>
+      <input placeholder="Title" data-ng-model="vm.newSong.trackName">
+      <input placeholder="Audio_url" data-ng-model="vm.newSong.audio_url">
+      <input placeholder="Album_art" data-ng-model="vm.newSong.album_art">
+      <input placeholder="Artist" data-ng-model="vm.newSong.artist">
+      <input placeholder="Genre" data-ng-model="vm.newSong.genre">
+      <button type="button" data-ng-click="vm.create()">Submit</button>
+    </form>
+    <button type="button" data-ng-click="vm.toggleNew()">Cancel</button>
+  </div>
+</div>
+<div data-ng-hide="vm.newSong.visible">
+  <button type="button" data-ng-click="vm.toggleNew()">New Song</button>
+</div>
+<div class="song" data-ng-repeat="song in vm.songs |orderBy:'-created_at'">
+  <p data-ng-click=>{{song.trackName}}</p>
+  <img width="500px"src="{{song.artworkUrl100}}">
+</div>
+<div class="songPlayer">OPFJEPSEF</div>
