@@ -1,0 +1,8 @@
+<h1>Songs</h1>
+<div data-ng-repeat="song in vm.songs">
+  <a data-ng-sref="songShow({id: song.$id})">{{song.title}}</a>
+  <a data-ng-sref="songShow({id: song.$id})">{{song.audio_url}}</a>
+  <img data-ng-src="{{song.album_art}}">
+  <a data-ng-sref="songShow({id: song.$id})">{{song.artist}}</a>
+  <a data-ng-sref="songShow({id: song.$id})">{{song.genre}}</a>
+</div>
