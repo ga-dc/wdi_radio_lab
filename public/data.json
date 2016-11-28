@@ -1,0 +1,30 @@
+[
+  {
+    "artist": "The Beatles",
+    "title": "Can't Buy Me Love",
+    "img_url": "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Buymelove.jpg/220px-Buymelove.jpg",
+    "audio_url": "http://www.wdidc.org/wdi-radio-lab-assets/mp3/The%20Beatles%20-%20Can%27t%20Buy%20Me%20Love.mp3",
+    "genre": "Rock"
+  },
+  {
+    "artist": "Drake ft. Lil' Wayne",
+    "title": "The Motto",
+    "img_url": "http://thatgrapejuice.net/wp-content/uploads/2016/06/drake-oct15-1.jpg",
+    "audio_url": "http://www.wdidc.org/wdi-radio-lab-assets/mp3/Drake%20-%20The%20Motto%20%28Explicit%29%20ft.%20LIL%20WAYNE%2c%20Tyga.mp3",
+    "genre": "Rap"
+  },
+  {
+    "artist": "SBTRKT",
+    "title": "Wildfire",
+    "img_url": "http://static.djbooth.net/pics-tracks/sbtrkt-wildfire.jpg",
+    "audio_url": "http://www.wdidc.org/wdi-radio-lab-assets/mp3/SBTRKT%20-%20Wildfire.mp3",
+    "genre": "Dubstep"
+  },
+  {
+    "artist": "D'Angelo and the Vanguard",
+    "title": "Really Love",
+    "img_url": "http://www.frontview-magazine.be/sites/default/files/styles/news_detail_big/public/article/74094-dangelo-and-the-vanguard-release-really-love-1042508.jpg?itok=O6CJAxOZ",
+    "audio_url": "http://www.wdidc.org/wdi-radio-lab-assets/mp3/D%27Angelo%2c%20The%20Vanguard%20-%20Really%20Love.mp3",
+    "genre": "R&B"
+  }
+]

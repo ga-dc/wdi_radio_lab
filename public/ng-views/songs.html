@@ -1,1 +1,39 @@
-<h1>This is the songs page</h1>
+<h3>Music Library</h3>
+
+
+<section>
+
+
+<div class="song" ng-repeat="song in vm.songs">
+  <div ng-show = "!showDiv">
+    <p>{{song.title}}</p>
+    <img ng-src="{{song.img_url}}" />
+    <button type="button" ng-click="showDiv = !showDiv">Edit</button>
+  </div>
+
+  <div ng-show = "showDiv">
+  <button type="button" ng-click="showDiv = !showDiv">Cancel Edit</button>
+  <form>
+    <input placeholder="Title" data-ng-model="song.title">
+    <input placeholder="Audio_url" data-ng-model="song.audio_url">
+    <input placeholder="Album_art" data-ng-model="song.img_url">
+    <input placeholder="Artist" data-ng-model="song.artist">
+    <input placeholder="Genre" data-ng-model="song.genre">
+
+    <button type="button" data-ng-click="vm.destroy(song)">Delete</button>
+    <button type="button" data-ng-click="vm.update(song); showDiv = !showDiv">Update</button>
+  </form>
+</div>
+</div>
+
+<div class="song">
+<form data-ng-submit="vm.create()">
+   <input type="text" placeholder="Title" data-ng-model="vm.newSong.title">
+   <input type="text" placeholder="Audio_url" data-ng-model="vm.newSong.audio_url">
+   <input type="text" placeholder="Album_art" data-ng-model="vm.newSong.img_url">
+   <input type="text" placeholder="Artist" data-ng-model="vm.newSong.artist">
+   <input type="text" placeholder="Genre" data-ng-model="vm.newSong.genre">
+   <button type="submit">Add New Song</button>
+ </form>
+ </div>
+</section>
