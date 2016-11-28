@@ -1,10 +1,12 @@
-angular.module("wdiRadio",['ui.router', "firebase","songs"])
+angular.module("wdiRadio",['ui.router', "firebase"])
 .controller("musicCtrlr", ["$firebaseArray",musicCtrlrFunc])
 .config(["$stateProvider", Router])
 
 angular.module("wdiRadio", ["firebase"])
-.controller("showSongCtrllr", ["$firebaseArray","$stateParams", showSongCtrllrFunc
+.controller("showSongCtrllr", ["$stateParams", showSongCtrllrFunc
 ])
+
+// SINCE I'VE connected to Firebase, I haven't been able to use my musicCtrlrFunc function. It won't recognize it anymore. My app no longer throws any errors regarding recognizing my connection to firebase
 
 function musicCtrlrFunc($firebaseArray) {
   console.log("stuff");
@@ -17,6 +19,10 @@ function showSongCtrllrFunc($stateParams,$firebaseArray) {
 
 function Router($stateProvider) {
   $stateProvider
+  .state("welcome", {
+    url: "/",
+    templateUrl: "js/welcome.html"
+  })
   .state("songs", {
     url: "/songs",
     controller: "musicCtrlr",
