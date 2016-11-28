@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html data-ng-app="wdiRadio">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAZb-ez9Lcuainp2McY5YtJ_ukxJZ_cldY",
+    authDomain: "wdiradio-3fddd.firebaseapp.com",
+    databaseURL: "https://wdiradio-3fddd.firebaseio.com",
+    storageBucket: "wdiradio-3fddd.appspot.com",
+    messagingSenderId: "1043253786456"
+  };
+  firebase.initializeApp(config);
+</script>
+  <script src="public/js/app.js"></script>
+</head>
+<body>
+  <h1>WebDI Radio</h1>
+  <main data-ui-view></main>
+</body>
+</html>
