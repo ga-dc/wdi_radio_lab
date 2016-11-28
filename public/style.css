@@ -1,0 +1,14 @@
+
+.song{
+  outline: black solid 2px;
+  position:relative;
+  width: 420px;
+  float:left;
+  overflow:hidden;
+  margin: 10px;
+}
+
+img {
+  width: 100%;
+  min-height: 420px;
+}
