@@ -1,0 +1,23 @@
+<h2>All Songs<h2>
+
+<div class="song" ng-repeat="song in vm.songs">
+  <p>{{song.title}}</p>
+  <img ng-src="{{song.img_url}}" />
+  <button type="button" ng-click="showDiv = !showDiv">Edit</button>
+</div>
+
+<br>
+
+<div ng-show = "showDiv">
+<form>
+  <input placeholder="Title" data-ng-model="song.title">
+  <input placeholder="Audio_url" data-ng-model="song.audio_url">
+  <input placeholder="Album_art" data-ng-model="song.img_url">
+  <input placeholder="Artist" data-ng-model="song.artist">
+  <input placeholder="Genre" data-ng-model="song.genre">
+
+  <button type="button" data-ng-click="vm.new(song)">Create</button>
+  <button type="button" data-ng-click="vm.destroy(song)">Delete</button>
+</form>
+</div>
+</div>

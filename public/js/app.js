@@ -7,17 +7,16 @@ angular.module("wdiradio", [
     "$stateProvider",
     RouterFunction
   ])
-.controller("SongIndexController", [SongIndexControllerFunc])
-.controller("SongShowController", ["$firebaseArray", SongShowControllerFunc])
+.controller("SongIndexController", [SongIndexControllerFunction])
 
-function SongIndexControllerFunc(){
+
+function SongIndexControllerFunction(){
 
 }
 
-function SongShowControllerFunction($firebaseArray){
+function SongControllerFunction($firebaseArray){
   let ref = firebase.database().ref().child("songs")
   this.songs = $firebaseArray(ref)
-  this.newSong = {}
 
 
 this.create = function(){
@@ -27,20 +26,25 @@ this.create = function(){
 this.delete = function(song){
   this.songs.$remove(song)
   }
+
+this.edit = function(song) {
+  this.songs.$save(song)
+  }
 }
+
 function RouterFunction($stateProvider) {
   $stateProvider
-  .state("songIndex", {
+  .state("home", {
     url: "/songs",
-    templateUrl: "js/ng-views/index.html",
+    templateUrl: "ng-views/home.html",
     controller: "SongIndexController",
-    controllerAs: "vm"
-)}
-
-  .state("songShow", {
-    url: "/songs",
-    templateUrl: "js/ng-views/show.html",
-    controller: "SongShowController",
-    controllerAs: "vm"
+    controllerAs: 'vm'
   })
-})
+}
+  .state('songsIndex', {
+    url: '/songs',
+    templateUrl: 'ng-views/show.html',
+    controller: "SongIndexController",
+    controllerAs: 'vm'
+  })
+}
