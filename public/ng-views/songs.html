@@ -1,0 +1,4 @@
+<div class="song" data-ng-repeat="song in vm.songs | orderBy: '-created_at'">
+    <p>{{song.trackName}}</p>
+  <img src="{{song.artworkUrl100}}">
+</div>

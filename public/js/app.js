@@ -1,15 +1,15 @@
 
-var app = angular.module("songs", ["ui.router"])
+var app = angular.module("songs", ["ui.router", "firebase"])
 
 app.config(["$stateProvider", RouterFunction])
 
 function RouterFunction($stateProvider){
   $stateProvider
-  .state("welcome", {
-    url: "/",
-    templateUrl: "ng-views/index.html"
+  .state("Welcome", {
+    url: "",
+    templateUrl: "ng-views/welcome.html"
   })
-  .state("songsIndex", {
+  .state("Songs", {
     url: "/songs",
     templateUrl: "ng-views/songs.html",
     controller: "SongsIndexController",
@@ -17,8 +17,9 @@ function RouterFunction($stateProvider){
   })
 }
 
-app.controller("SongsIndexController", [SongsIndexControllerFunction])
+app.controller("SongsIndexController", ["$firebaseArray", SongsIndexControllerFunction])
 
-function SongsIndexControllerFunction(){
-  console.log("were in the songs index!")
+function SongsIndexControllerFunction($firebaseArray){
+  let songData = firebase.database().ref().child("songs")
+  this.songs = $firebaseArray(songData)
 }
