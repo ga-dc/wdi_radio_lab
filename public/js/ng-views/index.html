@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>WDI Radio</title>
-    <script src="js/app.js"></script>
+<h2>All Your Songs</h2>
 
-  </head>
-  <body>
-    <header>WDI Radio</header>
-
-    Welcome to the World's Best Song App Son!
-
-    <div data-ng-repeat='ig in vm.ig | orderBy: "-create_at"'>
-      <p><a data-ui-sref="igShow({id: ig.id})"><img data-ng-src="{{ig.photo-url}}"></a></p>
-      <button data-ui-sref="igEdit({id: ig.id})">Edit</button>
-    </div>
-
-    <button data-ui-sref="igNew"> New </button>
-
-  </body>
-</html>
+<div data-ng-repeat="wdiradio in vm.wdiradio">
+  <div class="element">
+    <h3>Song: {{song.title}}</h3>
+    <h4>By: {{song.artist}}</h4>
+    <a href={{song.url}} target="_blank">Listen to Song!</a>
+    <div>
+</div>
