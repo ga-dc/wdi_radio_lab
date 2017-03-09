@@ -1,0 +1,10 @@
+<div class="row">
+
+<div class="col s6 center" data-ng-repeat="song in SongIndexViewModel.songs" >
+  <h2>{{song.Title}}</h2>
+  <h3>{{song.Artist}}</h3>
+  <h3>{{song.Genre}}</h3>
+  <button data-ui-sref="songShow({id: song.$id})" class="waves-effect waves-light btn">Show</button>
+</div>
+
+</div>
