@@ -67,7 +67,7 @@ angular
     $firebaseObject(ref).$loaded().then(song => this.song = song)
 
     this.delete = function(){
-      this.song.$remove()
+      this.song.$remove();
     }
 
     this.update = function(){

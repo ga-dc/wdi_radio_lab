@@ -35,11 +35,17 @@ hr {
   width: 300px;
 }
 
-.indexTitle {
-  font-weight: bold;
-  font-size: 20px;
-}
-
 .showImage, .showAudio {
   width: 600px;
+}
+
+.songbox {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 200px;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
