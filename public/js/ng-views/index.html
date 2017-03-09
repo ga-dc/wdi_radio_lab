@@ -1,5 +1,29 @@
 <h1> Library </h1>
-
+<button ng-click="create = !create"> Create </button>
+  <div class='createForm' ng-show="create">
+    <form >
+      <input placeholder="Title" ng-model="vm.newSong.title" />
+      <input placeholder="Audio Url" ng-model='vm.newSong.audio_url' />
+      <input placeholder="Album Art" ng-model='vm.newSong.album_art' />
+      <input placeholder="Artist" ng-model='vm.newSong.artist' />
+      <input placeholder="Genre" ng-model='vm.newSong.genre' />
+      <button data-ng-click="vm.create()"> Create Song </button>
+    </form>
+  </div>
 <div data-ng-repeat="song in vm.songs">
-  <p> {{song.artist}} </p>
+  <div class='albumBlock' style="background: url('{{song.album_art}}')">
+    <button data-ng-click="edit = !edit"> Edit </button>
+    <div class='editForm' ng-show='edit'>
+      <form>
+        <input placeholder="Title" ng-model="song.title" />
+        <input placeholder="Audio Url" ng-model='song.audio_url' />
+        <input placeholder="Album Art" ng-model='song.album_art' />
+        <input placeholder="Artist" ng-model='song.artist' />
+        <input placeholder="Genre" ng-model='song.genre' />
+        <button data-ng-click="vm.update(song)"> Edit Song </button>
+        <button data-ng-click='vm.delete(song)'> Delete </button>
+      </form>
+    </div>
+    <p><a data-ui-sref="songShow({id: song.$id})">{{song.title}}</a></p>
+  </div>
 </div>
