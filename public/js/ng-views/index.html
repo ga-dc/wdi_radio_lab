@@ -3,6 +3,8 @@
 <div ng-repeat="song in vm.songs">
   <p class="indexTitle"><a ui-sref="songShow({id: song.$id})">{{song.title}}</a></p>
   <img class="indexPicture" ng-src="{{song.album_art}}">
+  <br>
+  <audio controls="" ng-src="{{song.audio_url}}" src="{{song.audio_url}}"></audio>
   <p>by {{song.artist}}</p>
   <p>Genre: {{song.genre}}</p>
   <br>

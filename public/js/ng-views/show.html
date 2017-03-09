@@ -1,18 +1,30 @@
 <h1>{{vm.song.title}}</h1>
 
 <img class="showImage" ng-src="{{vm.song.album_art}}">
+<br>
+<audio class="showAudio" controls="" ng-src="{{vm.song.audio_url}}" src="{{vm.song.audio_url}}"></audio>
 <p>By {{vm.song.artist}}</p>
 <p>Genre: {{vm.song.genre}}</p>
 <p><a ui-sref="songEdit({id: song.$id})">Edit Song</a></p>
 
-<h2>Edit {{vm.song.title}}</h2>
-<form ng-submit="vm.update()">
-  <input placeholder="Title" ng-model="vm.song.title">
-  <input placeholder="Artist" ng-model="vm.song.artist">
-  <input placeholder="Genre" ng-model="vm.song.genre">
-  <input placeholder="Art URL" ng-model="vm.song.album_art">
-  <input placeholder="Audio URL" ng-model="vm.newSong.audio_url">
-  <button type="submit">Update Song</button>
-</form>
-
-<button data-ng-click="vm.delete()">Delete Song</button>
+<button ng-click="vm.toggleForm = !vm.toggleForm">EDIT</button>
+<br>
+<br>
+<div ng-show="vm.toggleForm">
+  <form ng-submit="vm.update()">
+    <input placeholder="Title" ng-model="vm.song.title">
+    <br>
+    <input placeholder="Artist" ng-model="vm.song.artist">
+    <br>
+    <input placeholder="Genre" ng-model="vm.song.genre">
+    <br>
+    <input placeholder="Art URL" ng-model="vm.song.album_art">
+    <br>
+    <input placeholder="Audio URL" ng-model="vm.newSong.audio_url">
+    <br>
+    <button type="submit">Update Song</button>
+    <button data-ng-click="vm.delete()">Delete Song</button>
+  </form>
+  <br>
+  <br>
+</div>

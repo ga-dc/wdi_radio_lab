@@ -1,11 +1,11 @@
 .indexPicture {
-  width: 200px;
+  width: 300px;
 }
 
 .indexTitle {
   font-weight: bold;
 }
 
-.showImage {
+.showImage, .showAudio {
   width: 600px;
 }
