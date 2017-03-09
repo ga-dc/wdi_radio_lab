@@ -40,4 +40,8 @@ function WdiRadioWelcomeController($firebaseArray){
   // this.songs = firebase.database().ref().child("songs");
   // this.songs = $firebaseArray(ref);
   console.log("hi")
-}
+};
+
+$(".song-info").on("click", function(){
+  $("audio").css("display", "block")
+})

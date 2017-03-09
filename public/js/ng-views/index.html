@@ -2,8 +2,11 @@
 <div class="songs">
   <div data-ng-repeat="song in vm.songs">
     <div class="song">
+
       <img ng-src={{song.coverArt}}>
       <p class= "song-info">{{song.title}} | {{song.artist}} | {{song.genre}}</p>
+
+      <audio controls ng-src={{song.mp3}}></audio>
     </div>
   </div>
 </div>
