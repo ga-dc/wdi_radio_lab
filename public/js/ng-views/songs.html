@@ -2,13 +2,24 @@
 
 <section>
   <div class="screen">
-    <div class="">
+    <h3 ng-click="newActive = !newActive">Add Song</h3>
+    <div class="new-form" ng-class="{'new-form-show': newActive}">
       <form ng-submit="vm.create()">
-        <input type="text" placeholder="Title" ng-model="vm.newSong.title">
-        <input type="text" placeholder="Artist" ng-model="vm.newSong.artist">
-        <input type="text" placeholder="Genre" ng-model="vm.newSong.genre">
-        <input type="text" placeholder="Image" ng-model="vm.newSong.song_img">
-        <input type="text" placeholder="File" ng-model="vm.newSong.song_file">
+        <div>
+          <label>Title</label>
+          <label>Artist</label>
+          <label>Genre</label>
+          <label>Image</label>
+          <label>Song File</label>
+        </div>
+        <div>
+          <input type="text" placeholder="Title" ng-model="vm.newSong.title">
+          <input type="text" placeholder="Artist" ng-model="vm.newSong.artist">
+          <input type="text" placeholder="Genre" ng-model="vm.newSong.genre">
+          <input type="text" placeholder="Image" ng-model="vm.newSong.song_img">
+          <input type="text" placeholder="File" ng-model="vm.newSong.song_file">
+        </div>
+
         <button type="submit">Add Song</button>
       </form>
     </div>
@@ -16,17 +27,22 @@
     <div ng-repeat="song in vm.songs">
 
       <h3 ng-click="active = !active">{{song.title}}</h3>
-      <div ng-show="active" ng-style="{'background-image':'url({{song.song_img}})'}">
+      <div ng-class="{'song-show': active}" ng-style="{'background-image':'url({{song.song_img}})'}" class="song">
         <h4>{{song.artist}}</h4>
         <h4>{{song.genre}}</h4>
         <h4>Play song</h4>
         <button ng-click="showEdit = !showEdit">Edit</button>
         <button ng-click="vm.delete(song)">Delete</button>
         <form ng-show="showEdit">
+          <label>Title</label>
           <input type="text" placeholder="Title" ng-model="song.title" ng-change="vm.update(song)">
+          <label>Artist</label>
           <input type="text" placeholder="Artist" ng-model="song.artist" ng-change="vm.update(song)">
+          <label>Genre</label>
           <input type="text" placeholder="Genre" ng-model="song.genre" ng-change="vm.update(song)">
+          <label>Image</label>
           <input type="text" placeholder="Image" ng-model="song.song_img" ng-change="vm.update(song)">
+          <label>Song File</label>
           <input type="text" placeholder="File" ng-model="song.song_file" ng-change="vm.update(song)">
         </form>
       </div>

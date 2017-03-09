@@ -11,8 +11,6 @@ angular
     WelcomeControllerFunction
   ])
   .controller("SongsController", [
-    // "$stateParams",
-    // "$state",
     "$firebaseArray",
     SongsControllerFunction
   ])
@@ -26,7 +24,7 @@ function RouterFunction($stateProvider) {
       controllerAs: "vm"
     })
     .state("songs", {
-      url: "songs",
+      url: "/songs",
       templateUrl: "js/ng-views/songs.html",
       controller: "SongsController",
       controllerAs: "vm"
