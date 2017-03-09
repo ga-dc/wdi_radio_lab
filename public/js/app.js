@@ -19,6 +19,10 @@ angular
 
 function RouterFunction($stateProvider){
   $stateProvider
+  .state("songsWelcome", {
+    url: "",
+    templateUrl: "../ng-views/welcome.html"
+  })
   .state("songsIndex", {
     url: "/songs",
     templateUrl: "../ng-views/index.html",
