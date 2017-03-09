@@ -86,6 +86,10 @@ angular
     let ref = firebase.database().ref().child("songs/" + $stateParams.id);
     $firebaseObject(ref).$loaded().then(song => this.song = song)
 
+    this.delete = function(){
+      this.song.$remove()
+    }
+
     this.update = function(){
       this.song.$save();
     }

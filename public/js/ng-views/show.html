@@ -11,8 +11,8 @@
   <input placeholder="Artist" ng-model="vm.song.artist">
   <input placeholder="Genre" ng-model="vm.song.genre">
   <input placeholder="Art URL" ng-model="vm.song.album_art">
-  <input placeholder="Audio URL" ng-model="vm.song.audio_url">
+  <input placeholder="Audio URL" ng-model="vm.newSong.audio_url">
   <button type="submit">Update Song</button>
 </form>
 
-<p><a ui-sref="Index">All Songs</a></p>
+<button data-ng-click="vm.delete()">Delete Song</button>
