@@ -1,20 +1,12 @@
-use strict;
 
 angular
   .module("wdiRadioApp", ["ui.router", "firebase"])
   .config(["$stateProvider", RouterFunction])
-  .controller("RadioHomeCtrl", [RadioHomeControllerFunction])
-  .controller("RadioIndexCtrl", ["$firebaseArray", "RadioIndexControllerFunction"])
+  .controller("RadioIndexCtrl", ["$firebaseArray", RadioIndexControllerFunction])
   .controller("RadioShowCtrl", ["$stateParams", "$firebaseObject", RadioShowControllerFunction])
 
 function RouterFunction($stateProvider){
   $stateProvider
-  .state("radioHome", {
-    url: "/",
-    templateUrl: "js/ng-views/home.html",
-    controller: "RadioHomeCtrl",
-    controllerAs: "vm"
-  })
   .state("radioIndex", {
     url: "/songs",
     templateUrl: "js/ng-views/index.html",
@@ -31,7 +23,11 @@ function RouterFunction($stateProvider){
 
 function RadioIndexControllerFunction($firebaseArray){
   let ref = firebase.database().ref().child("songs")
-  this.songs = $firebaseArray(ref)
+  this.songs = $firebaseArray(ref);
+
+  this.create = function() {
+    this.songs.$add(this.newSong).then( () => this.newSong ={} )
+  }
 }
 
 function RadioShowControllerFunction($stateParams, $firebaseObject){

@@ -1,0 +1,17 @@
+<h1>Radio</h1>
+
+<div class="new_form">
+  <button ng-click="create = !create">Add</button>
+  <form ng-show="create" ng-submit="vm.create()">
+    <input placeholder="Title" ng-model="vm.newSong.title">
+    <input placeholder="Audio Sample" ng-model="vm.newSong.audio_url">
+    <input placeholder="Album Art" ng-model="vm.newSong.album_art">
+    <input placeholder="Artist" ng-model="vm.newSong.artist">
+    <input placeholder="Genre" ng-model="vm.newSong.genre">
+    <button type="submit">Create</button>
+  </form>
+</div>
+
+<div data-ng-repeat="song in vm.songs">
+  <div class="albums" style="background: url('{{song.album_art}}')">{{song.title}}</div>
+</div>
