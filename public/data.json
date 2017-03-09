@@ -1,73 +1,73 @@
 [
   {
     "artist": "My Chemical Romance",
-    "song": "Ghost of you",
+    "title": "Ghost of you",
     "album": "Three Cheers for Sweet Revenge ",
     "photoUrl": "http://i.imgur.com/FAnId3A.jpg"
   },
   {
     "artist": "My Chemical Romance",
-    "song": "Helena",
+    "title": "Helena",
     "album": "Three Cheers for Sweet Revenge ",
     "photoUrl": "http://i.imgur.com/FAnId3A.jpg"
   },
   {
     "artist": "Fall Out Boy",
-    "song": "Sugar, We're Going Down",
+    "title": "Sugar, We're Going Down",
     "album": "Three Cheers for Sweet Revenge ",
     "photoUrl": "http://i.imgur.com/P2fNWf0.jpg"
   },
   {
-    "artist": "Champagne for My Real Friends, Real  Pain for My Sham Friends",
-    "song": "Sugar, We're Going Down",
+    "artist": "Fall Out Boy",
+    "title": "Champagne for My Real Friends, Real  Pain for My Sham Friends",
     "album": "Three Cheers for Sweet Revenge ",
     "photoUrl": "http://i.imgur.com/P2fNWf0.jpg"
   },
   {
     "artist": "Keane",
-    "song": "Somewhere Only We Know",
+    "title": "Somewhere Only We Know",
     "album": "Somewhere Only We Know",
     "photoUrl": "http://i.imgur.com/mN1vWIw.jpg"
   },
   {
     "artist": "Keane",
-    "song": "Spiralling",
+    "title": "Spiralling",
     "album": "Perfect Symmetry",
     "photoUrl": "http://i.imgur.com/QqQuzoV.jpg"
   },
   {
     "artist": "Killers",
-    "song": "Jenny Was a Friend of Mine",
+    "title": "Jenny Was a Friend of Mine",
     "album": "Hot Fuss",
     "photoUrl": "http://i.imgur.com/g7yCleP.png"
   },
   {
     "artist": "Killers",
-    "song": "Midnight Show",
+    "title": "Midnight Show",
     "album": "Hot Fuss",
     "photoUrl": "http://i.imgur.com/g7yCleP.png"
   },
   {
     "artist": "Muse",
-    "song": "Hysteria",
+    "title": "Hysteria",
     "album": "Absolution",
     "photoUrl": "http://i.imgur.com/g1w9zS5.jpg"
   },
   {
     "artist": "Muse",
-    "song": "Stockholm Syndrom",
+    "title": "Stockholm Syndrom",
     "album": "Absolution",
     "photoUrl": "http://i.imgur.com/g1w9zS5.jpg"
   },
   {
     "artist": "Panic! at the Disco",
-    "song": "Camisado",
+    "title": "Camisado",
     "album": "A Fever You Can't Sweat Out",
     "photoUrl": "http://i.imgur.com/EeFIlWR.jpg"
   },
   {
     "artist": "Panic! at the Disco",
-    "song": "Build God, Then We'll Talk",
+    "title": "Build God, Then We'll Talk",
     "album": "A Fever You Can't Sweat Out",
     "photoUrl": "http://i.imgur.com/EeFIlWR.jpg"
   }

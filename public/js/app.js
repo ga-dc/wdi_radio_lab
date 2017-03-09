@@ -1,7 +1,8 @@
 angular
-  .module("radiolab", [])
-  .controller("radiocontroller", [radioControllerFunction])
+  .module("radiolab", ["firebase"])
+  .controller("radiocontroller", ["$firebaseArray", radioControllerFunction])
 
-  function radioControllerFunction (){
-
+  function radioControllerFunction ($firebaseArray){
+    let ref = firebase.database().ref().child("songs");
+    this.songs = $firebaseArray(ref);
   }
