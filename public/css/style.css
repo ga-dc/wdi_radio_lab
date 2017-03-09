@@ -42,6 +42,4 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 0 auto;
-  padding:50px;
 }

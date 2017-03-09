@@ -31,6 +31,10 @@ angular
       this.songs.$add(this.newSong).then ( () => this.newSong = {} )
     }
 
+    this.update = function(song){
+      this.songs.$save(song)
+    }
+
     this.delete = function(song) {
       this.songs.$remove (song);
     }
