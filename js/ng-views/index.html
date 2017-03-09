@@ -1,0 +1,32 @@
+<div class="index-view">
+  <h1>Library</h1>
+  <!-- <button ng-click="vm.create()">New Song</button> -->
+  <div class="album-container">
+    <div data-ng-repeat="song in vm.songs">
+      {{song.audioUrl}}
+    </div>
+    <!-- <div data-ng-repeat="song in vm.songs">
+      <iframe src={{song.audioUrl}} width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+    </div> -->
+    <div data-ng-repeat= "song in vm.songs" class="album-cover" ng-style="{'background-image' : 'url({{song.albumArt}})'}">
+    <ui-sref="{{song.audioUrl}}"><div class=overlay>{{song.title}} &#9658;</div><a>
+    </div>
+  <iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A6NuT12xM2tDj64vJkmcsCw" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+</div>
+<!-- <form>
+  <input type="text" ng-model="song.title" ng-change="vm.update(song)">
+</div>
+<button ng-click="vm.delete()">Delete</button>
+<form ng-submit="vm.create()">
+  <input type="text" ng-model="vm.newsong.text">
+  <button type="submit">Add Song</button>
+</form> -->
+<!-- witcher -->
+<!-- https://embed.spotify.com/?uri=spotify%3Atrack%3A6NuT12xM2tDj64vJkmcsCw" width="300" height="380" frameborder="0" allowtransparency="true -->
+<!-- tsfh -->
+<!-- https://embed.spotify.com/?uri=spotify%3Atrack%3A2jn89xTHIVsy167uOmAewt" width="300" height="380" frameborder="0" allowtransparency="true" -->
+<!-- legend -->
+<!-- https://embed.spotify.com/?uri=spotify%3Atrack%3A6lzqFs6RCw4cqjPvx197Cq" width="300" height="380" frameborder="0" allowtransparency="true" -->
+<!-- nerds -->
+
+<!-- https://embed.spotify.com/?uri=spotify%3Atrack%3A5FsERguViYvDGLbOT2E9Pf" width="300" height="380" frameborder="0" allowtransparency="true" -->
