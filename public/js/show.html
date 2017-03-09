@@ -1,0 +1,13 @@
+<h2>{{ vm.song.title }}</h2>
+<p>{{ vm.song.artist }}</p>
+<img src="{{ vm.song.album_art }}" alt="">
+
+
+<h3>Edit Grumble</h3>
+
+<form data-ng-submit="vm.update()">
+  <input placeholder="Title" data-ng-model="vm.song.title">
+  <input placeholder="Author" data-ng-model="vm.song.artist">
+  <input placeholder="Content" data-ng-model="vm.song.album_art">
+  <button type="submit">Update</button>
+</form>
