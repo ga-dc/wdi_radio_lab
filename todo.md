@@ -1,10 +1,3 @@
-- Add delete
-
-### Questions
-- What is the desired directory structure?
-  - What do you mean by "create a main directory for your `wdi_radio` application"?
-  - What do you mean by "create a controller file"? I can put my controllers in a separate file? How?
-
 ### Bonus II: Deploy to Firebase
 
 - Use [Firebase Hosting](https://firebase.google.com/docs/hosting/) to deploy your application
