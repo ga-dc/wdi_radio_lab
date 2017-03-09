@@ -1,14 +1,14 @@
 body {
-  margin: 0 auto;
-  width: 555px;
+    margin: 0 auto;
+    width: 555px;
 }
 
 .song {
-  width: 333px;
-  height: 333px;
+    width: 333px;
+    height: 333px;
 }
 
 .photo {
-  width: 111px;
-  height: 111px;
+    width: 111px;
+    height: 111px;
 }
