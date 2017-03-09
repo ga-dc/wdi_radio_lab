@@ -2,8 +2,17 @@
 
 <div ng-repeat="song in vm.songs">
   <div>
-    <p>{{song.artist}}</p>
     <p>{{song.title}}</p>
+    <p>{{song.artist}}</p>
     <p>{{song.year}}</p>
   </div>
 </div>
+
+<h2>Add a song ...</h2>
+
+<form ng-submit="vm.create()">
+  <p><input type="text" placeholder="Title" ng-model="vm.newSong.title"></p>
+  <p><input type="text" placeholder="Artist" ng-model="vm.newSong.artist"></p>
+  <p><input type="text" placeholder="Year" ng-model="vm.newSong.year"></p>
+  <p><button type="submit">Add Song</button></p>
+</form>

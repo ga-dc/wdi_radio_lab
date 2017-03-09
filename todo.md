@@ -1,17 +1,10 @@
-## User Stories
-
-- As a user, when I go to the app's root url, we should see a welcome page.
-- As a user, when I visit "/songs", I should be able to see all of the songs in my database.
-- **Bonus**: As a user, when we click on a song it starts playing.
+- Add update
+- Add delete
 
 ### Questions
 - What is the desired directory structure?
   - What do you mean by "create a main directory for your `wdi_radio` application"?
   - What do you mean by "create a controller file"? I can put my controllers in a separate file? How?
-
-### Bonus I: Full CRUD Songs
-
-- Implement full CRUD for Songs
 
 ### Bonus II: Deploy to Firebase
 

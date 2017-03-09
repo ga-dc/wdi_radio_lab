@@ -37,4 +37,8 @@ function WelcomeControllerFunction() {
 function SongIndexControllerFunction($firebaseArray) {
   let ref = firebase.database().ref().child("songs")
   this.songs = $firebaseArray(ref)
+
+  this.create = function() {
+    this.songs.$add(this.newSong).then(() => this.newSong = {})
+  }
 }
