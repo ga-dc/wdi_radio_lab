@@ -1,0 +1,21 @@
+<form>
+  <input placeholder="Artist" data-ng-model="SongsIndexViewModel.newEntry.artist"></input>
+  <input placeholder="Title" data-ng-model="SongsIndexViewModel.newEntry.title"></input>
+  <input placeholder="Genre" data-ng-model="SongsIndexViewModel.newEntry.genre"></input>
+  <input placeholder="Album Art" data-ng-model="SongsIndexViewModel.newEntry.album_art"></input>
+  <input placeholder="Audio Link" data-ng-model="SongsIndexViewModel.newEntry.audio_url"></input>
+  <button data-ng-click="SongsIndexViewModel.create()">Add Song</button>
+</form>
+
+<div data-ng-repeat="song in SongsIndexViewModel.songs">
+  <h2>
+    <a data-ui-sref="songsShow({id: $index})">{{song.artist}}</a>
+  </h2>
+  <h4>
+    {{song.title}}
+  </h4>
+  <p>
+    {{song.genre}}
+  </p>
+  <img src="{{song.album_art}}" />
+</div>
