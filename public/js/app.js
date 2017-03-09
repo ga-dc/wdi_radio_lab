@@ -24,4 +24,5 @@ function RouterFunction($stateProvider){
 
 function SongsIndexControllerFunction($firebaseArray){
   let ref = firebase.database().ref().child("songs");
+  this.songs = $firebaseArray(ref);
 }

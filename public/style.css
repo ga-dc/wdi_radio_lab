@@ -1,0 +1,55 @@
+header {
+  padding: 30px;
+  height: 200px;
+  font-size: 40px;
+  text-transform: uppercase;
+  background-image: url("http://www.pixelstalk.net/wp-content/uploads/2016/05/3D-music-hd-widescreen-desktop-wallpaper.jpeg");
+  background-size: cover;
+  background-position: bottom;
+  color: black;
+
+}
+
+header h1 {
+  font-family: 'Sigmar One', cursive;
+  font-size: 50px;
+  background: white;
+  width: 400px;
+  margin: 0 auto;
+  border: 1px;
+  border-radius: 5px;
+}
+
+body {
+  text-align: center;
+  background-color: black;
+  margin: 0 auto;
+  color: white;
+}
+
+html * {
+  font-family: 'Magra';
+}
+
+main {
+  background-color: rgba(255,255,255,0.4);
+  margin: 30px;
+  border: 1px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.welcome {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.songs-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+img {
+  width: 200px;
+}

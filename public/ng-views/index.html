@@ -1,1 +1,8 @@
-HELLO
+<h1>Songs</h1>
+
+<div class="songs-container">
+    <div ng-repeat="song in vm.songs">
+        <h3>{{song.song}}</h3>
+        <img ng-src="{{song.album_art}}" />
+    </div>
+</div>
