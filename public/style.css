@@ -1,0 +1,113 @@
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #111;
+}
+
+p, h1, span {
+    color: white;
+}
+
+p {
+    display: inline-block;
+}
+
+span {
+    float: right;
+}
+
+h3 {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.plus {
+    background-color: #4CAF50;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.42;
+    border-radius: 15px;
+}
+
+.minus {
+    background-color: #B22222;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.42;
+    border-radius: 15px;
+}
+
+.song {
+    background-color: #262626;
+    width: 400px;
+    margin: 30px;
+}
+
+.pad {
+    padding: 20px;
+    margin: 0;
+}
+
+.left {
+    height: 100%;
+    width: 170px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #262626;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.right {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #262626;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.left a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.left a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+#main {
+    background-color: #111;
+    margin-left: 170px;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .left {padding-top: 15px;}
+  .left a {font-size: 18px;}
+}
