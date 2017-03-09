@@ -5,10 +5,11 @@
     <p><input type="text" ng-model="song.title" ng-change="vm.update(song)"></p>
     <p><input type="text" ng-model="song.artist" ng-change="vm.update(song)"></p>
     <p><input type="text" ng-model="song.year" ng-change="vm.update(song)"></p>
+    <p><button ng-click="vm.delete(song)">Delete Song</button></p>
   </div>
 </div>
 
-<h2>Add a song ...</h2>
+<h2>New Song</h2>
 
 <form ng-submit="vm.create()">
   <p><input type="text" placeholder="Title" ng-model="vm.newSong.title"></p>
