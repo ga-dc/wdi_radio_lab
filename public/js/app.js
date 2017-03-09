@@ -1,12 +1,15 @@
 
 angular
   .module("wdi_radio", [
-    "ui.router"
+    "ui.router",
+    "firebase"
   ])
-  .config(["$stateProvider",
+  .config([
+    "$stateProvider",
     RouterFunction
   ])
   .controller("SongIndexController", [
+    "$firebaseArray",
     SongIndexControllerFunction
   ])
 
@@ -22,6 +25,7 @@ function RouterFunction($stateProvider){
 }
 
 
-function SongIndexControllerFunction() {
-  console.log("hello World")
+function SongIndexControllerFunction($firebaseArray) {
+  let ref= firebase.database().ref().child("songs")
+  this.songs = $firebaseArray(ref);
 }
