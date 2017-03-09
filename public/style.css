@@ -1,0 +1,109 @@
+html {
+  text-align: center;
+  background-image: url(http://footage.framepool.com/shotimg/qf/495812401-sound-wave-zigzag-noise-graf.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: auto;
+  background-position: left center;
+}
+
+.app_body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  align-content: center;
+}
+
+.albums {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 450px;
+  width: 450px;
+  margin: 10px auto;
+  padding-top: 15px;
+  font-family: 'Spinnaker', sans-serif;
+}
+
+.adding {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color: rgba(0,0,0,.6);
+  border: 3px solid black;
+  padding: 10px;
+  font-family: 'Spinnaker', sans-serif;
+}
+
+.editing {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Spinnaker', sans-serif;
+}
+
+input {
+  width: 200px;
+  height: 20px;
+  margin: 10px 10px 0px;
+  font-family: 'Spinnaker', sans-serif;
+  background: rgba(255,255,255,0.5);
+  border: 2px solid black;
+  font-size: 1em;
+  padding: 1px 5px;
+}
+
+::-webkit-input-placeholder {
+  color: black;
+}
+
+button[type=submit] {
+  margin: 20px;
+  width: 70px;
+  font-family: 'Spinnaker', sans-serif;
+  background: rgba(255,255,255,0.5);
+  border: 2px solid black;
+  font-size: 1em;
+}
+
+.add_button {
+  background: rgba(255,255,255,0.5);
+  border: none;
+  font-size: 3em;
+  font-family: 'Spinnaker', sans-serif;
+}
+
+.edit_button {
+  align-self: flex-start;
+  margin-left: auto;
+  margin-right: 15px;
+  font-family: 'Spinnaker', sans-serif;
+  background: rgba(255,255,255,0.5);
+  border: 2px solid black;
+  font-size: 1em;
+}
+
+.title {
+  align-self: flex-start;
+  margin-top: auto;
+  color: white;
+  font-size: 2em;
+  padding: 10px;
+  background: linear-gradient( 0deg, black, rgba(0,0,0,0) );
+  width: 95%;
+  font-family: 'Jura', sans-serif;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+h1, header {
+  font-family: 'Syncopate', sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+header {
+  margin-top: 60px;
+  font-size: 3em;
+}
