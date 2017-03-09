@@ -11,11 +11,11 @@ angular
   "$firebaseArray",
   SongIndexControllerFunction
 ])
-// .controller("SongShowCtrl", [
-//   "$stateParams",
-//   "$firebaseObject",
-//   SongShowControllerFunction
-// ])
+.controller("SongShowController", [
+  "$stateParams",
+  "$firebase",
+  SongShowControllerFunction
+])
 
 function RouterFunction($stateProvider){
   $stateProvider
@@ -46,4 +46,9 @@ function SongIndexControllerFunction($firebaseArray){
   this.delete = function(song){
     this.songs.$remove(song);
   }
+}
+
+function SongShowControllerFunction($firebaseArray){
+  let ref = firebase.database().ref().child("song")
+  this.song = $firebase(ref);
 }

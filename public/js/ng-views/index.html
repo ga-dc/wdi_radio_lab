@@ -1,8 +1,8 @@
 <h1> RadioApp</h1>
 
-<div>{{song.artist}}</div>
+<!-- <div>{{song.artist}}</div>
 <div>{{song.song}}</div>
-<div>{{song.url}}</div>
+<div>{{song.url}}</div> -->
 
 <!-- <a data-ui-sref= "" -->
 
@@ -14,6 +14,14 @@
 </div>
 
 <form ng-submit="vm.create()">
-  <input ng-model="vm.newSongText">
-  <button type="submit">Add Song</button>
+  <input ng-model="vm.newSongArtist">
+  <button type="submit">Artist</button>
+</form>
+<form ng-submit="vm.create()">
+  <input ng-model="vm.newSongSong">
+  <button type="submit">Song</button>
+</form>
+<form ng-submit="vm.create()">
+  <input ng-model="vm.newSongUrl">
+  <button type="submit">Song URL</button>
 </form>
