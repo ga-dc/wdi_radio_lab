@@ -1,0 +1,37 @@
+[
+{
+  "artist": "Michael Jackson",
+  "songUrl": "https://www.youtube.com/watch?v=PIWSyUHD_nk&spfreload=10",
+  "imgUrl": "http://www.eurweb.com/wp-content/uploads/2015/06/michael_jackson_1.jpg",
+  "track":  "Billie Jean",
+  "album":  "1"
+},
+{
+  "artist": "Migos",
+  "songUrl": "https://soundcloud.com/octobersveryown/migos-versace-feat-drake",
+  "imgUrl": "http://thesource.com/wp-content/uploads/2016/01/migos-all-together.jpg",
+  "track":  "Versace",
+  "album":  "2"
+},
+{
+  "artist": "Big Baby D.R.A.M",
+  "songUrl": "https://soundcloud.com/bigbabydram/broccoli",
+  "imgUrl": "http://img.wennermedia.com/article-leads-horizontal/rs-dram-dc21909e-4bdb-45a2-9da0-0aabbc780a35.jpg",
+  "track":  "Broccoli",
+  "album":  "3"
+},
+{
+  "artist": "The Weekend",
+  "songUrl": "https://soundcloud.com/theweeknd/or-nah-remix-feat-the-weeknd",
+  "imgUrl": "http://s4.thingpic.com/images/kZ/J7LbVjeW9CiHFNCUYfgVWESK.png",
+  "track":  "Or Nah (Remix)",
+  "album":  "4"
+},
+{
+  "artist": "Travis Scott",
+  "songUrl": "https://soundcloud.com/travisscott-2/90210-2",
+  "imgUrl": "http://i4.mirror.co.uk/incoming/article6449723.ece/ALTERNATES/s615b/Doll.jpg",
+  "track":  "90210",
+  "album":  "5"
+}
+]

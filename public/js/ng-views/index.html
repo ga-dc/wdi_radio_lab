@@ -1,0 +1,47 @@
+<h2>Songs</h2>
+
+<div data-ng-repeat="wdiradio in vm.wdiradios">
+  <a data-ui-sref="wdiradioShow({id: wdiradio.$id})">
+    {{wdiradio.artist}}<br>
+    {{wdiradio.track}}<br>
+    {{wdiradio.album}}<br>
+  </a>
+</div>
+
+<h2>Create Song</h2>
+
+<form data-ng-submit="vm.create()">
+  <input placeholder="Track" data-ng-model="vm.newwdiradio.track">
+  <input placeholder="Artist" data-ng-model="vm.newwdiradio.artist">
+  <input placeholder="Album" data-ng-model="vm.newwdiradio.album">
+  <input placeholder="Image URL" data-ng-model="vm.newwdiradio.imgUrl">
+  <input placeholder="Song URL" data-ng-model="vm.newwdiradio.songUrl"
+  <button type="submit">Create Track</button>
+</form>
+
+<h2>Edit Song</h2>
+
+<div data-ng-repeat="wdiradio in vm.wdiradios">
+  <a data-ui-sref="wdiradioShow({id: wdiradio.$id})">{{wdiradio.artist}}</a>
+</div>
+
+<form data-ng-submit="vm.update()">
+  <input placeholder="Track" data-ng-model="vm.wdiradio.track">
+  <input placeholder="Artist" data-ng-model="vm.wdiradio.artist">
+  <input placeholder="Album" data-ng-model="vm.wdiradio.album">
+  <input placeholder="Image URL" data-ng-model="vm.wdiradio.imgUrl">
+  <input placeholder="Song URL" data-ng-model="vm.wdiradio.songUrl"
+  <button type="submit">Edit Track</button>
+</form>
+
+
+<h2>Delete Song</h2>
+
+<div data-ng-repeat="wdiradio in vm.wdiradios">
+  <a data-ui-sref="wdiradioShow({id: wdiradio.$id})">
+    {{wdiradio.artist}}<br>
+    {{wdiradio.track}}<br>
+    {{wdiradio.album}}<br>
+  </a>
+  <button data-ng-click="vm.delete(wdiradio)">Delete Grumble</button>
+</div>
