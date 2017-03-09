@@ -28,6 +28,10 @@ function RadioIndexControllerFunction($firebaseArray){
   this.create = function() {
     this.songs.$add(this.newSong).then( () => this.newSong ={} )
   }
+
+  this.update = function(){
+    this.song.$save();
+  }
 }
 
 function RadioShowControllerFunction($stateParams, $firebaseObject){

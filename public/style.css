@@ -2,3 +2,29 @@
   height: 300px;
   width: 300px;
 }
+
+.new_form {
+
+}
+.adding {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 300px;
+  background-color: black;
+}
+
+.editing {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 200px;
+  margin: 10px 10px 0px;
+}
+
+button[type=submit] {
+  margin: 20px;
+  width: 70px;
+}
