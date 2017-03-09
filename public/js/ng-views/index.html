@@ -1,8 +1,8 @@
-<h1>Radio</h1>
+<h1>Collection</h1>
 
 <div class="app_body">
 
-<button ng-click="create = !create">Add</button>
+<button title="Add an Album" class="add_button" ng-click="create = !create"> + </button>
   <div class="new_form">
     <form class="adding" ng-show="create" ng-submit="vm.create()">
       <input placeholder="Title" ng-model="vm.newSong.title">
