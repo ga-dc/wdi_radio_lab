@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-ng-app="wdiRadioApp">
+<html lang="en" ng-app="wdiRadioApp">
   <head>
     <meta charset="utf-8">
     <title>WDI Radio</title>
@@ -11,10 +11,7 @@
       // Initialize Firebase
       var config = {
         apiKey: "AIzaSyDLo_4HY7q0i6YFpL-issixCgq6DWTLCMw",
-        authDomain: "wdi-radio-app-458ed.firebaseapp.com",
         databaseURL: "https://wdi-radio-app-458ed.firebaseio.com",
-        storageBucket: "wdi-radio-app-458ed.appspot.com",
-        messagingSenderId: "421326627972"
       };
       firebase.initializeApp(config);
     </script>
@@ -22,13 +19,13 @@
   </head>
 
 
-  <body>
-    <main class="browse">
+  <body ng-controller="WdiRadioController as vm">
+    <main>
       <h1>Taco Taco Chimichanga Taco</h1>
       <h3>Welcome to the World's Best Song App</h3>
-      <div data-ui-view></div>
+      <div ng-repeat="song in vm.songs">
+        {{song.title}} - {{song.artist}}
+      </div>
     </main>
-
-
   </body>
 </html>
