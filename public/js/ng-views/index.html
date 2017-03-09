@@ -1,0 +1,18 @@
+<h1>Songs</h1>
+
+<div data-ng-repeat="song in vm.songs">
+  <h2>{{song.title}}</h2>
+  <h3>{{song.artist}}</h3>
+  <img ng-src="{{song.photoUrl}}"><br>
+  <a ng-href="{{song.songLink}}">Listen to this song</a>
+</div>
+
+<h2>Add a Song</h2>
+
+<form data-ng-submit="vm.create()">
+  <input placeholder="Title" data-ng-model="vm.newSong.title">
+  <input placeholder="Artist" data-ng-model="vm.newSong.artist">
+  <input placeholder="Photo" data-ng-model="vm.newSong.photoUrl">
+  <input placeholder="Song Link" data-ng-model="vm.newSong.songLink">
+  <button type="submit">Add Song</button>
+</form>

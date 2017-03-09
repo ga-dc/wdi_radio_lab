@@ -1,0 +1,26 @@
+[
+  {
+    "title": "The Warmth",
+    "artist": "Incubus",
+    "photoUrl": "https://images.rapgenius.com/a3e626569723c5c1c5c239fcabcb2b93.500x500x1.jpg",
+    "link": "https://www.youtube.com/watch?v=VeHddLI-aY8"
+  },
+  {
+    "title": "Avaritia",
+    "artist": "Deadmau5",
+    "photoUrl": "http://mixing.dj/wp-content/uploads/2014/12/deadmau5.jpg",
+    "link": "https://www.youtube.com/watch?v=Gpspgp3QQqo"
+  },
+  {
+    "title": "Whole Lotta Love",
+    "artist": "Led Zeppelin",
+    "photoUrl": "http://media.boingboing.net/wp-content/uploads/2011/09/led_zeppelin_-_led_zeppelin_II-front.jpg",
+    "link": "https://www.youtube.com/watch?v=Mln0RciE2o0"
+  },
+  {
+    "title": "Lonely Boy",
+    "artist": "Black Keys",
+    "photoUrl": "http://www.musictrajectory.com/wp-content/uploads/2011/12/the-black-keys-lonely-boy-single-cover.jpg",
+    "link": "https://www.youtube.com/watch?v=a_426RiwST8"
+  }
+]
