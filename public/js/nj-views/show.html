@@ -1,0 +1,23 @@
+<h2>This is WDI Radio Station</h2>
+
+<p>Song Title: {{vm.radio.title}}</p>
+<p>Artist: {{vm.radio.artist}}</p>
+<p>Genre: {{vm.radio.genre}}</p>
+<img data-ng-src="{{vm.radio.album_art}}"/>
+<button type="button"><a ng-href="{{vm.radio.audio_url}}"></a>Play</button>
+<audio controls autoplay data-ng-src="{{vm.radio.audio_url}}"></audio>
+
+<hr>
+<hr>
+<hr>
+
+<h2>Edit Song</h2>
+
+<form data-ng-submit="vm.update()">
+  <input placeholder="Title" data-ng-model="vm.radio.title"><br>
+  <input placeholder="Audio Url" data-ng-model="vm.radio.audio_url"><br>
+  <input placeholder="Album Art" data-ng-model="vm.radio.album_art"><br>
+  <input placeholder="Artist" data-ng-model="vm.radio.artist"><br>
+  <input placeholder="Genre" data-ng-model="vm.radio.genre"><br>
+  <button type="submit">Update</button>
+</form>

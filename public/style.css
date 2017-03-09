@@ -1,0 +1,58 @@
+body{
+  background-image: url("http://hdwall-papers.com/data/wallpapers/192/WDF_2308289.jpg");
+  background-size: 100%;
+
+  background-color: yellow;
+  font-family: 'Lobster', cursive;
+}
+header {
+  font-size: 30px;
+  color: red;
+  text-decoration: underline;
+}
+
+h1, h2 {
+  font-size: 40px;
+}
+p, a {
+  font-size: 20px;
+
+}
+input {
+  width: 40%;
+  height: 30px;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+button {
+  width: 150px;
+  height: 30px;
+  font-size: 15px;
+}
+.delete {
+  width: 60px;
+  height: 25px;
+  font-size: 15px;
+}
+.title {
+  margin: 25px;
+
+  background-color: orange;
+  width: 50%;
+  height: 30px;
+  border-radius: 5px;
+  text-align: center;
+}
+.song {
+  height: 300px;
+  margin-bottom: 20px;
+  
+}
+
+img {
+  margin-top: 10px;
+  width: 200px;
+  height: 200px;
+  border:10px double brown;
+  border-radius: 10px;
+}
