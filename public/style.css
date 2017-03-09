@@ -139,3 +139,19 @@ input:focus, button:focus {
 label, input, button {
   display: block;
 }
+
+.edit-col-1 {
+  float: left;
+  width: 100px;
+}
+.edit-col-2 {
+  float: left;
+  width: 160px;
+}
+.inline-form label {
+  display: block;
+}
+
+.inline-form input {
+  float: right;
+}

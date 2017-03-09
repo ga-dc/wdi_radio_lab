@@ -33,17 +33,21 @@
         <h4>Play song</h4>
         <button ng-click="showEdit = !showEdit">Edit</button>
         <button ng-click="vm.delete(song)">Delete</button>
-        <form ng-show="showEdit">
-          <label>Title</label>
-          <input type="text" placeholder="Title" ng-model="song.title" ng-change="vm.update(song)">
-          <label>Artist</label>
-          <input type="text" placeholder="Artist" ng-model="song.artist" ng-change="vm.update(song)">
-          <label>Genre</label>
-          <input type="text" placeholder="Genre" ng-model="song.genre" ng-change="vm.update(song)">
-          <label>Image</label>
-          <input type="text" placeholder="Image" ng-model="song.song_img" ng-change="vm.update(song)">
-          <label>Song File</label>
-          <input type="text" placeholder="File" ng-model="song.song_file" ng-change="vm.update(song)">
+        <form ng-show="showEdit" class="inline-form">
+          <div class="edit-col-1">
+            <label>Title</label>
+            <label>Artist</label>
+            <label>Genre</label>
+            <label>Image</label>
+            <label>Song File</label>
+          </div>
+          <div class="edit-col-2">
+            <input type="text" placeholder="Title" ng-model="song.title" ng-change="vm.update(song)">
+            <input type="text" placeholder="Artist" ng-model="song.artist" ng-change="vm.update(song)">
+            <input type="text" placeholder="Genre" ng-model="song.genre" ng-change="vm.update(song)">
+            <input type="text" placeholder="Image" ng-model="song.song_img" ng-change="vm.update(song)">
+            <input type="text" placeholder="File" ng-model="song.song_file" ng-change="vm.update(song)">
+          </div>
         </form>
       </div>
 
