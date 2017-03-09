@@ -30,7 +30,11 @@ function RadioIndexControllerFunction($firebaseArray){
   }
 
   this.update = function(song){
-    this.songs.$save(song);
+    this.songs.$save(song)
+  }
+
+  this.delete = function(song){
+    this.songs.$remove(song)
   }
 }
 

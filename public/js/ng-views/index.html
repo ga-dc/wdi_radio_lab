@@ -15,9 +15,9 @@
   </div>
 
 <div data-ng-repeat="song in vm.songs">
-  <div class="albums" style="background: url('{{song.album_art}}'); background-size: cover">
-    <button class="edit_button" ng-click="edit = !edit">Edit</button>
-      <div class="edit_form">
+  <div class="albums" ng-mouseover="option=true" ng-mouseleave="option=false" style="background: url('{{song.album_art}}'); background-size: cover">
+    <button class="edit_button" ng-show="option"  ng-click="edit = !edit">Edit</button>
+      <div class="edit_form" ng-show="option">
         <form class="editing" ng-show="edit" ng-submit="vm.update(song)">
           <input placeholder="Title" ng-model="song.title">
           <input placeholder="Audio Sample" ng-model="song.audio_url">
@@ -25,6 +25,7 @@
           <input placeholder="Artist" ng-model="song.artist"x>
           <input placeholder="Genre" ng-model="song.genre">
           <button type="submit">Edit</button>
+          <button type="submit" ng-click="vm.delete(song)">Delete</button>
         </form>
       </div>
       <div class="title">
