@@ -1,0 +1,26 @@
+[
+  {
+    "artist": "Macklemore",
+    "title": "Johnny Lovine",
+    "album": "The Heist",
+    "genre": "Hip Hop"
+  },
+  {
+    "artist": "Eminem",
+    "title": "My Mom",
+    "album": "Relapse",
+    "genre": "Rap"
+  },
+  {
+    "artist": "Johnny Cash",
+    "title": "Dark as a Prison",
+    "album": "At Folsom Prison",
+    "genre": "Country"
+  },
+  {
+    "artist": "Britney Spears",
+    "title": "Oops!... I Did It Again",
+    "album": "Oops!... I Did It Again",
+    "genre": "Pop"
+  }
+]
