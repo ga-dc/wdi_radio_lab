@@ -59,9 +59,18 @@ a:hover {
 
 .songs-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 20px;
+}
+
+.songs-container div {
+  margin: 5px 10px;
+}
+
+.songs-container h3 {
+  position: relative;
+  top: 10px;
 }
 
 .add {

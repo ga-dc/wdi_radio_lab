@@ -7,6 +7,12 @@ angular
     "$stateProvider",
     RouterFunction
   ])
+  .config(function($sceDelegateProvider) {
+    $sceDelegateProvider.resourceUrlWhitelist([
+        'self',
+        'https://embed.spotify.com/**'
+  ])
+})
   .controller("SongsIndexController", [
     "$firebaseArray",
     SongsIndexControllerFunction
