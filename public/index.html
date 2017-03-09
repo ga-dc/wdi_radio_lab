@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=""en ng-app="radioApp">
+<html lang="en" ng-app="radioApp">
   <head>
     <title>WDI Radio</title>
     <link rel="stylesheet" href="/css/style.css">
@@ -20,13 +20,15 @@
   </head>
   <body>
     <h1><a data-ui-sref="songsIndex">WDI Radio</a></h1>
-  <div class="welcome_view">
 
-    <h2>Welcome to the World's Best Song App</h2>
-    <h2><a data-ui-sref="songsIndex">View All Songs</a></h2>
+  <main data-ui-view>
+    <div class="welcome_view">
 
-  </div>
-  <main data-ui-view></main>
+      <h2>Welcome to the World's Best Song App</h2>
+      <h2><a data-ui-sref="songsIndex">View All Songs</a></h2>
+
+    </div>
+  </main>
 
   </body>
 </html>
