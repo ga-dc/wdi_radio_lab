@@ -1,4 +1,86 @@
 .albumBlock {
   height: 300px;
   width: 300px;
+  margin: 5px 5px;
 }
+
+.songTitle {
+  text-align: left;
+}
+
+.albumBlock {
+  height: 300px;
+  width: 300px;
+  margin: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lemonada', cursive, sans-serif;
+  margin: 0px 5px;
+  background-image: url(http://www.likehdwallpaper.com/wp-content/uploads/Simple%20Background/FTP1/1600x900/Gray%20minimalist%20wallpaper%201600x900.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.library {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin: 5px 0px;
+}
+main {
+  width: 50%;
+}
+
+h1,h2 {
+  text-align: center;
+}
+button {
+  margin: 5px 0;
+}
+
+.titleContainer {
+  width: 85%;
+}
+
+.createForm, .editForm {
+  background-color: rgba(126,126,126,.3);
+  height: 50%;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.createForm {
+  height: 300px;
+}
+
+input {
+  margin: 5px auto;
+  display: block;
+}
+.createbutton {
+  text-align: center;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.

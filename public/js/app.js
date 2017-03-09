@@ -12,11 +12,11 @@ angular
     "$firebaseArray",
     SongIndexControllerFunction
   ])
-  .controller("SongShowController", [
-    "$stateParams",
-    "$firebaseObject",
-    SongShowControllerFunction
-  ])
+  // .controller("SongShowController", [
+  //   "$stateParams",
+  //   "$firebaseObject",
+  //   SongShowControllerFunction
+  // ])
 
 
 function RouterFunction($stateProvider){
@@ -27,12 +27,12 @@ function RouterFunction($stateProvider){
     controller: "SongIndexController",
     controllerAs: "vm"
   })
-  .state("songShow", {
-    url: "/songs/:id",
-    templateUrl: "js/ng-views/show.html",
-    controller: "SongShowController",
-    controllerAs: "vm"
-  })
+  // .state("songShow", {
+  //   url: "/songs/:id",
+  //   templateUrl: "js/ng-views/show.html",
+  //   controller: "SongShowController",
+  //   controllerAs: "vm"
+  // })
 }
 
 
@@ -52,7 +52,7 @@ function SongIndexControllerFunction($firebaseArray) {
   }
 }
 
-function SongShowControllerFunction($stateParams, $firebaseObject) {
-  let ref= firebase.database().ref().child("songs/" + $stateParams.id);
-  $firebaseObject(ref).$loaded().then( song => this.song = song)
-}
+// function SongShowControllerFunction($stateParams, $firebaseObject) {
+//   let ref= firebase.database().ref().child("songs/" + $stateParams.id);
+//   $firebaseObject(ref).$loaded().then( song => this.song = song)
+// }

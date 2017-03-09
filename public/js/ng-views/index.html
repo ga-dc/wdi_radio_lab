@@ -1,7 +1,9 @@
-<h1> Library </h1>
-<button ng-click="create = !create"> Create </button>
+<h2> Library </h2>
+<div class='createbutton'><button ng-click="create = !create"> Create </button></div>
+<div class="library">
+
   <div class='createForm' ng-show="create">
-    <form >
+    <form>
       <input placeholder="Title" ng-model="vm.newSong.title" />
       <input placeholder="Audio Url" ng-model='vm.newSong.audio_url' />
       <input placeholder="Album Art" ng-model='vm.newSong.album_art' />
@@ -10,20 +12,24 @@
       <button data-ng-click="vm.create()"> Create Song </button>
     </form>
   </div>
-<div data-ng-repeat="song in vm.songs">
-  <div class='albumBlock' style="background: url('{{song.album_art}}')">
-    <button data-ng-click="edit = !edit"> Edit </button>
-    <div class='editForm' ng-show='edit'>
-      <form>
-        <input placeholder="Title" ng-model="song.title" />
-        <input placeholder="Audio Url" ng-model='song.audio_url' />
-        <input placeholder="Album Art" ng-model='song.album_art' />
-        <input placeholder="Artist" ng-model='song.artist' />
-        <input placeholder="Genre" ng-model='song.genre' />
-        <button data-ng-click="vm.update(song)"> Edit Song </button>
-        <button data-ng-click='vm.delete(song)'> Delete </button>
-      </form>
-    </div>
-    <p><a data-ui-sref="songShow({id: song.$id})">{{song.title}}</a></p>
+  <br>
+      <div data-ng-repeat="song in vm.songs">
+        <div class='albumBlock' style="background: url('{{song.album_art}}') 100% 100% no-repeat; background-size: cover;">
+          <button data-ng-click="edit = !edit"> Edit </button>
+          <div class='editForm' ng-show='edit'>
+            <form>
+              <input placeholder="Title" ng-model="song.title" />
+              <input placeholder="Audio Url" ng-model='song.audio_url' />
+              <input placeholder="Album Art" ng-model='song.album_art' />
+              <input placeholder="Artist" ng-model='song.artist' />
+              <input placeholder="Genre" ng-model='song.genre' />
+              <button data-ng-click="vm.update(song)"> Edit Song </button>
+              <button data-ng-click='vm.delete(song)'> Delete </button>
+            </form>
+          </div>
+          <div class='titleContainer'>
+            <h3 class='songTitle'><a data-ng-click="showSong = !showSong">{{song.title}}</a></h3>
+          </div>
+      </div>
   </div>
 </div>
