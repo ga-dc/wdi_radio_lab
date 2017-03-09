@@ -1,0 +1,25 @@
+<button data-ui-sref="songIndex" data-ng-click="newSongForm =! newSongForm">New Song</button>
+<div class="songs" data-ng-show="newSongForm" >
+
+<form data-ng-submit="vm.create()">
+  <input type="text" data-ng-model="vm.newSong.title" placeholder="Title"></input>
+  <input type="text" data-ng-model="vm.newSong.photo_url" placeholder="Photo Url"></input>
+  <input type="text" data-ng-model="vm.newSong.artist" placeholder="Artist"></input>
+  <button type="submit" data-ng-click="newSongForm =! newSongForm"> Add Song </button>
+</form>
+</div>
+
+
+<div data-ng-repeat="song in vm.songs" class="songs" data-ng-mouseenter="EditButton =! EditButton" data-ng-mouseleave="EditButton =! EditButton">
+  <button data-ng-show="EditButton" data-ng-click="EditSongForm =! EditSongForm"  data-ui-sref="songIndex">Edit</button>
+
+  <form data-ng-show="EditSongForm" data-ng-submit="vm.create()">
+    <input type="text" placeholder="Title"></input>
+    <input type="text" placeholder="Photo Url"></input>
+    <input type="text" placeholder="Artist"></input>
+  </form>
+  <p> {{song.title}}</p>
+  <p> {{song.artist}}</p>
+  <img ng-src="{{song.photo_url}}"/>
+
+</div>
