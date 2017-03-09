@@ -34,7 +34,6 @@ function RouterFunction($stateProvider){
 function WdiRadioIndexController($firebaseArray){
   let ref = firebase.database().ref().child("songs");
   this.songs = $firebaseArray(ref);
-  console.log("hi")
 }
 
 function WdiRadioWelcomeController($firebaseArray){

@@ -1,4 +1,7 @@
-<h1>WDIRadio Songs</h1>
-<div data-ng-repeat="song in vm.songs">
-  <p>{{song.title}}</p>
+<h1>WDI Radio Songs</h1>
+<div class="songs" data-ng-repeat="song in vm.songs">
+  <div class="song">
+    <p>{{song.title}} | {{song.artist}} | {{song.genre}}</p>
+    <img ng-src={{song.coverArt}}>
+  </div>
 </div>
