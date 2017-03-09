@@ -1,17 +1,7 @@
-### Initialize a Router
-
-- Configure your app's routing in the `app.js`.
-- Add a state for the routes `/` and `/songs`.
-- Create templates for these routes.
-
-### Define a Controller
-
-- Create a controller file and define a controller to handle songs.
-- Access the data from firebase and save it as a property on the controller
-
-### Build Views
-
-- Use data attached to your view model to display a list of all songs
+- Add a state for the `/` route.
+- Create a template for the `/` route.
+- Create a template for the `/songs` route.
+  - Use data attached to your view model to display a list of all songs
 
 ## User Stories
 
@@ -20,7 +10,9 @@
 - **Bonus**: As a user, when we click on a song it starts playing. The world is a better place
 
 ### Questions
-1. What is the desired directory structure? That is, what do they mean by "create a main directory for your `wdi_radio` application"?
+- What is the desired directory structure?
+  - What do you mean by "create a main directory for your `wdi_radio` application"?
+  - What do you mean by "create a controller file"? I can put my controllers in a separate file? How?
 
 ### Deploy
 
