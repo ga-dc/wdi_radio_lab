@@ -1,3 +1,5 @@
+"use strict";
+
 angular
   .module("WdiRadio", [
     "ui.router",
@@ -14,6 +16,10 @@ angular
 
   function RouterFunction($stateProvider){
     $stateProvider
+    .state("Enter", {
+      url: "/",
+      templateUrl:"js/ng-views/enter.html"
+    })
     .state("WdiRadioIndex", {
       url: "/songs",
       templateUrl: "js/ng-views/index.html",
@@ -23,7 +29,8 @@ angular
   }
 
 function WdiRadioIndexControllerFunction ($firebaseArray) {
-  let ref = firebase.database().ref().child("songs")
-  this.songs = $firebaseArray(ref)
+  let ref = firebase.database().ref().child("songs");
+  this.songs = $firebaseArray(ref);
+  console.log( $firebaseArray(ref));
 
 }
