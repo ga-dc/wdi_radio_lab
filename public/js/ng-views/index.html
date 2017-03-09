@@ -14,17 +14,23 @@
       <p>Artist: {{song.Artist}}</p>
       <p>Genre: {{song.Genre}}</p>
       <button data-ui-sref="songShow({id: song.$id})" class="waves-effect waves-light btn">Show</button>
+      <button data-ng-click="SongIndexViewModel.delete(song)" class="red waves-effect waves-light btn">Delete Song</button>
     </div>
 
   </div>
 
-
-
-
-  <!-- <h2>{{song.Title}}</h2>
-  <h3>{{song.Artist}}</h3>
-  <h3>{{song.Genre}}</h3> -->
-
 </div>
 
+</div>
+<div class="row">
+  <div class="col s12 center">
+    <h2>Add New Song</h2>
+    <form data-ng-submit="SongIndexViewModel.create()">
+      <input placeholder="Title" data-ng-model="SongIndexViewModel.newSong.Title">
+      <input placeholder="Artist" data-ng-model="SongIndexViewModel.newSong.Artist">
+      <input placeholder="Genre" data-ng-model="SongIndexViewModel.newSong.Genre">
+      <input placeholder="Photo URL" data-ng-model="SongIndexViewModel.newSong.photo_Url">
+      <button type="submit" class="waves-effect waves-light btn">Add Song</button>
+    </form>
+  </div>
 </div>

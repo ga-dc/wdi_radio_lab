@@ -37,9 +37,21 @@ function RouterFunction($stateProvider) {
 function SongIndexControllerFunction($firebaseArray) {
     let ref = firebase.database().ref().child("songs")
     this.songs = $firebaseArray(ref)
+    this.create = function(){
+      this.songs.$add(this.newSong).then( () => this.newSong = {})
+    }
+
+    this.delete = function(song){
+      this.songs.$remove(song)
+    }
 }
+
 
 function SongShowControllerFunction($stateParams, $firebaseObject) {
     let ref = firebase.database().ref().child("songs/" + $stateParams.id)
     $firebaseObject(ref).$loaded().then( song => this.song = song )
+
+    this.update = function(){
+      this.song.$save()
+    }
 }
