@@ -1,5 +1,4 @@
-<h1>Look, it's the Index!</h1>
-
+<br>
 <div ng-repeat="song in vm.songs">
   <p class="indexTitle"><a ui-sref="songShow({id: song.$id})">{{song.title}}</a></p>
   <img class="indexPicture" ng-src="{{song.album_art}}">
