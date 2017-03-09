@@ -1,0 +1,6 @@
+<h2> Welcome to the World's Best Song App </h2>
+
+<div class="display" data-ng-repeat="song in vm.songs">
+  <h3><a data-ui-sref="wdiradioShow({id: song.id})"> {{song.title}} </a> </h3>
+   <img data-ng-src="{{song.img_url}}" />
+</div>
