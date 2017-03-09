@@ -1,3 +1,6 @@
+
+
+
 angular
 .module("wdiRadioApp", [
   "ui.router",
@@ -38,3 +41,8 @@ function WdiRadioIndexController($firebaseArray){
 
 function WdiRadioWelcomeController($firebaseArray){
 };
+
+$(".song-info").on("click", function (){
+  $("audio").css("display", "block")
+  console.log("work")
+});
