@@ -4,7 +4,7 @@
 <img ng-src="{{vm.song.album_art}}" />
     <button music-player data-type="playTrack" data-song="{{ $index }}">{{ song.audio.url }}
 
-      <h2>Edit Grumble</h2>
+      <h2>Edit Song</h2>
 
       <form ng-submit="vm.update()">
         <input placeholder="Title" ng-model="vm.song.title">
@@ -12,7 +12,7 @@
         <input placeholder="Genre" ng-model="vm.song.genre">
         <input placeholder="Album Art URL" ng-model="vm.song.album_art">
         <input placeholder="Audio URL" ng-model="vm.song.audio_url">
-        <button type="submit">Update Grumble</button>
+        <button type="submit">Update Song</button>
       </form>
 
 

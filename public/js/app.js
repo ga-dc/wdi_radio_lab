@@ -51,7 +51,11 @@ function SongIndexControllerFunction($firebaseArray){
         this.song.$save();
       }
 
-      this.delete = function(song){
-        this.songs.$remove(song);
+      this.create = function(){
+        this.song.$add(this.newSong).then( () => this.newSong = {} )
       }
-    }
+      
+      this.delete = function(song){
+        this.song.$remove(song);
+      }
+  }
