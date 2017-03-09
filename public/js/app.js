@@ -25,5 +25,9 @@ angular
 
   function SongsControllerFunction($firebaseArray) {
     let ref = firebase.database().ref().child("songs");
-    this.songs = $firebaseArray(ref)
+    this.songs = $firebaseArray(ref);
+
+    this.create = function(){
+      this.songs.$add(this.newSong).then ( () => this.newSong = {} )
+    }
   }

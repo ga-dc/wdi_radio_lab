@@ -5,36 +5,43 @@ html {
   background-attachment: fixed;
 }
 
-h1, h2 {
-  margin: auto;
+h1,h2 {
+
+  /*color: rgb(251, 246, 107);*/
+  color: rgb(10, 248,	251	);
+  text-shadow: -1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
   text-align: center;
+  font-family: 'Fascinate Inline', cursive;
 }
-h1, h2, p {
+p {
   color: rgb(251, 246, 107);
   text-shadow: -1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
+  text-align: center;
 }
 
 main{
   background:rgba(100%,100%,100%,.5);
+  padding-left: 50px;
+
 
 }
 
 img {
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
 }
 
 a {
   color: rgb(10, 248,	251	);
+  display: inline-block;
   text-align: center;
-  margin: auto;
 }
 
 .songsInfo {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 0 auto;
-  padding:10px;
+  padding:50px;
 }

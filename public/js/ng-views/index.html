@@ -2,7 +2,17 @@
   <div ng-repeat="song in vm.songs">
     <p>Title: "{{song.title}}" | Artist: {{song.artist}} | Genre: {{song.genre}}</p>
     <img src="{{song.album_art}}">
-  
-
   </div>
+  <br>
+
 </div>
+
+<h2> Add New Song</h2>
+<form ng-submit="vm.create()">
+  <input type="text" placeholder="Title" ng-model="vm.newSong.title">
+  <input type="text" placeholder="Artist" ng-model="vm.newSong.artist">
+  <input type="text" placeholder="Album Cover URL" ng-model="vm.newSong.album_url">
+  <input type="text" placeholder="Genre" ng-model="vm.newSong.genre">
+  <input type="text" placeholder="Audio URL" ng-model="vm.newSong.audio_url">
+  <button type="submit">Add Song</button>
+</form>
