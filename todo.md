@@ -1,13 +1,3 @@
-### Questions
-1. What is the desired directory structure? That is, what do they mean by "create a main directory for your `wdi_radio` application"?
-
-### Firebase Setup
-
-- Create a new project in the [Firebase console](https://console.firebase.google.com/)
-- When prompted, make sure to choose the right most option: "Add Firebase to your web app".
-- After selecting the option, you should see a notification with a code snippet that contains your application's configuration credentials.
-- Make sure to include that snippet in your app's main `index.html` before any of your `js` files
-
 ### Initialize a Router
 
 - Configure your app's routing in the `app.js`.
@@ -28,6 +18,9 @@
 - As a user, when I go to the app's root url, we should see a welcome page.
 - As a user, when I visit "/songs", I should be able to see all of the songs in my database.
 - **Bonus**: As a user, when we click on a song it starts playing. The world is a better place
+
+### Questions
+1. What is the desired directory structure? That is, what do they mean by "create a main directory for your `wdi_radio` application"?
 
 ### Deploy
 
