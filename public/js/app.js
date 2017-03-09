@@ -13,13 +13,13 @@ angular
           url: "/radio",
           templateUrl: "js/ng-views/index.html",
           controller: "RadioIndexController",
-          controllerAs: "vm"
+          controllerAs: "RadioIndexViewModel"
       })
       .state("radioShow", {
           url: "/radio/:id",
           templateUrl: "js/ng-views/show.html",
           controller: "RadioShowController",
-          controllerAs: "vm"
+          controllerAs: "RadioShowViewModel"
       })
   }
 
@@ -30,4 +30,5 @@ function RadioIndexControllerFunction($firebaseArray) {
 
 function RadioShowControllerFunction($stateParams, $firebaseObject) {
   let ref = firebase.database().ref().child("radio/" + $stateParams.id)
+  $firebaseObject(ref).$loaded().then(radio => this.radio = radio)
 }
