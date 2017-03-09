@@ -39,6 +39,10 @@ function RouterFunction($stateProvider){
 function SongIndexControllerFunction($firebaseArray){
   let ref = firebase.database().ref().child("songs");
   this.songs = $firebaseArray(ref);
+
+  this.create = function(){
+    this.$add(this.newSong).then( () => this.newSong = {} )
+  }
 }
   function SongShowControllerFunction($stateParams, $firebaseObject){
       // This time, ref contains a reference to a specific grumble.
@@ -51,10 +55,6 @@ function SongIndexControllerFunction($firebaseArray){
         this.song.$save();
       }
 
-      this.create = function(){
-        this.song.$add(this.newSong).then( () => this.newSong = {} )
-      }
-      
       this.delete = function(song){
         this.song.$remove(song);
       }
