@@ -3,10 +3,20 @@
   <head>
     <title>WDI Radio</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
     <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBx8IjWqBFNl7z9P_lT17mHumAczdUSuL0",
+        authDomain: "wdi-radio-a420c.firebaseapp.com",
+        databaseURL: "https://wdi-radio-a420c.firebaseio.com",
+      };
+      firebase.initializeApp(config);
+    </script>
     <script src="js/app.js"></script>
   </head>
   <body>
