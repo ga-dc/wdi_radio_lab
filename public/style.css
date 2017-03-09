@@ -32,7 +32,7 @@ html * {
 }
 
 main {
-  background-color: rgba(255,255,255,0.4);
+  background-color: rgba(134, 104, 139, 0.4);
   margin: 30px;
   border: 1px;
   border-radius: 5px;
@@ -42,6 +42,7 @@ main {
 .welcome {
   font-size: 20px;
   margin: 10px;
+  color: rgb(186, 217, 128);
 }
 
 .songs-container {

@@ -3,6 +3,6 @@
 <div class="songs-container">
     <div ng-repeat="song in vm.songs">
         <h3>{{song.song}}</h3>
-        <img ng-src="{{song.album_art}}" />
+        <a ui-sref="songsShow({id: song.$id})"><img ng-src="{{song.album_art}}" /></a>
     </div>
 </div>
