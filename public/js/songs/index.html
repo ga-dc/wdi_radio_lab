@@ -1,0 +1,16 @@
+<h2>Top Hits Below</h2>
+
+<div ng-repeat="songs in SongIndexViewModel.songs">
+  <a data-ui-sref="songShow({id: songs.$id})">{{songs.title}}</a>
+  <button data-ng-click="SongIndexViewModel.delete(songs)">Delete Song</button>
+</div>
+
+<h2>Add Song</h2>
+
+<form data-ng-submit="SongIndexViewModel.create()">
+  <input placeholder="SongTitle" data-ng-model="SongIndexViewModel.newSong.title" />
+  <input placeholder="Song URL" data-ng-model="SongIndexViewModel.newSong.audio_url" />
+  <input placeholder="Album Art" data-ng-model="SongIndexViewModel.newSong.artist" />
+  <input placeholder="Artist" data-ng-model="SongIndexViewModel.newSong.genre" />
+  <button type="submit">Add Song</button>
+</form>
