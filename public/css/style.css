@@ -5,6 +5,7 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  background-color: rgba(0, 0, 0, 0.9);
 
 }
 h1, h2, h3, h4{
@@ -40,10 +41,30 @@ h2, h3{
   flex-direction: row;
   justify-content: center;
   width: 1000px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   margin: 0 auto;
+  margin-bottom: 40px;
 }
-img{
+
+.each_song{
+  margin: 10px;
+}
+
+.newbutton{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 100px;
+    background-color:  rgba(165, 135, 125, 0.5);
+
+}
+
+.albums{
   height: 400px;
   width: 400px;
+}
+
+.each_title{
+  color: #fff;
+  font-size:3em;
+  letter-spacing:.05em;
 }
