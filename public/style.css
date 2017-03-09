@@ -1,0 +1,81 @@
+header {
+  text-align: left;
+  font-size: 19px;
+}
+
+body {
+  text-align: center;
+  font-family: 'Rock Salt', cursive;
+  background-color: #000000;
+  color: white;
+}
+
+img {
+  height: 250px;
+  width: auto;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.top {
+  font-size: 40px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;;
+  align-items: center;
+  padding: 2em;
+}
+
+.songs {
+  margin: 1em;
+  border: #776C8A solid 1px;
+  background-color: #011502;
+  border-radius: 16px;
+  padding: 0 70px 20px 70px;
+}
+
+.songs:hover {
+  background-color: #69A2B0;
+}
+
+a {
+  color: #F2EAEA;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+a:hover, button:hover {
+  color: #000000;
+  text-decoration: line-through;
+}
+
+button {
+  font-family: 'Rock Salt', cursive;
+  font-size: 15px;
+  padding: 2%;
+  margin: 1.5%;
+}
+
+input {
+  font-family: 'Rock Salt', cursive;
+  font-size: 20px;
+  width: 50%;
+}
+
+input[type=text]:focus {
+    background-color: lightblue;
+}

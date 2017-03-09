@@ -1,0 +1,22 @@
+<h1 class="top">🎧 Welcome to the song list, baby. 🎵 </h1>
+<div class="container">
+  <div data-ng-repeat="song in vm.songs">
+    <div class="songs">
+      <h2><a data-ui-sref="radioShow({id: song.$id})">{{song.title}}</a></h2>
+      <img data-ng-src="{{song.album_art}}" alt="album art" />
+      <p>{{song.artist}}</p>
+      <button data-ng-click="vm.delete(song)">I Hate This Song</button>
+    </div>
+  </div>
+</div>
+
+<h1>Add your own groovy tunes</h1>
+  <form data-ng-submit="vm.create()">
+    <input placeholder="Title" data-ng-model="vm.newSong.title" />
+    <input placeholder="Artist" data-ng-model="vm.newSong.artist" />
+    <input placeholder="Genre" data-ng-model="vm.newSong.genre" />
+    <input placeholder="Album Art Url" data-ng-model="vm.newSong.album_art" />
+    <input placeholder="Audio Url" data-ng-model="vm.newSong.audio_url" />
+    <br />
+    <button type="submit">Add Your Tune</button>
+  </form>
