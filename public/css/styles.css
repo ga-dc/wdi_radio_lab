@@ -1,0 +1,39 @@
+body {
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 21px;
+}
+
+header {
+  width: 90%;
+}
+
+a {
+  display: block;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.panel {
+  width: 90%;
+  margin: 9px auto;
+  border: 3px solid tomato;
+  padding: 30px;
+}
+
+.panel > * {
+  display: block;
+}
+
+.song-panel {
+  border: 3px solid lightblue;
+  padding: 30px;
+}
+
+.test {
+  background-color: red;
+  font-size: 10px;
+  padding: 9px;
+}
