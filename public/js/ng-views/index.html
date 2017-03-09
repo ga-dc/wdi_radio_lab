@@ -1,6 +1,7 @@
-  <div data-ng-repeat="song in vm.songs">
+<div class = "songsView">
+  <div class = "eachSong" data-ng-repeat="song in vm.songs">
     <div class="albums" ng-mouseover="option=true" ng-mouseleave="option=false" style="background: url('{{song.album_art}}'); background-size: cover">
-      <button class="edit_button" ng-show="option"  ng-click="edit = !edit">Edit</button>
+      <button class="edit_button" ng-show="option"  ng-click="edit = !edit">Edit Song</button>
         <div class="edit_form" ng-show="option">
           <form class="editing" ng-show="edit" ng-submit="vm.update(song)">
             <input placeholder="Title" ng-model="song.title">
@@ -15,6 +16,7 @@
     </div>
     <br>
   </div>
+</div>
 
 <h2> Add New Song</h2>
   <form ng-submit="vm.create()">
