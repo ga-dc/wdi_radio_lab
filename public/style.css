@@ -1,0 +1,23 @@
+body {
+  background-color: grey;
+  font-family: 'Shojumaru', cursive;
+}
+
+.container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.songbox {
+  justify-content: space-between;
+  /*display: block;*/
+  width: 40vw;
+  height: 40vw;
+  background-position: center;
+  background-color: beige;
+  margin: 5vw;
+
+}
