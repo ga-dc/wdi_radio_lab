@@ -1,8 +1,20 @@
 html {
-  font-family: sans-serif;
+  font-family: monospace;
 }
 
 header {
-  font-size: 30px;
+  font-size: 50px;
   font-weight: bold;
+  text-align: center;
+  padding: 48px;
+}
+
+.enter {
+  text-align: center;
+  
+}
+
+img {
+  height: 330px;
+  width: 400px;
 }
