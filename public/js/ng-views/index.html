@@ -1,11 +1,10 @@
 <div class = "songsInfo">
   <div ng-repeat="song in vm.songs">
     <!-- <p>Title: "{{song.title}}" | Artist: {{song.artist}} | Genre: {{song.genre}}</p> -->
-    <p><input type="text" ng-model="song.title" ng-change="vm.update(song)"></p>
-    <p><input type="text" ng-model="song.artist" ng-change="vm.update(song)"></p>
-    
-    <p><input type="text" ng-model="song.genre" ng-change="vm.update(song)"></p>
-    <p><input type="text" ng-model="song.audio_url" ng-change="vm.update(song)"></p>
+    <p>Title: <input type="text" ng-model="song.title" ng-change="vm.update(song)"></p>
+    <p>Artist: <input type="text" ng-model="song.artist" ng-change="vm.update(song)"></p>
+    <p>Genre<input type="text" ng-model="song.genre" ng-change="vm.update(song)"></p>
+    <p>Audio URL: <input type="text" ng-model="song.audio_url" ng-change="vm.update(song)"></p>
     <img src="{{song.album_art}}">
     <br>
     <button ng-click="vm.delete(song)">Delete</button>

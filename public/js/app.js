@@ -12,10 +12,16 @@ angular
     "$firebaseArray",
     SongsControllerFunction])
 
+
+
     function RouterFunction($stateProvider){
       $stateProvider
-      .state("songsIndex", {
+      .state("Welcome", {
         url: "/",
+        templaterUrl: "js/ng-views/welcome.html"
+      })
+      .state("songsIndex", {
+        url: "/songs",
         templateUrl: "js/ng-views/index.html",
         controller: "SongsController",
         controllerAs: "vm"

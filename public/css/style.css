@@ -21,9 +21,8 @@ p {
 
 main{
   background:rgba(100%,100%,100%,.5);
-  padding-left: 50px;
-
-
+  width: 800px;
+  margin: 0 auto;
 }
 
 img {
@@ -42,4 +41,5 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin: 0 auto;
 }
