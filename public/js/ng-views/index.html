@@ -28,8 +28,8 @@
           <button type="submit" ng-click="vm.delete(song)">Delete</button>
         </form>
       </div>
-      <div class="title">
-          {{song.title}}
+      <div class="title" ng-mouseover="option=true" ng-mouseleave="option=false">
+          <p ng-show="option">{{song.title}}</p>
       </div>
   </div>
 </div>

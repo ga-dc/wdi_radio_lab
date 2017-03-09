@@ -29,7 +29,6 @@ html {
 .adding {
   display: flex;
   flex-direction: column;
-  height: 200px;
   width: 300px;
   background-color: rgba(0,0,0,.6);
   border: 3px solid black;
@@ -52,6 +51,10 @@ input {
   border: 2px solid black;
   font-size: 1em;
   padding: 1px 5px;
+}
+
+::-webkit-input-placeholder {
+  color: black;
 }
 
 button[type=submit] {
@@ -89,6 +92,7 @@ button[type=submit] {
   background: linear-gradient( 0deg, black, rgba(0,0,0,0) );
   width: 95%;
   font-family: 'Jura', sans-serif;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 h1, header {
@@ -100,5 +104,6 @@ h1 {
 }
 
 header {
+  margin-top: 60px;
   font-size: 3em;
 }
