@@ -1,0 +1,12 @@
+<h2>These are all the songs</h2>
+<div class="songs_view" ng-controller ="RadioIndexController as vm">
+
+
+<div data-ng-repeat="song in vm.songs">
+    <p>{{song.title}}</p>
+    <p>{{song.artistName}}</p>
+    <p>{{song.genre}}</p>
+    <img ng-src={{song.photoUrl}} />
+
+</div>
+</div>
