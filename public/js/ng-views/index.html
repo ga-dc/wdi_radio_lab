@@ -1,16 +1,21 @@
-<div class = "songsInfo">
-  <div ng-repeat="song in vm.songs">
-    <!-- <p>Title: "{{song.title}}" | Artist: {{song.artist}} | Genre: {{song.genre}}</p> -->
-    <p>Title: <input type="text" ng-model="song.title" ng-change="vm.update(song)"></p>
-    <p>Artist: <input type="text" ng-model="song.artist" ng-change="vm.update(song)"></p>
-    <p>Genre<input type="text" ng-model="song.genre" ng-change="vm.update(song)"></p>
-    <p>Audio URL: <input type="text" ng-model="song.audio_url" ng-change="vm.update(song)"></p>
-    <img src="{{song.album_art}}">
+  <div data-ng-repeat="song in vm.songs">
+    <div class="albums" ng-mouseover="option=true" ng-mouseleave="option=false" style="background: url('{{song.album_art}}'); background-size: cover">
+      <button class="edit_button" ng-show="option"  ng-click="edit = !edit">Edit</button>
+        <div class="edit_form" ng-show="option">
+          <form class="editing" ng-show="edit" ng-submit="vm.update(song)">
+            <input placeholder="Title" ng-model="song.title">
+            <input placeholder="Audio Sample" ng-model="song.audio_url">
+            <input placeholder="Album Art" ng-model="song.album_art">
+            <input placeholder="Artist" ng-model="song.artist"x>
+            <input placeholder="Genre" ng-model="song.genre">
+            <button type="submit">Edit</button>
+            <button type="submit" ng-click="vm.delete(song)">Delete</button>
+          </form>
+        </div>
+    </div>
     <br>
-    <button ng-click="vm.delete(song)">Delete</button>
   </div>
-  <br>
-</div>
+
 <h2> Add New Song</h2>
   <form ng-submit="vm.create()">
     <input type="text" placeholder="Title" ng-model="vm.newSong.title">

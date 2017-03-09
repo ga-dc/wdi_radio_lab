@@ -3,6 +3,7 @@ html {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  text-align: center;
 }
 
 h1,h2 {
@@ -19,27 +20,42 @@ p {
   text-align: center;
 }
 
-main{
-  background:rgba(100%,100%,100%,.5);
-  width: 800px;
-  margin: 0 auto;
-}
-
-img {
-  height: 300px;
-  width: 300px;
-}
-
 a {
-  color: rgb(10, 248,	251	);
-  display: inline-block;
-  text-align: center;
+  color: rgb(10, 248,	251);
 }
 
-.songsInfo {
+
+button {
+  align-self: flex-start;
+  margin: auto;
+  background-color: rgb(10, 248,	251);
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 11px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+.editing{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: column;
+  margin: auto;
+}
+
+input {
+  width: 200px;
+  margin: auto;
+}
+
+.albums {
+
+  height: 400px;
+  width: 400px;
   margin: 0 auto;
+  padding-top: 15px;
+
 }
