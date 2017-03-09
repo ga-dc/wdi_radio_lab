@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Bad",
+    "artistName": "Micheal Jackson",
+    "genre": "pop",
+    "photoUrl": "http://www.campusghanta.com/wp-content/uploads/2016/06/mj.jpg",
+    "songUrl": "song.mp3"
+  },
+  {
+    "title": "Can't Buy Me Love",
+    "artistName": "The beatles",
+    "genre": "rock",
+    "photoUrl": "http://www.billboard.com/files/media/the-beatles-1965-bw-billboard-1548.jpg",
+    "songUrl": "song.mp3"
+  },
+  {
+    "title": "Burning Love",
+    "artistName": "Elvis presley",
+    "genre": "rock 'n roll",
+    "photoUrl": "http://upload.wikimedia.org/wikipedia/commons/9/99/Elvis_Presley_promoting_Jailhouse_Rock.jpg",
+    "songUrl": "song.mp3"
+  }
+]
