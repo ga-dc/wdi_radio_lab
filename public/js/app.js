@@ -15,6 +15,11 @@ angular
     "$firebaseArray",
     SongsNewControllerFunction
   ])
+  .controller("SongsShowController", [
+    "$stateParams",
+    "$firebaseObject",
+    SongsShowControllerFunction
+  ])
 
   function RouterFunction($stateProvider){
     $stateProvider
@@ -34,6 +39,12 @@ angular
         controller: "SongsNewController",
         controllerAs: "vm"
       })
+      .state("songShow", {
+        url: "/songs/:id",
+        templateUrl: "js/ng-views/show.html",
+        controller: "SongsShowController",
+        controllerAs: "vm"
+      })
 
   }
 
@@ -48,4 +59,9 @@ angular
     this.create = function(){
       this.songs.$add(this.newSong).then( () => this.newSong = {})
     }
+  }
+
+  function SongsShowControllerFunction($stateParams, $firebaseObject){
+    let ref = firebase.database().ref().child("songs/" + $stateParams.id);
+    $firebaseObject(ref).$loaded().then(song => this.song = song)
   }
