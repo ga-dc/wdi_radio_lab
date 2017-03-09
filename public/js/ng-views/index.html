@@ -1,10 +1,30 @@
 <div class="row">
 
 <div class="col s6 center" data-ng-repeat="song in SongIndexViewModel.songs" >
-  <h2>{{song.Title}}</h2>
+  <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" ng-src="{{song.photo_Url}}">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">{{song.Title}}<i class="material-icons right">more_vert</i></span>
+      <p><a href="#">Click to view more</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">{{song.Title}}<i class="material-icons right">close</i></span>
+      <p>Artist: {{song.Artist}}</p>
+      <p>Genre: {{song.Genre}}</p>
+      <button data-ui-sref="songShow({id: song.$id})" class="waves-effect waves-light btn">Show</button>
+    </div>
+
+  </div>
+
+
+
+
+  <!-- <h2>{{song.Title}}</h2>
   <h3>{{song.Artist}}</h3>
-  <h3>{{song.Genre}}</h3>
-  <button data-ui-sref="songShow({id: song.$id})" class="waves-effect waves-light btn">Show</button>
+  <h3>{{song.Genre}}</h3> -->
+
 </div>
 
 </div>
