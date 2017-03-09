@@ -1,0 +1,30 @@
+header{
+  background-color: black;
+  color: white;
+  padding: 20pt;
+  font-family: 'Rubik Mono One', sans-serif;
+  font-size: 20pt;
+  text-shadow: 2px 2px #5aa800;
+}
+
+body{
+  background-image: url("../../style/musicbackground.jpg");
+}
+
+main{
+  background-color: hsla(88, 100%, 33%, 0.58);
+  margin: 50pt;
+  padding: 20pt;
+  align-items: center;
+  align-content: center;
+}
+
+h1{
+  font-family: 'Rubik Mono One', sans-serif;
+  text-decoration-line: none;
+}
+
+.songs{
+  display:flex;
+  align-items: center;
+}
