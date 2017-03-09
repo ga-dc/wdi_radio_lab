@@ -1,11 +1,9 @@
 .albums {
   height: 300px;
   width: 300px;
+  margin: 20px;
 }
 
-.new_form {
-
-}
 .adding {
   display: flex;
   flex-direction: column;
