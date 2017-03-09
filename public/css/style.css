@@ -1,0 +1,40 @@
+html {
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/9e/14/82/9e1482a327a7959266addff2fde0d8fc.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+h1, h2 {
+  margin: auto;
+  text-align: center;
+}
+h1, h2, p {
+  color: rgb(251, 246, 107);
+  text-shadow: -1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
+}
+
+main{
+  background:rgba(100%,100%,100%,.5);
+
+}
+
+img {
+  height: 400px;
+  width: 400px;
+}
+
+a {
+  color: rgb(10, 248,	251	);
+  text-align: center;
+  margin: auto;
+}
+
+.songsInfo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding:10px;
+}

@@ -1,0 +1,42 @@
+
+[
+  {
+    "title": "Beat It",
+    "audio_url": "#",
+    "album_art": "http://images.genius.com/ceb1ad5f941d020a5db86755610a6ec7.953x953x1.jpg",
+    "artist": "Michael Jackson",
+    "genre": "Pop"
+  },
+
+  {
+    "title": "Rosa Parks",
+    "audio_url": "#",
+    "album_art": "https://upload.wikimedia.org/wikipedia/en/d/df/OutkastRosaParks.jpg",
+    "artist": "Outkast",
+    "genre": "Hip Hop"
+  },
+
+  {
+    "title":"Princes of the Universe",
+    "audio_url": "#",
+    "album_art": "http://streamd.hitparade.ch/cdimages/queen-princes_of_the_universe_s_2.jpg",
+    "artist": "Queen",
+    "genre": "Classic Rock"
+  },
+
+  {
+    "title": "Alright",
+    "audio_url": "#",
+    "album_art": "http://www.josepvinaixa.com/blog/wp-content/uploads/2015/06/Kendrick-Lamar-Alright-2015-Single.png",
+    "artist": "Kendrick Lamar",
+    "genre": "Hip Hop"
+  },
+
+  {
+    "title": "Everyone Falls In Love Sometimes",
+    "audio_url": "#",
+    "album_art": "https://images-na.ssl-images-amazon.com/images/I/517EVlly%2BUL.jpg",
+    "artist": "Tanto Metro and Devo",
+    "genre": "Dancehall"
+  }
+]
