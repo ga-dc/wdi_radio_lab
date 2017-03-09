@@ -1,0 +1,41 @@
+body {
+  background: url(https://s-media-cache-ak0.pinimg.com/originals/18/fd/25/18fd25a18c8ea7f5b9860d9deab34d7c.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 15px solid black;
+  opacity: 0.85;
+}
+
+div.transbox a {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+
+header {
+  font-family: 'Fredericka the Great', cursive;
+  text-align: center;
+
+}
+
+h2 {
+  font-family: 'Special Elite', cursive;
+  text-align: center;
+  color: white;
+}
+
+a:link, a:visited {
+    background-color: rgb(39, 60, 82);
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: rgb(35, 86, 136);
+}
