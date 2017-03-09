@@ -1,0 +1,13 @@
+<h2>These are all the Radios</h2>
+
+<a data-ui-sref="radioNew">New Radio</a>
+
+<div data-ng-repeat="radio in RadioIndexViewModel.radios">
+  <div class="photo">
+    <a data-ui-sref="radioShow({id: radio.id})"></a>
+    <a data-ui-sref="radioEdit({id: radio.id})">Edit</a>
+    <img data-ng-src="{{radio.photo_url}}" alt="">
+    <p>{{radio.author}}</p>
+    <p>{{radio.body}}</p>
+  </div>
+</div>
