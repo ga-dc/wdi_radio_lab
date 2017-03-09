@@ -1,0 +1,30 @@
+<div id="page-container">
+<h2>New Song</h2>
+<div id="new-song">
+<form data-ng-submit="vm.create()">
+  <input placeholder="Title" data-ng-model="vm.newSong.title">
+  <input placeholder="Song Link" data-ng-model="vm.newSong.audio_url">
+  <input placeholder="Album Artwork" data-ng-model="vm.newSong.album_art">
+  <input placeholder="Artist" data-ng-model="vm.newSong.artist">
+  <input placeholder="Genre" data-ng-model="vm.newSong.genre">
+  <button type="submit">Create song</button>
+</form>
+</div>
+<h3>All Songs</h3>
+<div id="songs-container">
+  <div class="songs" ng-style="{'background-image': 'url(' + song.album_art + ')'}" style="background-size: cover" data-ng-repeat="song in vm.songs">
+      <div class="song-details">
+      <p>{{song.title}}</p>
+      <button data-ng-click="vm.delete(song)">Delete</button>
+      </div>
+  <div class="songs">
+    <form data-ng-submit="vm.update()">
+      <input placeholder="Title" data-ng-model="vm.song.title">
+      <input placeholder="Song Link" data-ng-model="vm.song.audio_url">
+      <input placeholder="Album Artwork" data-ng-model="vm.song.album_art">
+      <input placeholder="Artist" data-ng-model="vm.song.artist">
+      <input placeholder="Genre" data-ng-model="vm.song.genre">
+      <button type="submit">Update song</button>
+    </form>
+  </div>
+</div>
