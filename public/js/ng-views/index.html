@@ -1,0 +1,11 @@
+<a data-ui-sref="songNew">Add a Song to Library</a>
+
+<h2>Your Song Library</h2>
+
+<div data-ng-repeat="song in vm.songs">
+  <p>
+    <a data-ui-sref="song.show({id: song.id})">{{song.title}}</a>
+
+  </p>
+</div>
+Contact GitHub API Training Shop Blog About
