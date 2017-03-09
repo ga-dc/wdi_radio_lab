@@ -1,0 +1,39 @@
+body {
+  background-color: black;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+}
+p {
+  text-align: center;
+  color: white;
+}
+.song{
+  text-align: center;
+  font-size: 30px;
+
+}
+.update{
+  text-align: center;
+
+}
+
+header{
+  text-align: center;
+  font-size: 50px;
+  color: white;
+}
+
+.create{
+  text-align: center;
+}
+
+.songlist{
+  text-align: center;
+}
+
+.player{
+  text-align: center;
+}
