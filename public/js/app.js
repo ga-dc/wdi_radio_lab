@@ -30,4 +30,8 @@ angular
     this.create = function(){
       this.songs.$add(this.newSong).then ( () => this.newSong = {} )
     }
+
+    this.delete = function(song) {
+      this.songs.$remove (song);
+    }
   }
