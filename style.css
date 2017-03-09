@@ -1,0 +1,26 @@
+body {
+    font-family: "Courier 10 Pitch";
+    text-align: center;
+}
+
+.song {
+    padding: 1em 0;
+    margin: .5em;
+    border: solid black 1px;
+    width: 200px;
+    height: 307px
+}
+
+.song-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.song img {
+    width: 100%;
+}
