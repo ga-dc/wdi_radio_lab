@@ -1,15 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="radio">
   <head>
     <title>WDI Radio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster"
+          rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.0/angularfire.min.js"></script>
+    <!-- <base href="/" /> -->
+    <script>
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyBi6OlHaS4ny8ndDnlpMlFES8w3E65W1tA",
+  authDomain: "radio-dfe66.firebaseapp.com",
+  databaseURL: "https://radio-dfe66.firebaseio.com",
+  storageBucket: "radio-dfe66.appspot.com",
+};
+firebase.initializeApp(config);
+    </script>
     <script src="js/app.js"></script>
+    <script src="js/songs/songs.js"></script>
+    <script src="js/songs/index.controller.js"></script>
 
   </head>
   <body>
-    <header>WDI Radio</header>
+    <h1 class="home_h1_title"><a class="home_link" data-ui-sref="songIndex">To
+        List the Chorale Click Here Meow</a></h1>
 
-    Welcome to the World's Best Song App
-
+    <main data-ui-view></main>
 
   </body>
 </html>
