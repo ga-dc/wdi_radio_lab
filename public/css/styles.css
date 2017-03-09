@@ -1,0 +1,15 @@
+img{
+  max-width: 100px;
+  max-height: 100px;
+}
+
+html{
+  background: url(../img/radio.jpg) no-repeat center center fixed;
+  background-size: cover;
+  font-family:'Helvetica Neue', sans-serif;
+}
+
+div > a{
+  font-size: 24px;
+  color: red; 
+}
