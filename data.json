@@ -1,0 +1,23 @@
+[
+  {
+    "artist": "String Cheese Incident",
+    "title": "Water",
+    "genre": "Jam",
+    "song_img": "https://images-na.ssl-images-amazon.com/images/I/61R3GV8QS1L.jpg",
+    "song_file": ""
+  },
+  {
+    "artist": "Widespread Panic",
+    "title": "Chilly Water",
+    "genre": "Rock",
+    "song_img": "http://www.dubera.com/blog/wp-content/uploads/2014/08/gathering-wsp-700x466.jpg",
+    "song_file": ""
+  },
+  {
+    "artist": "Phish",
+    "title": "Slave to the Traffic Light",
+    "genre": "Rock",
+    "song_img": "http://i.imgur.com/Yxv1BGc.jpg",
+    "song_file": ""
+  }
+]

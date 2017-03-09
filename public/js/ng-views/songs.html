@@ -1,0 +1,24 @@
+
+
+<section>
+  <div class="screen">
+    <div class="">
+      <form ng-submit="vm.create()">
+        <input type="text" placeholder="Title" ng-model="vm.newSong.title">
+        <input type="text" placeholder="Artist" ng-model="vm.newSong.artist">
+        <input type="text" placeholder="Genre" ng-model="vm.newSong.genre">
+        <input type="text" placeholder="Image" ng-model="vm.newSong.song_img">
+        <input type="text" placeholder="File" ng-model="vm.newSong.song_file">
+      </form>
+    </div>
+    <div ng-repeat="song in vm.songs">
+      <h3 ng-click="active = !active">song: {{song.title}}</h3>
+      <div ng-show="active" ng-style="{'background-image':'url({{song.song_img}})'}">
+        <h4>{{song.artist}}</h4>
+        <h4>{{song.genre}}</h4>
+        <h4>Play song</h4>
+      </div>
+    </div>
+
+  </div>
+</section>
