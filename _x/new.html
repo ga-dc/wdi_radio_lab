@@ -1,0 +1,10 @@
+<h2>Pick yer song</h2>
+
+<div               ng-repeat =  'song in songs'>
+<input type='text' ng-model =   'song.text'>
+</div>
+
+<form data-ng-submit = 'vm.create()'>
+  <input type='text'      data-ng-model ='vm.newSong.text' />
+  <button type='submit'   data-ng-click = 'song.create()'> Pick yer song </button>
+</form>

@@ -1,0 +1,11 @@
+<h1>Change my song</h1>
+
+<img data-ng-src={{vm.song.photo_url}}>
+
+<form>
+    <p><input placeholder='Photo URL' data-ng-model='vm.song.photo_url' /></p>
+    <p><input placeholder='Artist'    data-ng-model='vm.song.artist' /></p>
+    <p><input placeholder='body'      data-ng-model='vm.song.body' /></p>
+    <p><button                        data-ng-click='vm.update()'> Update Me </button></p>
+</form>
+    <p><button                        data-ng-click='vm.destroy()'> Delete Him </button></p>
