@@ -1,12 +1,6 @@
 ### Questions
 1. What is the desired directory structure? That is, what do they mean by "create a main directory for your `wdi_radio` application"?
 
-
-- Make sure to load in any appropriate libraries via CDNs
-- Create a skeleton for your content and include all dependencies.
-- Create the main `app.js` file and create the module for this angular app.
-- Create a module that defines songs.
-
 ### Firebase Setup
 
 - Create a new project in the [Firebase console](https://console.firebase.google.com/)
