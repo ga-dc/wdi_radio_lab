@@ -1,0 +1,16 @@
+<h1> SONG </h1>
+
+<my-custom-directive data-song='wdiradioShowViewModel.song'></my-custom-directive>
+
+<audio controls autoplay ng-src="{{wdiradioShowViewModel.song.audio_url}}"></audio>
+
+<h1> Edit The Song/Artist </h1>
+
+<form data-ng-submit="wdiradioShowViewModel.update()">
+  <input placeholder="Artist" data-ng-model="wdiradioShowViewModel.song.artist" >
+  <input placeholder="Album Art" data-ng-model="wdiradioShowViewModel.song.album_art" >
+  <input placeholder="Audio URL" data-ng-model="wdiradioShowViewModel.song.audio_url" >
+  <input placeholder="Genre" data-ng-model="wdiradioShowViewModel.song.genre" >
+  <input placeholder="Title" data-ng-model="wdiradioShowViewModel.song.title" >
+  <button type="submit"> Update </button>
+</form>

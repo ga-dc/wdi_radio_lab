@@ -1,0 +1,10 @@
+<h1> Add A Song </h1>
+
+<form data-ng-submit="wdiradioNewViewModel.create()">
+  <input placeholder="Artist" data-ng-model="wdiradioNewViewModel.newSong.artist" >
+  <input placeholder="Album Art" data-ng-model="wdiradioNewViewModel.newSong.album_art" >
+  <input placeholder="Audio URL" data-ng-model="wdiradioNewViewModel.newSong.audio_url" >
+  <input placeholder="Genre" data-ng-model="wdiradioNewViewModel.newSong.genre" >
+  <input placeholder="Title" data-ng-model="wdiradioNewViewModel.newSong.title" >
+  <button type="submit"> Add Song </button>
+</form>
