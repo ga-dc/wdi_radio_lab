@@ -1,0 +1,28 @@
+body {
+  display: block;
+  text-align: left;
+  font-family: sans-serif;
+}
+
+button {
+  color: blue;
+  margin: 20px 10px;
+}
+
+img {
+  height: 300px;
+}
+
+form {
+  display: block;
+  text-align: left;
+}
+
+textarea {
+  margin: 10px auto;
+  width: 550px;
+}
+input {
+  width: 550px;
+  margin: 10px auto;
+}
