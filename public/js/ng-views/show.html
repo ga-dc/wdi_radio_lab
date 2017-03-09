@@ -1,0 +1,21 @@
+<h2>These are the songs!</h2>
+<p data-ui-sref="radioIndex">(go back)</p>
+<div class="song" data-ng-repeat="song in vm.songs">
+<h3>{{song.artist}}</h3>
+<img data-ng-src="{{song.album_art}}" />
+<a href="{{song.audio_url}}">{{song.title}}</a><br>
+<i>{{song.genre}}</i>
+<button data-ng-click="vm.delete(song)">Delete Song</button>
+</div>
+
+<div class="song">
+
+<form data-ng-submit="vm.create()">
+  <input type="text" placeholder="Title" data-ng-model="vm.newSong.title">
+  <input type="text" placeholder="Audio_url" data-ng-model="vm.newSong.audio_url">
+  <input type="text" placeholder="Album_art" data-ng-model="vm.newSong.img_url">
+  <input type="text" placeholder="Artist" data-ng-model="vm.newSong.artist">
+  <input type="text" placeholder="Genre" data-ng-model="vm.newSong.genre">
+  <button type="submit">Add New Song</button>
+  </form>
+ </div>
