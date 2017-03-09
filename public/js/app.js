@@ -1,13 +1,28 @@
 angular
   .module("WdiRadio", [
-    "firebase",
+    "ui.router",
+    "firebase"
   ])
-  .controller("WdiController", [
+  .config([
+    "$stateProvider",
+    RouterFunction
+  ])
+  .controller("WdiRadioIndexController", [
     "$firebaseArray",
-    WdiControllerFunction
+    WdiRadioIndexControllerFunction
   ])
 
-function WdiControllerFunction ($firebaseArray) {
+  function RouterFunction($stateProvider){
+    $stateProvider
+    .state("WdiRadioIndex", {
+      url: "/songs",
+      templateUrl: "js/ng-views/index.html",
+      controller: "WdiRadioIndexController",
+      controllerAs: "vm"
+    })
+  }
+
+function WdiRadioIndexControllerFunction ($firebaseArray) {
   let ref = firebase.database().ref().child("songs")
   this.songs = $firebaseArray(ref)
 
