@@ -1,0 +1,20 @@
+
+<div id="all_songs_display_pg">
+  <div id="all_songs" data-ng-repeat="songs in vm.RubinSongs">
+    <div id="group_itm">
+    <p><a data-ui-sref="rubinSongsShow({id: songs.$id})">{{songs.title}}</a> </p>
+    <p>Artist:{{songs.artist}}</p>
+    <p>Genre:{{songs.genre}}</p>
+    <p><img  ng-src={{songs.album_art}}> </p>
+  <button data-ng-click="vm.delete(songs)">Delete Song</button>
+  </div>
+    </div>
+</div>
+<form data-ng-submit="vm.create()">
+  <input placeholder="Title" data-ng-model="vm.newRubinSong.title">
+  <input placeholder="Author" data-ng-model="vm.NewRubinSong.artist">
+  <input placeholder="Content" data-ng-model="vm.NewRubinSong.genre">
+  <input placeholder="Album Art URL" data-ng-model="vm.NewRubinSong.album_art">
+    <input placeholder="Mp3 URL" data-ng-model="vm.NewRubinSong.audio_url">
+  <button type="submit">Create New Song</button>
+</form>

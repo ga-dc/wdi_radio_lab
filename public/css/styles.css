@@ -1,0 +1,43 @@
+body {
+  width:100%;
+  height:100%;
+}
+
+#all_songs_display_pg {
+  width:1024px;
+  height:100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: 2px solid red;
+}
+
+
+#group_itm {
+  display: flex;
+  flex-direction: column;
+}
+
+div#all_songs img {
+  width: 300px;
+  height: auto;
+}
+
+#all_songs p{
+font-size: 36px;
+text-align: center;
+margin:0;
+
+
+}
+
+div#all_songs{
+  width: 500px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+    justify-content: space-around;
+  margin-bottom: 25px;
+
+}

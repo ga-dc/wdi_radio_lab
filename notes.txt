@@ -1,0 +1,20 @@
+URL for Creating Firebase Database https://console.firebase.google.com/
+1. Create new project - Copy Script that is given into your head of your index.html
+2. Edit the Permissions rules to allow changing of data. Set Read/write to true. PUBLISH this.
+3. Create a Seed Database.  Here is the Schema
+
+      Database
+
+      Title
+      Audio_url
+      Album_art
+      Artist
+      Genre
+4. Import the schema into the Firebase tables.
+
+
+To start server
+HS
+
+To start Client
+http://localhost:8080/#/rubinsongs
