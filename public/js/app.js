@@ -29,6 +29,8 @@
 
     function SongsIndexControllerFunction ($firebaseArray) {
       console.log("You are in the index page")
+      let ref = firebase.database().ref().child("songs");
+      this.songs = $firebaseArray(ref);
     }
 
 }());

@@ -1,1 +1,9 @@
 <h2>All Songs</h2>
+
+<div data-ng-repeat="song in vm.songs">
+  <div class="element">
+    <h3>Song: {{song.title}}</h3>
+    <h4>By: {{song.artist}}</h4>
+    <a href={{song.url}} target=“_blank”>Listen to Song!</a>
+    <div>
+</div>

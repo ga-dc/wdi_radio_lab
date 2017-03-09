@@ -1,0 +1,7 @@
+.element {
+  width: 350px;
+  height: 150px;
+  background: yellow;
+  padding: 20px;
+  margin: 10px auto;
+}
