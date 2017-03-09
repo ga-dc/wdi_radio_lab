@@ -1,0 +1,17 @@
+<h2> Track listing </h2>
+<p>{{vm.song.artist}}</p>
+<p>{{vm.song.songUrl}}</p>
+<img data-ng-src="{{vm.song.imgUrl}}">
+<p>{{vm.song.track}}</p>
+<p>{{vm.song.album}}</p>
+
+<h2>Edit Grumble</h2>
+
+  <form data-ng-submit="vm.update()">
+    <input placeholder="Artist" data-ng-model="vm.song.artist">
+    <input placeholder="Song URL" data-ng-model="vm.song.songUrl">
+    <input placeholder="Image URL" data-ng-model="vm.song.imgUrl">
+    <input placeholder="Track" data-ng-model="vm.song.track">
+    <input placeholder="Album" data-ng-model="vm.song.album">
+    <!-- <button type="submit">Update Grumble</button> -->
+  </form>

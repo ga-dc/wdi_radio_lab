@@ -1,0 +1,37 @@
+[
+ {
+   "artist":"Skrillex" ,
+   "songUrl":"https://soundcloud.com/skrillex/skrillex-rick-ross-purple-lamborghini" ,
+   "imgUrl": "http://jcket.com/stoneyroads/files/2016/08/800x500-centre/loljokes.jpg",
+   "track": "Purple Lamborghini",
+   "album":" Suicide Squad Soundtrack"
+ },
+ {
+   "artist": "Kevin Gates",
+   "songUrl":"https://soundcloud.com/kevingates/time-for-that-1" ,
+   "imgUrl": "https://pbs.twimg.com/profile_images/654809407901990913/2_xXOohL.jpg",
+   "track": "Time for That",
+   "album": "Islah"
+ },
+ {
+   "artist": "John Legend",
+   "songUrl":"https://soundcloud.com/johnlegend/love-me-now" ,
+   "imgUrl": "http://i.iheart.com/v3/re/new_assets/57f6a98e2291c4c3a1f2b78a",
+   "track":"Love Me Now" ,
+   "album":" Love Me Now"
+ },
+ {
+   "artist": "R. Kelly",
+   "songUrl":"https://soundcloud.com/r-kellyofficial/ignition-remix" ,
+   "imgUrl": "http://1.images.comedycentral.com/images/shows/chappelle/videos/season_1/CHAPPELLE_01_0110_KELLY_640x360.jpg" ,
+   "track": "Ignition Remix",
+   "album":"Chocolate Factory"
+ },
+ {
+   "artist": "TJR",
+   "songUrl":"https://soundcloud.com/tjr/we-wanna-party-out-now" ,
+   "imgUrl": "http://s.mxmcdn.net/images-storage/albums4/3/6/4/7/3/2/34237463_500_500.jpg",
+   "track": "We Wanna Party",
+   "album":"We Wanna Party"
+ }
+]
