@@ -1,0 +1,14 @@
+<br>
+<div ng-repeat="song in vm.songs">
+  <br>
+  <div class="songbox" ng-style="{'background-image' : 'url({{song.album_art}})'}">
+    <audio controls="" ng-src="{{song.audio_url}}" src="{{song.audio_url}}"></audio>
+  </div>
+  <p><a ui-sref="songShow({id: song.$id})">{{song.title}}</a></p>
+  <br>
+  <hr>
+  <br>
+</div>
+
+<p><a ui-sref="New">Add Song</a></p>
+<br>

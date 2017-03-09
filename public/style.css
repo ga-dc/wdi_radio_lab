@@ -1,0 +1,51 @@
+html {
+  text-align: center;
+  background: url("http://cliparts.co/cliparts/8T6/5ro/8T65ro9Rc.jpg");
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  font-weight: bold;
+}
+
+header {
+  background-color: black;
+  margin: -20px -10px 0px -10px;
+  padding: 20px 10px 10px 10px;
+}
+
+main {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(255,255,255,.4)
+}
+
+hr {
+  width: 600px;
+}
+
+.title {
+  width: 300px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1px 0;
+}
+
+.indexPicture {
+  width: 300px;
+}
+
+.showImage, .showAudio {
+  width: 600px;
+}
+
+.songbox {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 200px;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
