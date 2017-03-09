@@ -1,0 +1,17 @@
+<h2>All Songs!</h2>
+
+<!-- <p><a ng-click="showForm()"  href="#">Add Song</a></p> -->
+
+<form data-ng-submit="create()">
+  <input placeholder="Artist" data-ng-model="newSong.artist">
+  <input placeholder="Title" data-ng-model="newSong.title">
+  <input placeholder="Album Art url" data-ng-model="newSong.album_art">
+  <input placeholder="Audio url" data-ng-model="newSong.audio_url">
+  <input placeholder="Genre" data-ng-model="newSong.genre">
+  <button type="submit">Create Song</button>
+
+</form>
+
+<div data-ng-repeat="song in songs">
+  <p><a ui-sref="showSong({id: song.$id})">{{song.title}}</p>
+</div>
