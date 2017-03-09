@@ -1,6 +1,3 @@
-- Add a state for the `/` route.
-- Create a template for the `/` route.
-
 ## User Stories
 
 - As a user, when I go to the app's root url, we should see a welcome page.
