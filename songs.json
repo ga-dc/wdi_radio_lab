@@ -1,0 +1,19 @@
+[
+  {
+    "Artist": "Adele",
+    "Song": "Million Years Ago",
+    "url": "https://www.youtube.com/watch?v=sc4rqVwlbjU"
+  },
+
+  {
+    "Name": "Kid Cudi",
+    "Song": "Pursuit of Happiness",
+    "url": "https://www.youtube.com/watch?v=7xzU9Qqdqww"
+  },
+
+  {
+    "Name": "Chance the Rapper",
+    "Song": "Summer Friends",
+    "url": "https://www.youtube.com/watch?v=rT4wUByldo4"
+  }
+]
