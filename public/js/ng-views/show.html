@@ -1,8 +1,9 @@
 <h2>{{vm.song.title}}</h2>
-<h3><p>By: {{vm.song.authorName}}</p>
-<p>{{vm.song.created_at}}</p>
-<p>{{vm.song.content}}</p>
+<h3><p>By: {{vm.song.artist}}</p>
+<p>{{vm.song.genre}}</p>
+    <button music-player data-type="playTrack" data-song="{{ $index }}">{{ song.title }}
     <button type="button" data-ng-click="vm.destroy()">Delete</button>
+<img ng-src={{vm.song.album_art}} />
 
-</hg3>
-<img ng-src="{{vm.song.photoUrl}}" />
+
+<img ng-src="{{vm.song.audio_url}}" />
