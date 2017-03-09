@@ -1,29 +1,16 @@
 "use strict";
 
+  (function()){
+    angular
+      .module("wdiradio", ["ui.router", "firebase"])
+      .config(["$stateProvider", Router])
+      .controller("RootController", [RootControllerFunction])
+      .controller("WDIRadioIndexController", ["$firebaseArray", WDIRadioControllerFunction])
 
-// let wdiradioData= [
-//   {id: 0, photo_url: "http://www.famoussportspeople.com/wp-content/uploads/2016/04/michael-jordan-basketball-sport-wallpapers-hd-wallpapers-hd-celebrities-sports-photo-michael-jordan-wallpaper.jpg", author: "Michael Jordan", body: "Bulls"},
-//   {id: 1, photo_url: "http://cdn-s3.si.com/s3fs-public/styles/marquee_large_2x/public/2016/03/21/lebron-james-cavs-twitter.jpg?itok=FTe2EJhf", author: "LeBron James", body: "Cavaliers"},
-//   {id: 2, photo_url: "http://www.trbimg.com/img-54c81b82/turbine/la-sp-ln-kobe-bryant-final-season-career-reward-20150127", author: "Kobe Bryant", body: "Lakers"},
-//   {id: 3, photo_url: "https://i.ytimg.com/vi/Fa_lw05TppE/maxresdefault.jpg", author: "Steph Curry", body: "Warriors"},
-// ]
-
-
-// add a state for the routes '/' and /songs
-  .state "/", "/songs"[]
+  }
 
 // create templates for these routes
-angular
-  .module("wdiradio", ["ui.router", "ngResource"])
-  .config(["$stateProvider", RouterFunction])
-  .factory("wdiradioFactory", [
-    "$resource",
-    WDIRadioFactoryFunction
-  ])
-  .controller("WDIRadioIndexController", [
-    "WDIRadioFactory",
-    WDIRadioIndexControllerFunction
-  ])
+
   // .controller("IGIndexController", [
   //   "IGFactory",
   //   "$state",
