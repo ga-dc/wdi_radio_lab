@@ -1,7 +1,8 @@
 angular
   .module("WDIRadio", [
     "ui.router",
-    "firebase"
+    "firebase",
+    'ngSanitize'
   ])
   .config([
     "$stateProvider",
@@ -9,6 +10,8 @@ angular
   ])
   .controller("WdiradioIndexController", [
     "$firebaseArray",
+    "$scope",
+    "$sce",
     WdiradioIndexControllerFunction
   ])
 
@@ -22,9 +25,15 @@ angular
       })
   }
 
-  function WdiradioIndexControllerFunction($firebaseArray) {
+  function WdiradioIndexControllerFunction($firebaseArray, $scope, $sce) {
+    this.trustSrc = function(src) {
+      return $sce.trustAsResourceUrl(src);
+    }
+
     let ref = firebase.database().ref().child("songs")
     this.songs = $firebaseArray(ref)
+
+    // $scope.myHTML = "{{song.audioUrl}}"
 
     this.create = () => {
       this.songs.$add(this.newSong).then(() => this.newSong = {})
