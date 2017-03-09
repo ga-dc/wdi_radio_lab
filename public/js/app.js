@@ -1,37 +1,37 @@
 "use strict";
 
-(function(){
+(function() {
 
-  angular.module("radioSC", [
-  	"ui.router",
-  	"firebase"
-  	])
-  .config([
-  	"$stateProvider",
-  	RouterFunction
-  	])
-  
-  .controller("SongIndexController", [
-  	"$firebaseArray",
-  	SongIndexControllerFunction
-  	])
-  
+    angular.module("radiosc", [
+            "ui.router",
+            "firebase"
+        ])
+        .config([
+            "$stateProvider",
+            RouterFunction
+        ])
 
-  function RouterFunction($stateProvider) {
-  	$stateProvider
-  		.state("SongIndex", {
-  			url: '/',
-  			templateUrl: "js/ng-views/index.html",
-            controller: "SongIndexController",
-            controllerAs: "vm"
-  		})
-  	
+    .controller("SongIndexController", [
+        "$firebaseArray",
+        SongIndexControllerFunction
+    ])
 
-  	function SongIndexControllerFunction($firebaseArray){
-      let ref = firebase.database().ref().child("songs");
-  		this.songs = $firebaseArray
-  	}
-  }
+
+    function RouterFunction($stateProvider) {
+        $stateProvider
+            .state("SongIndex", {
+                url: '/',
+                templateUrl: "js/ng-views/index.html",
+                controller: "SongIndexController",
+                controllerAs: "vm"
+            })
+    }
+
+    function SongIndexControllerFunction($firebaseArray) {
+        let ref = firebase.database().ref().child("songs");
+        this.songs = $firebaseArray
+    }
+
 
 
 
