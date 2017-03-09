@@ -13,11 +13,14 @@
 <div data-ng-repeat="song in vm.songs" class="songs" data-ng-mouseenter="EditButton =! EditButton" data-ng-mouseleave="EditButton =! EditButton">
   <button data-ng-show="EditButton" data-ng-click="EditSongForm =! EditSongForm"  data-ui-sref="songIndex">Edit</button>
 
-  <form data-ng-show="EditSongForm" data-ng-submit="vm.create()">
-    <input type="text" placeholder="Title"></input>
-    <input type="text" placeholder="Photo Url"></input>
-    <input type="text" placeholder="Artist"></input>
+  <form data-ng-show="EditSongForm" data-ng-submit="vm.update(song)">
+    <input type="text" data-ng-model="song.title"></input>
+    <input type="text" data-ng-model="song.photo_url"></input>
+    <input type="text" data-ng-model="song.artist"></input>
+    <button type="submit"> Update </button>
+    <button type="submit" data-ng-click="vm.delete(song)"> Delete </button>
   </form>
+
   <p> {{song.title}}</p>
   <p> {{song.artist}}</p>
   <img ng-src="{{song.photo_url}}"/>

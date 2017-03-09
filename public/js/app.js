@@ -1,7 +1,7 @@
 angular
 .module("wdi_radio", ["ui.router", "firebase"])
 .config(["$stateProvider", RouterFunction])
-.controller("SongIndexController", ["$firebaseArray", SongIndexControllerFunction])
+.controller("SongIndexController", ["$firebaseArray", "$firebaseObject", SongIndexControllerFunction])
 // .controller("SongNewController", ["$firebaseArray", SongNewControllerFunction])
 
 function RouterFunction($stateProvider){
@@ -20,17 +20,25 @@ function RouterFunction($stateProvider){
 });
 }
 
-function SongIndexControllerFunction($firebaseArray){
-  let ref = firebase.database().ref().child("songs");
-  this.songs = $firebaseArray(ref);
+function SongIndexControllerFunction($firebaseArray, $firebaseObject){
+  var vm = this;
+let ref = firebase.database().ref().child("songs");
+  $firebaseArray(ref).$loaded().then(function(songs){
+    vm.songs = songs;
+  });
+  // this.songs = $firebaseArray(ref);
 
-  this.create = function() {
-    this.songs.$add(this.newSong).then(()=> this.newSong = {})
+  vm.create = function() {
+    vm.songs.$add(vm.newSong).then(()=> vm.newSong = {})
 
   }
+  $firebaseObject(ref).$loaded().then(song => vm.song = song);
+  vm.update = function(song){
+    vm.songs.$save(song);
+  }
 
-  this.update = function(song){
-    this.songs.$save(song)
+  vm.delete = function(song){
+    vm.songs.$remove(song);
   }
 }
 //
