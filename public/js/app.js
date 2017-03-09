@@ -15,11 +15,6 @@ angular
     "$firebaseArray",
     SongsNewControllerFunction
   ])
-  .controller("SongsEditController", [
-    "$stateParams",
-    "$firebaseObject",
-    SongsEditControllerFunction
-  ])
   .controller("SongsShowController", [
     "$stateParams",
     "$firebaseObject",
@@ -44,12 +39,6 @@ angular
         controller: "SongsNewController",
         controllerAs: "vm"
       })
-      .state("songEdit", {
-        url: "/songs/:id/edit",
-        templateUrl: "js/ng-views/edit.html",
-        controller: "SongsEditController",
-        controllerAs: "vm"
-      })
       .state("songShow", {
         url: "/songs/:id",
         templateUrl: "js/ng-views/show.html",
@@ -70,15 +59,6 @@ angular
     this.songs = $firebaseArray(ref);
     this.create = function(){
       this.songs.$add(this.newSong).then( () => this.newSong = {})
-    }
-  }
-
-  function SongsEditControllerFunction($stateParams, $firebaseObject){
-    let ref = firebase.database().ref().child("songs/" + $stateParams.id);
-    $firebaseObject(ref).$loaded().then(song => this.song = song)
-
-    this.update = function(){
-      this.song.$save();
     }
   }
 

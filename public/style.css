@@ -1,3 +1,11 @@
+html {
+  text-align: center;
+}
+
+hr {
+  width: 600px;
+}
+
 .indexPicture {
   width: 300px;
 }

@@ -5,7 +5,6 @@
 <audio class="showAudio" controls="" ng-src="{{vm.song.audio_url}}" src="{{vm.song.audio_url}}"></audio>
 <p>By {{vm.song.artist}}</p>
 <p>Genre: {{vm.song.genre}}</p>
-<p><a ui-sref="songEdit({id: song.$id})">Edit Song</a></p>
 
 <button ng-click="vm.toggleForm = !vm.toggleForm">EDIT</button>
 <br>
