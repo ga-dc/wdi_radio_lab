@@ -1,0 +1,22 @@
+<h1>This song </h1>
+
+<p>Song Title : {{vm.song.title}}</p>
+<p>Artist : {{vm.song.artist}}</p>
+<p>Genre : {{vm.song.genre}}</p>
+<audio src="{{vm.song.trustedUrl}}" controls loop>
+  <p>Your browser does not support the <code>audio</code> element.</p>
+</audio>
+<p><img ng-src="{{vm.song.album_art}}"</p>
+
+
+<h2>Edit Song</h2>
+
+<form data-ng-submit="vm.update()">
+  <input placeholder="Title" data-ng-model="vm.song.title"><br>
+  <input placeholder="Artist" data-ng-model="vm.song.artist"><br>
+  <input placeholder="Genre" data-ng-model="vm.song.genre"><br>
+  <input placeholder="Photo" data-ng-model="vm.song.album_art"><br>
+  <input placeholder="Audio url" data-ng-model="vm.song.audio_url"><br>
+
+  <button type="submit">Update Song</button>
+</form>
