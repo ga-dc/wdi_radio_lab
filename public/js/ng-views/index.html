@@ -1,5 +1,7 @@
 <h1>Radio</h1>
 
+<div class="app_body">
+
 <button ng-click="create = !create">Add</button>
   <div class="new_form">
     <form class="adding" ng-show="create" ng-submit="vm.create()">
@@ -13,8 +15,8 @@
   </div>
 
 <div data-ng-repeat="song in vm.songs">
-  <div class="albums" style="background: url('{{song.album_art}}')">
-    <button ng-click="edit = !edit">Edit</button>
+  <div class="albums" style="background: url('{{song.album_art}}'); background-size: cover">
+    <button class="edit_button" ng-click="edit = !edit">Edit</button>
       <div class="edit_form">
         <form class="editing" ng-show="edit" ng-submit="vm.update(song)">
           <input placeholder="Title" ng-model="song.title">
@@ -25,6 +27,11 @@
           <button type="submit">Edit</button>
         </form>
       </div>
-    {{song.title}}
+      <div class="title">
+          {{song.title}}
+      </div>
   </div>
+</div>
+
+
 </div>

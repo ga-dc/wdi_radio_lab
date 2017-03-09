@@ -1,7 +1,22 @@
+html {
+  text-align: center;
+}
+
+.app_body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  align-content: center;
+}
+
 .albums {
-  height: 300px;
-  width: 300px;
-  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 400px;
+  width: 400px;
+  margin: 10px auto;
 }
 
 .adding {
@@ -25,4 +40,19 @@ input {
 button[type=submit] {
   margin: 20px;
   width: 70px;
+}
+
+.edit_button {
+  align-self: flex-start;
+  margin-left: auto;
+}
+
+.title {
+  align-self: flex-start;
+  margin-top: auto;
+  color: white;
+  font-size: 2em;
+  padding: 10px;
+  background: linear-gradient( 0deg, black, rgba(0,0,0,0) ); 
+  width: 95%;
 }
