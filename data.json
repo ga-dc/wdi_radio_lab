@@ -1,23 +1,23 @@
 [
   {
-    "title": "Simple and Clean (Ray of Hope Mix)",
-    "audio_url": "https://open.spotify.com/track/4vLrBKT6Kkb0Wvm9Sb4oNA",
-    "album_art": "http://imgur.com/rbsL4T7.jpg",
-    "artist": "Utada Hikaru",
-    "genre": "JPop"
+    "title": "Assassin's Creed: Liberation Main Theme",
+    "audio_url": "/mp3/liberation_main_theme.mp3",
+    "album_art": "http://imgur.com/MvLIuIT.jpg",
+    "artist": "Winifred Phillips",
+    "genre": "Soundtrack"
   },
   {
-    "title": "Baba Yetu - Duet Version",
-    "audio_url": "https://open.spotify.com/track/6N4uFZaROP2f6vvf6PDfJ8",
-    "album_art": "http://imgur.com/o3cnJ3u.jpg",
-    "artist": "Christopher Tin",
-    "genre": "Video Game"
+    "title": "Legend of Zelda: Spirit Tracks Overworld Adventure",
+    "audio_url": "/mp3/overworld_adventure.mp3",
+    "album_art": "http://imgur.com/69tKPfy.jpg",
+    "artist": "Koji Kondo",
+    "genre": "Soundtrack"
   },
   {
-    "title": "Pacific Rim - Main Title",
-    "audio_url": "https://open.spotify.com/track/707jJElfCQq5JDgiOSzyqs",
-    "album_art": "http://imgur.com/AU81VNh.jpg",
-    "artist": "Ramin Djawadi",
+    "title": "Palm Tree Escape",
+    "audio_url": "/mp3/palm_tree_escape.mp3",
+    "album_art": "http://imgur.com/6EAbXRv.jpg",
+    "artist": "Hans Zimmer",
     "genre": "Soundtrack"
   }
 ]

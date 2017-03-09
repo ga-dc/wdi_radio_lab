@@ -1,2 +1,9 @@
-// let songWidth = $('.songbox').width();
-// $('.songbox').css({'height' : songWidth })
+$(document).ready(function() {
+
+  $(".detail").on("click", (event) => {
+    event.preventDefault()
+    console.log(this.parent())
+    this.parent().
+  })
+
+})

@@ -1,18 +1,22 @@
 <h3>Jam Central!!!</h3>
 <div class="container">
 
-
-
     <div data-ng-repeat= "song in vm.songs" class="songbox" ng-style="{'background-image' : 'url({{song.album_art}})'}">
 
-      <p>{{song.title}}</p>
+      <button type="button" class="detail">Details</button>
+
+      <div class="info">
+        <p>{{song.title}}</p>
+      </div>
+
+      <audio controls="" ng-src="{{song.audio_url}}" src="{{song.audio_url}}"></audio>
+
 
     </div>
 
-  
-  <div class="dummy">
 
-    <div class="songbox">
+
+    <div class="songbox" id="new">
 
       <p>Add a Jam</p>
 
@@ -25,6 +29,5 @@
         <button type="submit">Add song</button>
       </form>
 
-    </div>
   </div>
 </div>
