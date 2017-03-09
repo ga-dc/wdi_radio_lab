@@ -1,4 +1,3 @@
-- Add update
 - Add delete
 
 ### Questions
