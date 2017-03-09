@@ -1,0 +1,32 @@
+<h3> wdiRadio </h3>
+<main class="indexPage">
+<div class="radioBody">
+  <div data-ng-repeat="song in vm.songs">
+    <!-- <audio controls>
+      <source src="{{song.audio_url}}">
+        Your browser does not support the audio element.
+  </audio> -->
+    <a data-ui-sref="wdiRadioShow({id: $index})">{{song.artist}}</a>    <button ng-click="vm.update(song); editBar = !editBar">Edit</button><br>
+<button data-ng-click="vm.delete(song)">Delete This Song</button><br>
+  <div ng-show="editBar">
+    <input placeholder="{{song.album_art}}" type="text" data-ng-model="song.album_art" data-ng-change="vm.update(song)">
+    <input placeholder="{{song.artist}}" type="text" data-ng-model="song.artist" data-ng-change="vm.update(song)">
+    <input placeholder="{{song.audio_url}}" type="text" data-ng-model="song.audio_url" data-ng-change="vm.update(song)">
+    <input placeholder="{{song.genre}}" type="text" data-ng-model="song.genre" data-ng-change="vm.update(song)">
+    <input placeholder="{{song.title}}" type="text" data-ng-model="song.title" data-ng-change="vm.update(song)">
+  </div>
+  <img ng-src="{{song.album_art}}">
+  </div>
+
+<div class="newSongDiv">
+<form data-ng-submit="vm.create()">
+    <input placeholder="Album Art" type="text" data-ng-model="vm.newSong.album_art">
+    <input placeholder="Artist" type="text" data-ng-model="vm.newSong.artist">
+    <input placeholder="Audio Link" type="text" data-ng-model="vm.newSong.audio_url">
+    <input placeholder="Genre" type="text" data-ng-model="vm.newSong.genre">
+    <input placeholder="Title" type="text" data-ng-model="vm.newSong.title">
+    <button type="submit">Add Song</button>
+</form>
+</div>
+</div>
+</main>
