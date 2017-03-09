@@ -32,10 +32,14 @@ header h1 {
 
 main {
   background-color: rgba(134, 104, 139, 0.4);
-  margin: 30px;
+  margin: 0 30px;
   border: 1px;
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
+}
+
+main h1 {
+  color: rgb(186, 221, 198);
 }
 
 a {
