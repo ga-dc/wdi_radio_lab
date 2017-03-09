@@ -3,5 +3,16 @@
 <img class="showImage" ng-src="{{vm.song.album_art}}">
 <p>By {{vm.song.artist}}</p>
 <p>Genre: {{vm.song.genre}}</p>
+<p><a ui-sref="songEdit({id: song.$id})">Edit Song</a></p>
+
+<h2>Edit {{vm.song.title}}</h2>
+<form ng-submit="vm.update()">
+  <input placeholder="Title" ng-model="vm.song.title">
+  <input placeholder="Artist" ng-model="vm.song.artist">
+  <input placeholder="Genre" ng-model="vm.song.genre">
+  <input placeholder="Art URL" ng-model="vm.song.album_art">
+  <input placeholder="Audio URL" ng-model="vm.song.audio_url">
+  <button type="submit">Update Song</button>
+</form>
 
 <p><a ui-sref="Index">All Songs</a></p>
