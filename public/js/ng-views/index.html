@@ -1,7 +1,3 @@
-
-<!-- <div data-ng-repeat="song in vm.songs">
-  <p>{{song.title}}</p>
-
+<div ng-repeat="song in WdiRadioIndexViewModel.songs">
+  <a ui-sref="songShow({id: song.$id})">{{song.title}} - {{song.artist}}</a>
 </div>
-
-</div> -->
