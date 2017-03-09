@@ -1,5 +1,8 @@
 angular
-  .module("radio", ["firebase"])
+  .module("radio", [
+    "ui.router",
+    "firebase"
+  ])
   .config([
     "$stateProvider",
     RouterFunction

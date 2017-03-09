@@ -1,7 +1,5 @@
 - Add a state for the `/` route.
 - Create a template for the `/` route.
-- Create a template for the `/songs` route.
-  - Use data attached to your view model to display a list of all songs
 
 ## User Stories
 
