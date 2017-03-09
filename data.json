@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Assassin's Creed: Liberation Main Theme",
+    "audio_url": "/mp3/liberation_main_theme.mp3",
+    "album_art": "http://imgur.com/MvLIuIT.jpg",
+    "artist": "Winifred Phillips",
+    "genre": "Soundtrack"
+  },
+  {
+    "title": "Legend of Zelda: Spirit Tracks Overworld Adventure",
+    "audio_url": "/mp3/overworld_adventure.mp3",
+    "album_art": "http://imgur.com/69tKPfy.jpg",
+    "artist": "Koji Kondo",
+    "genre": "Soundtrack"
+  },
+  {
+    "title": "Palm Tree Escape",
+    "audio_url": "/mp3/palm_tree_escape.mp3",
+    "album_art": "http://imgur.com/6EAbXRv.jpg",
+    "artist": "Hans Zimmer",
+    "genre": "Soundtrack"
+  }
+]

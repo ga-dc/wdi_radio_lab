@@ -1,0 +1,53 @@
+body {
+  background-color: grey;
+  font-family: 'Shojumaru', cursive;
+  color: beige;
+}
+
+.container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /*justify-content: flex-start;*/
+}
+
+.songbox {
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  height: 40vw;
+  /*background-position: center;*/
+  background-color: beige;
+  margin: 5vw;
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+audio {
+  width: inherit;
+
+}
+
+#new {
+  color: black;
+  background-color: beige;
+}
+
+button {
+  bottom: 100%;
+}
+
+.info {
+  display: none;
+}
+
+.visible {
+
+}
