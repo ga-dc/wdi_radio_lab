@@ -1,0 +1,37 @@
+[
+  {
+    "Title": "My House",
+    "Audio_url": "",
+    "Album_art": "https://upload.wikimedia.org/wikipedia/en/9/91/Flo-RidaMyHouseEP.jpg",
+    "Artist": "Flo Rida",
+    "Genre": "Pop"
+  },
+  {
+    "Title": "Cake By the Ocean",
+    "Audio_url": "" ,
+    "Album_art": "https://upload.wikimedia.org/wikipedia/en/9/91/Flo-RidaMyHouseEP.jpg",
+    "Artist": "DNCE",
+    "Genre": "Pop"
+  },
+  {
+    "Title": "Closer",
+    "Audio_url": "",
+    "Album_art": "http://www.breatheheavy.com/wp-content/uploads/2016/07/closer-the-chainsmokers-halsey.jpg",
+    "Artist": "The ChainSmokers",
+    "Genre": "Pop"
+  },
+  {
+    "Title": "Black Beatles",
+    "Audio_url": "",
+    "Album_art": "http://www.thehypemagazine.com/wp-content/uploads/2016/09/Rae-Sreummurd.jpg",
+    "Artist": "Rae Sremmurd",
+    "Genre": "Hip Hop"
+  },
+  {
+    "Title": "All Things Go",
+    "Audio_url": "",
+    "Album_art": "http://www.rap-up.com/app/uploads/2014/12/the-pinkprint-deluxe-cover.jpg",
+    "Artist": "Nicki Minaj",
+    "Genre": "Hip Hop"
+  }
+]
