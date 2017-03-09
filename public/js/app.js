@@ -16,7 +16,7 @@ angular
   ])
   .controller("SongShowController", [
       "$stateParams",
-      "firebaseObject",
+      "$firebaseObject",
       SongShowControllerFunction
   ])
 
@@ -39,10 +39,6 @@ function RouterFunction($stateProvider){
 function SongIndexControllerFunction($firebaseArray){
   let ref = firebase.database().ref().child("songs");
   this.songs = $firebaseArray(ref);
-
-  this.delete = function(song){
-    this.songs.$remove(song)
-  }
 }
   function SongShowControllerFunction($stateParams, $firebaseObject){
       // This time, ref contains a reference to a specific grumble.
@@ -50,4 +46,12 @@ function SongIndexControllerFunction($firebaseArray){
 
       // Then we retrieve a $firebaseObject based on ref. Once that asynchronous action is done, we save the resulting grumble to `vm.grumble`.
       $firebaseObject(ref).$loaded().then( song => this.song = song )
+
+      this.update = function(){
+        this.song.$save();
+      }
+
+      this.delete = function(song){
+        this.songs.$remove(song);
+      }
     }
