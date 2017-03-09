@@ -1,0 +1,8 @@
+<h1>Welcome</h1>
+<div ng-controller="songsIndexController as vm">
+<div class="song" ng-repeat="song in vm.songs">
+  <h4 class="songArtist">{{song.artist}}</h4>
+  <h6>{{song.songTitle}}</h6>
+  <img id = "albumArt" ng-src='{{song.albumArt}}'>
+</div>
+</div>
