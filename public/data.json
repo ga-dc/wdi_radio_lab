@@ -1,0 +1,25 @@
+[
+  {
+    "artistName": "Jay Z",
+    "songName": "Dead Presidents",
+    "songUrl": "https://soundcloud.com/chaseg23/jay-z-dead-presidents",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/f/f5/Reasonable_Doubt_New.jpg",
+    "genre": "Hip Hop"
+  },
+
+  {
+    "artistName": "The Weeknd",
+    "songName": "Tell Your Friends",
+    "songUrl": "https://soundcloud.com/theweeknd/tell-your-friends-1",
+    "imageUrl": "http://static.metacritic.com/images/products/music/0/7855d81e7df3983ca6e88306380bf592.jpg",
+    "genre": "R&B"
+  },
+
+  {
+    "artistName": "Madjid Jordan",
+    "songName": "King City",
+    "songUrl": "https://soundcloud.com/majidjordan/king-city",
+    "imageUrl": "https://images.genius.com/e0e3947c9c61c426cb473235350d1293.600x600x1.jpg",
+    "genre": "R&B"
+  }
+]
