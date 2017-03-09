@@ -14,7 +14,7 @@ angular
 
       $stateProvider
         .state("Opening", {
-          url: "",
+          url: "/",
           templateUrl: "js/ng-views/index.html"
         })
         .state("Index", {
@@ -29,4 +29,5 @@ angular
 function SongsControllerFunction($firebaseArray){
   let ref = firebase.database().ref().child("songs");
   this.songs = $firebaseArray(ref);
+
 }
