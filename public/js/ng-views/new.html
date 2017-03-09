@@ -1,0 +1,11 @@
+<h2>Create Song</h2>
+<div class="song-wrapper">
+<form data-ng-submit="vm.create()">
+  <input placeholder="Title" data-ng-model="vm.newSong.title">
+  <input placeholder="Artist" data-ng-model="vm.newSong.artist">
+  <input placeholder="Genre" data-ng-model="vm.newSong.genre">
+  <input placeholder="Song_url" data-ng-model="vm.newSong.song_url">
+  <input placeholder="Photo URL" data-ng-model="vm.newSong.album_art">
+  <button type="submit">Create Song</button>
+</form>
+</div>
