@@ -1,0 +1,20 @@
+<h2>All Songs</h2>
+
+<div ng-repeat="song in vm.songs">
+  <div class="song-data">
+    <p><input type="text" ng-model="song.title" ng-change="vm.update(song)"></p>
+    <p><input type="text" ng-model="song.artist" ng-change="vm.update(song)"></p>
+    <p><input type="text" ng-model="song.year" ng-change="vm.update(song)"></p>
+    <p><button ng-click="vm.delete(song)">Delete Song</button></p>
+  </div>
+</div>
+
+<div class="song-data">
+  <h2>New Song</h2>
+  <form ng-submit="vm.create()">
+    <p><input type="text" placeholder="Title" ng-model="vm.newSong.title"></p>
+    <p><input type="text" placeholder="Artist" ng-model="vm.newSong.artist"></p>
+    <p><input type="text" placeholder="Year" ng-model="vm.newSong.year"></p>
+    <p><button type="submit">Add Song</button></p>
+  </form>
+</div>
