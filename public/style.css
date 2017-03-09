@@ -78,9 +78,11 @@ input {
 .createbutton {
   text-align: center;
 }
+
 a {
   color: white;
-  text-decoration: none;
 }
-
-.
+.songPlayer {
+  width: 100%;
+  height: 30px;
+}

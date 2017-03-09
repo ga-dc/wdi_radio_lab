@@ -50,7 +50,17 @@ function SongIndexControllerFunction($firebaseArray) {
   this.delete = function(song) {
     this.songs.$remove(song)
   }
-}
+
+  this.play = function(song) {
+       $('#now-playing').html(`Playing: ${song.title} by ${song.artist}`)
+      console.log(song.title);
+      $('audio source').attr("src", song.audio_url)
+      $('audio')[0].pause();
+      $('audio')[0].load();
+      $('audio')[0].oncanplaythrough = $('audio')[0].play();
+    }
+  }
+
 
 // function SongShowControllerFunction($stateParams, $firebaseObject) {
 //   let ref= firebase.database().ref().child("songs/" + $stateParams.id);
