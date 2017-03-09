@@ -1,0 +1,19 @@
+html{}
+body{
+	background-color: lightgrey;
+	
+}
+main{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+
+}
+
+.songBox{
+	width: 40%;
+	border-style: solid;
+	border-color: grey;
+	border-radius: 4px;
+}
