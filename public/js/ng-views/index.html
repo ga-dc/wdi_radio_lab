@@ -1,0 +1,10 @@
+<h2>All Songs</h2>
+
+<div data-ng-repeat="song in vm.songs">
+  <img data-ng-src="{{ song.Album_art }}">
+  <h2>{{ song.Title }}</h2>
+  <p>{{ song.Artist }}</p>
+  <p>{{ song.Genre }}</p>
+  <!-- <p data-ng-click="{{ song.audio_url}}"></p> -->
+
+</div>
