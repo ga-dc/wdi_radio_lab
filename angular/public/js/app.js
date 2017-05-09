@@ -35,7 +35,7 @@ function RouterFunction($stateProvider) {
 	.state("songShow", {
 		url: "/songs/:id",
 		templateUrl: "/js/ng-views/show.html",
-		controller: "songShowController",
+		controller: "SongShowController",
 		controllerAs: "vm"
 	})
 }
