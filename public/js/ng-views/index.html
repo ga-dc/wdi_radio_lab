@@ -1,0 +1,12 @@
+<h1>Library</h1>
+<a data-ui-sref="songsNew">New Song</a>
+<div class="songContainer">
+  <div style="background-image:url({{song.albumArt}}); background-size:cover;" class="song" ng-repeat="song in vm.songs">
+    <div><a data-ui-sref="songsEdit({id: song.$id})">Edit</a></div>
+    <p class="boxy hover">
+        {{song.title}}
+        <br>
+        <small>{{song.artist}} - {{song.genre}}</small>
+      </p>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<h1>New Song</h1>
+
+<form ng-submit="vm.create()">
+  <input type="text" placeholder="Title" ng-model="vm.newSong.title"> <br>
+  <input type="text" placeholder="Audio Link" ng-model="vm.newSong.audioUrl"><br>
+  <input type="text" placeholder="Album Art" ng-model="vm.newSong.albumArt"><br>
+  <input type="text" placeholder="Artist" ng-model="vm.newSong.artist"><br>
+  <input type="text" placeholder="Genre" ng-model="vm.newSong.genre"><br>
+  <button type="submit">Submit New Song</button>
+</form>

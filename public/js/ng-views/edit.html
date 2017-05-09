@@ -1,0 +1,10 @@
+<h1>Edit Song</h1>
+
+<form ng-submit="vm.update()">
+  <input type="text" placeholder="Title" ng-model="vm.song.title"> <br>
+  <input type="text" placeholder="Audio Link" ng-model="vm.song.audioUrl"><br>
+  <input type="text" placeholder="Album Art" ng-model="vm.song.albumArt"><br>
+  <input type="text" placeholder="Artist" ng-model="vm.song.artist"><br>
+  <input type="text" placeholder="Genre" ng-model="vm.song.genre"><br>
+  <button type="submit">Update Song</button>
+</form>
