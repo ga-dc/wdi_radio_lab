@@ -1,0 +1,20 @@
+<h2>Songs</h2>
+
+<div data-ng-repeat="song in vm.songs">
+  <p>{{song.title}} - {{song.artist}}</p>
+  <audio controls="" ng-src="{{song.src}}" src="{{song.src}}"></audio>
+</div>
+
+<h2>New Song</h2>
+<form ng-submit="vm.create()">
+  <input placeholder="title" type="text" ng-model="vm.newSong.title"><br />
+  <input placeholder="artist" type="text" ng-model="vm.newSong.artist"><br />
+  <!-- File Upload Button -->
+  <input type="file" id="file" ><br />
+  <!-- Show Filepath Button -->
+  <button type="button" onclick="myFunction()">Yo, here's your filepath</button>
+  <!-- Show Filepath -->
+  <input placeholder="filepath" type="text" id="filepath" ng-model="vm.newSong.src"><br>
+  <input placeholder="src" type="text" ng-model="vm.newSong.src"><br />
+  <button type="submit">Add Song</button>
+</form>
