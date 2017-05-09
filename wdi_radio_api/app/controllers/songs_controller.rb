@@ -1,10 +1,15 @@
 class SongsController < ApplicationController
-  before_action :set_song, only: [:show, :edit, :update, :destroy]
+  # before_action :set_song, only: [:show, :edit, :update, :destroy]
 
   # GET /songs
   # GET /songs.json
   def index
     @songs = Song.all
+
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render json: @songs }
+    end
   end
 
   # GET /songs/1
