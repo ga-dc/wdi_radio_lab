@@ -1,0 +1,9 @@
+<h4>Add Song</h4>
+
+<form ng-submit="vm.create()">
+  <input placeholder="Title" ng-model="vm.newSong.title">
+  <input placeholder="Artist" ng-model="vm.newSong.artist">
+  <input placeholder="Album" ng-model="vm.newSong.album">
+  <input placeholder="Photo URL" ng-model="vm.newSong.photoUrl">
+  <button type="submit">Add Song</button>
+</form>

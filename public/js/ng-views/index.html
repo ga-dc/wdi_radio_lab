@@ -1,0 +1,4 @@
+<div data-ng-repeat="song in vm.songs | orderBy : 'artist'">
+  <a data-ui-sref="songShow({id: song.$id})">{{song.artist}} - {{song.title}} - {{song.album}}</a><br />
+  <img ng-src="{{song.photoUrl}}" alt=""><br /><br />
+</div>
