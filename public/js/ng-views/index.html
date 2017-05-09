@@ -1,0 +1,6 @@
+<h2>All Songs</h2>
+
+<div data-ng-repeat="music in access.songs">
+  <h4><a data-ui-sref="songShow({id: music.$id})">{{music.title}}</a></h4>
+  <h4>{{music.genre}}</h4>
+</div>
