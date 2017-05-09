@@ -1,0 +1,26 @@
+[
+  { "song": "Down By The River",
+    "artist": "Milky Chance",
+    "audio_url": "spotify:track:7HNpXPaTcX5CoNBjTAEWBr",
+    "album_art": "https://images-na.ssl-images-amazon.com/images/I/51sOVWxFkaL.jpg",
+    "genre": "Alternative"
+  },
+  { "song": "All We Ever Knew",
+    "artist": "The Head and the Heart",
+    "audio_url": "spotify:track:72zmwnbXjx9fMUjw3mbDSs",
+    "album_art": "https://images-na.ssl-images-amazon.com/images/I/61XO%2Bl6JZzL._SS500.jpg",
+    "genre": "Alternative"
+  },
+  { "song": "Aftergold",
+    "artist": "Big Wild",
+    "audio_url": "spotify:track:2bqYcSSycHX7Zo6LJbA6aw",
+    "album_art": "https://images.rapgenius.com/e28a665f0bbfcc127ba652dedfdac77e.1000x1000x1.jpg",
+    "genre": "Electric"
+  },
+  { "song": "It Is Not Meant To Be",
+    "artist": "Tame Impala",
+    "audio_url": "spotify:track:67PE7PvEYWXd2Ct6TBB2Ax",
+    "album_art": "https://cdn2.thelineofbestfit.com/media/2010/09/tame_impala_innerspeaker.jpg",
+    "genre": "Alternative"
+  }
+]
