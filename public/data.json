@@ -1,0 +1,74 @@
+[
+  {
+    "artist": "My Chemical Romance",
+    "title": "Ghost of you",
+    "album": "Three Cheers for Sweet Revenge ",
+    "photoUrl": "http://i.imgur.com/FAnId3A.jpg"
+  },
+  {
+    "artist": "My Chemical Romance",
+    "title": "Helena",
+    "album": "Three Cheers for Sweet Revenge ",
+    "photoUrl": "http://i.imgur.com/FAnId3A.jpg"
+  },
+  {
+    "artist": "Fall Out Boy",
+    "title": "Sugar, We're Going Down",
+    "album": "Three Cheers for Sweet Revenge ",
+    "photoUrl": "http://i.imgur.com/P2fNWf0.jpg"
+  },
+  {
+    "artist": "Fall Out Boy",
+    "title": "Champagne for My Real Friends, Real  Pain for My Sham Friends",
+    "album": "Three Cheers for Sweet Revenge ",
+    "photoUrl": "http://i.imgur.com/P2fNWf0.jpg"
+  },
+  {
+    "artist": "Keane",
+    "title": "Somewhere Only We Know",
+    "album": "Somewhere Only We Know",
+    "photoUrl": "http://i.imgur.com/mN1vWIw.jpg"
+  },
+  {
+    "artist": "Keane",
+    "title": "Spiralling",
+    "album": "Perfect Symmetry",
+    "photoUrl": "http://i.imgur.com/QqQuzoV.jpg"
+  },
+  {
+    "artist": "Killers",
+    "title": "Jenny Was a Friend of Mine",
+    "album": "Hot Fuss",
+    "photoUrl": "http://i.imgur.com/g7yCleP.png"
+  },
+  {
+    "artist": "Killers",
+    "title": "Midnight Show",
+    "album": "Hot Fuss",
+    "photoUrl": "http://i.imgur.com/g7yCleP.png"
+  },
+  {
+    "artist": "Muse",
+    "title": "Hysteria",
+    "album": "Absolution",
+    "photoUrl": "http://i.imgur.com/g1w9zS5.jpg"
+  },
+  {
+    "artist": "Muse",
+    "title": "Stockholm Syndrom",
+    "album": "Absolution",
+    "photoUrl": "http://i.imgur.com/g1w9zS5.jpg"
+  },
+  {
+    "artist": "Panic! at the Disco",
+    "title": "Camisado",
+    "album": "A Fever You Can't Sweat Out",
+    "photoUrl": "http://i.imgur.com/EeFIlWR.jpg"
+  },
+  {
+    "artist": "Panic! at the Disco",
+    "title": "Build God, Then We'll Talk",
+    "album": "A Fever You Can't Sweat Out",
+    "photoUrl": "http://i.imgur.com/EeFIlWR.jpg"
+  }
+]

@@ -1,0 +1,27 @@
+
+.banner {
+  height: 300px;
+  background-image: url("http://i.imgur.com/EWYNNBA.jpg");
+  background-position: center;
+  background-size: cover;
+  font-size: 50px;
+  text-align: center;
+}
+
+.songs{
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 30px;
+  text-align: center;
+}
+
+.title {
+  font-size:30px;
+  color: white;
+  background: black;
+  text-decoration: none;
+  margin: 0;
+}

@@ -1,0 +1,18 @@
+<h2> Songs Index</h2>
+
+  <div class= "songs" ng-repeat="song in vm.songs" style="background-image: url('{{song.photoUrl}}') ">
+    <p><audio src="Mp3/Build_God.mp3" controls=""></audio></p>
+    <p><a class="title" ui-sref="radioShow({id: $index})">{{song.title}}</a></p>
+    <p><button ng-click="vm.delete(song)">Delete Song</button></p>
+
+  </div>
+
+<p>Add new music</p>
+
+<form ng-submit="vm.create()">
+  <input type="text" ng-model="vm.newSong.title" placeholder="title">
+  <input type="text" ng-model="vm.newSong.artist" placeholder="artist">
+  <input type="text" ng-model="vm.newSong.album" placeholder="Album Name">
+  <input type="text" ng-model="vm.newSong.photoUrl" placeholder="Album Art Link">
+  <button type="submit">Add Song</button>
+</form>
