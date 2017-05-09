@@ -1,0 +1,4 @@
+<div data-ng-repeat = "song in RadioIndexViewModel.radio">
+  <h3>{{song.title}}</h3>
+  <button data-ui-sref = "radioShow({id: song.$id})">More Info</button>
+</div>
