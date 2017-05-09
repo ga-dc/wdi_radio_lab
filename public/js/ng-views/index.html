@@ -1,0 +1,35 @@
+<h2> Library </h2>
+<div class='createbutton'><button ng-click="create = !create"> Create </button></div>
+<div class="library">
+
+  <div class='createForm' ng-show="create">
+    <form>
+      <input placeholder="Title" ng-model="vm.newSong.title" />
+      <input placeholder="Audio Url" ng-model='vm.newSong.audio_url' />
+      <input placeholder="Album Art" ng-model='vm.newSong.album_art' />
+      <input placeholder="Artist" ng-model='vm.newSong.artist' />
+      <input placeholder="Genre" ng-model='vm.newSong.genre' />
+      <button data-ng-click="vm.create()"> Create Song </button>
+    </form>
+  </div>
+  <br>
+      <div data-ng-repeat="song in vm.songs">
+        <div class='albumBlock' style="background: url('{{song.album_art}}') 100% 100% no-repeat; background-size: cover;">
+          <button data-ng-click="edit = !edit"> Edit </button>
+          <div class='editForm' ng-show='edit'>
+            <form>
+              <input placeholder="Title" ng-model="song.title" />
+              <input placeholder="Audio Url" ng-model='song.audio_url' />
+              <input placeholder="Album Art" ng-model='song.album_art' />
+              <input placeholder="Artist" ng-model='song.artist' />
+              <input placeholder="Genre" ng-model='song.genre' />
+              <button data-ng-click="vm.update(song)"> Edit Song </button>
+              <button data-ng-click='vm.delete(song)'> Delete </button>
+            </form>
+          </div>
+          <div class='titleContainer'>
+            <a data-ng-click="showSong = !showSong">{{song.title}}</a>
+          </div>
+      </div>
+  </div>
+</div>
