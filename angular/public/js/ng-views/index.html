@@ -1,0 +1,8 @@
+<h2>All Songs</h2>
+
+<div data-ng-repeat="song in vm.songs">
+  <h3>{{song.song}} by {{song.artist}}</h3>
+  <img ng-src="{{song.album_art_url}}" />
+  <p><a data-ui-sref="songShow({id: song.id})">Show {{song.song}}</a></p>
+  <!-- <a data-ui-sref="songEdit({ id: song.id})">Edit</a> -->
+</div>
