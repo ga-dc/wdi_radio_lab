@@ -1,12 +1,22 @@
 angular
   .module("wdiRadio", [
-    "ui.router"
+    "ui.router",
+    "ngResource"
   ])
 
   .config([
     "$stateProvider",
     RouterFunction
-  ]);
+  ])
+
+  .factory( "SongFactory", [
+  "$resource",
+   SongFactoryFunction
+ ]);
+
+ function SongFactoryFunction( $resource ){
+     return $resource( "http://localhost:3000/songs/:id" );
+   }
 
   function RouterFunction($stateProvider){
     $stateProvider
