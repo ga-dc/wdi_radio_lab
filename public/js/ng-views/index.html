@@ -1,0 +1,36 @@
+<div class="row">
+
+<div class="col s6 center" data-ng-repeat="song in SongIndexViewModel.songs" >
+  <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" ng-src="{{song.photo_Url}}">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">{{song.Title}}<i class="material-icons right">more_vert</i></span>
+      <p><a href="#">Click to view more</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">{{song.Title}}<i class="material-icons right">close</i></span>
+      <p>Artist: {{song.Artist}}</p>
+      <p>Genre: {{song.Genre}}</p>
+      <button data-ui-sref="songShow({id: song.$id})" class="waves-effect waves-light btn">Show</button>
+      <button data-ng-click="SongIndexViewModel.delete(song)" class="red waves-effect waves-light btn">Delete Song</button>
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+<div class="row">
+  <div class="col s12 center">
+    <h2>Add New Song</h2>
+    <form data-ng-submit="SongIndexViewModel.create()">
+      <input placeholder="Title" data-ng-model="SongIndexViewModel.newSong.Title">
+      <input placeholder="Artist" data-ng-model="SongIndexViewModel.newSong.Artist">
+      <input placeholder="Genre" data-ng-model="SongIndexViewModel.newSong.Genre">
+      <input placeholder="Photo URL" data-ng-model="SongIndexViewModel.newSong.photo_Url">
+      <button type="submit" class="waves-effect waves-light btn">Add Song</button>
+    </form>
+  </div>
+</div>
