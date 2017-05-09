@@ -6,8 +6,20 @@ angular
   .config([
     "$stateProvider",
     RouterFunction
-  ])
+  ]);
 
   function RouterFunction($stateProvider){
-    console.log('Router set up correctly')
+    $stateProvider
+    .state("radioWelcome", {
+      url: "/",
+      controller: "RadioWelcomeController",
+      controllerAs: "vm"
+    })
+
+    .state("songIndex", {
+      url: "/songs",
+      controller: "songIndexController",
+      controllerAs: "vm"
+
+    })
   }
