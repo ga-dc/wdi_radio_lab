@@ -1,0 +1,27 @@
+<h1> RadioApp</h1>
+
+<!-- <div>{{song.artist}}</div>
+<div>{{song.song}}</div>
+<div>{{song.url}}</div> -->
+
+<!-- <a data-ui-sref= "" -->
+
+<div ng-repeat="song in vm.songs">
+  <input placeholder="Artist" ng-model="song.artist" ng-change="vm.update(song)">
+  <input placeholder="Song" ng-model="song.song" ng-change="vm.update(song)">
+  <input placeholder="Song URL" ng-model="song.url" ng-change="vm.update(song)">
+
+</div>
+
+<form ng-submit="vm.create()">
+  <input ng-model="vm.newSongArtist">
+  <button type="submit">Artist</button>
+</form>
+<form ng-submit="vm.create()">
+  <input ng-model="vm.newSongSong">
+  <button type="submit">Song</button>
+</form>
+<form ng-submit="vm.create()">
+  <input ng-model="vm.newSongUrl">
+  <button type="submit">Song URL</button>
+</form>
