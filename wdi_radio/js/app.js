@@ -12,10 +12,19 @@ angular
   .factory( "SongFactory", [
   "$resource",
    SongFactoryFunction
- ]);
+ ])
+
+ .controller( "SongIndexController", [
+    "SongFactory",
+    SongIndexControllerFunction
+  ])
+
+  function SongIndexControllerFunction( SongFactory ){
+      this.songs = SongFactory.query();
+    }
 
  function SongFactoryFunction( $resource ){
-     return $resource( "http://localhost:3000/songs/:id" );
+     return $resource( "http://localhost:3000/songs/:id.json" );
    }
 
   function RouterFunction($stateProvider){
@@ -30,7 +39,7 @@ angular
     .state("songIndex", {
       url: "/songs",
       templateUrl: "js/ng-views/index.html",
-      controller: "songIndexController",
+      controller: "SongIndexController",
       controllerAs: "vm"
 
     })
