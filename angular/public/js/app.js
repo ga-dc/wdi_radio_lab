@@ -11,7 +11,7 @@ angular
   ])
   .factory("SongFactory", [
     "$resource",
-    FactoryFunction
+    SongFactoryFunction
   ])
   .controller("SongIndexController", [
     "SongFactory",
@@ -23,8 +23,8 @@ angular
     SongShowControllerFunction
   ])
 
-function FactoryFunction($resource) {
-  return $resource("http://localhost:3000/songs/:id", {})
+function SongFactoryFunction($resource) {
+  return $resource("http://localhost:3000/songs/:id.json")
 }
 
 function RouterFunction($stateProvider) {
