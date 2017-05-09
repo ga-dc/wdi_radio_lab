@@ -1,0 +1,7 @@
+<h2>All Songs</h2>
+
+<div data-ng-repeat="song in vm.songs">
+  <img src="{{ song.cover_art }}" alt="{{ song.title }}">
+  <h3>{{ song.title }} by {{ song.artist}}</h3>
+  <p>Album: {{ song.album}}</p>
+</div>
