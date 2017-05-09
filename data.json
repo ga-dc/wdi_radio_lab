@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Rock With You",
+    "artist": "Michael Jackson",
+    "img_url": "http://cdn2.pitchfork.com/news/62778/ce99ca59.jpeg",
+    "player_url": "https://soundcloud.com/mjimmortal/rock-with-you-single-version"
+  },
+  {
+    "title": "Manhattan",
+    "artist": "Blossom Dearie",
+    "img_url": "http://www.music-bazaar.com/album-images/vol3/260/260715/2021282-big/Once-Upon-A-Summertime-cover.jpg",
+    "player_url": ""
+  },
+  {
+    "title": "Doin' it Right",
+    "artist": "Daft Punk",
+    "img_url": "https://images-na.ssl-images-amazon.com/images/I/61Uxg-SWExL._SX522_.jpg",
+    "player_url": ""
+  },
+  {
+    "title": "Pulaski at Night",
+    "artist": "Andrew Bird",
+    "img_url": "https://cdn.pastemagazine.com/www/articles/tx3p_PulaskiFinalCoverblast.jpg",
+    "player_url": ""
+  }
+]
