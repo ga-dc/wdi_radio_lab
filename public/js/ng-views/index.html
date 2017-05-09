@@ -1,0 +1,21 @@
+<!-- <a data-ui-sref="songNew">Add a Song to Library</a> -->
+
+<h2>Your Song Library</h2>
+
+<div data-ng-repeat="song in vm.songs">
+  <p>
+    <a data-ui-sref="songShow({id: song.$id})">{{song.title}}</a>
+  </p>
+</div>
+
+
+<h2>Add a Song</h2>
+
+<form ng-submit="vm.create()">
+  <input placeholder="Title" ng-model="vm.newSong.title">
+  <input placeholder="Artist" ng-model="vm.newSong.artist">
+  <input placeholder="Genre" ng-model="vm.newSong.genre">
+  <input placeholder="Album Art URL" ng-model="vm.newSong.album_art">
+  <input placeholder="Audio URL" ng-model="vm.newSong.audio_url">
+  <button type="submit">Create Song</button>
+</form>
