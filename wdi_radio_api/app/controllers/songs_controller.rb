@@ -7,7 +7,6 @@ class SongsController < ApplicationController
     @songs = Song.all
 
     respond_to do |format|
-      format.html { render :index }
       format.json { render json: @songs }
     end
   end
@@ -15,6 +14,11 @@ class SongsController < ApplicationController
   # GET /songs/1
   # GET /songs/1.json
   def show
+    @song = Song.find(params[:id])
+
+    respond_to do |format|
+      format.json { render json: @song }
+    end
   end
 
   # GET /songs/new
