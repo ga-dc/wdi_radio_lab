@@ -6,11 +6,11 @@ angular
     "ngResource"
   ])
   .config([
-    "stateProvider",
+    "$stateProvider",
     RouterFunction
   ])
   .factory("SongFactory", [
-    "resource",
+    "$resource",
     SongFactoryFunction
   ])
   .controller("SongIndexController", [
@@ -18,37 +18,35 @@ angular
     SongIndexControllerFunction
   ])
   .controller("SongShowController", [
-    "$stateParams",
     "SongFactory",
+    "$stateParams",
     SongShowControllerFunction
   ])
-
-
-
-function RouterFunction($stateProvider){
-  $stateProvider
-  .state("songIndex", {
-    url: "/",
-    templateUrl: "js/ng-views/index.html",
-    controller: "SongIndexController",
-    controllerAs: "vm"
-  })
-  .state("songShow", {
-    url: "/songs/:id",
-    templateUrl: "js/ng-views/show.html",
-    controller: "SongShowController",
-    controllerAs: "vm"
-  })
-}
 
 function SongFactoryFunction($resource){
   return $resource("http://localhost:3000/songs/:id.json")
 }
 
-function SongIndexControllerFunction() {
+function RouterFunction($stateProvider){
+  $stateProvider
+  .state("songIndex", {
+    url: "/",
+    controller: "SongIndexController",
+    controllerAs: "vm",
+    templateUrl: "js/ng-views/index.html"
+  })
+  .state("songShow", {
+    url: "/songs/:id",
+    controller: "SongShowController",
+    controllerAs: "vm",
+    templateUrl: "js/ng-views/show.html"
+  })
+}
+
+function SongIndexControllerFunction(SongFactory) {
   this.songs = SongFactory.query()
 }
 
-function SongShowControllerFunction() {
+function SongShowControllerFunction(SongFactory, $stateParams) {
   this.song = SongFactory.get({id: $stateParams.id})
 }
