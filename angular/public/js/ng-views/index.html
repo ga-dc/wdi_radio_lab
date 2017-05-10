@@ -1,0 +1,7 @@
+<a data-ui-sref="songNew">Add Song</a>
+
+<div data-ng-repeat="song in vm.songs">
+  <a data-ui-sref="songShow({id: song.id})">
+    <h3 class="song">=>{{song.title}}</h3>
+  </a>
+</div>

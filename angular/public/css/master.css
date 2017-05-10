@@ -1,0 +1,22 @@
+body {
+  background-color: gray;
+  color: snow;
+}
+
+img {
+  width: 225px;
+  height: 225px;
+}
+
+a {
+  text-decoration: none;
+  color: aquamarine;
+}
+
+#Songs a {
+  text-decoration: underline;
+}
+
+.song {
+  display: inline-flex;
+}
