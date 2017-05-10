@@ -1,0 +1,8 @@
+<a data-ui-sref="songNew">Feel free to add a song</a>
+
+<h2>Song Library</h2>
+
+<div data-ng-repeat="song in vm.songs">
+  <p><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a></p>
+  <!-- <a data-ui-sref="grumbleEdit({id: grumble.id})">Edit</a> -->
+</div>
