@@ -80,8 +80,11 @@ angular
     this.song = SongFactory.get({id: $stateParams.id});
     this.update = function(){
       this.song.$update({id: $stateParams.id})
-    }
+      this.destory = function(){
+        this.song.$delete({id: $stateParams.id})
+      }
   }
+}
 
   // look up ng resource
 
