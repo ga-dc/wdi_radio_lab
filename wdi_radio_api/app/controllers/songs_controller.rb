@@ -15,4 +15,20 @@ class SongsController < ApplicationController
       format.json {render json: @song}
     end
   end
+
+  def create
+    @song = Song.create!(song_params)
+      if @song.save!
+        render json: @song.to_json, status: :created
+      else
+        render json: @song.errors, status: :unprocessable_entity
+    end
+  end
+
+  private
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def song_params
+      params.require(:song).permit(:title, :artist, :album, :album_url)
+    end
+
 end
