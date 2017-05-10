@@ -19,13 +19,25 @@ angular
     SongIndexControllerFunction
   ])
 
-  function SongIndexControllerFunction( SongFactory ){
-      this.songs = SongFactory.query();
-    }
+  .controller("SongShowController", [
+    "SongFactory",
+    "$stateParams",
+    SongShowControllerFunction
+  ])
+
+
 
  function SongFactoryFunction( $resource ){
      return $resource( "http://localhost:3000/songs/:id.json" );
    }
+
+  function SongIndexControllerFunction( SongFactory ){
+      this.songs = SongFactory.query();
+     }
+
+  function SongShowControllerFunction(SongFactory, $stateParams){
+    this.song = SongFactory.get({id: $stateParams.id})
+  }
 
   function RouterFunction($stateProvider){
     $stateProvider
@@ -42,5 +54,12 @@ angular
       controller: "SongIndexController",
       controllerAs: "vm"
 
+    })
+
+    .state("songShow", {
+      url: "/songs/:id",
+      templateUrl: "js/ng-views/show.html",
+      controller: "SongShowController",
+      controllerAs: "vm"
     })
   }
