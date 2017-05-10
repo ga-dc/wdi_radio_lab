@@ -20,11 +20,13 @@ angular
 	.controller("SongEditController", [
 		"SongFactory",
 		"$stateParams",
+		"$state",
 		SongEditControllerFunction
 	])
 	.controller("SongShowController", [
 		"SongFactory",
 		"$stateParams",
+		"$state",
 		SongShowControllerFunction
 	])
 
@@ -61,10 +63,12 @@ function SongShowControllerFunction( SongFactory, $stateParams) {
 	console.log(this.song)
 }
 
-function SongEditControllerFunction( SongFactory, $stateParams) {
+function SongEditControllerFunction( SongFactory, $stateParams, $state) {
 	this.song = SongFactory.get({id: $stateParams.id})
-	this.update = function() {
-		this.song.$update({id: $stateParams.id})
+	this.update = function(data) {
+		this.song.$update({id: $stateParams.id}, function(data){
+			$state.go('songShow', {id: data.id})
+		})
 	}
 }
 

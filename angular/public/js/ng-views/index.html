@@ -1,5 +1,5 @@
 <div data-ng-repeat="song in vm.songs">
   <h3><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a> by {{song.artist}}</h3>
   <img ng-src="{{song.album_art_url}}" />
-  <!-- <a data-ui-sref="songEdit({ id: song.id})">Edit</a> -->
+  <a data-ui-sref="songEdit({ id: song.id})">Edit</a>
 </div>
