@@ -10,12 +10,17 @@ angular
 		RouterFunction
 	])
 	.factory( "SongFactory", [
-	"$resource",
-	 SongFactoryFunction 
+		"$resource",
+		SongFactoryFunction 
 	 ])
 	.controller("SongIndexController", [
 		"SongFactory", 
 		SongIndexControllerFunction
+	])
+	.controller("SongEditController", [
+		"SongFactory",
+		"$stateParams",
+		SongEditControllerFunction
 	])
 	.controller("SongShowController", [
 		"SongFactory",
@@ -27,7 +32,7 @@ angular
 function RouterFunction($stateProvider) {
 	$stateProvider
 	.state("songIndex", {
-		url: "/songs",
+		url: "/",
 		templateUrl: "/js/ng-views/index.html",
 		controller: "SongIndexController",
 		controllerAs: "vm"
@@ -36,6 +41,12 @@ function RouterFunction($stateProvider) {
 		url: "/songs/:id",
 		templateUrl: "/js/ng-views/show.html",
 		controller: "SongShowController",
+		controllerAs: "vm"
+	})
+	.state('songEdit', {
+		url: "/songs/:id/edit",
+		templateUrl: "/js/ng-views/edit.html",
+		controller: "SongEditController",
 		controllerAs: "vm"
 	})
 }
@@ -50,12 +61,15 @@ function SongShowControllerFunction( SongFactory, $stateParams) {
 	console.log(this.song)
 }
 
-function SongFactoryFunction($resource) {
-	return $resource( "http://localhost:3000/songs/:id.json")
+function SongEditControllerFunction( SongFactory, $stateParams) {
+	this.song = SongFactory.get({id: $stateParams.id})
+	this.update = function() {
+		this.song.$update({id: $stateParams.id})
+	}
 }
 
-// function FactoryFunction($resource) {
-//   return $resource( "http://localhost:3000/songs/:id.json", {}, {
-//     update: { method: "PUT" }
-//   })
-// }
+function SongFactoryFunction($resource) {
+	return $resource( "http://localhost:3000/songs/:id", {}, {
+	    update: { method: "PUT" }
+	  })
+}

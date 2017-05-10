@@ -1,7 +1,7 @@
 class CreateSongs < ActiveRecord::Migration[5.0]
   def change
     create_table :songs do |t|
-    	t.string :song
+    	t.string :title
     	t.string :album
     	t.string :album_art_url
     	t.string :song_url

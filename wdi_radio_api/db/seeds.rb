@@ -8,7 +8,7 @@
 Song.destroy_all
 
 riff_raff = Song.create({
-  song: "TiP TOE WiNG iN MY JAWWDiNZ",
+  title: "TiP TOE WiNG iN MY JAWWDiNZ",
   album_art_url: "https://upload.wikimedia.org/wikipedia/en/thumb/8/86/RiFFRAFFNeonIconCover.jpg/220px-RiFFRAFFNeonIconCover.jpg",
   album: "Neon Icon",
   song_url: "https://soundcloud.com/riffraffradio/riff-raff-tip-toe-wing-in-my-jawwwdinz",
@@ -16,7 +16,7 @@ riff_raff = Song.create({
 })
 
 owen = Song.create({
-  song: "Bird in hand",
+  title: "Bird in hand",
   album_art_url: "https://f4.bcbits.com/img/a3137103707_10.jpg",
   album: "At Home with Owen",
   song_url: "https://www.youtube.com/watch?v=I2IZbnsdzOk",
@@ -24,7 +24,7 @@ owen = Song.create({
 })
 
 suicide_boys = Song.create({
-  song: "Back from the Dead",
+  title: "Back from the Dead",
   album_art_url: "https://f4.bcbits.com/img/a1829342645_10.jpg",
   album: "",
   song_url: "https://soundcloud.com/rewingus/uicide-boy-back-from-the-dead",
@@ -32,7 +32,7 @@ suicide_boys = Song.create({
 })
 
 jabroni = Song.create({
-  song: "Jabroni",
+  title: "Jabroni",
   album_art_url: "http://3.bp.blogspot.com/-plem4KuC6-I/T43lX6Pc5II/AAAAAAAAVoA/GXCz6mc82bU/s400/the%2Brock%2Bdwayne%2Bjohnson.jpg",
   album: "The Jabronis united",
   song_url: "https://soundcloud.com/rewingus/uicide-boy-back-from-the-dead",

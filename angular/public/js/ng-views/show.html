@@ -1,5 +1,6 @@
-<h1>Single song</h1>
-<h2>{{vm.song.song}}</h2>
+<h1><a data-ui-sref="songIndex">All Songs</a></h1>
+<div><a ui-sref="songEdit({id: vm.song.id})">Edit</a></div>
+<h2>{{vm.song.title}}</h2>
 <h3>By {{ vm.song.artist}}</h3>
 <p>Album: {{ vm.song.album}}</p>
 

@@ -12,9 +12,6 @@ class SongsController < ApplicationController
     render json: @song
   end
 
-  def edit
-  end
-
   def create
     @song = Song.new(song_params)
 
@@ -26,20 +23,19 @@ class SongsController < ApplicationController
   end
 
   def update
-    if @song.update(song_params)
-      render :show, status: :ok, location: @song
-    else
-      render json: @song.errors, status: :unprocessable_entity
-    end
+    @song = Song.find(params[:id])
+    @song.update!(song_params)
+    render json: @song
   end
 
   def destroy
+    @song = Song.find(params[:id])
     @song.destroy
-    format.json { head :no_content }
+    render nothing:true
   end
 
   private
     def song_params
-      params.require(:song).permit(:song, :album, :album_art_url, :song_url, :artist)
+      params.require(:song).permit( :album, :album_art_url, :song_url, :artist, :title)
     end
 end
