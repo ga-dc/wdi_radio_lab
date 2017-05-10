@@ -1,6 +1,14 @@
+"use strict";
+
+(function(){
+
 angular
 	.module("radio", ["ui.router", "ngResource"])
 	.config(["$stateProvider", Router])
+	.factory("RadioFactory", [
+		"$resource",
+		RadioFactoryFunction
+		])
 	.controller("RadioWelcomeController", [
 		RadioWelcomeControllerFunction
 		])
@@ -8,9 +16,10 @@ angular
 		"RadioFactory",
 		RadioIndexControllerFunction
 		])
-	.factory("RadioFactory", [
-		"$resource",
-		RadioFactoryFunction
+	.controller("RadioShowController", [
+		"RadioFactory",
+		"$stateParams",
+		RadioShowControllerFunction
 		])
 	
 
@@ -29,6 +38,12 @@ angular
 			controllerAs: "vm",
 			templateUrl: "js/ng-views/index.html"
 		})
+		.state("radioShow", {
+			url: "/songs/:id",
+			controller: "RadioShowController",
+			controllerAs: "vm",
+			templateUrl: "js/ng-views/show.html"
+		})
 	}
 
 	function RadioWelcomeControllerFunction(){
@@ -38,10 +53,16 @@ angular
 	function RadioIndexControllerFunction(RadioFactory){
 		console.log("and I'm in the index controller!")
 		this.songs = RadioFactory.query();
-	
+		
+	}
+
+	function RadioShowControllerFunction(RadioFactory, $stateParams) {
+		this.song = RadioFactory.get({id: $stateParams.id});
 	}
 
 	function RadioFactoryFunction($resource){
-		return $resource("http://localhost:3000/songs/:id")
-		}
+		return $resource("http://localhost:3000/songs/:id.json")
+		
 	}
+
+})();

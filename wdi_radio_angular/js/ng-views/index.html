@@ -1,1 +1,6 @@
 <h1>All the Songs</h1>
+
+<div ng-repeat="song in vm.songs">
+<p><a ui-sref="radioShow({id: $index + 1})">{{song.title}}</a></p>
+
+</div>
