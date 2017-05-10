@@ -1,0 +1,54 @@
+* {
+font-family: 'Courgette', cursive;	
+}
+
+.welcome-main {
+	align-items: center;
+	background-color: black;
+	color: #ff00ae;
+	display: flex;
+	flex-wrap: wrap;
+	
+	height: 100vh;
+	justify-content: center;
+}
+
+.welcome {
+	border-bottom: 5px solid #ff00ae;
+	border-top: 5px solid #ff00ae;
+	font-size: 72px;
+	padding: 5%;
+}
+
+.link-to-index a {
+	color: #ff00ae;
+	text-decoration: none;
+}
+
+.link-to-index {
+	
+	margin-top: 5%;
+	font-size: 24px;
+	width: 100%;
+
+}
+.songs-wrapper {
+	background-color: black;
+	display:flex;
+	flex-wrap: wrap;
+}
+
+.song-listing {
+	align-items: center;
+	background-color: #ff00ae;
+	border-radius: 50%;
+	display:flex;
+	justify-content: center;
+	height: 250px;
+	width: 250px;
+}
+
+.song-listing a {
+	color: white;
+	text-decoration: none;
+}
