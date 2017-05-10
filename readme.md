@@ -2,7 +2,7 @@
 
 Please fork this repo. By 5:00pm Wednesday, May 10th, submit your work as a **pull request**.
 
-## User Stories
+## User Stories.
 
 - As a user, when I go to the app's root url, I should see a welcome page.
 - As a user, when I visit "/songs", I should be able to see all of the songs in my database.
