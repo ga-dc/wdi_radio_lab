@@ -13,9 +13,15 @@ angular
     "SongFactory",
     "$stateParams",
     SongShowControllerFunction
-  ]).controller("SongNewController", [
+  ])
+  .controller("SongNewController", [
     "SongFactory",
     SongNewControllerFunction
+  ])
+  .controller("SongEditController", [
+    "SongFactory",
+    "$stateParams",
+    SongEditControllerFunction
   ])
 
   // functions
@@ -40,11 +46,19 @@ angular
       controller: "SongShowController",
       controllerAs: "vm"
     })
+    .state("songEdit", {
+      url: "/songs/:id/edit",
+      templateUrl: "js/ng-views/edit.html",
+      controller: "SongEditController",
+      controllerAs: "vm"
+    })
   }
 
 
   function SongFactoryFunction($resource){
-    return $resource("http://localhost:3000/songs/:id.json");
+    return $resource("http://localhost:3000/songs/:id.json", {}, {
+      update: {method: "PUT"}
+    });
   }
 
   function SongsIndexControllerFunction ( SongFactory ){
@@ -59,6 +73,13 @@ angular
     this.song = new SongFactory();
     this.create = function(){
       this.song.$save()
+    }
+  }
+
+  function SongEditControllerFunction(SongFactory, $stateParams){
+    this.song = SongFactory.get({id: $stateParams.id});
+    this.update = function(){
+      this.song.$update({id: $stateParams.id})
     }
   }
 

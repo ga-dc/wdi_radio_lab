@@ -25,6 +25,16 @@ class SongsController < ApplicationController
     end
   end
 
+  def update
+    @song = Song.find(params[:id])
+    if @song.update(song_params)
+      # render json: @song.to_json, status: :ok
+      render json: @song
+    else
+      render json: @song.errors, status: :unprocessable_entity
+    end
+  end
+
   private
     # Never trust parameters from the scary internet, only allow the white list through.
     def song_params
