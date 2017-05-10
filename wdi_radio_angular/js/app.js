@@ -21,6 +21,10 @@ angular
 		"$stateParams",
 		RadioShowControllerFunction
 		])
+	.controller("RadioNewController", [
+		"RadioFactory",
+		RadioNewControllerFunction
+		])
 	
 
 
@@ -38,12 +42,25 @@ angular
 			controllerAs: "vm",
 			templateUrl: "js/ng-views/index.html"
 		})
+		//new must be put before show
+		.state("radioNew", {
+			url: "/songs/new",
+			controller: "RadioNewController",
+			controllerAs: "vm",
+			templateUrl: "js/ng-views/new.html"
+		})
 		.state("radioShow", {
 			url: "/songs/:id",
 			controller: "RadioShowController",
 			controllerAs: "vm",
 			templateUrl: "js/ng-views/show.html"
 		})
+	
+	}
+
+	function RadioFactoryFunction($resource){
+		return $resource("http://localhost:3000/songs/:id.json")
+		
 	}
 
 	function RadioWelcomeControllerFunction(){
@@ -53,16 +70,21 @@ angular
 	function RadioIndexControllerFunction(RadioFactory){
 		console.log("and I'm in the index controller!")
 		this.songs = RadioFactory.query();
-		
 	}
 
 	function RadioShowControllerFunction(RadioFactory, $stateParams) {
 		this.song = RadioFactory.get({id: $stateParams.id});
 	}
 
-	function RadioFactoryFunction($resource){
-		return $resource("http://localhost:3000/songs/:id.json")
-		
+	function RadioNewControllerFunction(RadioFactory) {
+		this.song = new RadioFactory();
+		this.create = function(){
+			this.song.$save( function(song) {
+				$state.go("radioShow", {id: song.id})
+			})
+		}
 	}
+
+	
 
 })();
