@@ -23,6 +23,7 @@ angular
 		])
 	.controller("RadioNewController", [
 		"RadioFactory",
+		"$state",
 		RadioNewControllerFunction
 		])
 	
@@ -76,7 +77,7 @@ angular
 		this.song = RadioFactory.get({id: $stateParams.id});
 	}
 
-	function RadioNewControllerFunction(RadioFactory) {
+	function RadioNewControllerFunction(RadioFactory, $state) {
 		this.song = new RadioFactory();
 		this.create = function(){
 			this.song.$save( function(song) {
