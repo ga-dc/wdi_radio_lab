@@ -28,10 +28,10 @@ angular
 
 
  function SongFactoryFunction( $resource ){
-     return $resource( "http://localhost:3000/songs/:id.json" );
+     return $resource( "http://localhost:3000/songs/:id" );
    }
 
-  function SongIndexControllerFunction( SongFactory ){
+  function SongIndexControllerFunction(SongFactory){
       this.songs = SongFactory.query();
      }
 
