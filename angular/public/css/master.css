@@ -5,4 +5,10 @@ img {
 
 a {
   text-decoration: none;
+  color: brown;
+}
+
+#Songs a {
+  text-decoration: underline;
+  color: black;
 }

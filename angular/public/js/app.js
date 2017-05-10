@@ -22,6 +22,10 @@ angular
     "$stateParams",
     SongShowControllerFunction
   ])
+  .controller("SongNewController", [
+    "SongFactory",
+    SongNewControllerFunction
+  ])
 
 
 function SongFactoryFunction($resource) {
@@ -36,12 +40,19 @@ function RouterFunction($stateProvider) {
       controller: "SongIndexController",
       controllerAs: "vm"
     })
+    .state("songNew", {
+      url: "/songs/new",
+      templateUrl: "js/ng-views/new.html",
+      controller: "SongNewController",
+      controllerAs: "vm"
+    })
     .state("songShow", {
       url: "/songs/:id",
       templateUrl: "js/ng-views/show.html",
       controller: "SongShowController",
       controllerAs: "vm"
     })
+
 }
 
 function SongIndexControllerFunction(SongFactory) {
@@ -52,4 +63,11 @@ function SongShowControllerFunction(SongFactory, $stateParams) {
   this.song = SongFactory.get({
     id: $stateParams.id
   })
+}
+
+function SongNewControllerFunction(SongFactory) {
+  this.song = new SongFactory();
+  this.create = function() {
+    this.song.$save()
+  }
 }
