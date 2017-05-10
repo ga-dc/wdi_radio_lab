@@ -31,11 +31,16 @@ function RouterFunction($stateProvider){
     controller: "SongIndexController",
     controllerAs: "vm"
   })
+  .state("songShow", {
+    url: "/songs/:id",
+    templateUrl: "js/ng-views/show.html",
+    controller: "SongShowController",
+    controllerAs: "vm"
+  })
 }
 
 function SongIndexControllerFunction(SongFactory){
   this.songs = SongFactory.query();
-  console.log(this.songs)
 }
 
 function SongShowControllerFunction(SongFactory, $stateParams){
