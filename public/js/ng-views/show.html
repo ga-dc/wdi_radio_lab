@@ -1,0 +1,7 @@
+<div>The Best Songs of the Season</div>
+<div ng-repeat="song in vm.songs">
+  <p>{{song.title}}</p>
+  <p>{{song.artist}}</p>
+  <p>{{song.genre}}</p>
+  <img ng-src={{song.album_art}}>
+</div>
