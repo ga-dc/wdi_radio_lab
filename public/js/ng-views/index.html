@@ -1,0 +1,29 @@
+<div class = "songsView">
+  <div class = "eachSong" data-ng-repeat="song in vm.songs">
+    <div class="albums" ng-mouseover="option=true" ng-mouseleave="option=false" style="background: url('{{song.album_art}}'); background-size: cover">
+      <button class="edit_button" ng-show="option"  ng-click="edit = !edit">Edit Song</button>
+        <div class="edit_form" ng-show="option">
+          <form class="editing" ng-show="edit" ng-submit="vm.update(song)">
+            <input placeholder="Title" ng-model="song.title">
+            <input placeholder="Audio Sample" ng-model="song.audio_url">
+            <input placeholder="Album Art" ng-model="song.album_art">
+            <input placeholder="Artist" ng-model="song.artist"x>
+            <input placeholder="Genre" ng-model="song.genre">
+            <button type="submit">Edit</button>
+            <button type="submit" ng-click="vm.delete(song)">Delete</button>
+          </form>
+        </div>
+    </div>
+    <br>
+  </div>
+</div>
+
+<h2> Add New Song</h2>
+  <form ng-submit="vm.create()">
+    <input type="text" placeholder="Title" ng-model="vm.newSong.title">
+    <input type="text" placeholder="Artist" ng-model="vm.newSong.artist">
+    <input type="text" placeholder="Album Cover URL" ng-model="vm.newSong.album_url">
+    <input type="text" placeholder="Genre" ng-model="vm.newSong.genre">
+    <input type="text" placeholder="Audio URL" ng-model="vm.newSong.audio_url">
+    <button type="submit">Add Song</button>
+  </form>

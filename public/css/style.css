@@ -1,0 +1,71 @@
+html {
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/9e/14/82/9e1482a327a7959266addff2fde0d8fc.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+h1,h2 {
+
+  /*color: rgb(251, 246, 107);*/
+  color: rgb(10, 248,	251	);
+  text-shadow: -1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
+  text-align: center;
+  font-family: 'Fascinate Inline', cursive;
+}
+p {
+  color: rgb(251, 246, 107);
+  text-shadow: -1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
+  text-align: center;
+}
+
+a {
+  color: rgb(10, 248,	251);
+}
+
+
+button {
+  align-self: flex-start;
+  margin: auto;
+  background-color: rgb(10, 248,	251);
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 11px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+.editing{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+input {
+  width: 200px;
+  margin: auto;
+}
+
+.songsView {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.eachSong {
+  margin: 20px;
+}
+
+.albums {
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+  padding-top: 15px;
+
+}
