@@ -1,0 +1,58 @@
+*{
+  font-family: sans-serif;
+
+}
+
+header{
+  background-color: black;
+  color: white;
+  padding: 20pt;
+  width: 100%;
+  margin: 0;
+  font-family: 'Rubik Mono One', sans-serif;
+  font-size: 50pt;
+  text-shadow: 2px 2px #5aa800;
+  text-align: center;
+}
+
+body{
+  background-image: url("../../style/musicbackground.jpg");
+  background-size: cover;
+}
+
+main{
+  background-color: hsla(88, 100%, 33%, 0.58);
+  margin: 10pt;
+  padding: 20pt;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+h1{
+  font-family: 'Rubik Mono One', sans-serif;
+  text-decoration-line: none;
+}
+
+.songs{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+img{
+  width: 300px;
+}
+.song-info{
+  margin-top: 5pt;
+  color: white;
+  font-family: sans-serif;
+}
+
+.song{
+  background-color:black;
+  margin: 10px;
+  padding: 10px;
+}
