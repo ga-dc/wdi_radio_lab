@@ -1,0 +1,15 @@
+<h1>Library</h1>
+<div ng-repeat="song in vm.songs">
+  <p class="songtitle">{{song.title}}</p>
+  <p class="songartist">{{song.artist}}</p>
+  <img class="songimage" ng-src="{{song.photoUrl}}">
+</div>
+
+<h2>Create a New Song </h1>
+
+  <form ng-submit="vm.create()">
+    <input placeholder="Title" ng-model="vm.newSong.title">
+    <input placeholder="Artist" ng-model="vm.newSong.artist">
+    <input placeholder="Image" ng-model="vm.newSong.photoUrl">
+    <button type="submit">Add a new song</button>
+  </form>
