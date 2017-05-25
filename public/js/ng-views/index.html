@@ -1,0 +1,15 @@
+<div class="song-gallery">
+    <div class="new-song-form">
+      <h2>New Song</h2>
+      <input type="text" ng-model="vm.newSong.title" placeholder="Title">
+      <input type="text" ng-model="vm.newSong.artist" placeholder="Artist">
+      <input type="text" ng-model="vm.newSong.genre" placeholder="Genre">
+      <input type="text" ng-model="vm.newSong.image_url" placeholder="URL for Album Art">
+      <button type="button" ng-click="vm.addNewSong()">Add Song</button>
+    </div>
+    <div ng-repeat="song in vm.songs | orderBy: '-'" ng-click="vm.playSong(song)" class="album-cover" style="background: url('{{song.image_url}}'); background-size: cover; background-position: center top">
+      <div class="song-details">
+        <h3>{{song.title}}</h3>
+      </div>
+    </div>
+</div>
