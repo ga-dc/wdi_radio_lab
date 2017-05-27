@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Really Love",
+    "mp3": "http://www.wdidc.org/wdi-radio-lab-assets/mp3/D%27Angelo%2c%20The%20Vanguard%20-%20Really%20Love.mp3",
+    "image": "http://www.wdidc.org/wdi-radio-lab-assets/img/really_love_dangelo.jpeg",
+    "artist": "D'Angelo",
+    "genre": "R&B"
+  },
+  {
+    "title": "Wildfire",
+    "mp3": "http://www.wdidc.org/wdi-radio-lab-assets/mp3/SBTRKT%20-%20Wildfire.mp3",
+    "image": "http://www.wdidc.org/wdi-radio-lab-assets/img/wildfire_sbtrkt.jpeg",
+    "artist": "sbtrkt",
+    "genre": "Electric"
+  },
+  {
+    "title": "Hang Loose",
+    "mp3": "http://www.wdidc.org/wdi-radio-lab-assets/mp3/Alabama%20Shakes%20-%20Hang%20Loose.mp3",
+    "image": "http://www.wdidc.org/wdi-radio-lab-assets/img/hang_loose_alabama_shakes.jpeg",
+    "artist": "Alabama Shakes",
+    "genre": "Rock"
+  }
+]
