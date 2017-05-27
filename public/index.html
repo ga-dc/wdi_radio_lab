@@ -1,15 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="songs">
   <head>
     <title>WDI Radio</title>
-    <script src="js/app.js"></script>
-
+  <link href='https://fonts.googleapis.com/css?family=Luckiest+Guy' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <header>WDI Radio</header>
+    <header>
+    <h1 data-ui-sref="Welcome">WDI Radio</h1>
+    </header>
 
-    Welcome to the World's Best Song App
+    <main data-ui-view class="cf"></main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="js/app.js"></script>
 
 
+    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
+
+
+    <script>
+    var config = {
+      apiKey: "AIzaSyDYslSIM_zF2Gml_v8sPyDNMBkJ6ah5AC8",
+      authDomain: "radio-lab.firebaseapp.com",
+      databaseURL: "https://radio-lab.firebaseio.com",
+      storageBucket: "radio-lab.appspot.com",
+      messagingSenderId: "222627915304"
+    };
+    firebase.initializeApp(config);
+  </script>
   </body>
 </html>
