@@ -1,0 +1,9 @@
+<h2>All Songs</h2>
+
+<div data-ng-repeat="song in indexVm.songs">
+  <a data-ui-sref="songShow({id: song.$id})">{{song.title}}</a>
+  <a data-ui-sref="songShow({id: song.$id})">{{song.audio_url}}</a>
+  <img data-ng-src="{{song.album_art}}" alt="">
+  <a data-ui-sref="songShow({id: song.$id})">{{song.artist}}</a>
+  <a data-ui-sref="songShow({id: song.$id})">{{song.genre}}</a>
+</div>
