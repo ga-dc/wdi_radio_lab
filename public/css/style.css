@@ -1,0 +1,70 @@
+body{
+  margin: 0 auto;
+  padding: 0;
+  background: url('../images/radio.png') no-repeat;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.9);
+
+}
+h1, h2, h3, h4{
+  font-family:'Luckiest Guy', sans-serif;
+}
+
+h1{
+  font-size: 6em;
+  text-align:center;
+  letter-spacing:.05em;
+  color:#fff;
+  text-shadow:.05em .05em 0 #000;
+  -webkit-text-stroke: 1px #000;
+}
+
+h2, h3{
+  text-align:center;
+  font-size:3em;
+  letter-spacing:.05em;
+}
+.welcome_view{
+     width: 1000px;
+     border: 5px black solid;
+     border-radius: 10px;
+     background-color: rgba(255, 255, 255, 0.5);
+     margin: 0 auto;
+}
+.songs_view{
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 1000px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.each_song{
+  margin: 10px;
+}
+
+.newbutton{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 100px;
+    background-color:  rgba(165, 135, 125, 0.5);
+
+}
+
+.albums{
+  height: 400px;
+  width: 400px;
+}
+
+.each_title{
+  color: #fff;
+  font-size:3em;
+  letter-spacing:.05em;
+}

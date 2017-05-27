@@ -1,0 +1,41 @@
+<h2>All songs</h2>
+
+
+<div class="songs_view" ng-controller ="RadioIndexController as vm" >
+
+<div class="each_song" data-ng-repeat="song in vm.songs">
+  <div class="albums" ng-mouseover="option=true" ng-mouseleave="option=false" style="background: url('{{song.photoUrl}}'); background-size: cover">
+    <button class="edit_button" ng-show="option"  ng-click="edit = !edit">Edit</button>
+    <!-- <img ng-src={{song.photoUrl}} /> -->
+    <div class="edit_form" ng-show="option">
+      <form class="editing" ng-show="edit" ng-submit="vm.update(song)">
+        <input placeholder="Title" ng-model="song.title">
+        <input placeholder="Audio" ng-model="song.songUrl">
+        <input placeholder="Photo" ng-model="song.photoUrl">
+        <input placeholder="Artist" ng-model="song.artistName">
+        <input placeholder="Genre" ng-model="song.genre">
+        <button type="submit">Edit</button>
+        <button type="submit" ng-click="vm.delete(song)">Delete</button>
+      </form>
+    </div>
+    <div class="each_title">
+        {{song.title}}
+    </div>
+</div>
+
+</div>
+
+
+
+<div class="new_song">
+
+  <form ng-submit="vm.create()">
+  title: <input type="text" ng-model='vm.newSong.title'>
+   artist: <input type="text" ng-model='vm.newSong.artistName'>
+   genre: <input type="text" ng-model='vm.newSong.genre'>
+   image: <input type="text" ng-model='vm.newSong.photoUrl'>
+   <button type="submit">Add Song</button>
+
+
+  </form>
+ </div>
