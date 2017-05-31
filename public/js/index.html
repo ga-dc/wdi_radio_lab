@@ -1,0 +1,6 @@
+<div ng-repeat="data in vm.data">
+  <p>{{data.songTitle}}</p>
+  <p><a data-ui-sref="radioShow({id: data.$id})"> click here to view this song</a></p>
+  <p><a data-ui-sref="radioUpdate({id: data.$id})"> click here to update this song</a></p>
+  <button ng-click="vm.delete(data)"> Click here to delete this </button>
+</div>
