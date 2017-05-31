@@ -23,9 +23,12 @@ angular
     "SongFactory",
     "$stateParams",
     SongEditControllerFunction
+  ])
+  .controller("SongShowController", [
+    "SongFactory",
+    "$stateParams",
+    SongShowControllerFunction
   ]);
-
-
 
   function RouterFunction($stateProvider){
     $stateProvider
@@ -47,28 +50,41 @@ angular
       controller:"SongEditController",
       controllerAs:"vm"
     })
+    .state("songShow", {
+      url: "/songs/:id",
+      templateUrl: "js/ng-views/show.html",
+      controller: "SongShowController",
+      controllerAs: "vm"
+    })
   }
+
     function SongFactoryFunction($resource){
-      return $resource( "http://localhost:3000/songs.json", {}, {});
+      return $resource( "http://127.0.0.1:3000/songs/:id", {}, {
+        update: {method: "PUT"}
+      });
     }
 
     function SongIndexControllerFunction(SongFactory){
       this.songs = SongFactory.query();
     }
+    function SongNewControllerFunction(SongFactory) {
+      this.song = new SongFactory()
+      this.create = function(){
+        this.song.$save()
+      }
+    }
+
+    function SongShowControllerFunction(SongFactory, $stateParams){
+      this.song = SongFactory.get({id: $stateParams.id});
+    }
 
     function SongEditControllerFunction(SongFactory, $stateParams) {
       this.song = SongFactory.get({id: $stateParams.id});
       this.update = function(){
-      this.song.$update({id: $stateParams.id});
+        debugger;
+        this.song.$update({id: $stateParams.id});
       }
       this.destroy = function(){
-        this.grumble.$delete({id: $stateParams.id});
-      }
-    }
-
-    function SongNewControllerFunction(SongFactory) {
-      this.song = new SongFactory();
-      this.create = function(){
-        this.song.$save();
+        this.song.$delete({id: $stateParams.id});
       }
     }

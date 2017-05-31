@@ -1,0 +1,9 @@
+<h2>This is a Song</h2>
+
+
+<p>{{vm.song.title}}</p>
+<p>{{vm.song.artist}}</p>
+<p>{{vm.song.album}}</p>
+<img data-ng-src={{vm.song.album_art}}>
+
+<p><a data-ui-sref="songEdit({id: vm.song.id})">Edit Song</a></p>

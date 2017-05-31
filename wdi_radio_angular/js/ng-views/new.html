@@ -1,8 +1,9 @@
 <h1>New Song</h1>
 
 <form>
-  <p><label>Title: <input placeholder='title'></label></p>
-  <p><label>Artist: <input placeholder='artist'></label></p>
-  <p><label>Album: <input placeholder='album'></label></p>
-  <p><label>Album Art: <input placeholder='album art'></label></p>
+  <p><label>Title: <input placeholder='title' data-ng-model=vm.song.title></label></p>
+  <p><label>Artist: <input placeholder='artist' data-ng-model=vm.song.artist></label></p>
+  <p><label>Album: <input placeholder='album' data-ng-model=vm.song.album></label></p>
+  <p><label>Album Art: <input placeholder='album art' data-ng-model=vm.song.album_art></label></p>
+  <button type='button' data-ng-click='vm.create()'>Add</button>
 </form>
