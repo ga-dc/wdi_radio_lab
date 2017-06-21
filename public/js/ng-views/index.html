@@ -1,0 +1,16 @@
+<h1>RadioApp<h1>
+
+<div>{{song.artist}}</div>
+  <div>{{song.song}}</div>
+   <div>{{song.url}}</div>
+
+<div ng-repeat="song in vm.songs">
+  <input type="text" ng-model="song.title" ng-change="vm.update(song)">
+  <input type="text" ng-model="song.title" ng-change="vm.update(song)">
+  <input type="text" ng-model="song.title" ng-change="vm.update(song)">
+</div>
+
+<form ng-submit="vm.create()">
+  <input ng-model="vm.newSongText">
+  <button tyoe="submit">Add Song</button>
+</form>
