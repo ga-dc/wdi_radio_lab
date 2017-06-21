@@ -1,0 +1,8 @@
+<h3>All Our Songs</h3>
+<h4>So far...</h4>
+
+<div>
+	<ul ng-repeat="song in vmAll.songs">
+		<a ui-sref=""><li>{{song.song_title}} by: {{song.artist}} <!-- {{song.preview_url}} --></li></a>
+	</ul>
+</div>
