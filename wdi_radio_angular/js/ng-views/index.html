@@ -1,0 +1,8 @@
+<a data-ui-sref='songNew'>Add Song</a>
+
+<div data-ng-repeat="song in vm.songs">
+  <a data-ui-sref="songShow({id: song.id})"><p>{{song.title}}</p></a>
+  <p>{{song.artist}}</p>
+  <p>{{song.album}}</p>
+  <img data-ng-src={{song.album_art}}>
+</div>
