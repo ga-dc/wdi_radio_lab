@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Song.destroy_all
 
-song = Song.create!(song_title:"Wait and Bleed",artist:"Slipknot",preview_url:"#")
-song = Song.create!(song_title:"Throne",artist:"Bring Me the Horizon",preview_url:"#")
-song = Song.create!(song_title:"Omerta",artist:"Lamb of God",preview_url:"#")
-song = Song.create!(song_title:"Big Bad Wolf",artist:"In this Moment",preview_url:"#")
-song = Song.create!(song_title:"Turn Down for What",artist:"Upon a Burning Body",preview_url:"#")
+song = Song.create!(song_title:"Wait and Bleed",artist:"Slipknot",preview_url:"http://")
+song1 = Song.create!(song_title:"Throne",artist:"Bring Me the Horizon",preview_url:"http://")
+song2 = Song.create!(song_title:"Omerta",artist:"Lamb of God",preview_url:"http://")
+song3 = Song.create!(song_title:"Big Bad Wolf",artist:"In this Moment",preview_url:"http://")
+song4 = Song.create!(song_title:"Turn Down for What",artist:"Upon a Burning Body",preview_url:"http://")
