@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Swamp Thing",
+    "audioUrl": "<iframe src=\"https://embed.spotify.com/?uri=spotify%3Atrack%3A5FsERguViYvDGLbOT2E9Pf\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"></iframe>",
+    "albumArt": "https://i1.sndcdn.com/artworks-000120334332-x0dwqb-t500x500.jpg",
+    "artist": "Pegboard Nerds",
+    "genre": "Electronic"
+  },
+  {
+    "title": "Blackheart",
+    "audioUrl": "<iframe src=\"https://embed.spotify.com/?uri=spotify%3Atrack%3A2jn89xTHIVsy167uOmAewt\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"></iframe>",
+    "albumArt": "https://upload.wikimedia.org/wikipedia/en/e/e0/TSFH-SkyWorld-Steven-R-Gilmore.jpg",
+    "artist": "Two Steps From Hell",
+    "genre": "Instrumental"
+  },
+  {
+    "title": "Becoming a Legend",
+    "audioUrl": "<iframe src=\"https://embed.spotify.com/?uri=spotify%3Atrack%3A6lzqFs6RCw4cqjPvx197Cq\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"></iframe>",
+    "albumArt": "https://images.shazam.com/coverart/t92052363-i551913679_s400.jpg",
+    "artist": "John Dreamer",
+    "genre": "Epic"
+  },
+  {
+    "title": "...Steel for Humans",
+    "audioUrl": "<iframe src=\"https://embed.spotify.com/?uri=spotify%3Atrack%3A6NuT12xM2tDj64vJkmcsCw\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"></iframe>",
+    "albumArt": "https://lh3.googleusercontent.com/XgxVNEMsxxost__bQLA2Z6sx60tncrxp5Klrjr12x3J954IVZKHcJ5_849kjEwDKh469-zBz=w300",
+    "artist": "Percival Schuttenbach",
+    "genre": "Polish Folk"
+  }
+]
