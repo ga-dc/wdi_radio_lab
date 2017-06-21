@@ -1,11 +1,1 @@
 <h1>All The Songs</h1>
-
-<% @songs.each do |song| %>
-  <div>
-    <h2><%= song.title %></h2>
-    <h2><%= song.album %></h2>
-    <h3>By: <%= song.artist %></h3>
-    <p><%= song.genre %></p>
-    <%= image_tag song.preview_url %>
-  </div>
-<% end %>
