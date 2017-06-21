@@ -1,34 +1,49 @@
-let songsData = [
-  { title: 'Get Lucky'},
-  { title: 'Beyond'},
-  { title: 'Instant Crush'}
-]
+// let songsData = [
+//   { title: 'Get Lucky', artist: 'Daft Punk' },
+//   { title: 'Beyond', artist: 'Daft Punk' },
+//   { title: 'Instant Crush', artist: 'Daft Punk' }
+// ]
 
 angular
-.module("wdi-radio", ["ui.router"])
+.module("wdi-radio", [
+  "ui.router",
+  "ngResource"
+])
 .config(["$stateProvider", RouterFunction])
 
-.controller("SongsController", [
-    SongsControllerFunction
-  ])
+.factory( "SongsFactory", [
+  "$resource",
+  SongsFactoryFunction
+])
+
+
+.controller("SongsIndexController", [
+    "SongsFactory",
+    SongsIndexControllerFunction
+  ]);
 
   function RouterFunction($stateProvider){
     $stateProvider
     .state("home", {
       url: "/",
-      controller: "SongsController",
+      controller: "SongsIndexController",
       controllerAs: "vm",
       templateUrl: "js/songs-views/home.html"
     })
 
     .state("songsIndex", {
       url: "/songs",
-      controller: "SongsController",
+      controller: "SongsIndexController",
       controllerAs: "vm",
       templateUrl: "js/songs-views/index.html"
     });
   }
 
-  function SongsControllerFunction () {
-    this.songs = songsData
+  function SongsIndexControllerFunction (SongsFactory) {
+    this.songs = SongsFactory.query();
+  }
+
+
+  function SongsFactoryFunction($resource) {
+    return $resource ("http://localhost:3000/songs/:id.json");
   }
