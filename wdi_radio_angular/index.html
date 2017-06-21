@@ -9,11 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
     <script src="js/app.js"></script>
+    <!-- <base href="/" /> -->
   </head>
-  <body ng-controller="SongsController as vm">
-    <h2>Songs</h2>
-    <div ng-repeat="song in vm.songs">
-      <p>{{$index + 1}}. {{song.title}}</p>
-    </div>
+  <body ui-view>
   </body>
 </html>

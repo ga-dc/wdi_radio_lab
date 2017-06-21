@@ -1,0 +1,7 @@
+<h3><a ui-sref="home">HOME</a></h3>
+<h2>SONGS</h2>
+
+
+<div ng-repeat="song in vm.songs">
+  <p>{{$index + 1}}. {{song.title}}</p>
+</div>
