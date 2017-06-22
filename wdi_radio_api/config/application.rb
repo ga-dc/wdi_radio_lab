@@ -17,15 +17,13 @@ module WdiRadioApi
     'Access-Control-Request-Method' => %w{GET POST PUT DELETE OPTIONS}.join(",")
     }
 
-    # From grumblr factory lesson
-  # config.active_record.raise_in_transactional_callbacks = true
 
-  #   config.middleware.insert_before 0, "Rack::Cors" do
-  #     allow do
-  #       origins '*'
-  #       resource '*', :headers => :any, :methods => :any
-  #     end
-  #   end
+    # config.middleware.insert_before 0, Rack::Cors do
+    #   allow do
+    #     origins '*'
+    #     resource '*', :headers => :any, :methods => [:get, :post, :options]
+    #   end
+    # end
 
 
     # Settings in config/environments/* take precedence over those specified here.
