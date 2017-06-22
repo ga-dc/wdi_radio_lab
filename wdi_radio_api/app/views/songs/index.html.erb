@@ -1,0 +1,11 @@
+<h2>Songs</h2>
+
+<ul>
+  <% @songs.each do |song| %>
+    <li>
+        <%= song.title %>
+        <%= song.album %>
+        <%= song.preview_url %>
+    </li>
+  <% end %>
+</ul>
