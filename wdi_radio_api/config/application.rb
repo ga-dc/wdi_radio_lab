@@ -11,10 +11,23 @@ module WdiRadioApi
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
+    #code from stackoverflow/ works for get request but not post
     config.action_dispatch.default_headers = {
-    'Access-Control-Allow-Origin' => 'http://localhost:8080/#/songs',
-    'Access-Control-Request-Method' => %w{GET POST OPTIONS}.join(",")
-  }
+    'Access-Control-Allow-Origin' => 'http://localhost:8080',
+    'Access-Control-Request-Method' => %w{GET POST PUT DELETE OPTIONS}.join(",")
+    }
+
+    # From grumblr factory lesson
+  # config.active_record.raise_in_transactional_callbacks = true
+
+  #   config.middleware.insert_before 0, "Rack::Cors" do
+  #     allow do
+  #       origins '*'
+  #       resource '*', :headers => :any, :methods => :any
+  #     end
+  #   end
+
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
