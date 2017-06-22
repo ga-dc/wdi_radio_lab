@@ -57,7 +57,7 @@
 
 			this.create = function(){
 				this.newSong.$save().then(function(){
-					$state.go("songAll")
+					$state.go("songIndex")
 				})
 			}
 	}

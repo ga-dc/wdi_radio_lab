@@ -5,9 +5,9 @@
 <a href="#" ng-click="vmShow.hide = !vmShow.hide">Edit the Song</a>
 <div ng-show="vmShow.hide">
 	<form>
-		<input type="text" placeholder="Song Title" ng-model="vmShow.newSong.song_title">
-		<input type="text" placeholder="Artist" ng-model="vmShow.newSong.artist">
-		<input type="text" placeholder="Preview URL" ng-model="vmShow.newSong.preview_url">
+		<input type="text" placeholder="vmShow.song.song_title" ng-model="vmShow.song.song_title">
+		<input type="text" placeholder="vmShow.song.artist" ng-model="vmShow.song.artist">
+		<input type="text" placeholder="vmShow.song.preview_url" ng-model="vmShow.song.preview_url">
 	</form>
 <button ng-click="vmShow.update()">Submit Edits</button>
 <button ng-click="vmShow.destroy()">Delete Forever!!!</button>
