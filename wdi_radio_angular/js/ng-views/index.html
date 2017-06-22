@@ -1,0 +1,7 @@
+<h2>Enjoy these Songs</h2>
+
+<div data-ng-repeat="song in vm.songs">
+  <p><b>Song title:</b> {{song.title}}, <b>Album:</b> {{song.album}}</p>
+  <p><img ng-src="{{song.preview_url}}"></p>
+  <embed-video data-ng-href="https://www.youtube.com/watch?v=_BbNoQQUMgE" controls=0><a href="https://www.youtube.com/watch?v=_BbNoQQUMgE">Play Song</a></embed-video>
+</div>
