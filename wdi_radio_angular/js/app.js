@@ -3,7 +3,7 @@
 angular
   .module("wdiradio", [
     "ui.router",
-    "ngResource"
+    "ngResource",
   ])
   .config([
     "$stateProvider",
