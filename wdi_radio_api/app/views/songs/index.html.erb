@@ -1,0 +1,9 @@
+<h1>All The Songs</h1>
+
+
+<% @songs.each do |song| %>
+  <div class="grumble">
+    <h2><%= song.title %></h2>
+    <h3>By: <%= song.artist %></h3>
+  </div>
+<% end %>

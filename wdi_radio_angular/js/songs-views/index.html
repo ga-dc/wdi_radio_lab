@@ -1,0 +1,22 @@
+
+
+<h2>SONGS</h2>
+
+
+<div data-ng-repeat="song in vm.songs">
+  <p><a data-ui-sref="songShow({id: song.id})"> {{song.title}}</a> </p>
+</div>
+
+<br>
+
+<h2> Add Song </h2>
+
+<form>
+  <input placeholder="Title" data-ng-model="vm.song.title" />
+  <input placeholder="Artist" data-ng-model="vm.song.artist" />
+  <input placeholder="Album" data-ng-model="vm.song.album" />
+  <input placeholder="Genre" data-ng-model="vm.song.genre" />
+  <input placeholder="Photo" data-ng-model="vm.song.preview_url" />
+
+  <button type="button" data-ng-click="vm.create()">Create</button>
+</form>
