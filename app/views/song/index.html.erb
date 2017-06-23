@@ -1,0 +1,12 @@
+<div>
+	<h1>Welcome To The Radio!</h1>
+		<h2>This is the list of songs today!</h2>
+</div>
+
+<% @song.each do |song| %>
+
+<h4>["<%= song.title %>"]</h4>
+	<h4>By: <%= song.artist %></h4>
+		<h4>Genre: <%= song.genre %></h4>
+			<a href="<%= song.photo_url %>">
+<% end %>
