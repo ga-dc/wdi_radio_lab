@@ -1,0 +1,12 @@
+
+
+<div>
+  <img src="{{vm.song.photo_url}}" >
+  <p> Title: {{vm.song.title}}</p>
+  <p> By: {{vm.song.artist}}</p>
+  <p> Album: {{vm.song.album}}</p>
+  <p> Genre: {{vm.song.genre}}</p>
+  <img src="{{vm.song.preview_url}}" >
+</div>
+
+<a data-ui-sref="songEdit({id: vm.song.id})"> Edit Song </a>
