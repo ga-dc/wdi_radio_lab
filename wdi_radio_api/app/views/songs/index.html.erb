@@ -1,0 +1,8 @@
+<h4><a class="new-song" href="<%= new_song_path %>"><sup>(+)</sup> New Song</a></h4>
+<h3>All Songs</h3>
+<ul>
+    <% @songs.each do | song | %>
+        <p><a href="<%= song_path(song) %>"><%= song.title %></a> by <%= song.artist %></p>
+    <% end %>
+</ul>
+

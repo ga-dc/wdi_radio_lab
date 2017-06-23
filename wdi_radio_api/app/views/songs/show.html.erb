@@ -1,0 +1,8 @@
+<div class="song-page">
+    <h2><%= @song.artist %></h2>
+    <img src="<%= @song.photo_url %>">
+    <h3><%= @song.album %> - <%= @song.title %></h3>
+</div>
+
+<%= link_to 'Edit', edit_song_path(@song), class: 'block' %>
+<%= link_to 'Back', songs_path, class: 'block' %>
