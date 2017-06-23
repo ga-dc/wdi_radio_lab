@@ -1,0 +1,12 @@
+<div>
+	<h1>Welcome To The Radio!</h1>
+		<h2>This is the list of songs today!</h2>
+</div>
+
+<ul>
+  <% @song.each do |song| %>
+    <li>
+      <%= link_to "#{song.title}: #{song.artist} | #{song.genre} |", song_path(song) %>
+    </li>
+  <% end %>
+</ul>
