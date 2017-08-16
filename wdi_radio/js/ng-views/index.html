@@ -1,0 +1,5 @@
+<h1>All of the songs</h1>
+
+<div data-ng-repeat="song in vm.songs">
+  <p><a data-ui-sref="wdiRadioShow({id: song.id})">{{song.title}}</a></p>
+</div>
