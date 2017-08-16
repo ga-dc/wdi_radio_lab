@@ -1,0 +1,2 @@
+module WdiradioHelper
+end
